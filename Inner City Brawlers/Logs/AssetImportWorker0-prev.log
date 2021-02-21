@@ -11,19 +11,19 @@ C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-D:/College Papers/All GDD WORK/411/Inner City Brawlers
+D:/College Papers/All GDD WORK/411/Inner-City-Brawlers-GitPage/Inner City Brawlers
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55692
-Successfully changed project path to: D:/College Papers/All GDD WORK/411/Inner City Brawlers
-D:/College Papers/All GDD WORK/411/Inner City Brawlers
+53898
+Successfully changed project path to: D:/College Papers/All GDD WORK/411/Inner-City-Brawlers-GitPage/Inner City Brawlers
+D:/College Papers/All GDD WORK/411/Inner-City-Brawlers-GitPage/Inner City Brawlers
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 76.73 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 73.18 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.4f1 (becced5a802b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/College Papers/All GDD WORK/411/Inner City Brawlers/Assets
+[Subsystems] Discovering subsystems at path D:/College Papers/All GDD WORK/411/Inner-City-Brawlers-GitPage/Inner City Brawlers/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -36,96 +36,1746 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56776
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56328
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004987 seconds.
+Registered in 0.003918 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 70.69 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 65.39 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.753 seconds
+- Completed reload, in  3.644 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005760 seconds.
+Registered in 0.086862 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 69.45 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 67.37 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.247 seconds
+- Completed reload, in  1.260 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
-Refreshing native plugins compatible for Editor in 0.97 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 1.09 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3018 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 130.9 MB.
-System memory in use after: 130.9 MB.
+System memory in use before: 131.9 MB.
+System memory in use after: 131.9 MB.
 
 Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 3509.
-Total: 4.301400 ms (FindLiveObjects: 0.677600 ms CreateObjectMapping: 0.274800 ms MarkObjects: 3.149200 ms  DeleteObjects: 0.197900 ms)
+Total: 2.686800 ms (FindLiveObjects: 0.275300 ms CreateObjectMapping: 0.110800 ms MarkObjects: 2.103500 ms  DeleteObjects: 0.196300 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/ExampleScene.unity
-  artifactKey: Guid(d6e3747197e230b4fafeb884eda9bd8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/ExampleScene.unity using Guid(d6e3747197e230b4fafeb884eda9bd8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a730ac01a3b498798c374274fdbbf3de') in 0.016692 seconds
-  Import took 0.022478 seconds .
+  path: Assets/Scenes/MainGameScene.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainGameScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96b9b46c84c14ac597c72d3df36fe094') in 0.023322 seconds
+  Import took 0.176058 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.049108 seconds.
-  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/ExampleScene.unity
-  artifactKey: Guid(d6e3747197e230b4fafeb884eda9bd8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/ExampleScene.unity using Guid(d6e3747197e230b4fafeb884eda9bd8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a730ac01a3b498798c374274fdbbf3de') in 0.004291 seconds
-  Import took 0.010357 seconds .
+  Time since last request: 2447.468620 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.1.2-300x229.png
+  artifactKey: Guid(b79da14f86d7e29489e1daf6ba6416e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.1.2-300x229.png using Guid(b79da14f86d7e29489e1daf6ba6416e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '578e187dd1a5717bbb6bb9bd63da035f') in 0.651969 seconds
+  Import took 0.717647 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000459 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.6.4.gif
+  artifactKey: Guid(29768dedbde21be4682641e4c7c041e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.6.4.gif using Guid(29768dedbde21be4682641e4c7c041e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3850f40a4d37fd2473f76d737d43d748') in 0.161636 seconds
+  Import took 0.167471 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000594 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.7.2.gif
+  artifactKey: Guid(500aa121025170c4fbe0088d895fea21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.7.2.gif using Guid(500aa121025170c4fbe0088d895fea21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b974d9f00083db18ebd8fe16761a85b') in 0.218280 seconds
+  Import took 0.248514 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000635 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/3.1.2.png
+  artifactKey: Guid(1c201e3d4fa9f534f9c9842a706c12ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/3.1.2.png using Guid(1c201e3d4fa9f534f9c9842a706c12ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7f0d0e7f80a023391830d7dbcd356cd') in 0.162027 seconds
+  Import took 0.194301 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000581 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.6.3.gif
+  artifactKey: Guid(e4c2690a32b35ee43ab85259c568c4e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.6.3.gif using Guid(e4c2690a32b35ee43ab85259c568c4e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6ecbab58ef2d8a8cc1c2ccc010443f0') in 0.130741 seconds
+  Import took 0.227710 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000485 seconds.
+  path: Assets/Rewired/Examples/GamepadTemplateUI/Images/action-button.png
+  artifactKey: Guid(fb21d43469c422e4799d052c515883f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Examples/GamepadTemplateUI/Images/action-button.png using Guid(fb21d43469c422e4799d052c515883f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c90e5ec9a0e594ca66a8ec4c44e8ec51') in 0.119187 seconds
+  Import took 0.124707 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000505 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.7.3.gif
+  artifactKey: Guid(589099840634ede41a3d1f1ce9caef42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.7.3.gif using Guid(589099840634ede41a3d1f1ce9caef42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e1960dd5b6f956af331e5bc3ae57515') in 0.119416 seconds
+  Import took 0.234193 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000437 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/behavior-designer-logo.png
+  artifactKey: Guid(5d305f5dc0fccae4faac99beab970489) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/behavior-designer-logo.png using Guid(5d305f5dc0fccae4faac99beab970489) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4325e45a204ffae44a7e8be7067eb2b5') in 0.126693 seconds
+  Import took 0.190788 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000541 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/Backgrounds/background.png
+  artifactKey: Guid(a40f348ef7e41334baff283b8676ae25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/Backgrounds/background.png using Guid(a40f348ef7e41334baff283b8676ae25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '682cd86917908996448d354d455625a3') in 0.089785 seconds
+  Import took 0.096055 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000515 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.7.1-300x229.png
+  artifactKey: Guid(5f8caad793454d043a4686346d211022) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.7.1-300x229.png using Guid(5f8caad793454d043a4686346d211022) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3973e83f77ce8d28e77c954fd144f6d9') in 0.124518 seconds
+  Import took 0.130443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000467 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.3.1-1-300x275.png
+  artifactKey: Guid(0b36335379a26804dbf6dc02f6f86248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.3.1-1-300x275.png using Guid(0b36335379a26804dbf6dc02f6f86248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '421717e75cc7cdeb6fcecff272d273a6') in 0.105682 seconds
+  Import took 0.112292 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000540 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.7.2-300x229.png
+  artifactKey: Guid(9620b92568e4cd5468e61d18e8bc2991) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.7.2-300x229.png using Guid(9620b92568e4cd5468e61d18e8bc2991) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '543d21d77973ee93d9b76d492942d40e') in 0.132790 seconds
+  Import took 0.139435 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000612 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.7.1.gif
+  artifactKey: Guid(a50dd2f3c9cf455479788147ea4e2aca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.7.1.gif using Guid(a50dd2f3c9cf455479788147ea4e2aca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2c887bf26509d4ed29ef7bf437cd801') in 0.113883 seconds
+  Import took 0.162772 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000465 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.4.2-300x168.png
+  artifactKey: Guid(e9f87d615ec9898448eec173af1132df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.4.2-300x168.png using Guid(e9f87d615ec9898448eec173af1132df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb24fa5fdaf90b65d7661bbe9902eab7') in 0.116161 seconds
+  Import took 0.121772 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000547 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.6.1.gif
+  artifactKey: Guid(de1557dde8f70fd468c55668e6666f0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.6.1.gif using Guid(de1557dde8f70fd468c55668e6666f0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9fb5d18e5d40fd7fd0c3e97490e492e') in 0.119914 seconds
+  Import took 0.245777 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000524 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/UI/bitmapfont.png
+  artifactKey: Guid(5790d370f04844f44980c260faa90229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/UI/bitmapfont.png using Guid(5790d370f04844f44980c260faa90229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2700e138c685a424b91fbabb553e525') in 0.292283 seconds
+  Import took 0.299753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000471 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.5.1-300x230.png
+  artifactKey: Guid(67fe5bef6a700ab4291ff4969d424e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.5.1-300x230.png using Guid(67fe5bef6a700ab4291ff4969d424e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bbe640de1a1a5b2223a98612bf7777f') in 0.192804 seconds
+  Import took 0.306362 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000599 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.1.1-300x209.png
+  artifactKey: Guid(e5014573e512dc74389826296387e744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.1.1-300x209.png using Guid(e5014573e512dc74389826296387e744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ac92e37a2e07821e1907ca81c978ad3') in 0.265528 seconds
+  Import took 0.271716 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000625 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.3.2-300x173.png
+  artifactKey: Guid(7563c3e7a90a6214882d4832bc997cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.3.2-300x173.png using Guid(7563c3e7a90a6214882d4832bc997cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86fdfc0164b8c24932cee2ed31269e61') in 0.146388 seconds
+  Import took 0.153635 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000527 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/animationeditor_120_003.gif
+  artifactKey: Guid(76b44de4dcca47e4bb95ffe87f6fc612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/animationeditor_120_003.gif using Guid(76b44de4dcca47e4bb95ffe87f6fc612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d5e413fcef6c77903d77120e15378cb') in 0.251981 seconds
+  Import took 0.338416 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000479 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.4.3.gif
+  artifactKey: Guid(7f5573bbb3c211845ba721022d3c4889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.4.3.gif using Guid(7f5573bbb3c211845ba721022d3c4889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a96003bccc17388c88312eaf456f925d') in 0.100041 seconds
+  Import took 0.110403 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000447 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.1.3-300x228.png
+  artifactKey: Guid(c2a437845b025b341b41ae488eafa846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.1.3-300x228.png using Guid(c2a437845b025b341b41ae488eafa846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40c521e25ea8b9662f524dbb006e342a') in 0.065219 seconds
+  Import took 0.125712 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000477 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.3.1-300x230.png
+  artifactKey: Guid(246fb7444de7d3a4aa3f8a8a79dad467) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.3.1-300x230.png using Guid(246fb7444de7d3a4aa3f8a8a79dad467) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec77a374116277cee9e1cc2ca14c04b1') in 0.105238 seconds
+  Import took 0.184457 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000569 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.6.2.gif
+  artifactKey: Guid(1bc66627b2660984ba9acf252443c154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.6.2.gif using Guid(1bc66627b2660984ba9acf252443c154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3caf2979d4c109a3e65db8e11241138') in 0.124781 seconds
+  Import took 0.154566 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000465 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/animationeditor_120_002.gif
+  artifactKey: Guid(a60f9c804266ba94daeb8b9833df127f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/animationeditor_120_002.gif using Guid(a60f9c804266ba94daeb8b9833df127f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf5311a6b685f2aaa07c71dc34bf4b04') in 0.095932 seconds
+  Import took 0.101709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000548 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.4.1-300x199.png
+  artifactKey: Guid(79988d420047b4147b3992da2a5ff4e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.4.1-300x199.png using Guid(79988d420047b4147b3992da2a5ff4e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4d75aea6374730db715ec2236ca5a6e') in 0.088536 seconds
+  Import took 0.094820 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000536 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.3.3-300x196.png
+  artifactKey: Guid(17e5e688fdcf6a14a8623b3f510d67d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/1.3.3-300x196.png using Guid(17e5e688fdcf6a14a8623b3f510d67d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77d90487295eb263857dd6dd3c36faf3') in 0.127714 seconds
+  Import took 0.154957 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000489 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.2.1-300x230.png
+  artifactKey: Guid(b2fe9abe43845114091b93e6f093acb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/2.2.1-300x230.png using Guid(b2fe9abe43845114091b93e6f093acb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c16f5bd46ef4a53025a48a9542e1c676') in 0.100572 seconds
+  Import took 0.134402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.785375 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/FX/block.png
+  artifactKey: Guid(e2354276b27614249b4150d30b20a867) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/FX/block.png using Guid(e2354276b27614249b4150d30b20a867) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71fa2d9a8dce793b396f5dba68b39701') in 0.603963 seconds
+  Import took 0.698516 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000454 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Images/calibration-value-marker.png
+  artifactKey: Guid(7f4e5f9eac93c0a4ab5e638adf6b02e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Extras/ControlMapper/Images/calibration-value-marker.png using Guid(7f4e5f9eac93c0a4ab5e638adf6b02e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f03ca250e28c56ec91f7bff94af5139d') in 0.122545 seconds
+  Import took 0.170993 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000436 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_rewiredstandaloneinputmodule.png
+  artifactKey: Guid(21343f61c38b5e449ad9183fc1d159ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_rewiredstandaloneinputmodule.png using Guid(21343f61c38b5e449ad9183fc1d159ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddce7556ffac7fdaf22ca51b18987518') in 0.120208 seconds
+  Import took 0.144432 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000499 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/console-warnings.png
+  artifactKey: Guid(9344ce11190377a4fb5f8ba199ab505b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/console-warnings.png using Guid(9344ce11190377a4fb5f8ba199ab505b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '342c35c75cd943ac0d6396486aa6c49f') in 0.128503 seconds
+  Import took 0.180423 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000425 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/gamepad-template-element-name-guide.png
+  artifactKey: Guid(aaf013c1da240ba4a8e665b2245f1c49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/gamepad-template-element-name-guide.png using Guid(aaf013c1da240ba4a8e665b2245f1c49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '775c971297dffbc3a5b5e8b2663d0e01') in 0.124062 seconds
+  Import took 0.130628 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000416 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/document-print.png
+  artifactKey: Guid(dd3a4fbbb81a6ce439dbf5dfc96d0689) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/document-print.png using Guid(dd3a4fbbb81a6ce439dbf5dfc96d0689) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23b4885b534816eb8e8dcbd58ee51156') in 0.041145 seconds
+  Import took 0.129640 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000570 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Images/graphic-center-stick.png
+  artifactKey: Guid(ec2db8ab6243b9545bbe7e137131b6c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Extras/ControlMapper/Images/graphic-center-stick.png using Guid(ec2db8ab6243b9545bbe7e137131b6c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d07fe7fa4874f81e3d0d0b337021f9e') in 0.092318 seconds
+  Import took 0.147728 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000632 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/examples_dualanaloggamepadtemplateui.png
+  artifactKey: Guid(ce66c45bdd28b094eb6acb03239cdaae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/examples_dualanaloggamepadtemplateui.png using Guid(ce66c45bdd28b094eb6acb03239cdaae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0fb9550b856496401e3eebddc576e7d') in 0.119371 seconds
+  Import took 0.151461 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000487 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/FX/hit.png
+  artifactKey: Guid(ae131c67fd7d1264d8dab2720227e5f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/FX/hit.png using Guid(ae131c67fd7d1264d8dab2720227e5f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bd9eedaf00308e86b007c9beb87c687') in 0.065097 seconds
+  Import took 0.073628 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000558 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/examples_playermouseunityui.png
+  artifactKey: Guid(a945b351ffcb82f4fae5c80d94c818aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/examples_playermouseunityui.png using Guid(a945b351ffcb82f4fae5c80d94c818aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a93aed8fc7baf36d644e7413844d567') in 0.137019 seconds
+  Import took 0.188725 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000441 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_default-layouts.png
+  artifactKey: Guid(769067e82e9333d41b6fdc0c1d05a9ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_default-layouts.png using Guid(769067e82e9333d41b6fdc0c1d05a9ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c91e7e32d560a7aa40a69fb0707c281') in 0.077200 seconds
+  Import took 0.095935 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000422 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Images/icon-mouse.png
+  artifactKey: Guid(fc88ce24a47f4014cb0ad237abc8d1dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Extras/ControlMapper/Images/icon-mouse.png using Guid(fc88ce24a47f4014cb0ad237abc8d1dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dff709dc23cb7ceef585b5125aa87ea0') in 0.084495 seconds
+  Import took 0.157689 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000608 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/componentcontrols_tiltcontrol_inspector.png
+  artifactKey: Guid(ff1e64fc8c8b5ee4a9e543212c554613) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/componentcontrols_tiltcontrol_inspector.png using Guid(ff1e64fc8c8b5ee4a9e543212c554613) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca05c5493abac2315933d5c8e0584c8e') in 0.055611 seconds
+  Import took 0.157730 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000417 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/examples_gamepadtemplateui.png
+  artifactKey: Guid(855614b7f55faf840b9408894f8dfa4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/examples_gamepadtemplateui.png using Guid(855614b7f55faf840b9408894f8dfa4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d46e0e8fa677eafa73704438cc37b51') in 0.081268 seconds
+  Import took 0.086015 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000480 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_unknowncontrollermap.png
+  artifactKey: Guid(30d6b645134403a46909073a7d5d920d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_unknowncontrollermap.png using Guid(30d6b645134403a46909073a7d5d920d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a04c9dcde7c7fbc150ae186bafbd287') in 0.104246 seconds
+  Import took 0.223455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000498 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_events.png
+  artifactKey: Guid(e2dce2df284b27140a694efd5053a840) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_events.png using Guid(e2dce2df284b27140a694efd5053a840) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47bf03c16e0bdbd8f5c602c5a6d5a69e') in 0.069656 seconds
+  Import took 0.114989 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000392 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_maps-and-actions.png
+  artifactKey: Guid(f21699b032d73824abf1315912439620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_maps-and-actions.png using Guid(f21699b032d73824abf1315912439620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3c6e76e0a5dc68c4aae33ed480fbff1') in 0.194276 seconds
+  Import took 0.199952 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000401 seconds.
+  path: Assets/Rewired/Examples/GamepadTemplateUI/Images/center-button.png
+  artifactKey: Guid(bc49b22c5555d61488efb201b5e28e53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Examples/GamepadTemplateUI/Images/center-button.png using Guid(bc49b22c5555d61488efb201b5e28e53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de151f5f8c195d713ffa943cb0f08785') in 0.115486 seconds
+  Import took 0.120932 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000467 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/examples_playermousesprite.png
+  artifactKey: Guid(d1ceb71e4293b8b41abf7f3f73ab3d5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/examples_playermousesprite.png using Guid(d1ceb71e4293b8b41abf7f3f73ab3d5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3105457834eb45a0e0eaa5cc2abfc723') in 0.063678 seconds
+  Import took 0.082518 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000520 seconds.
+  path: Assets/Rewired/Examples/GamepadTemplateUI/Images/controller-body-front.png
+  artifactKey: Guid(546bf6c397a8d574c96f32a6d68ed921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Examples/GamepadTemplateUI/Images/controller-body-front.png using Guid(546bf6c397a8d574c96f32a6d68ed921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a691f6fcfe989864733bd15f4ce693b7') in 0.130308 seconds
+  Import took 0.137178 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000495 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/editinghitboxes_120_001.gif
+  artifactKey: Guid(40922c21226708f489f06794daf0c4fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/editinghitboxes_120_001.gif using Guid(40922c21226708f489f06794daf0c4fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cf6e831fb5f75fc296042f54cfbd016') in 0.050602 seconds
+  Import took 0.070620 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000380 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/Buttons/input_sprites.png
+  artifactKey: Guid(05e4377e6867d04429ed6830b49fb6a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/Buttons/input_sprites.png using Guid(05e4377e6867d04429ed6830b49fb6a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c16827d4dbe4c1757a5b738d8d04d8ca') in 0.119299 seconds
+  Import took 0.125888 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000543 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio crouch kick.png
+  artifactKey: Guid(ab32ad84094ea3242b4aba48e571152c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio crouch kick.png using Guid(ab32ad84094ea3242b4aba48e571152c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85dfcd137e724b631180317050d41cf7') in 0.091457 seconds
+  Import took 0.141138 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000617 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/layout-manager-diagram-1.png
+  artifactKey: Guid(5b85ca47118baff43a3677a5fc467f1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/layout-manager-diagram-1.png using Guid(5b85ca47118baff43a3677a5fc467f1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34b3b1e2caa076d32bd7cc96027cb241') in 0.148469 seconds
+  Import took 0.153680 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000371 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio air stagger.png
+  artifactKey: Guid(0cc2f26d9784ebd4e9f6128b3876e022) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio air stagger.png using Guid(0cc2f26d9784ebd4e9f6128b3876e022) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5403d4189ffc77891e883ef0469f6541') in 0.081759 seconds
+  Import took 0.088066 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000424 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio jump.png
+  artifactKey: Guid(24a18dfdc04a48346aa6276d05bcffce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio jump.png using Guid(24a18dfdc04a48346aa6276d05bcffce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13871b980fbba1e7835ef004bfd8c1a0') in 0.080196 seconds
+  Import took 0.105924 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000397 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio grab throw.png
+  artifactKey: Guid(e66a1e69b61304b458fa00ca5a17e6a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio grab throw.png using Guid(e66a1e69b61304b458fa00ca5a17e6a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02f1880ea1901b37459a7f23ee8ea9fe') in 0.073404 seconds
+  Import took 0.078813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000412 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/rewirededitor_mapenablerrules.png
+  artifactKey: Guid(d98b5bb0df480214f92ab73767e66aec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/rewirededitor_mapenablerrules.png using Guid(d98b5bb0df480214f92ab73767e66aec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc8f714cc9bd5dcb12d7f3c0ee69d23d') in 0.148692 seconds
+  Import took 0.178704 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000415 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/rewirededitor_layoutmanagerrules.png
+  artifactKey: Guid(e3fab3bf2fcf90d47b80466b1595cf74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/rewirededitor_layoutmanagerrules.png using Guid(e3fab3bf2fcf90d47b80466b1595cf74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b542da0d8f12d277b6dfd6c642b6768') in 0.113667 seconds
+  Import took 0.182994 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000543 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/InputManager-100x300.png
+  artifactKey: Guid(ac676b1027580314f874088a2f95be3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/InputManager-100x300.png using Guid(ac676b1027580314f874088a2f95be3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c70e9351f45dc22689a984e934e7175') in 0.061535 seconds
+  Import took 0.066722 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000484 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/UI/lifebar_frame.png
+  artifactKey: Guid(8107cc059799ac44caed315515f83049) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/UI/lifebar_frame.png using Guid(8107cc059799ac44caed315515f83049) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7c6e7977f23e2565d0c6c2d721e9ccd') in 0.083414 seconds
+  Import took 0.091618 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000565 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/rewirededitor_players_layoutmanagerrulesetoptions.png
+  artifactKey: Guid(51ed51655c275f649957c599cb52a3fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/rewirededitor_players_layoutmanagerrulesetoptions.png using Guid(51ed51655c275f649957c599cb52a3fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad20372d7eaa408a2c84ddb914ee431b') in 0.116398 seconds
+  Import took 0.122794 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000395 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/rewiredstandaloneinputmodule_inspector_actions.png
+  artifactKey: Guid(d6961472fcff57f48bf88e2a080dd521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/rewiredstandaloneinputmodule_inspector_actions.png using Guid(d6961472fcff57f48bf88e2a080dd521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0422d164e1f07dee677912a7ea80f759') in 0.096961 seconds
+  Import took 0.167695 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000303 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/FX/shadow.png
+  artifactKey: Guid(d5f745e748f9a5f4590da89c4b41ae4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/FX/shadow.png using Guid(d5f745e748f9a5f4590da89c4b41ae4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e7bf93aa05e8099ee02b53e75d1757b') in 0.084133 seconds
+  Import took 0.116197 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000423 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_setup-cc-1.png
+  artifactKey: Guid(0c9e0014e983ff546b4b694e5dcd8265) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_setup-cc-1.png using Guid(0c9e0014e983ff546b4b694e5dcd8265) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bab2143ba62135a7460acebac6c8fca4') in 0.208413 seconds
+  Import took 0.214806 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000429 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchcontroller_search_rimlinked.png
+  artifactKey: Guid(84e323cea18d9ff4a9c160495889d228) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchcontroller_search_rimlinked.png using Guid(84e323cea18d9ff4a9c160495889d228) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1940e4d19a5c385f689ab4b96716d7bd') in 0.146322 seconds
+  Import took 0.152539 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000437 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchjoystick-touch-region-tut-step3.png
+  artifactKey: Guid(7c1156e0c64d51b4da7c458d3c1d5a63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchjoystick-touch-region-tut-step3.png using Guid(7c1156e0c64d51b4da7c458d3c1d5a63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebff9c068a386041dfa85b0ff9a28fbe') in 0.109677 seconds
+  Import took 0.115728 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000757 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchbutton-customcontrolleroptions.png
+  artifactKey: Guid(d5b2366682ebba143aa60cc923232567) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchbutton-customcontrolleroptions.png using Guid(d5b2366682ebba143aa60cc923232567) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9826f8be38f9bc417720d3d7f7b02550') in 0.144928 seconds
+  Import took 0.150564 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000408 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/map-enabler-diagram-1.png
+  artifactKey: Guid(fc4e491287c023e4cb7c73e4f07c47c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/map-enabler-diagram-1.png using Guid(fc4e491287c023e4cb7c73e4f07c47c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5ac88b17ef97a0e6d6a7eb6e3a3d8e4') in 0.137265 seconds
+  Import took 0.143269 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000485 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchpad.png
+  artifactKey: Guid(cfa2a5469fdb6454585a251d9a7025df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchpad.png using Guid(cfa2a5469fdb6454585a251d9a7025df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9f74a7a6197429ac5ab4915088c06c0') in 0.113555 seconds
+  Import took 0.118951 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000551 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/dual-analog-gamepad-template-element-name-guide.png
+  artifactKey: Guid(6b7919569eb823d4aa0060104cecaddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/dual-analog-gamepad-template-element-name-guide.png using Guid(6b7919569eb823d4aa0060104cecaddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cf7bf9ce4e166e465ffa2c91d96fbd0') in 0.346626 seconds
+  Import took 0.352093 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000518 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/specialplatformsupport_uwp_playersettings_hid.png
+  artifactKey: Guid(517012e6edf0ee246a0b9381d153426c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/specialplatformsupport_uwp_playersettings_hid.png using Guid(517012e6edf0ee246a0b9381d153426c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f37aa38a3c6826e80a0608d4fb983084') in 0.258070 seconds
+  Import took 0.263751 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000485 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/virtualcontrollers_virtualcontroller_inspector.png
+  artifactKey: Guid(063964460c19ff848a1014f1462a266a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/virtualcontrollers_virtualcontroller_inspector.png using Guid(063964460c19ff848a1014f1462a266a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f7edcf37a73fd1a8054d574f8590ff8') in 0.268455 seconds
+  Import took 0.275785 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000453 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/troubleshooting_dllplatforms.png
+  artifactKey: Guid(c6418e10b9b9f694aaab8142634c440a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/troubleshooting_dllplatforms.png using Guid(c6418e10b9b9f694aaab8142634c440a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b00bc54d7cf7cb68910df4d5c9c05f96') in 0.177995 seconds
+  Import took 0.197988 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000450 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/rewirededitor_players_mapenablerrulesetoptions.png
+  artifactKey: Guid(bdc704fead6bf094880766a6c0d29e5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/rewirededitor_players_mapenablerrulesetoptions.png using Guid(bdc704fead6bf094880766a6c0d29e5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c79f50c197ad3ebe277072637f6687ff') in 0.164859 seconds
+  Import took 0.217974 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000409 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/palette-300x21.png
+  artifactKey: Guid(a8e50df38d1501c49a7e4957a9322c9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/palette-300x21.png using Guid(a8e50df38d1501c49a7e4957a9322c9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddb5187eb5cf375f28caadcbe92cdba1') in 0.234394 seconds
+  Import took 0.240603 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000570 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/works-with-ufps.png
+  artifactKey: Guid(830267c320662584b807071c844c2f13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/works-with-ufps.png using Guid(830267c320662584b807071c844c2f13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8ddecac30ed05d77ae2af92f434e44c') in 0.124568 seconds
+  Import took 0.177007 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000501 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_controller-options.png
+  artifactKey: Guid(35d35e3fb598ad045a2b7f51d79fa7bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_controller-options.png using Guid(35d35e3fb598ad045a2b7f51d79fa7bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d0d8c02dc23e9e43dea00ae60f2d9e4') in 0.144769 seconds
+  Import took 0.150186 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000585 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/examples_dualshock4specialfeatures.png
+  artifactKey: Guid(b20a8e9146ecf2743a171b88c6775406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/examples_dualshock4specialfeatures.png using Guid(b20a8e9146ecf2743a171b88c6775406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '606e6d3dce0a5fc8d37a1c9751eb6dea') in 0.199643 seconds
+  Import took 0.267362 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000480 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Images/icon-invert.png
+  artifactKey: Guid(c084db22e43bd61499f3d42d7946ba31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Extras/ControlMapper/Images/icon-invert.png using Guid(c084db22e43bd61499f3d42d7946ba31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7b605089a937752240959dc036702d3') in 0.311138 seconds
+  Import took 0.316567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000461 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/rewirededitor_mapenablerrules_ruleoptions.png
+  artifactKey: Guid(548102fb6860a3341904433e1aa2cdc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/rewirededitor_mapenablerrules_ruleoptions.png using Guid(548102fb6860a3341904433e1aa2cdc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c10be32a013d2110922a2f46a9bc9a7f') in 0.175785 seconds
+  Import took 0.181255 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000617 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio jab.png
+  artifactKey: Guid(58a25dafb3d04984e851325e5fa79ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio jab.png using Guid(58a25dafb3d04984e851325e5fa79ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71e63cc049976a3047bb3ef14a700751') in 0.141930 seconds
+  Import took 0.148477 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000416 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/examples_touchcontrols1.png
+  artifactKey: Guid(e10a1b43ea0e5d04492577f8679104af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/examples_touchcontrols1.png using Guid(e10a1b43ea0e5d04492577f8679104af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b34e20d6d84ee3e59834c58c4dd5cc3f') in 0.140961 seconds
+  Import took 0.186846 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000441 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/rewirededitor_tools.png
+  artifactKey: Guid(8a1330abbb55e87438b08160c6e014bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/rewirededitor_tools.png using Guid(8a1330abbb55e87438b08160c6e014bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37e0a9e3942ab723e46c7c8d66e54c00') in 0.254174 seconds
+  Import took 0.259519 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000531 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_input-field-options.png
+  artifactKey: Guid(11e7ce261168aee498f839a524960ee3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_input-field-options.png using Guid(11e7ce261168aee498f839a524960ee3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e95a7a97e2b4dda82d428c13097e6228') in 0.089156 seconds
+  Import took 0.171522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000448 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio shuffle.png
+  artifactKey: Guid(f456daa682a36454988f496dc77a55ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio shuffle.png using Guid(f456daa682a36454988f496dc77a55ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd128d75b9bce990b2f2a8795fcaac277') in 0.138150 seconds
+  Import took 0.143507 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000444 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio uppercut.png
+  artifactKey: Guid(8fcbcc7bcb633e0488d8f3bf313f94eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio uppercut.png using Guid(8fcbcc7bcb633e0488d8f3bf313f94eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67c89bdbb19b5a0cf3986fb5d1bbe607') in 0.121377 seconds
+  Import took 0.175737 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000458 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/timeline_120_002.gif
+  artifactKey: Guid(fdf49801231aee7409a543f998301d4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/timeline_120_002.gif using Guid(fdf49801231aee7409a543f998301d4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cbb0af574aeaaf1efcbed94da10c8fe') in 0.131854 seconds
+  Import took 0.136840 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000430 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio kick.png
+  artifactKey: Guid(d75ac6f492ebb344885eccca737f705a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio kick.png using Guid(d75ac6f492ebb344885eccca737f705a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8acd553cbb6cb70b18a69d9cc368bc4') in 0.157516 seconds
+  Import took 0.165155 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000516 seconds.
+  path: Assets/Rewired/Examples/GamepadTemplateUI/Images/shoulder-button-top.png
+  artifactKey: Guid(c0c2cfc86a6e7a846ab953ca1d4c6787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Examples/GamepadTemplateUI/Images/shoulder-button-top.png using Guid(c0c2cfc86a6e7a846ab953ca1d4c6787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd457091ad6bfb7e88c50aec7fc2e60e1') in 0.075398 seconds
+  Import took 0.094069 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000408 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_popup-window-options.png
+  artifactKey: Guid(287b4876343db3b4492d20bee7af6be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_popup-window-options.png using Guid(287b4876343db3b4492d20bee7af6be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5fa0b78b26f72b4a52cff33906070d6') in 0.099426 seconds
+  Import took 0.104683 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000563 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/rewirededitor_actions_exportactions.png
+  artifactKey: Guid(eeab54dd2ddf77f4ab8cc32bbda4e3c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/rewirededitor_actions_exportactions.png using Guid(eeab54dd2ddf77f4ab8cc32bbda4e3c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e35175ccf2d3e49db03b0c90b3b1c92') in 0.062130 seconds
+  Import took 0.131407 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000412 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio jump jab.png
+  artifactKey: Guid(21f7baff9828e684994c9294c2593346) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio jump jab.png using Guid(21f7baff9828e684994c9294c2593346) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52b674bd1a2544e872c0a48f978c4d68') in 0.049317 seconds
+  Import took 0.116230 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000412 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/palette.png
+  artifactKey: Guid(aa01b202dae6e864b85cdb541a8b6216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/palette.png using Guid(aa01b202dae6e864b85cdb541a8b6216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5acf77b69ba09ab5da7e17e46b57b53') in 0.086485 seconds
+  Import took 0.091693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000437 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchinteractabletransitioner.png
+  artifactKey: Guid(572321bec6b07264e8b2ba0f1b765275) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchinteractabletransitioner.png using Guid(572321bec6b07264e8b2ba0f1b765275) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e6c05251e1a031548f4b280c6f2718f') in 0.108284 seconds
+  Import took 0.159137 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000491 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/playmaker-logo.png
+  artifactKey: Guid(d49f58d280ccfec469d12d2506e62ce3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/playmaker-logo.png using Guid(d49f58d280ccfec469d12d2506e62ce3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbf362e131f58bb7ad2c37d011f605a2') in 0.069442 seconds
+  Import took 0.074929 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000407 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchbutton.png
+  artifactKey: Guid(efef2d152c1e4a4438de1fd9c350731e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchbutton.png using Guid(efef2d152c1e4a4438de1fd9c350731e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd544db150bd3f5c8e022e8e1e43aec9') in 0.126051 seconds
+  Import took 0.131008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000460 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_setup-cc-4.png
+  artifactKey: Guid(80c2535d3fa2f7f4a822107a124ca1c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_setup-cc-4.png using Guid(80c2535d3fa2f7f4a822107a124ca1c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '490463bdd0986e4926e9434ea5cab34f') in 0.145759 seconds
+  Import took 0.175952 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000461 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/examples_virtualmousesprite.png
+  artifactKey: Guid(0fedd870362033246a4c4a9a66e962e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/examples_virtualmousesprite.png using Guid(0fedd870362033246a4c4a9a66e962e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b26c1af779f6a2fa1154a30c3b37200c') in 0.056848 seconds
+  Import took 0.085778 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 996.920334 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/componentcontrols_customcontroller_inspector_create_rimlinked.png
+  artifactKey: Guid(6e9531ddf12599b459815123d98c7c1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/componentcontrols_customcontroller_inspector_create_rimlinked.png using Guid(6e9531ddf12599b459815123d98c7c1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f46b6d9544c76c44c66e718b5a520a0') in 0.446055 seconds
+  Import took 0.499580 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000521 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_input-grid-layout-options.png
+  artifactKey: Guid(0714dbf4b4b24a649830e460dbcbdd03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_input-grid-layout-options.png using Guid(0714dbf4b4b24a649830e460dbcbdd03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c123455704cff217a48b741759077cc6') in 0.092257 seconds
+  Import took 0.098736 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000411 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/howtos_actionidproperty.png
+  artifactKey: Guid(0e9ffa38ed8733d4e8c096fdfb7adbdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/howtos_actionidproperty.png using Guid(0e9ffa38ed8733d4e8c096fdfb7adbdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd15c9f00934134e1743ead0e75ef4a9') in 0.079691 seconds
+  Import took 0.085386 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000492 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/playercontrollers_playermouse_inspector.png
+  artifactKey: Guid(83e1efac7d0715e4d8c64f0df6c58ce1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/playercontrollers_playermouse_inspector.png using Guid(83e1efac7d0715e4d8c64f0df6c58ce1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c713b1173d4f967e1d5df7997b7aab3') in 0.042636 seconds
+  Import took 0.068908 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000449 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_keyboard-options.png
+  artifactKey: Guid(35ef68c724dc5e84d94749f90f4b9aeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_keyboard-options.png using Guid(35ef68c724dc5e84d94749f90f4b9aeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '506bd44673b4f0df6d7941c88f420616') in 0.054433 seconds
+  Import took 0.141054 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000489 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/examples_virtualmouseunityui.png
+  artifactKey: Guid(d2242e5647a8ad8478c368b5034d8bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/examples_virtualmouseunityui.png using Guid(d2242e5647a8ad8478c368b5034d8bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1db4f17ac3bc9c10bb06a4fa274ba3aa') in 0.089986 seconds
+  Import took 0.097317 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000512 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/integration_bolt_typeoptions.png
+  artifactKey: Guid(e65845de4861d5449bb334b8095310a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/integration_bolt_typeoptions.png using Guid(e65845de4861d5449bb334b8095310a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '006d11f6283d1b1a21d3200065b09c5f') in 0.181763 seconds
+  Import took 0.244951 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001028 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/icon-template-6-dof-controller.png
+  artifactKey: Guid(d25252c42a153fc42a059488150adf90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/icon-template-6-dof-controller.png using Guid(d25252c42a153fc42a059488150adf90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69b83b6f0ca29b15953c99c94d311e69') in 0.051202 seconds
+  Import took 0.077951 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000406 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/search.png
+  artifactKey: Guid(21af6e8d575a48b49bab339909dfdbf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/search.png using Guid(21af6e8d575a48b49bab339909dfdbf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21fe2c61ccdad39d221414b9eafe710b') in 0.044207 seconds
+  Import took 0.084249 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000426 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/menu_120_001.png
+  artifactKey: Guid(85d63bb0f4c8fb84c9f71c56cee3eff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/menu_120_001.png using Guid(85d63bb0f4c8fb84c9f71c56cee3eff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b497e79ebf1df57be7881797af72388d') in 0.102877 seconds
+  Import took 0.179634 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000542 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_input-behaviors.png
+  artifactKey: Guid(afe020248597d5442a43d8cece700cab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_input-behaviors.png using Guid(afe020248597d5442a43d8cece700cab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd65affe5876b7ec99ed48387cbdf2c47') in 0.083077 seconds
+  Import took 0.091260 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000530 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_mouse-options.png
+  artifactKey: Guid(f5423151869b3dc4f9c8adbd8af0dc16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_mouse-options.png using Guid(f5423151869b3dc4f9c8adbd8af0dc16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30a77dd21eaaebbbf584c7262d50d292') in 0.066853 seconds
+  Import took 0.072957 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000445 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/rewirededitor_players_layoutmanager.png
+  artifactKey: Guid(bf2318352ebd06341bbca2214312e25f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/rewirededitor_players_layoutmanager.png using Guid(bf2318352ebd06341bbca2214312e25f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad70907817d3f58442b4fbb676cd2a21') in 0.043446 seconds
+  Import took 0.049183 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000399 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/faq-fixed-update-explanation.png
+  artifactKey: Guid(2d7ee9aedbc0e694183a737d6aefb278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/faq-fixed-update-explanation.png using Guid(2d7ee9aedbc0e694183a737d6aefb278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd583cb2f52cdd077244c8bae67e162c') in 0.064449 seconds
+  Import took 0.093378 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000457 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio idle.png
+  artifactKey: Guid(35fdede74c19f124aa00efaaa8717861) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio idle.png using Guid(35fdede74c19f124aa00efaaa8717861) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dec473ff0ea8754b539257e6a054cbb') in 0.116266 seconds
+  Import took 0.122885 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000433 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_screen-control-actions.png
+  artifactKey: Guid(4c2e5879945d08f4e9f7a72759b6942a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_screen-control-actions.png using Guid(4c2e5879945d08f4e9f7a72759b6942a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29db5ad129857770738a99d2f9437893') in 0.112353 seconds
+  Import took 0.165665 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000416 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_rewired-input-manager.png
+  artifactKey: Guid(96160a35332794c4ba8ba0015db78cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_rewired-input-manager.png using Guid(96160a35332794c4ba8ba0015db78cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2785b1b8b2dc1604a1ba4c0336ed7880') in 0.078355 seconds
+  Import took 0.123914 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000598 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_canvas-scaler.png
+  artifactKey: Guid(130029d58c47e7842afba08e17beb818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_canvas-scaler.png using Guid(130029d58c47e7842afba08e17beb818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5585fc12e251995a5ec389f7841bc49d') in 0.094393 seconds
+  Import took 0.120394 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000429 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/icon-template-gamepad.png
+  artifactKey: Guid(c5838374c879421488568402301ed3b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/icon-template-gamepad.png using Guid(c5838374c879421488568402301ed3b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1252c40ec1db516ab8e1cf0b7c282a96') in 0.102702 seconds
+  Import took 0.159683 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000614 seconds.
+  path: Assets/Rewired/Examples/GamepadTemplateUI/Images/shoulder-button-front.png
+  artifactKey: Guid(ad926f266f5327d48b890791e37dfcd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Examples/GamepadTemplateUI/Images/shoulder-button-front.png using Guid(ad926f266f5327d48b890791e37dfcd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbf47e71828865854513683deb605c3c') in 0.286906 seconds
+  Import took 0.405138 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000536 seconds.
+  path: Assets/Rewired/Examples/PlayerMouseSprite/Sprites/target.png
+  artifactKey: Guid(d3f9f79929c708d45b0cc96aa9af8fdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Examples/PlayerMouseSprite/Sprites/target.png using Guid(d3f9f79929c708d45b0cc96aa9af8fdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62161110c6e6c68bf95cc9e7a23650db') in 0.100247 seconds
+  Import took 0.148920 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000417 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio crouch jab.png
+  artifactKey: Guid(c4f400eb593cc6b43a32fa177e15cea7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio crouch jab.png using Guid(c4f400eb593cc6b43a32fa177e15cea7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbb1f455010024b7d0afbd02f8c53f00') in 0.129310 seconds
+  Import took 0.134536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000527 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/integration_cinemachine_inspector.png
+  artifactKey: Guid(5b2eda6dca1ded449bad5e83cc06ee8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/integration_cinemachine_inspector.png using Guid(5b2eda6dca1ded449bad5e83cc06ee8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c594a6a25756a594d5008f3cca83f1bc') in 0.097327 seconds
+  Import took 0.106647 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000550 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_input-field-grid-layout-options.png
+  artifactKey: Guid(ab56924b6c76c2d46b3745d6d410caa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_input-field-grid-layout-options.png using Guid(ab56924b6c76c2d46b3745d6d410caa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '635ae99aa16f1983f8b7840ed492664a') in 0.058369 seconds
+  Import took 0.093411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000513 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_advanced-settings.png
+  artifactKey: Guid(f76eb30e250b40e428c9b7a3c30df9f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_advanced-settings.png using Guid(f76eb30e250b40e428c9b7a3c30df9f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9732b55ef2a8fdd12ddc6bc81cb9e3d1') in 0.095769 seconds
+  Import took 0.102332 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000407 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchcontrol-add-controls.png
+  artifactKey: Guid(fc7dcabe13df0b343aca911c84b8f7e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchcontrol-add-controls.png using Guid(fc7dcabe13df0b343aca911c84b8f7e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7567989724d3eedfbc1106422fcee3d8') in 0.034228 seconds
+  Import took 0.083568 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000388 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_screen2.png
+  artifactKey: Guid(fcce0eeb4e650644a9e3126b67c72c0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_screen2.png using Guid(fcce0eeb4e650644a9e3126b67c72c0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69959889002aeb6a44b487c508c8de67') in 0.132000 seconds
+  Import took 0.141478 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000621 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchcontroller.png
+  artifactKey: Guid(d2e5fe7456f7f3f48b22fee980d79d5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchcontroller.png using Guid(d2e5fe7456f7f3f48b22fee980d79d5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d38ebb4ed119a088c5250e8d67fca81') in 0.135240 seconds
+  Import took 0.181239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000537 seconds.
+  path: Assets/Rewired/Examples/CustomControllersTouch/Images/Joystickcircle.png
+  artifactKey: Guid(0e015ecd147972c41b1faf4690c53167) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Examples/CustomControllersTouch/Images/Joystickcircle.png using Guid(0e015ecd147972c41b1faf4690c53167) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ceb2bf9c6ecc504d8cd24a781d9ecd07') in 0.139402 seconds
+  Import took 0.145998 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000626 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_setup-cc-2.png
+  artifactKey: Guid(7ea293b469b19f349a251f07a3d30174) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_setup-cc-2.png using Guid(7ea293b469b19f349a251f07a3d30174) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22cc7e67258d8d2d408b44391476631e') in 0.162503 seconds
+  Import took 0.171805 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000486 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_color-examples.png
+  artifactKey: Guid(a1d30b9ff1bd90143bc2776070f21bfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_color-examples.png using Guid(a1d30b9ff1bd90143bc2776070f21bfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39c261cfa1642e23ae186cbfdf7e953a') in 0.074914 seconds
+  Import took 0.098524 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000426 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio block.png
+  artifactKey: Guid(8eb75645b8027684a9cd792ce35ee775) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio block.png using Guid(8eb75645b8027684a9cd792ce35ee775) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e041421f1382679a091f43c5c9fc26e9') in 0.080208 seconds
+  Import took 0.086015 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000473 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/troubleshooting_steam-big-picture-controller-config.png
+  artifactKey: Guid(294c659745d4dc6418f4c0c5b74163ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/troubleshooting_steam-big-picture-controller-config.png using Guid(294c659745d4dc6418f4c0c5b74163ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b66cb60f2d58f68959adda82e46c4492') in 0.090861 seconds
+  Import took 0.096084 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000434 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/virtualcontrollers_virtualmouse_inspector.png
+  artifactKey: Guid(97db0ae0a0eb6ab449650f3e7ce9f472) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/virtualcontrollers_virtualmouse_inspector.png using Guid(97db0ae0a0eb6ab449650f3e7ce9f472) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ce2b2b804b6ed13f0ef15a9f098ad7a') in 0.132065 seconds
+  Import took 0.137078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000397 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchcontroller_rim.png
+  artifactKey: Guid(b00b603f938cadb42b46774b31f3a937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchcontroller_rim.png using Guid(b00b603f938cadb42b46774b31f3a937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3681d50e1a29b93eee9f5fcded739cef') in 0.164982 seconds
+  Import took 0.170405 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000406 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/rewirededitor_layoutmanagerrules_ruleoptions.png
+  artifactKey: Guid(62dba77b17b29c940b71da6c663e4fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/rewirededitor_layoutmanagerrules_ruleoptions.png using Guid(62dba77b17b29c940b71da6c663e4fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e2e3ffc8c3d63fff155ba8a601cfecf') in 0.106780 seconds
+  Import took 0.204340 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000660 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Images/graphic-move-stick.png
+  artifactKey: Guid(a734389a53a8a384888da1abcad1dd1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Extras/ControlMapper/Images/graphic-move-stick.png using Guid(a734389a53a8a384888da1abcad1dd1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79e9d56b62b6087af0b35af579a2d641') in 0.205066 seconds
+  Import took 0.210635 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000414 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio crouch block.png
+  artifactKey: Guid(ba582cdc3d8721643a5deb86179091ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio crouch block.png using Guid(ba582cdc3d8721643a5deb86179091ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fbb6e147211c2a7231d05d000fa1ca3') in 0.168841 seconds
+  Import took 0.212073 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000422 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio crouch stagger.png
+  artifactKey: Guid(812172240a453c844b7ff7155cd2aaac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio crouch stagger.png using Guid(812172240a453c844b7ff7155cd2aaac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a39c1818dc2101361d17bdf86a62afd') in 0.129991 seconds
+  Import took 0.212532 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000529 seconds.
+  path: Assets/Rewired/Examples/GamepadTemplateUI/Images/stick-arrow.png
+  artifactKey: Guid(5e049a8f255844b43a4504301dea94ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Examples/GamepadTemplateUI/Images/stick-arrow.png using Guid(5e049a8f255844b43a4504301dea94ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8680a8acd9e87849656efe6ce3cb878') in 0.093799 seconds
+  Import took 0.117939 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000479 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/componentcontrols_customcontroller_inspector_rim.png
+  artifactKey: Guid(e8b8904d052393442a3d1354b5c1b4b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/componentcontrols_customcontroller_inspector_rim.png using Guid(e8b8904d052393442a3d1354b5c1b4b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14e70ff35f3b4fb1008218adeb92d1f2') in 0.091533 seconds
+  Import took 0.097627 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000422 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_color-shift-shader.png
+  artifactKey: Guid(9d8b23ca68645b24bb5ce18860045721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_color-shift-shader.png using Guid(9d8b23ca68645b24bb5ce18860045721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f147312889aebe74910d77a27303f15') in 0.096782 seconds
+  Import took 0.122991 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000523 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchjoystick.png
+  artifactKey: Guid(a98d9b031cc87b842aba036ccab15e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchjoystick.png using Guid(a98d9b031cc87b842aba036ccab15e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbe70938c22bae1010847d0eb5c54bdb') in 0.086780 seconds
+  Import took 0.095152 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000454 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/input-mapping-diagram-2.png
+  artifactKey: Guid(c6d3e896b1c98c748b912b32b5787e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/input-mapping-diagram-2.png using Guid(c6d3e896b1c98c748b912b32b5787e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43f7cef3133e2dc43433d2840f7b1bc1') in 0.116678 seconds
+  Import took 0.163000 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000393 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/input-mapping-diagram-3.png
+  artifactKey: Guid(c5f0e529fff915b4086f9e3d16de1900) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/input-mapping-diagram-3.png using Guid(c5f0e529fff915b4086f9e3d16de1900) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45d3d41e3918419c92ae4439570af18f') in 0.130764 seconds
+  Import took 0.173704 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000469 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchjoystick-touch-region-tut-step1.png
+  artifactKey: Guid(399fa01467ed5a544aadf99c0d0f309d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchjoystick-touch-region-tut-step1.png using Guid(399fa01467ed5a544aadf99c0d0f309d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab37312ea2e2293d0008df5489eccb38') in 0.086712 seconds
+  Import took 0.094547 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000423 seconds.
+  path: Assets/Rewired/Examples/GamepadTemplateUI/Images/stick-base.png
+  artifactKey: Guid(9e5bc0ff73219dd4dbf19d928c0b867a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Examples/GamepadTemplateUI/Images/stick-base.png using Guid(9e5bc0ff73219dd4dbf19d928c0b867a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bfc2a80b7327f1e0d00b2f2145a65c1') in 0.069071 seconds
+  Import took 0.076235 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000475 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/playercontrollers_playercontroller_inspector.png
+  artifactKey: Guid(1ac3930e794157543941fd7534f0c3cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/playercontrollers_playercontroller_inspector.png using Guid(1ac3930e794157543941fd7534f0c3cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44d164ee132dedeb9a9f97209db2dd4e') in 0.101615 seconds
+  Import took 0.106736 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000391 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/rewiredstandaloneinputmodule_inspector_virtualmice.png
+  artifactKey: Guid(fb335fd38f4a8e1449c4ef82a2e8f404) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/rewiredstandaloneinputmodule_inspector_virtualmice.png using Guid(fb335fd38f4a8e1449c4ef82a2e8f404) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75141e5d136bf57ddca24fa8676ad1c0') in 0.084089 seconds
+  Import took 0.112473 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000427 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_screen-options.png
+  artifactKey: Guid(d46d86dce3c15a24a9516eab4a60e5c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_screen-options.png using Guid(d46d86dce3c15a24a9516eab4a60e5c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f92e6f73afa1afb9d0f214f1c6ee8814') in 0.054715 seconds
+  Import took 0.087153 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000418 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/frameconfig_120_001.png
+  artifactKey: Guid(2c5852e73eec19d45b341c9a1081da41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/frameconfig_120_001.png using Guid(2c5852e73eec19d45b341c9a1081da41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3081577fdee2bb8002b6dc832e0c8bc') in 0.125584 seconds
+  Import took 0.130760 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000381 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/icon-template-racing-wheel.png
+  artifactKey: Guid(0ba5617ce9c6a55479b5aa4658ee5df5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/icon-template-racing-wheel.png using Guid(0ba5617ce9c6a55479b5aa4658ee5df5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6228a65b91fe216d4242bdb3c66b5bfe') in 0.093812 seconds
+  Import took 0.098923 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000394 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_language-options.png
+  artifactKey: Guid(588202f52e084bc44a9adfe9600d0589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_language-options.png using Guid(588202f52e084bc44a9adfe9600d0589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da6776836ad73bd9c105a205d99dfc44') in 0.050101 seconds
+  Import took 0.138055 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000416 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touch-controller-hierarchy.png
+  artifactKey: Guid(c3e9a40715b811e4eb8c719c2e64dc48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touch-controller-hierarchy.png using Guid(c3e9a40715b811e4eb8c719c2e64dc48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '184c115789b5058b778d499ce110b68a') in 0.072009 seconds
+  Import took 0.080530 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000535 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/examples_touchbuttons1.png
+  artifactKey: Guid(dd4442a2d66b4a84e9f32dfef2b3d654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/examples_touchbuttons1.png using Guid(dd4442a2d66b4a84e9f32dfef2b3d654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9b360c9fc1ac14869e200a6fcea0d1a') in 0.065218 seconds
+  Import took 0.072744 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000589 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchjoystick-customcontrolleroptions.png
+  artifactKey: Guid(51a63d2d20652914a825920199cb6bbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchjoystick-customcontrolleroptions.png using Guid(51a63d2d20652914a825920199cb6bbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0834bcacdc99a52d08306cfa3680dc18') in 0.055239 seconds
+  Import took 0.061718 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000533 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/componentcontrols_customcontroller_inspector_search_rimlinked.png
+  artifactKey: Guid(60e04b519ae877b4e9f9f69531e13fdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/componentcontrols_customcontroller_inspector_search_rimlinked.png using Guid(60e04b519ae877b4e9f9f69531e13fdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32a6ae1878850e90e6d58459aaa2b248') in 0.071719 seconds
+  Import took 0.093091 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000476 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchjoystickangleindicator.png
+  artifactKey: Guid(66c6f0831fa750e4d9f658848fddc2e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchjoystickangleindicator.png using Guid(66c6f0831fa750e4d9f658848fddc2e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5447aa2ee4e60a2eaef29096aea8268') in 0.072730 seconds
+  Import took 0.079261 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000785 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchjoystick-touch-region-tut-step2.png
+  artifactKey: Guid(58e69f374fc42b248bdcbbaea7fa0972) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchjoystick-touch-region-tut-step2.png using Guid(58e69f374fc42b248bdcbbaea7fa0972) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7322626d44a6475597b5458176035dc4') in 0.123162 seconds
+  Import took 0.131464 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000714 seconds.
+  path: Assets/Rewired/Examples/Shared/Sprites/pointer.png
+  artifactKey: Guid(8f074558a0d80874984ff71650594d39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Examples/Shared/Sprites/pointer.png using Guid(8f074558a0d80874984ff71650594d39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5894d96dd5f4234c693ad0fbb1337cca') in 0.078356 seconds
+  Import took 0.124513 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000439 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchjoystickradialindicator.png
+  artifactKey: Guid(e2a7c169a1de8fb47938b9148cc642e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchjoystickradialindicator.png using Guid(e2a7c169a1de8fb47938b9148cc642e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99d2240692a5f07cb899f9ece249547e') in 0.055690 seconds
+  Import took 0.063878 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000423 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/custom-controller-tilt-hierarchy.png
+  artifactKey: Guid(03de02dd11770864c839ca0a1447c407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/custom-controller-tilt-hierarchy.png using Guid(03de02dd11770864c839ca0a1447c407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b50d425b915bd5fc122c92ace0ba4da') in 0.043586 seconds
+  Import took 0.095491 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000524 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_theme-options.png
+  artifactKey: Guid(82c1d1f784be7344285b6e4c8db671b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_theme-options.png using Guid(82c1d1f784be7344285b6e4c8db671b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fe629064f1eee2df3b43a34ff90b50c') in 0.097087 seconds
+  Import took 0.148638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000449 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_timer-options.png
+  artifactKey: Guid(fb61cd33788faa54ca0d6c567e6d415b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_timer-options.png using Guid(fb61cd33788faa54ca0d6c567e6d415b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05375c6f805156d3ba03d6953879db90') in 0.036770 seconds
+  Import took 0.104222 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000412 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchregion.png
+  artifactKey: Guid(91e52447ead5b8a4d90b79ad1faf84e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchregion.png using Guid(91e52447ead5b8a4d90b79ad1faf84e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18bddf5369e3dd016237e7f3836b40ff') in 0.047127 seconds
+  Import took 0.052725 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000526 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_player-options.png
+  artifactKey: Guid(ad30dc34737cc8443b9340e5ee9484c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_player-options.png using Guid(ad30dc34737cc8443b9340e5ee9484c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59345873a3cb03c445b106e4c200ebc2') in 0.085607 seconds
+  Import took 0.094104 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000477 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Editor/Resources/GrayCheckerBackground.png
+  artifactKey: Guid(18752717825a4bf459596fe9a9b5e19d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Editor/Resources/GrayCheckerBackground.png using Guid(18752717825a4bf459596fe9a9b5e19d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f27be0bc446d2a5fe76cb35e8911d87') in 0.094817 seconds
+  Import took 0.100485 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000400 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/componentcontrols_customcontroller_inspector_search_norimlinked.png
+  artifactKey: Guid(ee9b4c81dfdee674bb9d5b402f13d555) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/componentcontrols_customcontroller_inspector_search_norimlinked.png using Guid(ee9b4c81dfdee674bb9d5b402f13d555) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0de2dfbb5a00fbc9b5c68a0e4a72c640') in 0.060108 seconds
+  Import took 0.078304 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000401 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/settings_120_001.gif
+  artifactKey: Guid(961c1668dcf350241bf74a306799ed28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/settings_120_001.gif using Guid(961c1668dcf350241bf74a306799ed28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eae78753db85e669305f20242c01a57a') in 0.083542 seconds
+  Import took 0.107785 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000513 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/rewiredstandaloneinputmodule_inspector_playermice.png
+  artifactKey: Guid(ff5a8105ff895ad40ae562a17548c2aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/rewiredstandaloneinputmodule_inspector_playermice.png using Guid(ff5a8105ff895ad40ae562a17548c2aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b31805414fe4913e1ed95d1d66279136') in 0.089110 seconds
+  Import took 0.097384 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000393 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_theme1.png
+  artifactKey: Guid(0b7b58281f6f1d54a9abfd18c31c70e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_theme1.png using Guid(0b7b58281f6f1d54a9abfd18c31c70e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f498353e4bab325a584cf34bb0859aae') in 0.076451 seconds
+  Import took 0.082381 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000543 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/inputmanager_inspector_debug_info.png
+  artifactKey: Guid(7d51c20998d44cd4c8dffcd7c78d5d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/inputmanager_inspector_debug_info.png using Guid(7d51c20998d44cd4c8dffcd7c78d5d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2a28a83ed2e28719ef25b3b884f9e52') in 0.060686 seconds
+  Import took 0.068707 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000388 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio crouch.png
+  artifactKey: Guid(b116dc836b0630e49b1a6eeba80a9df2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio crouch.png using Guid(b116dc836b0630e49b1a6eeba80a9df2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45a2b85ff6b032e0ae2fcaf4e6738e16') in 0.105180 seconds
+  Import took 0.120547 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000528 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_set-material.png
+  artifactKey: Guid(eed4ed9017588004684c2a82ec68408d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_set-material.png using Guid(eed4ed9017588004684c2a82ec68408d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b65333a1c9558a046af10b4274a8b97b') in 0.100003 seconds
+  Import took 0.106222 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000405 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/menu_120_002.png
+  artifactKey: Guid(0a169343d41744d4eadafd920beb57a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/menu_120_002.png using Guid(0a169343d41744d4eadafd920beb57a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3387e3acf37b4c6c1f1832685819447') in 0.136179 seconds
+  Import took 0.151913 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000440 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_rewiredinputmanager_uiactions.png
+  artifactKey: Guid(fd956708e8bb77a438f04dbcc89c0e7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_rewiredinputmanager_uiactions.png using Guid(fd956708e8bb77a438f04dbcc89c0e7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea8bee9697cfdfba0c1256ece54e14da') in 0.040005 seconds
+  Import took 0.049014 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000431 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchcontroller_create_rimlinked.png
+  artifactKey: Guid(dd50ad5bd7e7c0f4b942a487fd0bd8f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchcontroller_create_rimlinked.png using Guid(dd50ad5bd7e7c0f4b942a487fd0bd8f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c78b4f808343701e9ee9d110dd2b48da') in 0.056474 seconds
+  Import took 0.062230 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000394 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio jump kick.png
+  artifactKey: Guid(9754f1049d21cf44887301651c6eab19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/Demo/Sprites/mustachio jump kick.png using Guid(9754f1049d21cf44887301651c6eab19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '666686a5bfbf608a8bc327fcb1d71144') in 0.134093 seconds
+  Import took 0.139219 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000485 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_screen1.png
+  artifactKey: Guid(6faf90332b9cd02418d23723eddea516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_screen1.png using Guid(6faf90332b9cd02418d23723eddea516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19ebcf4ef0bab3d42cba311b4da42cd1') in 0.052999 seconds
+  Import took 0.131081 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000508 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/rewiredstandaloneinputmodule_inspector.png
+  artifactKey: Guid(0180d6cb3e5716b4a8339b1fd548f727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/rewiredstandaloneinputmodule_inspector.png using Guid(0180d6cb3e5716b4a8339b1fd548f727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c7e3850cc72b70a2596e301365c7852') in 0.072763 seconds
+  Import took 0.081073 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000395 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/icon-template-flight-yoke.png
+  artifactKey: Guid(0df3bdf615563f641a4db3b1bf5e85b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/icon-template-flight-yoke.png using Guid(0df3bdf615563f641a4db3b1bf5e85b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5df1277c8c61e4a61f61821e6eaa84a3') in 0.072716 seconds
+  Import took 0.098929 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000396 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_setup-cc-3.png
+  artifactKey: Guid(efa55a675bd67a14b81ec23df69330db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_setup-cc-3.png using Guid(efa55a675bd67a14b81ec23df69330db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '902dbfbc24ff2b8ee420decb1bc4db3a') in 0.107793 seconds
+  Import took 0.113402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000396 seconds.
+  path: Assets/Rewired/Examples/GamepadTemplateUI/Images/d-pad.png
+  artifactKey: Guid(0f7d3b0a2a0999c458e31af2297bf330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Examples/GamepadTemplateUI/Images/d-pad.png using Guid(0f7d3b0a2a0999c458e31af2297bf330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2c7e9f489d21cd558b7aa160a5c1900') in 0.149859 seconds
+  Import took 0.181633 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000406 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_element-assignment-options.png
+  artifactKey: Guid(628afaa762d96574a99405c9edc9380d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/controlmapper_inspector_element-assignment-options.png using Guid(628afaa762d96574a99405c9edc9380d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f09ff15f28411b5e269147457759d05') in 0.048184 seconds
+  Import took 0.054239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000416 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/timeline_120_001.png
+  artifactKey: Guid(46601c1e901fb8644868e8584891ddb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/timeline_120_001.png using Guid(46601c1e901fb8644868e8584891ddb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3aaf09fb1219d1cb49b39bd7b5e05c1') in 0.110451 seconds
+  Import took 0.115703 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000409 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/rewirededitor_mapenablerrules_properties.png
+  artifactKey: Guid(05c893ff359979e469fb9f27e1bbca93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/rewirededitor_mapenablerrules_properties.png using Guid(05c893ff359979e469fb9f27e1bbca93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2db85535b6af18d3c2b8032d321ff944') in 0.132282 seconds
+  Import took 0.138953 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000428 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/timeline_120_003.gif
+  artifactKey: Guid(ce51800082fb7b043a3221a507cf786e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/timeline_120_003.gif using Guid(ce51800082fb7b043a3221a507cf786e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b37839b4f0c1bf6e70f3ac50d9835553') in 0.099983 seconds
+  Import took 0.107400 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000402 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/icon-template-hotas.png
+  artifactKey: Guid(45027e2aa8ea4ca4da9165a47e744c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/icon-template-hotas.png using Guid(45027e2aa8ea4ca4da9165a47e744c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a0ea080a8928a4c768f870ff3fdeff2') in 0.048942 seconds
+  Import took 0.054263 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000416 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Images/icon-joystick.png
+  artifactKey: Guid(0c9ce4e64fb83764aa394faeeed56210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Extras/ControlMapper/Images/icon-joystick.png using Guid(0c9ce4e64fb83764aa394faeeed56210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e28469b8fa59cf106d17a705cc4e8d1') in 0.086059 seconds
+  Import took 0.139865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000507 seconds.
+  path: Assets/Rewired/Examples/GamepadTemplateUI/Images/controller-body-top.png
+  artifactKey: Guid(0925577a202e6af4a9b679d59b97d255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Examples/GamepadTemplateUI/Images/controller-body-top.png using Guid(0925577a202e6af4a9b679d59b97d255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e50d276eb6a2fe8ffdaa2ca47043570') in 0.100633 seconds
+  Import took 0.119909 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000390 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/integration_bolt_assemblyoptions.png
+  artifactKey: Guid(31e22a850010fbe4e8fc67172224c7d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/integration_bolt_assemblyoptions.png using Guid(31e22a850010fbe4e8fc67172224c7d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab9fa4492b0128f25bf3bc8cd75b7165') in 0.062543 seconds
+  Import took 0.069563 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000508 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchjoystick-touch-region-tut-step4.png
+  artifactKey: Guid(c29f6d21062ae8a409ee430b9c0434fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/touchcontrols_inspector_touchjoystick-touch-region-tut-step4.png using Guid(c29f6d21062ae8a409ee430b9c0434fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8087c056aeadc2fa3dbd9d427e91ed9') in 0.043870 seconds
+  Import took 0.076382 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000423 seconds.
+  path: Assets/Rewired/Documentation/Html/files/images/icon-template-flight-pedals.png
+  artifactKey: Guid(40cfc617ed8b7cf438b22b67a4805861) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rewired/Documentation/Html/files/images/icon-template-flight-pedals.png using Guid(40cfc617ed8b7cf438b22b67a4805861) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3382f95e103625896f9f9d04fbe21604') in 0.037931 seconds
+  Import took 0.065849 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000418 seconds.
+  path: Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/timeline_120_004.gif
+  artifactKey: Guid(a16532a354ce06f4693e7dd35cdc94e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackGardenStudios/HitboxStudioPro/User Guide/userguide_files/timeline_120_004.gif using Guid(a16532a354ce06f4693e7dd35cdc94e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90e7e7851173ddb10bac666a356fc6b7') in 0.113999 seconds
+  Import took 0.180948 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.005580 seconds.
+Registered in 0.005480 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.161 seconds
+- Completed reload, in  1.182 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2957 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 126.4 MB.
-System memory in use after: 126.5 MB.
+System memory in use before: 130.8 MB.
+System memory in use after: 131.0 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3512.
-Total: 4.813100 ms (FindLiveObjects: 0.359600 ms CreateObjectMapping: 0.184300 ms MarkObjects: 3.977300 ms  DeleteObjects: 0.290600 ms)
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3738.
+Total: 4.173900 ms (FindLiveObjects: 0.717300 ms CreateObjectMapping: 0.311000 ms MarkObjects: 2.950300 ms  DeleteObjects: 0.193600 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.005528 seconds.
+Registered in 0.189109 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.114 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2957 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 130.9 MB.
+System memory in use after: 131.0 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3741.
+Total: 3.298000 ms (FindLiveObjects: 0.410400 ms CreateObjectMapping: 0.320600 ms MarkObjects: 2.416100 ms  DeleteObjects: 0.149800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005608 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.129 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2957 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 130.9 MB.
+System memory in use after: 131.0 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3744.
+Total: 3.951700 ms (FindLiveObjects: 0.361900 ms CreateObjectMapping: 0.174300 ms MarkObjects: 3.291800 ms  DeleteObjects: 0.122500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005095 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.113 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2957 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 131.0 MB.
+System memory in use after: 131.1 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3747.
+Total: 3.452200 ms (FindLiveObjects: 0.661700 ms CreateObjectMapping: 0.284500 ms MarkObjects: 2.351700 ms  DeleteObjects: 0.153200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005541 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.172 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2957 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 131.0 MB.
+System memory in use after: 131.1 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3750.
+Total: 2.742500 ms (FindLiveObjects: 0.429800 ms CreateObjectMapping: 0.165700 ms MarkObjects: 1.885600 ms  DeleteObjects: 0.260500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005572 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.126 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.05 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2957 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 131.0 MB.
+System memory in use after: 131.1 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3753.
+Total: 3.219200 ms (FindLiveObjects: 0.344700 ms CreateObjectMapping: 0.185700 ms MarkObjects: 2.531300 ms  DeleteObjects: 0.156400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005313 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
@@ -136,100 +1786,42 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.358 seconds
+- Completed reload, in  1.054 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2957 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 126.5 MB.
-System memory in use after: 126.6 MB.
+System memory in use before: 131.0 MB.
+System memory in use after: 131.1 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3515.
-Total: 3.414600 ms (FindLiveObjects: 0.339200 ms CreateObjectMapping: 0.174200 ms MarkObjects: 2.770100 ms  DeleteObjects: 0.130000 ms)
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3756.
+Total: 4.479600 ms (FindLiveObjects: 0.751900 ms CreateObjectMapping: 0.241600 ms MarkObjects: 3.338700 ms  DeleteObjects: 0.144600 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.005933 seconds.
+Registered in 0.005448 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.78 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.350 seconds
+- Completed reload, in  1.100 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.78 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2957 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 126.5 MB.
-System memory in use after: 126.6 MB.
+System memory in use before: 131.0 MB.
+System memory in use after: 131.1 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3518.
-Total: 3.302300 ms (FindLiveObjects: 0.448300 ms CreateObjectMapping: 0.242900 ms MarkObjects: 2.452900 ms  DeleteObjects: 0.156700 ms)
-
-========================================================================
-Received Prepare
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 5.18 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 68.6 MB.
-System memory in use after: 68.7 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 3518.
-Total: 3.114100 ms (FindLiveObjects: 0.652800 ms CreateObjectMapping: 0.272200 ms MarkObjects: 2.011000 ms  DeleteObjects: 0.176200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005589 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 19.05 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.960 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2957 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 126.5 MB.
-System memory in use after: 126.6 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3521.
-Total: 3.996900 ms (FindLiveObjects: 0.430000 ms CreateObjectMapping: 0.194400 ms MarkObjects: 3.176300 ms  DeleteObjects: 0.194600 ms)
-
-========================================================================
-Received Prepare
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 5.48 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 68.6 MB.
-System memory in use after: 68.7 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 3521.
-Total: 2.960700 ms (FindLiveObjects: 0.327300 ms CreateObjectMapping: 0.155700 ms MarkObjects: 2.306100 ms  DeleteObjects: 0.170400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 403.612256 seconds.
-  path: Assets/Scenes/SampleScene.unity
-  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '709747ac962673ab5b16e669a9755bb9') in 0.017508 seconds
-  Import took 0.023512 seconds .
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3759.
+Total: 3.506900 ms (FindLiveObjects: 0.441400 ms CreateObjectMapping: 0.312800 ms MarkObjects: 2.634100 ms  DeleteObjects: 0.117200 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
