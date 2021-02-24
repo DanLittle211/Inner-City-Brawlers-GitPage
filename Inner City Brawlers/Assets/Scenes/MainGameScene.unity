@@ -1797,7 +1797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 170853782}
   maxHealth: 500
-  currentHealth: 0
+  currentHealth: 500
   currentRecovHealth: 0
   gradient:
     serializedVersion: 2
@@ -3102,6 +3102,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf12fd399adb8146a1fbc9ba801b96f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  p1Health: {fileID: 1649239957}
+  p2Health: {fileID: 470878395}
+  p1HealthFloat: 0
+  p2HealthFloat: 0
+  p1CAMeterfloat: 0
+  p1CAMeterMaxfloat: 5
+  p1CAMeter: {fileID: 1499647822}
+  p1CaIsFull: 0
+  p2CAMeterfloat: 0
+  p2CAMeterMaxfloat: 5
+  p2CAMeter: {fileID: 1442451404}
+  p2CaIsFull: 0
   currentTimerInt: 0
   maxTimerInt: 99
   TimerText: {fileID: 1465969646}
@@ -5342,7 +5354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 945356720}
   maxHealth: 500
-  currentHealth: 0
+  currentHealth: 500
   currentRecovHealth: 0
   gradient:
     serializedVersion: 2

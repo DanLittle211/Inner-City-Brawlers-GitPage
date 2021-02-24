@@ -14,10 +14,11 @@ public class PlayerMovement : MonoBehaviour
     public float jumpStrength;
     public float movementSpeed;
 
-    public enum playerState{Grounded, Crouch, Jump, Block, SoftKnockdown, HardKnockdown };
+    public enum playerState{Grounded, Crouch, Jump, Block, SoftKnockdown, HardKnockdown};
 
-    public Rigidbody2D myRB2D;
+    
     playerState currentPlayState;
+    public Rigidbody2D myRB2D;
 
     // Start is called before the first frame update
     void Start()
@@ -102,12 +103,6 @@ public class PlayerMovement : MonoBehaviour
                 myRB2D.AddForce(new Vector2(-movementSpeed, 0), ForceMode2D.Force);
                 Debug.Log("LeftWalk");
             }
-
-            if (Input.GetKey(KeyCode.H))
-            {
-                myRB2D.AddForce(new Vector2(-movementSpeed, 0), ForceMode2D.Force);
-                Debug.Log("LeftWalk");
-            }
         }
     }
     public void P2Movement()
@@ -134,12 +129,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 myRB2D.AddForce(new Vector2(-movementSpeed, 0), ForceMode2D.Force);
                 Debug.Log("LeftWalk2");
-            }
-
-            if (Input.GetKey(KeyCode.J))
-            {
-                myRB2D.AddForce(new Vector2(-movementSpeed, 0), ForceMode2D.Force);
-                Debug.Log("LeftWalk");
             }
         }
     }

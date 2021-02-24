@@ -36,8 +36,8 @@ public class GameManagerScript : MonoBehaviour
         p1HealthFloat = p1Health.currentHealth;
         p2HealthFloat = p2Health.currentHealth;
 
-        SetP1CAMaxMeter(p1CAMeterMaxfloat);
-        SetP2CAMaxMeter(p2CAMeterMaxfloat);
+        SetP1CAMaxMeter(p1CAMeterfloat);
+        SetP2CAMaxMeter(p2CAMeterfloat);
 
         currentTimerInt = maxTimerInt;
     }
@@ -50,6 +50,17 @@ public class GameManagerScript : MonoBehaviour
         if (p1HealthFloat <= 0 || p2HealthFloat <= 0)
         {
             CheckHealth();
+        }
+
+        if (p1CAMeterfloat >= p1CAMeterMaxfloat)
+        {
+            p1CAMeterfloat = p1CAMeterMaxfloat;
+            p1CaIsFull = true;
+        }
+        if (p2CAMeterfloat >= p2CAMeterMaxfloat)
+        {
+            p2CAMeterfloat = p2CAMeterMaxfloat;
+            p2CaIsFull = true;
         }
     }
     void FixedUpdate()
