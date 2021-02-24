@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
         Fill.color = gradient.Evaluate(slider.normalizedValue);
     }
 
-    void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         currentHealth -= damage;
         Mathf.Round(currentHealth);
@@ -50,9 +50,9 @@ public class PlayerHealth : MonoBehaviour
     {
         if (col.tag == "TempHitBox")
         {
-            TakeDamage(20f);
-            meterSystem.GiveMeter(0.1f);
-            meterSystem.MakeMeter(0.3f);
+            //TakeDamage(20f);
+            //meterSystem.p2MakeMeter(0.1f);
+            //meterSystem.p1MakeMeter(0.3f);
             Debug.Log("Hit hitbox");
         }
     }

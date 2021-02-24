@@ -27,13 +27,13 @@ public class MeterSystem : MonoBehaviour
         ResetP2Meter();
     }
 
-    public void MakeMeter(float miPoint) // miPoint = meter increase point
+    public void p1MakeMeter(float miPoint) // miPoint = meter increase point
     {
         p1CurrentMeter += miPoint;
         SetP1Meter(p1CurrentMeter);
 
     }
-    public void GiveMeter(float miPoint) // miPoint = meter increase point
+    public void p2MakeMeter(float miPoint) // miPoint = meter increase point
     {
         p2CurrentMeter += miPoint;
         SetP2Meter(p2CurrentMeter);

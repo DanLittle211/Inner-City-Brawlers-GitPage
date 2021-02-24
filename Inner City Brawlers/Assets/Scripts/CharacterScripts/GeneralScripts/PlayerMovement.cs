@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpStrength;
     public float movementSpeed;
 
-    public enum playerState{Grounded, Crouch, Jump, Block, SoftKnockdown, HardKnockdown};
+    public enum playerState{Grounded, Crouch, Jump, Block, SoftKnockdown, HardKnockdown, Defeated, Paused, RoundOver};
 
     
     playerState currentPlayState;

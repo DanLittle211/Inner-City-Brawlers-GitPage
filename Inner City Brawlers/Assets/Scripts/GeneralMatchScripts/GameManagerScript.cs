@@ -16,14 +16,18 @@ public class GameManagerScript : MonoBehaviour
     public float p1CAMeterfloat;
     public float p1CAMeterMaxfloat = 5f;
     public Slider p1CAMeter;
+    public Image p1CAFill;
     public bool p1CaIsFull;
+    public Gradient p1CaGradient;
 
     public float p2CAMeterfloat;
     public float p2CAMeterMaxfloat = 5f;
     public Slider p2CAMeter;
+    public Image p2CAFill;
     public bool p2CaIsFull;
+    public Gradient p2CaGradient;
 
-    
+
 
     //Timer Variable
     public float currentTimerInt;
@@ -36,8 +40,11 @@ public class GameManagerScript : MonoBehaviour
         p1HealthFloat = p1Health.currentHealth;
         p2HealthFloat = p2Health.currentHealth;
 
-        SetP1CAMaxMeter(p1CAMeterfloat);
-        SetP2CAMaxMeter(p2CAMeterfloat);
+        p1CAMeterfloat = p1CAMeterMaxfloat;
+        SetP1CaMeter(p1CAMeterfloat);
+
+        p2CAMeterfloat = p1CAMeterMaxfloat;
+        SetP2CaMeter(p1CAMeterfloat);
 
         currentTimerInt = maxTimerInt;
     }
@@ -45,11 +52,29 @@ public class GameManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        CheckHealth();
+        p1HealthFloat = p1Health.currentHealth;
+        p2HealthFloat = p2Health.currentHealth;
+
         if (p1HealthFloat <= 0 || p2HealthFloat <= 0)
         {
+            CheckWinner();
+        }
+        else
+        {
             CheckHealth();
+        }
+
+    }
+    void FixedUpdate()
+    {
+        
+        if (currentTimerInt <= 0)
+        {
+            TimerText.text = "Round Over";
+        }
+        else if (p1HealthFloat > 0 || p2HealthFloat > 0)
+        {
+            timerTickDown();
         }
 
         if (p1CAMeterfloat >= p1CAMeterMaxfloat)
@@ -57,57 +82,54 @@ public class GameManagerScript : MonoBehaviour
             p1CAMeterfloat = p1CAMeterMaxfloat;
             p1CaIsFull = true;
         }
+        else
+        {
+            fillUp();
+            p1CaIsFull = false;
+        }
         if (p2CAMeterfloat >= p2CAMeterMaxfloat)
         {
             p2CAMeterfloat = p2CAMeterMaxfloat;
             p2CaIsFull = true;
         }
-    }
-    void FixedUpdate()
-    {
-        timerTickDown();
-        if (currentTimerInt <= 0)
-        {
-            TimerText.text = "Round Over";
-        }
-
-        if (p1CaIsFull == false || p2CaIsFull == false)
+        else
         {
             fillUp();
+            p2CaIsFull = false;
         }
     }
 
     public void CheckHealth()
     {
-        if (p1HealthFloat > 0 && p2HealthFloat > 0)
+        if (p2HealthFloat == p1HealthFloat)
         {
-            if (p1HealthFloat >= p2HealthFloat)
-            {
-                Debug.Log("Player 1 is winning");
-            }
-            if (p2HealthFloat >= p1HealthFloat)
-            {
-                Debug.Log("Player 2 is winning");
-            }
-            if (p2HealthFloat == p1HealthFloat)
-            {
-                Debug.Log("Players are equal");
-            }
+            Debug.Log("Players are equal");
         }
-        else if (p1HealthFloat <= 0 || p2HealthFloat <= 0)
+        else if (p1HealthFloat >= p2HealthFloat)
         {
-            if (p1HealthFloat >= p2HealthFloat)
-            {
-                Debug.Log("Player 1 Wins!");
-            }
-            if (p2HealthFloat >= p1HealthFloat)
-            {
-                Debug.Log("Player 2 Wins!");
-            }
-            if (p2HealthFloat == p1HealthFloat)
-            {
-                Debug.Log("Draw!!");
-            }
+            Debug.Log("Player 1 is winning");
+        }
+
+        else if (p2HealthFloat >= p1HealthFloat)
+        {
+            Debug.Log("Player 2 is winning");
+        }
+
+       
+    }
+    public void CheckWinner()
+    {
+        if (p2HealthFloat == p1HealthFloat)
+        {
+            Debug.Log("Draw!!");
+        }
+        else if (p1HealthFloat >= p2HealthFloat)
+        {
+            Debug.Log("Player 1 Wins!");
+        }
+        else if (p2HealthFloat >= p1HealthFloat)
+        {
+            Debug.Log("Player 2 Wins!");
         }
     }
     //In Game timer Manager
@@ -119,20 +141,26 @@ public class GameManagerScript : MonoBehaviour
 
     public void fillUp()
     {
-        p1CAMakeMeter(0.1f);
-        p2CAMakeMeter(0.1f);
+        p1CAMakeMeter(0.005f);
+        p2CAMakeMeter(0.005f);
     }
 
     public void useP1CaAssist()
     {
-        Debug.Log("P1 Assist Called");
-        ResetP1CAMeter();
+        if (p1CaIsFull == true)
+        {
+            Debug.Log("P1 Assist Called");
+            ResetP1CAMeter();
+        }
     }
 
     public void useP2CaAssist()
     {
-        Debug.Log("P2 Assist Called");
-        ResetP2CAMeter();
+        if (p2CaIsFull == true)
+        {
+            Debug.Log("P2 Assist Called");
+            ResetP2CAMeter();
+        }
     }
 
    //Callout Assist Meter functions
@@ -140,38 +168,43 @@ public class GameManagerScript : MonoBehaviour
     {
         p1CAMeter.maxValue = p2CAMeterfloat;
         p1CAMeter.value = p2CAMeterfloat;
+        p1CAFill.color = p1CaGradient.Evaluate(p1CAMeter.normalizedValue);
+        p1CaGradient.Evaluate(1f);
 
-       
+
     }
     public void SetP2CAMaxMeter(float MaxMeter)
     {
         p2CAMeter.maxValue = p2CAMeterfloat;
         p2CAMeter.value = p2CAMeterfloat;
+        p2CAFill.color = p2CaGradient.Evaluate(p2CAMeter.normalizedValue);
+        p2CaGradient.Evaluate(1f);
 
-       
     }
     public void p1CAMakeMeter(float miPoint) // miPoint = meter increase point
     {
         p1CAMeterfloat += miPoint;
-        SetP1Meter(p1CAMeterfloat);
+        SetP1CaMeter(p1CAMeterfloat);
 
     }
     public void p2CAMakeMeter(float miPoint) // miPoint = meter increase point
     {
         p2CAMeterfloat += miPoint;
-        SetP2Meter(p2CAMeterfloat);
+        SetP2CaMeter(p2CAMeterfloat);
 
     }
 
-    public void SetP1Meter(float Meter)
+    public void SetP1CaMeter(float Meter)
     {
         p1CAMeter.value = p1CAMeterfloat;
-        
+        p1CAFill.color = p1CaGradient.Evaluate(p1CAMeter.normalizedValue);
+        p1CaGradient.Evaluate(1f);
     }
-    public void SetP2Meter(float Meter)
+    public void SetP2CaMeter(float Meter)
     {
         p2CAMeter.value = p2CAMeterfloat;
-       
+        p2CAFill.color = p2CaGradient.Evaluate(p2CAMeter.normalizedValue);
+        p2CaGradient.Evaluate(1f);
     }
     public void ResetP1CAMeter()
     {
