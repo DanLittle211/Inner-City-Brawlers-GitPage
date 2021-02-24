@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 public class CallOutAssist : MonoBehaviour
-{   [Header("Bool Controllers")]
+    
+{
+    [Header("Bool Controllers")]
     public bool AssistAllowed;//Tracks if the option is toggled On or Off
     public bool oneTime;//Allows spawning of item when true
+    //temporary for testing
+    private void Awake()
+    {
+        AssistAllowed = true;
+    }
     void Update()
     {
         //If the Assist is set to be ON the E-key will be available to instantiate the random item to assist the player
