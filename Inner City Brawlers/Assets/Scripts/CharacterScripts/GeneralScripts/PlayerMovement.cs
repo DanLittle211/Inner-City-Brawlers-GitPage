@@ -42,10 +42,37 @@ public class PlayerMovement : MonoBehaviour
         if (isP1 == true)
         {
             P1Movement();
+            P1Buttons();
         }
         if (isP2 == true)
         {
             P2Movement();
+            P2Buttons();
+        }
+    }
+
+    public void P1Buttons()
+    {
+        if (currentPlayState == playerState.Grounded)
+        {
+            if (Input.GetKeyDown(KeyCode.H))
+            {
+                GameObject.FindGameObjectsWithTag("GameManager");
+                //useP1CaAssist();
+                Debug.Log("Jump " + currentPlayState);
+            }
+        }
+    }
+    public void P2Buttons()
+    {
+        if (currentPlayState == playerState.Grounded)
+        {
+            if (Input.GetKey(KeyCode.J))
+            {
+                GameObject.FindGameObjectsWithTag("GameManager");
+                //useP2CaAssist();
+                Debug.Log("LeftWalk");
+            }
         }
     }
 
@@ -69,6 +96,12 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("RightWalk");
             }
             if (Input.GetKey(KeyCode.A))
+            {
+                myRB2D.AddForce(new Vector2(-movementSpeed, 0), ForceMode2D.Force);
+                Debug.Log("LeftWalk");
+            }
+
+            if (Input.GetKey(KeyCode.H))
             {
                 myRB2D.AddForce(new Vector2(-movementSpeed, 0), ForceMode2D.Force);
                 Debug.Log("LeftWalk");
@@ -99,6 +132,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 myRB2D.AddForce(new Vector2(-movementSpeed, 0), ForceMode2D.Force);
                 Debug.Log("LeftWalk2");
+            }
+
+            if (Input.GetKey(KeyCode.J))
+            {
+                myRB2D.AddForce(new Vector2(-movementSpeed, 0), ForceMode2D.Force);
+                Debug.Log("LeftWalk");
             }
         }
     }
