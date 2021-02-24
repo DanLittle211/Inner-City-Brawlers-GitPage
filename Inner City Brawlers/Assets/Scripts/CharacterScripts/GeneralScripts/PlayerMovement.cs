@@ -57,8 +57,9 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.H))
             {
-                GameObject.FindGameObjectsWithTag("GameManager");
-                //useP1CaAssist();
+                GameObject gameManager = GameObject.Find("GameManager");
+                GameManagerScript gM = (GameManagerScript) gameManager.GetComponent(typeof(GameManagerScript));
+                gM.useP1CaAssist();
                 Debug.Log("Jump " + currentPlayState);
             }
         }
@@ -69,8 +70,9 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.J))
             {
-                GameObject.FindGameObjectsWithTag("GameManager");
-                //useP2CaAssist();
+                GameObject gameManager = GameObject.Find("GameManager");
+                GameManagerScript gM = (GameManagerScript)gameManager.GetComponent(typeof(GameManagerScript));
+                gM.useP2CaAssist();
                 Debug.Log("LeftWalk");
             }
         }
