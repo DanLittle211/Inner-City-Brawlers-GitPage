@@ -24,8 +24,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         myRB2D = GetComponent<Rigidbody2D>();
-
-        
         if (isP1 == true)
         {
             currentPlayState = playerState.Grounded;
@@ -91,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.S))
             {
                 currentPlayState = playerState.Crouch;
-                Debug.Log("Crouch2 " + currentPlayState);
+                Debug.Log("Crouch " + currentPlayState);
             }
             if (Input.GetKey(KeyCode.D))
             {

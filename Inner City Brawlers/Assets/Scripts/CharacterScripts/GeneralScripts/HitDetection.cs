@@ -8,7 +8,7 @@ public class HitDetection : MonoBehaviour
     {
         if (col.tag == "Player1")
         {
-            GameObject playerHealth = GameObject.Find("P1");
+            GameObject playerHealth = GameObject.Find("Player1");
             PlayerHealth pH = (PlayerHealth)playerHealth.GetComponent(typeof(PlayerHealth));
             pH.TakeDamage(20f);
 
@@ -22,7 +22,7 @@ public class HitDetection : MonoBehaviour
 
         if (col.tag == "Player2")
         {
-            GameObject playerHealth = GameObject.Find("P2");
+            GameObject playerHealth = GameObject.Find("Player2");
             PlayerHealth pH = (PlayerHealth)playerHealth.GetComponent(typeof(PlayerHealth));
             pH.TakeDamage(20f);
 

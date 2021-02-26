@@ -395,6 +395,144 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48141539}
   m_CullTransparentMesh: 1
+--- !u!1 &61049163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 61049164}
+  - component: {fileID: 61049167}
+  - component: {fileID: 61049166}
+  - component: {fileID: 61049165}
+  - component: {fileID: 61049168}
+  m_Layer: 0
+  m_Name: Player2
+  m_TagString: Player2
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &61049164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61049163}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.22, y: -1.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 470878391}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &61049165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61049163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e7aff4d3926f64a8a432efde9c3e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 170853782}
+  maxHealth: 500
+  currentHealth: 500
+  currentRecovHealth: 0
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0.7075472, g: 0.04271979, b: 0.04271979, a: 1}
+    key1: {r: 0.8207547, g: 0.34078962, b: 0.08052685, a: 1}
+    key2: {r: 0.41176474, g: 0.6509804, b: 0.25490198, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 771
+    ctime1: 12529
+    ctime2: 24479
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  Fill: {fileID: 1799897081}
+  meterSystem: {fileID: 1100499574}
+  blueHealthFill: {fileID: 1307565422}
+--- !u!114 &61049166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61049163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 212234448d69b654bae75c452b314a7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundCheck: {fileID: 2030056160}
+  isP1: 0
+  isP2: 1
+  isGrounded: 0
+  jumpStrength: 20
+  movementSpeed: 4
+  myRB2D: {fileID: 61049167}
+--- !u!50 &61049167
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61049163}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 1
+  m_AngularDrag: 0.1
+  m_GravityScale: 3.5
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &61049168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61049163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5d61b215bff93b41904911adf5e3620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1Transform: {fileID: 1517586323}
+  player2Transform: {fileID: 61049164}
+  isFlipped: 0
 --- !u!1 &92550579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,9 +1790,6 @@ GameObject:
   - component: {fileID: 470878391}
   - component: {fileID: 470878390}
   - component: {fileID: 470878393}
-  - component: {fileID: 470878392}
-  - component: {fileID: 470878394}
-  - component: {fileID: 470878395}
   m_Layer: 0
   m_Name: P2
   m_TagString: Player2
@@ -1720,37 +1855,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 470878389}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.57, y: -1.32, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.4164299, y: 3.628918, z: 1.0274417}
   m_Children:
   - {fileID: 2030056161}
   - {fileID: 1141869626}
   - {fileID: 1410812303}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 61049164}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &470878392
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 470878389}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 0.1
-  m_GravityScale: 3.5
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!61 &470878393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1777,73 +1891,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &470878394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 470878389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 212234448d69b654bae75c452b314a7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundCheck: {fileID: 2030056160}
-  isP1: 0
-  isP2: 1
-  isGrounded: 0
-  jumpStrength: 20
-  movementSpeed: 4
-  myRB2D: {fileID: 470878392}
---- !u!114 &470878395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 470878389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3e7aff4d3926f64a8a432efde9c3e0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 170853782}
-  maxHealth: 500
-  currentHealth: 500
-  currentRecovHealth: 0
-  gradient:
-    serializedVersion: 2
-    key0: {r: 0.7075472, g: 0.04271979, b: 0.04271979, a: 1}
-    key1: {r: 0.8207547, g: 0.34078962, b: 0.08052685, a: 1}
-    key2: {r: 0.41176474, g: 0.6509804, b: 0.25490198, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 771
-    ctime1: 12529
-    ctime2: 24479
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_NumColorKeys: 3
-    m_NumAlphaKeys: 2
-  Fill: {fileID: 1799897081}
-  meterSystem: {fileID: 1100499574}
-  blueHealthFill: {fileID: 1307565422}
 --- !u!1 &481663407
 GameObject:
   m_ObjectHideFlags: 0
@@ -3128,8 +3175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf12fd399adb8146a1fbc9ba801b96f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  p1Health: {fileID: 1649239957}
-  p2Health: {fileID: 470878395}
+  p1Health: {fileID: 1517586324}
+  p2Health: {fileID: 61049165}
   p1HealthFloat: 0
   p2HealthFloat: 0
   p1CAMeterfloat: 0
@@ -4921,6 +4968,144 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514333105}
   m_CullTransparentMesh: 1
+--- !u!1 &1517586322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1517586323}
+  - component: {fileID: 1517586326}
+  - component: {fileID: 1517586325}
+  - component: {fileID: 1517586324}
+  - component: {fileID: 1517586327}
+  m_Layer: 0
+  m_Name: Player1
+  m_TagString: Player1
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1517586323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517586322}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.2, y: -1.48, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1649239953}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1517586324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517586322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e7aff4d3926f64a8a432efde9c3e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 945356720}
+  maxHealth: 500
+  currentHealth: 500
+  currentRecovHealth: 0
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0.7075472, g: 0.04271979, b: 0.04271979, a: 1}
+    key1: {r: 0.8207547, g: 0.34078962, b: 0.08052685, a: 1}
+    key2: {r: 0.41176474, g: 0.6509804, b: 0.25490198, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 771
+    ctime1: 12529
+    ctime2: 24479
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  Fill: {fileID: 1224826122}
+  meterSystem: {fileID: 1100499574}
+  blueHealthFill: {fileID: 416799730}
+--- !u!114 &1517586325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517586322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 212234448d69b654bae75c452b314a7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundCheck: {fileID: 1586933310}
+  isP1: 1
+  isP2: 0
+  isGrounded: 0
+  jumpStrength: 20
+  movementSpeed: 4
+  myRB2D: {fileID: 1517586326}
+--- !u!50 &1517586326
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517586322}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 1
+  m_AngularDrag: 0.1
+  m_GravityScale: 3.5
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &1517586327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517586322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5d61b215bff93b41904911adf5e3620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1Transform: {fileID: 1517586323}
+  player2Transform: {fileID: 61049164}
+  isFlipped: 0
 --- !u!1 &1571612286
 GameObject:
   m_ObjectHideFlags: 0
@@ -5055,7 +5240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586933310}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.627, z: 180}
+  m_LocalPosition: {x: 0, y: -0.6165, z: 180}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1649239953}
@@ -5281,10 +5466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1649239953}
   - component: {fileID: 1649239952}
-  - component: {fileID: 1649239955}
   - component: {fileID: 1649239954}
-  - component: {fileID: 1649239956}
-  - component: {fileID: 1649239957}
   m_Layer: 0
   m_Name: P1
   m_TagString: Player1
@@ -5350,38 +5532,17 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649239951}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.49, y: -1.32, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.4164299, y: 3.628918, z: 1.0274417}
   m_Children:
   - {fileID: 1586933311}
   - {fileID: 1872370020}
   - {fileID: 1183473053}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1517586323}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1649239954
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649239951}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 0.1
-  m_GravityScale: 3.5
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &1649239955
+--- !u!61 &1649239954
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5407,73 +5568,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1649239956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649239951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 212234448d69b654bae75c452b314a7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundCheck: {fileID: 1586933310}
-  isP1: 1
-  isP2: 0
-  isGrounded: 0
-  jumpStrength: 20
-  movementSpeed: 4
-  myRB2D: {fileID: 1649239954}
---- !u!114 &1649239957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649239951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3e7aff4d3926f64a8a432efde9c3e0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 945356720}
-  maxHealth: 500
-  currentHealth: 500
-  currentRecovHealth: 0
-  gradient:
-    serializedVersion: 2
-    key0: {r: 0.7075472, g: 0.04271979, b: 0.04271979, a: 1}
-    key1: {r: 0.8207547, g: 0.34078962, b: 0.08052685, a: 1}
-    key2: {r: 0.41176474, g: 0.6509804, b: 0.25490198, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 771
-    ctime1: 12529
-    ctime2: 24479
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_NumColorKeys: 3
-    m_NumAlphaKeys: 2
-  Fill: {fileID: 1224826122}
-  meterSystem: {fileID: 1100499574}
-  blueHealthFill: {fileID: 416799730}
 --- !u!1 &1686037729
 GameObject:
   m_ObjectHideFlags: 0
@@ -6581,7 +6675,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030056160}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.608, z: 0}
+  m_LocalPosition: {x: 0, y: -0.6022, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 470878391}
