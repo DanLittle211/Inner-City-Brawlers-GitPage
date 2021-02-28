@@ -11,12 +11,13 @@ public class DirectionLook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isFlipped = false;
+        isFlipped = false;    
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+
         if (player1Transform.position.x >= player2Transform.position.x)
         { 
             flipPlayer1();
@@ -32,7 +33,6 @@ public class DirectionLook : MonoBehaviour
     private void flipPlayer1()
     {
         isFlipped = true;
-        //player1RB.rotation = 180f;
         player1Transform.rotation = Quaternion.Euler(0, -180f,0); 
         Debug.Log("flipped p1");
     }
@@ -40,7 +40,6 @@ public class DirectionLook : MonoBehaviour
     {
         isFlipped = true;
         player2Transform.rotation = Quaternion.Euler(0, -180f, 0);
-        //player2RB.rotation = 180f;
         Debug.Log("flipped p2");
     }
 

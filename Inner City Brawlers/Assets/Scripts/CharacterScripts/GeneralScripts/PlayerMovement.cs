@@ -1,143 +1,92 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Rewired;
 public class PlayerMovement : MonoBehaviour
 {
 
     public GameObject groundCheck;
-    public bool isP1;
-    public bool isP2;
     public bool isGrounded;
-
-
+   
     public float jumpStrength;
     public float movementSpeed;
 
     public enum playerState{Grounded, Crouch, Jump, Block, SoftKnockdown, HardKnockdown, Defeated, Paused, RoundOver};
 
     
-    playerState currentPlayState;
+    public playerState currentPlayState;
     public Rigidbody2D myRB2D;
+
+    //Rewired
+    [SerializeField] public int playerID;
+    [SerializeField] private Player player;
+   
 
     // Start is called before the first frame update
     void Start()
     {
         myRB2D = GetComponent<Rigidbody2D>();
-        if (isP1 == true)
-        {
-            currentPlayState = playerState.Grounded;
-        }
-        if (isP2 == true)
-        {
-            currentPlayState = playerState.Grounded;
-        }
-
+        player = ReInput.players.GetPlayer(playerID);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isP1 == true)
-        {
-            P1Movement();
-            P1Buttons();
-        }
-        if (isP2 == true)
-        {
-            P2Movement();
-            P2Buttons();
-        }
-    }
-
-    public void P1Buttons()
-    {
-        if (currentPlayState == playerState.Grounded)
-        {
-            if (Input.GetKeyDown(KeyCode.H))
-            {
-                GameObject gameManager = GameObject.Find("GameManager");
-                GameManagerScript gM = (GameManagerScript) gameManager.GetComponent(typeof(GameManagerScript));
-                gM.useP1CaAssist();
-                Debug.Log("Jump " + currentPlayState);
-            }
-        }
-    }
-    public void P2Buttons()
-    {
-        if (currentPlayState == playerState.Grounded)
-        {
-            if (Input.GetKey(KeyCode.J))
-            {
-                GameObject gameManager = GameObject.Find("GameManager");
-                GameManagerScript gM = (GameManagerScript)gameManager.GetComponent(typeof(GameManagerScript));
-                gM.useP2CaAssist();
-                Debug.Log("LeftWalk");
-            }
-        }
+        P1Movement();
     }
 
     public void P1Movement()
     {
+        float moveHorizontal = player.GetAxis("Move Horizontal");
+        float moveUp = player.GetAxis("Move Up");
+        float moveDown = player.GetAxis("Move Down");
+
         if (currentPlayState == playerState.Grounded)
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            if  (moveUp <= 1 && moveUp > 0.2)
             {
                 JumpFunction();
-                Debug.Log("Jump " + currentPlayState);
+                Debug.Log("Current Player State: " + currentPlayState);
             }
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                currentPlayState = playerState.Crouch;
-                Debug.Log("Crouch " + currentPlayState);
-            }
-            if (Input.GetKey(KeyCode.D))
+
+            if (moveHorizontal <= 1 && moveHorizontal > 0.2)
             {
                 myRB2D.AddForce(new Vector2(movementSpeed, 0), ForceMode2D.Force);
                 Debug.Log("RightWalk");
             }
-            if (Input.GetKey(KeyCode.A))
+            if (-moveHorizontal <= 1 && -moveHorizontal > 0.2)
             {
                 myRB2D.AddForce(new Vector2(-movementSpeed, 0), ForceMode2D.Force);
                 Debug.Log("LeftWalk");
             }
+            else 
+            {
+                currentPlayState = playerState.Grounded;
+                Debug.Log("Current Player State: " + currentPlayState);
+            }
         }
-    }
-    public void P2Movement()
-    {
-        if (currentPlayState == playerState.Grounded)
+        if (-moveDown <= 1 && -moveDown > 0.3)
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            currentPlayState = playerState.Crouch;
+            Debug.Log("Crouch2 " + currentPlayState);
+        }
+        /*if (currentPlayState == playerState.Crouch)
+        {
+            if (moveUp <= 1 && moveUp > 0.2)
             {
                 JumpFunction();
-                Debug.Log("Jump " + currentPlayState);
+                Debug.Log("Current Player State: " + currentPlayState);
             }
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                currentPlayState = playerState.Crouch;
-                Debug.Log("Crouch2 " + currentPlayState);
-
-            }
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                myRB2D.AddForce(new Vector2(movementSpeed, 0), ForceMode2D.Force);
-                Debug.Log("RightWalk2");
-            }
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                myRB2D.AddForce(new Vector2(-movementSpeed, 0), ForceMode2D.Force);
-                Debug.Log("LeftWalk2");
-            }
-        }
+        }*/
     }
+    
     public void JumpFunction()
     {
-        if (isGrounded == true)
+        if (isGrounded == true && Mathf.Abs(myRB2D.velocity.y) < 0.001f)
         {
             myRB2D.AddForce(new Vector2(0, jumpStrength), ForceMode2D.Impulse);
         }
     }
-
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "Ground")

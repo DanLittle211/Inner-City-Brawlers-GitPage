@@ -27,12 +27,12 @@ public class GameManagerScript : MonoBehaviour
     public bool p2CaIsFull;
     public Gradient p2CaGradient;
 
-
-
     //Timer Variable
     public float currentTimerInt;
     public float maxTimerInt;
     public Text TimerText;
+    public RoundManagement rManager;
+
 
     // Start is called before the first frame update
     void Start()
@@ -55,19 +55,10 @@ public class GameManagerScript : MonoBehaviour
         p1HealthFloat = p1Health.currentHealth;
         p2HealthFloat = p2Health.currentHealth;
 
-        if (p1HealthFloat <= 0 || p2HealthFloat <= 0)
-        {
-            CheckWinner();
-        }
-        else
-        {
-            CheckHealth();
-        }
-
+       
     }
     void FixedUpdate()
-    {
-        
+    {  
         if (currentTimerInt <= 0)
         {
             TimerText.text = "Round Over";
@@ -75,6 +66,15 @@ public class GameManagerScript : MonoBehaviour
         else if (p1HealthFloat > 0 || p2HealthFloat > 0)
         {
             timerTickDown();
+        }
+
+        if (p1HealthFloat <= 0 || p2HealthFloat <= 0)
+        {
+            CheckWinner();
+        }
+        else
+        {
+            CheckHealth();
         }
 
         if (p1CAMeterfloat >= p1CAMeterMaxfloat)
@@ -109,29 +109,30 @@ public class GameManagerScript : MonoBehaviour
         {
             Debug.Log("Player 1 is winning");
         }
-
         else if (p2HealthFloat >= p1HealthFloat)
         {
             Debug.Log("Player 2 is winning");
-        }
-
-       
+        }  
     }
     public void CheckWinner()
     {
         if (p2HealthFloat == p1HealthFloat)
         {
             Debug.Log("Draw!!");
+            rManager.playersTie();
         }
         else if (p1HealthFloat >= p2HealthFloat)
         {
             Debug.Log("Player 1 Wins!");
+            rManager.player1WinRound();
         }
         else if (p2HealthFloat >= p1HealthFloat)
         {
             Debug.Log("Player 2 Wins!");
+            rManager.player2WinRound();
         }
     }
+
     //In Game timer Manager
     public void timerTickDown()
     {
@@ -170,8 +171,6 @@ public class GameManagerScript : MonoBehaviour
         p1CAMeter.value = p2CAMeterfloat;
         p1CAFill.color = p1CaGradient.Evaluate(p1CAMeter.normalizedValue);
         p1CaGradient.Evaluate(1f);
-
-
     }
     public void SetP2CAMaxMeter(float MaxMeter)
     {
@@ -179,19 +178,16 @@ public class GameManagerScript : MonoBehaviour
         p2CAMeter.value = p2CAMeterfloat;
         p2CAFill.color = p2CaGradient.Evaluate(p2CAMeter.normalizedValue);
         p2CaGradient.Evaluate(1f);
-
     }
     public void p1CAMakeMeter(float miPoint) // miPoint = meter increase point
     {
         p1CAMeterfloat += miPoint;
         SetP1CaMeter(p1CAMeterfloat);
-
     }
     public void p2CAMakeMeter(float miPoint) // miPoint = meter increase point
     {
         p2CAMeterfloat += miPoint;
         SetP2CaMeter(p2CAMeterfloat);
-
     }
 
     public void SetP1CaMeter(float Meter)
