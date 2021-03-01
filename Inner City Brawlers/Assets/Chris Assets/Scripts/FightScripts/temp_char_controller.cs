@@ -32,6 +32,11 @@ public class temp_char_controller : MonoBehaviour
     public int testCharCurrentSuperMeter;
     public temp_superMeter_script testSuperMeter;
 
+    bool isAttacking;
+
+    [SerializeField]
+    private float attackDelay;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -72,6 +77,7 @@ public class temp_char_controller : MonoBehaviour
 
             if (isGrounded) { 
                 tempAnimator.Play("char_temp_moving_forward");
+                isAttacking = false;
             }
 
             tempSR.flipX = false;
@@ -84,6 +90,7 @@ public class temp_char_controller : MonoBehaviour
 
             if (isGrounded) { 
                 tempAnimator.Play("char_temp_moving_back");
+                isAttacking = false;
             }
             isCrouched = false;
         }//moving left
@@ -94,17 +101,19 @@ public class temp_char_controller : MonoBehaviour
                 tempRB2D.velocity = new Vector2(0, 0);
                 tempAnimator.Play("char_temp_crouch");
                 isCrouched = true;
+                isAttacking = false;
             }
         }//crouching
         else
         {
 
-            if (isGrounded) { 
+            if (isGrounded && !isAttacking) { 
                 tempAnimator.Play("char_temp_idle");
             }
 
             tempRB2D.velocity = new Vector2(0, tempRB2D.velocity.y);
             isCrouched = false;
+            isAttacking = false;
         }//idle
 
         if (Input.GetKey("w") && isGrounded || Input.GetKey("up") && isGrounded)
@@ -113,7 +122,7 @@ public class temp_char_controller : MonoBehaviour
             tempRB2D.velocity = new Vector2(tempRB2D.velocity.x, 9);
             tempAnimator.Play("char_temp_jump");
             isCrouched = false;
-
+            isAttacking = false;
 
         }//jumping
 
@@ -124,6 +133,8 @@ public class temp_char_controller : MonoBehaviour
                 tempRB2D.velocity = new Vector2(0, 0);
                 tempAnimator.Play("char_temp_punch_light");
                 isCrouched = false;
+                isAttacking = true;
+
                 if (isCrouched || Input.GetKey("s") || Input.GetKey("down"))
                 {
                     tempRB2D.velocity = new Vector2(0, 0);
@@ -145,6 +156,8 @@ public class temp_char_controller : MonoBehaviour
                 tempRB2D.velocity = new Vector2(0, 0);
                 tempAnimator.Play("char_temp_punch_medium");
                 isCrouched = false;
+                isAttacking = true;
+
                 if (isCrouched || Input.GetKey("s") || Input.GetKey("down"))
                 {
                     tempRB2D.velocity = new Vector2(0, 0);
@@ -166,6 +179,8 @@ public class temp_char_controller : MonoBehaviour
                 tempRB2D.velocity = new Vector2(0, 0);
                 tempAnimator.Play("char_temp_punch_heavy");
                 isCrouched = false;
+                isAttacking = true;
+
                 if (isCrouched || Input.GetKey("s") || Input.GetKey("down"))
                 {
                     tempRB2D.velocity = new Vector2(0, 0);
@@ -188,6 +203,8 @@ public class temp_char_controller : MonoBehaviour
                 tempRB2D.velocity = new Vector2(0, 0);
                 tempAnimator.Play("char_temp_kick_light");
                 isCrouched = false;
+                isAttacking = true;
+
                 if (isCrouched || Input.GetKey("s") || Input.GetKey("down"))
                 {
 
@@ -209,7 +226,9 @@ public class temp_char_controller : MonoBehaviour
             {
                 tempRB2D.velocity = new Vector2(0, 0);
                 tempAnimator.Play("char_temp_kick_medium");
+                isAttacking = true;
                 isCrouched = false;
+
                 if (isCrouched || Input.GetKey("s") || Input.GetKey("down"))
                 {
 
@@ -232,6 +251,8 @@ public class temp_char_controller : MonoBehaviour
                 tempRB2D.velocity = new Vector2(0, 0);
                 tempAnimator.Play("char_temp_kick_heavy");
                 isCrouched = false;
+                isAttacking = true;
+
                 if (isCrouched || Input.GetKey("s") || Input.GetKey("down"))
                 {
 
@@ -254,7 +275,7 @@ public class temp_char_controller : MonoBehaviour
             tempRB2D.velocity = new Vector2(0, 0);
             tempAnimator.Play("char_temp_grab");
             isCrouched = false;
-
+            isAttacking = true;
 
         }//grab
 
@@ -265,7 +286,7 @@ public class temp_char_controller : MonoBehaviour
             tempAnimator.Play("char_temp_assist");
             testUseAssistMeter(10);
             isCrouched = false;
-
+            isAttacking = true;
 
         }//assist
 
@@ -275,8 +296,8 @@ public class temp_char_controller : MonoBehaviour
             tempRB2D.velocity = new Vector2(0, 0);
             tempAnimator.Play("char_temp_SUPER");
             isCrouched = false;
+            isAttacking = true;
             testUseSuperMeter(20);
-
 
         }//SUPER MOVE (DOUBLE TRIGGER)
 
@@ -311,4 +332,8 @@ public class temp_char_controller : MonoBehaviour
 
     }
 
+    void AttackFin()
+    {
+        isAttacking = false;
+    }
 }
