@@ -38,7 +38,7 @@ public class CallOutAssist : MonoBehaviour
         //what happens when the spawning bool is set true
         if (oneTime)
         {
-            
+            setSpawnPoint();
             spawnItem(whichItem(whichItemType()));//Spawning random item
         }
     }
