@@ -31,11 +31,11 @@ public class RoundManagement : MonoBehaviour
     {
         GameObject player1 = GameObject.Find("Player1");
         PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
-        p1.currentPlayState = PlayerMovement.playerState.RoundOver;
+        //p1.currentPlayState = PlayerMovement.playerState.RoundOver;
 
         GameObject player2 = GameObject.Find("Player2");
         PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
-        p2.currentPlayState = PlayerMovement.playerState.RoundOver;
+        //p2.currentPlayState = PlayerMovement.playerState.RoundOver;
         Debug.Log("Round " + CurrentRoundInt + " is over!");
 
         for (int i = 0; i <= TotalWinsInt; i++)
@@ -51,11 +51,11 @@ public class RoundManagement : MonoBehaviour
     {
         GameObject player1 = GameObject.Find("Player1");
         PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
-        p1.currentPlayState = PlayerMovement.playerState.RoundOver;
+        //p1.currentPlayState = PlayerMovement.playerState.RoundOver;
 
         GameObject player2 = GameObject.Find("Player2");
         PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
-        p2.currentPlayState = PlayerMovement.playerState.RoundOver;
+        //p2.currentPlayState = PlayerMovement.playerState.RoundOver;
         Debug.Log("Round " + CurrentRoundInt + " is over!");
 
        
@@ -73,11 +73,11 @@ public class RoundManagement : MonoBehaviour
     {
         GameObject player1 = GameObject.Find("Player1");
         PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
-        p1.currentPlayState = PlayerMovement.playerState.RoundOver;
+       // p1.currentPlayState = PlayerMovement.playerState.RoundOver;
 
         GameObject player2 = GameObject.Find("Player2");
         PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
-        p2.currentPlayState = PlayerMovement.playerState.RoundOver;
+       // p2.currentPlayState = PlayerMovement.playerState.RoundOver;
         Debug.Log("Round " + CurrentRoundInt + " is over!");
 
         Debug.Log(" Player Tie ! Current Standings: Player 1 " + Player1currentRWInt + " to Player 2 " + Player2currentRWInt);

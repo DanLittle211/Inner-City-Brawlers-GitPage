@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class HitDetection : MonoBehaviour
 {
+    [SerializeField] public float damageNumber;
+    [SerializeField] public float gMeterNumber;
+    [SerializeField] public float rMeterNumber;
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "Player1")
         {
             GameObject playerHealth = GameObject.Find("Player1");
             PlayerHealth pH = (PlayerHealth)playerHealth.GetComponent(typeof(PlayerHealth));
-            pH.TakeDamage(20f);
+            pH.TakeDamage(damageNumber);
 
             GameObject gameManager = GameObject.Find("GameManager");
             MeterSystem mS = (MeterSystem)gameManager.GetComponent(typeof(MeterSystem));
-            mS.p1MakeMeter(0.1f);
-            mS.p2MakeMeter(0.3f);
+            mS.p1MakeMeter(gMeterNumber);
+            mS.p2MakeMeter(rMeterNumber);
 
             Debug.Log("Hit hitbox");
         }
@@ -24,12 +27,12 @@ public class HitDetection : MonoBehaviour
         {
             GameObject playerHealth = GameObject.Find("Player2");
             PlayerHealth pH = (PlayerHealth)playerHealth.GetComponent(typeof(PlayerHealth));
-            pH.TakeDamage(20f);
+            pH.TakeDamage(damageNumber);
 
             GameObject gameManager = GameObject.Find("GameManager");
             MeterSystem mS = (MeterSystem)gameManager.GetComponent(typeof(MeterSystem));
-            mS.p1MakeMeter(0.3f);
-            mS.p2MakeMeter(0.1f);
+            mS.p1MakeMeter(rMeterNumber);
+            mS.p2MakeMeter(gMeterNumber);
             Debug.Log("Hit hitbox");
         }
     }

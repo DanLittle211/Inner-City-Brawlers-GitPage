@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpStrength;
     public float movementSpeed;
 
-    public enum playerState{Grounded, Crouch, Jump, Block, SoftKnockdown, HardKnockdown, Defeated, Paused, RoundOver};
+    public enum playerState{Grounded, Crouch, Jump, Block, SoftKnockdown, HardKnockdown, Defeated, Immobile};
 
     
     public playerState currentPlayState;
@@ -51,12 +51,22 @@ public class PlayerMovement : MonoBehaviour
 
             if (moveHorizontal <= 1 && moveHorizontal > 0.2)
             {
-                myRB2D.AddForce(new Vector2(movementSpeed, 0), ForceMode2D.Force);
+                myRB2D.AddForce(new Vector2(movementSpeed, 0), ForceMode2D.Impulse);
+                if (moveUp <= 1 && moveUp > 0.2)
+                {
+                    JumpFunction();
+                    Debug.Log("Current Player State: " + currentPlayState);
+                }
                 Debug.Log("RightWalk");
             }
             if (-moveHorizontal <= 1 && -moveHorizontal > 0.2)
             {
-                myRB2D.AddForce(new Vector2(-movementSpeed, 0), ForceMode2D.Force);
+                myRB2D.AddForce(new Vector2(-movementSpeed, 0), ForceMode2D.Impulse);
+                if (moveUp <= 1 && moveUp > 0.2)
+                {
+                    JumpFunction();
+                    Debug.Log("Current Player State: " + currentPlayState);
+                }
                 Debug.Log("LeftWalk");
             }
             else 
