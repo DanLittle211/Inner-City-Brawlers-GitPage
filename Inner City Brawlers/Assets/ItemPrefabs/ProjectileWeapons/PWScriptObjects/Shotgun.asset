@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Shotgun
   m_EditorClassIdentifier: 
   ObjectImage: {fileID: 0}
+  itemLifeTime: 10
   type: 1
   ItemDescription: 
   AmmoCount: 0

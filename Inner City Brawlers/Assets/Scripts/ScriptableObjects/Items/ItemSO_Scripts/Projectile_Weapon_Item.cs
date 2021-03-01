@@ -9,5 +9,7 @@ public class Projectile_Weapon_Item : itemObject
     public void Awake()
     {
         type = ItemType.Projectile_Weapon;
+        
     }
+    
 }

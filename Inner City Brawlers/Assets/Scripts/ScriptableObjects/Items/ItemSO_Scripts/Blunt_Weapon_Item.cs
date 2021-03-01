@@ -8,5 +8,6 @@ public class Blunt_Weapon_Item : itemObject
     public void Awake()
     {
         type = ItemType.Blunt_Weapon;
+        
     }
 }

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Riceball
   m_EditorClassIdentifier: 
   ObjectImage: {fileID: 0}
+  itemLifeTime: 10
   type: 0
   ItemDescription: 
   restoreHealthValue: 0

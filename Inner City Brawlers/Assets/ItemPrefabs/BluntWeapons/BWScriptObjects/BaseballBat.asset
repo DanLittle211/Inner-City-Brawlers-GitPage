@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: BaseballBat
   m_EditorClassIdentifier: 
   ObjectImage: {fileID: 0}
+  itemLifeTime: 10
   type: 2
   ItemDescription: 
   weaponDamage: 0
