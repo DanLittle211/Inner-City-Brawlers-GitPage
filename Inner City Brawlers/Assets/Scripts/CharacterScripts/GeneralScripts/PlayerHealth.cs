@@ -50,9 +50,6 @@ public class PlayerHealth : MonoBehaviour
     {
         if (col.tag == "TempHitBox")
         {
-            //TakeDamage(20f);
-            //meterSystem.p2MakeMeter(0.1f);
-            //meterSystem.p1MakeMeter(0.3f);
             Debug.Log("Hit hitbox");
         }
     }
@@ -65,7 +62,11 @@ public class PlayerHealth : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
-            currentHealth = 0;
+            
+            GameObject gManager = GameObject.Find("GameManager");
+            GameManagerScript gM = (GameManagerScript)gManager.GetComponent(typeof(GameManagerScript));
+            //currentHealth = 0;
+            // gM.currentMatchState = GameManagerScript.playerState.Knockout;
         }
     }
 }
