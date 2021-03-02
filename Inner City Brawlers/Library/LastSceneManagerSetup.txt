@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/MainGameScene.unity
+=======
+- path: Assets/Chris Assets/Scenes/fight_screen.unity
+>>>>>>> origin/Chris-H-MVP
   isLoaded: 1
   isActive: 1
   isSubScene: 0

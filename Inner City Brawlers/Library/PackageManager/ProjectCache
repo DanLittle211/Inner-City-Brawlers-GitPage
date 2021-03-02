@@ -1,21 +1,36 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
+<<<<<<< HEAD
     m_FilePath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
+=======
+    m_FilePath: D:/Users/Christopher/UnityProjects/Inner-City-Brawlers-GitPage/Inner
+>>>>>>> origin/Chris-H-MVP
       City Brawlers/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 637496154900000000
     m_Hash: 2327189174
   m_LockFileStatus:
     m_FilePath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
+=======
+      ticks: 637492126061681346
+    m_Hash: 2702355557
+  m_LockFileStatus:
+    m_FilePath: D:/Users/Christopher/UnityProjects/Inner-City-Brawlers-GitPage/Inner
+>>>>>>> origin/Chris-H-MVP
       City Brawlers/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 637496193030000000
+=======
+      ticks: 637500930593203755
+>>>>>>> origin/Chris-H-MVP
     m_Hash: 432214232
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -27,8 +42,13 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 5.0.3
       source: 1
+<<<<<<< HEAD
       resolvedPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
         City Brawlers/Library/PackageCache/com.unity.2d.animation@5.0.3
+=======
+      resolvedPath: D:\Users\Christopher\UnityProjects\Inner-City-Brawlers-GitPage\Inner
+        City Brawlers\Library\PackageCache\com.unity.2d.animation@5.0.3
+>>>>>>> origin/Chris-H-MVP
       assetPath: Packages/com.unity.2d.animation
       name: com.unity.2d.animation
       displayName: 2D Animation
@@ -90,6 +110,10 @@ m_PackageAssets:
         - 5.0.1
         - 5.0.2
         - 5.0.3
+<<<<<<< HEAD
+=======
+        - 6.0.0-pre.1
+>>>>>>> origin/Chris-H-MVP
         compatible:
         - 5.0.3
         verified: 5.0.3
@@ -151,8 +175,13 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 4.0.1
       source: 1
+<<<<<<< HEAD
       resolvedPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
         City Brawlers/Library/PackageCache/com.unity.2d.pixel-perfect@4.0.1
+=======
+      resolvedPath: D:\Users\Christopher\UnityProjects\Inner-City-Brawlers-GitPage\Inner
+        City Brawlers\Library\PackageCache\com.unity.2d.pixel-perfect@4.0.1
+>>>>>>> origin/Chris-H-MVP
       assetPath: Packages/com.unity.2d.pixel-perfect
       name: com.unity.2d.pixel-perfect
       displayName: 2D Pixel Perfect
@@ -187,6 +216,10 @@ m_PackageAssets:
         - 3.0.2
         - 4.0.0
         - 4.0.1
+<<<<<<< HEAD
+=======
+        - 5.0.0-pre.1
+>>>>>>> origin/Chris-H-MVP
         compatible:
         - 4.0.1
         verified: 4.0.1
@@ -222,8 +255,13 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 4.0.2
       source: 1
+<<<<<<< HEAD
       resolvedPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
         City Brawlers/Library/PackageCache/com.unity.2d.psdimporter@4.0.2
+=======
+      resolvedPath: D:\Users\Christopher\UnityProjects\Inner-City-Brawlers-GitPage\Inner
+        City Brawlers\Library\PackageCache\com.unity.2d.psdimporter@4.0.2
+>>>>>>> origin/Chris-H-MVP
       assetPath: Packages/com.unity.2d.psdimporter
       name: com.unity.2d.psdimporter
       displayName: 2D PSD Importer
@@ -267,6 +305,10 @@ m_PackageAssets:
         - 4.0.0
         - 4.0.1
         - 4.0.2
+<<<<<<< HEAD
+=======
+        - 5.0.0-pre.1
+>>>>>>> origin/Chris-H-MVP
         compatible:
         - 4.0.2
         verified: 4.0.2
@@ -378,8 +420,13 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 5.1.0
       source: 1
+<<<<<<< HEAD
       resolvedPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
         City Brawlers/Library/PackageCache/com.unity.2d.spriteshape@5.1.0
+=======
+      resolvedPath: D:\Users\Christopher\UnityProjects\Inner-City-Brawlers-GitPage\Inner
+        City Brawlers\Library\PackageCache\com.unity.2d.spriteshape@5.1.0
+>>>>>>> origin/Chris-H-MVP
       assetPath: Packages/com.unity.2d.spriteshape
       name: com.unity.2d.spriteshape
       displayName: 2D SpriteShape
@@ -424,6 +471,10 @@ m_PackageAssets:
         - 3.0.11
         - 3.0.12
         - 3.0.13
+<<<<<<< HEAD
+=======
+        - 3.0.14
+>>>>>>> origin/Chris-H-MVP
         - 4.0.0
         - 4.0.1
         - 4.0.2
@@ -435,6 +486,10 @@ m_PackageAssets:
         - 5.0.0
         - 5.0.1
         - 5.1.0
+<<<<<<< HEAD
+=======
+        - 6.0.0-pre.1
+>>>>>>> origin/Chris-H-MVP
         compatible:
         - 5.1.0
         verified: 5.1.0
@@ -550,8 +605,13 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.3.9
       source: 1
+<<<<<<< HEAD
       resolvedPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
         City Brawlers/Library/PackageCache/com.unity.collab-proxy@1.3.9
+=======
+      resolvedPath: D:\Users\Christopher\UnityProjects\Inner-City-Brawlers-GitPage\Inner
+        City Brawlers\Library\PackageCache\com.unity.collab-proxy@1.3.9
+>>>>>>> origin/Chris-H-MVP
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Unity Collaborate
@@ -646,8 +706,13 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.7
       source: 1
+<<<<<<< HEAD
       resolvedPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
         City Brawlers/Library/PackageCache/com.unity.ide.rider@2.0.7
+=======
+      resolvedPath: D:\Users\Christopher\UnityProjects\Inner-City-Brawlers-GitPage\Inner
+        City Brawlers\Library\PackageCache\com.unity.ide.rider@2.0.7
+>>>>>>> origin/Chris-H-MVP
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -682,6 +747,12 @@ m_PackageAssets:
         - 2.0.3
         - 2.0.5
         - 2.0.7
+<<<<<<< HEAD
+=======
+        - 3.0.1
+        - 3.0.2
+        - 3.0.3
+>>>>>>> origin/Chris-H-MVP
         compatible:
         - 1.0.2
         - 1.0.6
@@ -701,6 +772,12 @@ m_PackageAssets:
         - 2.0.3
         - 2.0.5
         - 2.0.7
+<<<<<<< HEAD
+=======
+        - 3.0.1
+        - 3.0.2
+        - 3.0.3
+>>>>>>> origin/Chris-H-MVP
         verified: 2.0.7
       dependencies:
       - name: com.unity.test-framework
@@ -740,8 +817,13 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.5
       source: 1
+<<<<<<< HEAD
       resolvedPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
         City Brawlers/Library/PackageCache/com.unity.ide.visualstudio@2.0.5
+=======
+      resolvedPath: D:\Users\Christopher\UnityProjects\Inner-City-Brawlers-GitPage\Inner
+        City Brawlers\Library\PackageCache\com.unity.ide.visualstudio@2.0.5
+>>>>>>> origin/Chris-H-MVP
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -800,8 +882,13 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.3
       source: 1
+<<<<<<< HEAD
       resolvedPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
         City Brawlers/Library/PackageCache/com.unity.ide.vscode@1.2.3
+=======
+      resolvedPath: D:\Users\Christopher\UnityProjects\Inner-City-Brawlers-GitPage\Inner
+        City Brawlers\Library\PackageCache\com.unity.ide.vscode@1.2.3
+>>>>>>> origin/Chris-H-MVP
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -870,8 +957,13 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 10.3.1
       source: 1
+<<<<<<< HEAD
       resolvedPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
         City Brawlers/Library/PackageCache/com.unity.render-pipelines.universal@10.3.1
+=======
+      resolvedPath: D:\Users\Christopher\UnityProjects\Inner-City-Brawlers-GitPage\Inner
+        City Brawlers\Library\PackageCache\com.unity.render-pipelines.universal@10.3.1
+>>>>>>> origin/Chris-H-MVP
       assetPath: Packages/com.unity.render-pipelines.universal
       name: com.unity.render-pipelines.universal
       displayName: Universal RP
@@ -904,6 +996,10 @@ m_PackageAssets:
         - 7.4.2
         - 7.4.3
         - 7.5.1
+<<<<<<< HEAD
+=======
+        - 7.5.2
+>>>>>>> origin/Chris-H-MVP
         - 8.0.1
         - 8.1.0
         - 8.2.0
@@ -969,8 +1065,13 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.1.20
       source: 1
+<<<<<<< HEAD
       resolvedPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
         City Brawlers/Library/PackageCache/com.unity.test-framework@1.1.20
+=======
+      resolvedPath: D:\Users\Christopher\UnityProjects\Inner-City-Brawlers-GitPage\Inner
+        City Brawlers\Library\PackageCache\com.unity.test-framework@1.1.20
+>>>>>>> origin/Chris-H-MVP
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -1054,8 +1155,13 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.1
       source: 1
+<<<<<<< HEAD
       resolvedPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
         City Brawlers/Library/PackageCache/com.unity.textmeshpro@3.0.1
+=======
+      resolvedPath: D:\Users\Christopher\UnityProjects\Inner-City-Brawlers-GitPage\Inner
+        City Brawlers\Library\PackageCache\com.unity.textmeshpro@3.0.1
+>>>>>>> origin/Chris-H-MVP
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -1198,8 +1304,13 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.4.6
       source: 1
+<<<<<<< HEAD
       resolvedPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
         City Brawlers/Library/PackageCache/com.unity.timeline@1.4.6
+=======
+      resolvedPath: D:\Users\Christopher\UnityProjects\Inner-City-Brawlers-GitPage\Inner
+        City Brawlers\Library\PackageCache\com.unity.timeline@1.4.6
+>>>>>>> origin/Chris-H-MVP
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -3147,8 +3258,13 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.6
       source: 1
+<<<<<<< HEAD
       resolvedPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
         City Brawlers/Library/PackageCache/com.unity.ext.nunit@1.0.6
+=======
+      resolvedPath: D:\Users\Christopher\UnityProjects\Inner-City-Brawlers-GitPage\Inner
+        City Brawlers\Library\PackageCache\com.unity.ext.nunit@1.0.6
+>>>>>>> origin/Chris-H-MVP
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
@@ -3207,8 +3323,13 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.1.0
       source: 1
+<<<<<<< HEAD
       resolvedPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
         City Brawlers/Library/PackageCache/com.unity.mathematics@1.1.0
+=======
+      resolvedPath: D:\Users\Christopher\UnityProjects\Inner-City-Brawlers-GitPage\Inner
+        City Brawlers\Library\PackageCache\com.unity.mathematics@1.1.0
+>>>>>>> origin/Chris-H-MVP
       assetPath: Packages/com.unity.mathematics
       name: com.unity.mathematics
       displayName: Mathematics
@@ -3283,8 +3404,13 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 10.3.1
       source: 1
+<<<<<<< HEAD
       resolvedPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
         City Brawlers/Library/PackageCache/com.unity.render-pipelines.core@10.3.1
+=======
+      resolvedPath: D:\Users\Christopher\UnityProjects\Inner-City-Brawlers-GitPage\Inner
+        City Brawlers\Library\PackageCache\com.unity.render-pipelines.core@10.3.1
+>>>>>>> origin/Chris-H-MVP
       assetPath: Packages/com.unity.render-pipelines.core
       name: com.unity.render-pipelines.core
       displayName: Core RP Library
@@ -3305,6 +3431,7 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+<<<<<<< HEAD
         - 0.1.21
         - 0.1.27
         - 0.1.28
@@ -3380,6 +3507,8 @@ m_PackageAssets:
         - 9.0.0-preview.38
         - 9.0.0-preview.60
         - 10.0.0-preview.30
+=======
+>>>>>>> origin/Chris-H-MVP
         - 10.3.1
         compatible:
         - 10.3.1
@@ -3420,8 +3549,13 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 10.3.1
       source: 1
+<<<<<<< HEAD
       resolvedPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
         City Brawlers/Library/PackageCache/com.unity.shadergraph@10.3.1
+=======
+      resolvedPath: D:\Users\Christopher\UnityProjects\Inner-City-Brawlers-GitPage\Inner
+        City Brawlers\Library\PackageCache\com.unity.shadergraph@10.3.1
+>>>>>>> origin/Chris-H-MVP
       assetPath: Packages/com.unity.shadergraph
       name: com.unity.shadergraph
       displayName: Shader Graph
@@ -3507,6 +3641,10 @@ m_PackageAssets:
         - 7.4.2
         - 7.4.3
         - 7.5.1
+<<<<<<< HEAD
+=======
+        - 7.5.2
+>>>>>>> origin/Chris-H-MVP
         - 8.0.1
         - 8.1.0
         - 8.2.0
@@ -3560,8 +3698,13 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 4.0.3
       source: 1
+<<<<<<< HEAD
       resolvedPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
         City Brawlers/Library/PackageCache/com.unity.2d.common@4.0.3
+=======
+      resolvedPath: D:\Users\Christopher\UnityProjects\Inner-City-Brawlers-GitPage\Inner
+        City Brawlers\Library\PackageCache\com.unity.2d.common@4.0.3
+>>>>>>> origin/Chris-H-MVP
       assetPath: Packages/com.unity.2d.common
       name: com.unity.2d.common
       displayName: 2D Common
@@ -3592,6 +3735,10 @@ m_PackageAssets:
         - 4.0.1
         - 4.0.2
         - 4.0.3
+<<<<<<< HEAD
+=======
+        - 5.0.0-pre.1
+>>>>>>> origin/Chris-H-MVP
         compatible:
         - 4.0.2
         - 4.0.3
@@ -3641,8 +3788,13 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 4.0.1
       source: 1
+<<<<<<< HEAD
       resolvedPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
         City Brawlers/Library/PackageCache/com.unity.2d.path@4.0.1
+=======
+      resolvedPath: D:\Users\Christopher\UnityProjects\Inner-City-Brawlers-GitPage\Inner
+        City Brawlers\Library\PackageCache\com.unity.2d.path@4.0.1
+>>>>>>> origin/Chris-H-MVP
       assetPath: Packages/com.unity.2d.path
       name: com.unity.2d.path
       displayName: 2D Path
@@ -3671,6 +3823,10 @@ m_PackageAssets:
         - 3.0.2
         - 4.0.0
         - 4.0.1
+<<<<<<< HEAD
+=======
+        - 5.0.0-pre.1
+>>>>>>> origin/Chris-H-MVP
         compatible:
         - 4.0.1
         verified: 4.0.1
@@ -3704,8 +3860,13 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 4.3.1
       source: 1
+<<<<<<< HEAD
       resolvedPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
         City Brawlers/Library/PackageCache/com.unity.searcher@4.3.1
+=======
+      resolvedPath: D:\Users\Christopher\UnityProjects\Inner-City-Brawlers-GitPage\Inner
+        City Brawlers\Library\PackageCache\com.unity.searcher@4.3.1
+>>>>>>> origin/Chris-H-MVP
       assetPath: Packages/com.unity.searcher
       name: com.unity.searcher
       displayName: Searcher
@@ -3721,33 +3882,19 @@ m_PackageAssets:
       errors: []
       versions:
         all:
-        - 4.0.0-preview
-        - 4.0.0
-        - 4.0.7-preview
-        - 4.0.7
-        - 4.0.8-preview
-        - 4.0.9
-        - 4.1.0-preview
-        - 4.1.0
-        - 4.2.0
-        - 4.3.0
         - 4.3.1
+<<<<<<< HEAD
         - 4.6.0-preview
         - 4.7.0-preview
+=======
+>>>>>>> origin/Chris-H-MVP
         compatible:
-        - 4.0.0-preview
-        - 4.0.0
-        - 4.0.7-preview
-        - 4.0.7
-        - 4.0.8-preview
-        - 4.0.9
-        - 4.1.0-preview
-        - 4.1.0
-        - 4.2.0
-        - 4.3.0
         - 4.3.1
+<<<<<<< HEAD
         - 4.6.0-preview
         - 4.7.0-preview
+=======
+>>>>>>> origin/Chris-H-MVP
         verified: 4.3.1
       dependencies: []
       resolvedDependencies: []
@@ -3766,7 +3913,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637272602300000000
+      datePublishedTicks: 0
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -3776,6 +3923,10 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []
+<<<<<<< HEAD
 m_ProjectPath: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner
+=======
+m_ProjectPath: D:/Users/Christopher/UnityProjects/Inner-City-Brawlers-GitPage/Inner
+>>>>>>> origin/Chris-H-MVP
   City Brawlers/Packages
 m_EditorVersion: 2020.2.4f1 (becced5a802b)
