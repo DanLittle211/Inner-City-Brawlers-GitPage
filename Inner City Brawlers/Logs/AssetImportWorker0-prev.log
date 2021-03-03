@@ -15,11 +15,13 @@ D:/Users/Christopher/UnityProjects/Inner-City-Brawlers-GitPage/Inner City Brawle
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55460
+60886
 Successfully changed project path to: D:/Users/Christopher/UnityProjects/Inner-City-Brawlers-GitPage/Inner City Brawlers
 D:/Users/Christopher/UnityProjects/Inner-City-Brawlers-GitPage/Inner City Brawlers
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 57.50 ms, found 2 plugins.
+Multiple plugins with the same name 'rewired_directinput' (found at 'Assets/Rewired/Internal/Libraries/Runtime/Native/WindowsStandalone/x64/Rewired_DirectInput.dll' and 'Assets/Dan Assets/Rewired/Internal/Libraries/Runtime/Native/WindowsStandalone/x64/Rewired_DirectInput.dll'). That means one or more plugins are set to be compatible with Editor. Only one plugin at the time can be used by Editor.
+
+Refreshing native plugins compatible for Editor in 81.04 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.4f1 (becced5a802b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Resources/UnitySubsystems
@@ -36,82 +38,120 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56812
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56948
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002715 seconds.
+Registered in 0.002528 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 62.02 ms, found 2 plugins.
+Multiple plugins with the same name 'rewired_directinput' (found at 'Assets/Rewired/Internal/Libraries/Runtime/Native/WindowsStandalone/x64/Rewired_DirectInput.dll' and 'Assets/Dan Assets/Rewired/Internal/Libraries/Runtime/Native/WindowsStandalone/x64/Rewired_DirectInput.dll'). That means one or more plugins are set to be compatible with Editor. Only one plugin at the time can be used by Editor.
+
+Refreshing native plugins compatible for Editor in 68.62 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.772 seconds
+- Completed reload, in  1.817 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002961 seconds.
+Registered in 0.005953 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 60.02 ms, found 2 plugins.
+Multiple plugins with the same name 'rewired_directinput' (found at 'Assets/Rewired/Internal/Libraries/Runtime/Native/WindowsStandalone/x64/Rewired_DirectInput.dll' and 'Assets/Dan Assets/Rewired/Internal/Libraries/Runtime/Native/WindowsStandalone/x64/Rewired_DirectInput.dll'). That means one or more plugins are set to be compatible with Editor. Only one plugin at the time can be used by Editor.
+
+Refreshing native plugins compatible for Editor in 70.00 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.949 seconds
+- Completed reload, in  1.742 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.80 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3043 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 134.0 MB.
-System memory in use after: 134.1 MB.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Multiple plugins with the same name 'rewired_directinput' (found at 'Assets/Rewired/Internal/Libraries/Runtime/Native/WindowsStandalone/x64/Rewired_DirectInput.dll' and 'Assets/Dan Assets/Rewired/Internal/Libraries/Runtime/Native/WindowsStandalone/x64/Rewired_DirectInput.dll'). That means one or more plugins are set to be compatible with Editor. Only one plugin at the time can be used by Editor.
 
-Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 3535.
-Total: 2.554500 ms (FindLiveObjects: 0.426700 ms CreateObjectMapping: 0.132100 ms MarkObjects: 1.859000 ms  DeleteObjects: 0.135500 ms)
+Refreshing native plugins compatible for Editor in 1.10 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3216 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 141.0 MB.
+System memory in use after: 141.2 MB.
+
+Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 3763.
+Total: 2.697600 ms (FindLiveObjects: 0.418400 ms CreateObjectMapping: 0.119200 ms MarkObjects: 2.075400 ms  DeleteObjects: 0.083200 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Chris Assets
-  artifactKey: Guid(30246ab3099e43c49a90e4a0f21b2b3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Chris Assets using Guid(30246ab3099e43c49a90e4a0f21b2b3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f24cece88b52c4d40887800ef6aaa565') in 0.010222 seconds
-  Import took 0.076734 seconds .
+  path: Assets/Dan Assets
+  artifactKey: Guid(3f3ec23ae81487047a9d6ae742e127b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dan Assets using Guid(3f3ec23ae81487047a9d6ae742e127b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be184379618a43dc213e85b45f8ee6ea') in 0.012691 seconds
+  Import took 0.034928 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.460536 seconds.
+  path: Assets/Dan Assets/BlackGardenStudios
+  artifactKey: Guid(29a07467a92bb0e4089cc4253c6c5609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dan Assets/BlackGardenStudios using Guid(29a07467a92bb0e4089cc4253c6c5609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2027c34db5ffe12906094b500cdd2bb5') in 0.006106 seconds
+  Import took 0.011355 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.702643 seconds.
+  path: Assets/Dan Assets/Scenes
+  artifactKey: Guid(48a8f00d40000d64fb6c827475d464a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dan Assets/Scenes using Guid(48a8f00d40000d64fb6c827475d464a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c191dd3485c13627535fd04109002d2f') in 0.005575 seconds
+  Import took 0.011360 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.266350 seconds.
+  path: Assets/Dan Assets/Scenes/MainGameScene.unity
+  artifactKey: Guid(4959e06fae962914b9ab92af99215b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dan Assets/Scenes/MainGameScene.unity using Guid(4959e06fae962914b9ab92af99215b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0b81c1ff3bac3b6a3f4c1410f0c0199') in 0.013698 seconds
+  Import took 0.019101 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003358 seconds.
+Registered in 0.003174 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.87 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.806 seconds
+- Completed reload, in  0.822 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.81 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2969 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 128.6 MB.
-System memory in use after: 128.7 MB.
+Unloading 2965 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 130.7 MB.
+System memory in use after: 130.9 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3538.
-Total: 2.821900 ms (FindLiveObjects: 0.384300 ms CreateObjectMapping: 0.114600 ms MarkObjects: 2.151900 ms  DeleteObjects: 0.169600 ms)
+Unloading 184 unused Assets to reduce memory usage. Loaded Objects now: 3600.
+Total: 2.676000 ms (FindLiveObjects: 0.410500 ms CreateObjectMapping: 0.075900 ms MarkObjects: 2.066300 ms  DeleteObjects: 0.122000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 525.508626 seconds.
+  path: Assets/Chris Assets/Scenes/start_screen.unity
+  artifactKey: Guid(79eb8448ffc8c6246a891c4a1ca67199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Chris Assets/Scenes/start_screen.unity using Guid(79eb8448ffc8c6246a891c4a1ca67199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b974cec733d2404ec0a5a93a32f85628') in 0.115006 seconds
+  Import took 0.134001 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

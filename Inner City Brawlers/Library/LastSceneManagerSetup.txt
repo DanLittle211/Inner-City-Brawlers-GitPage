@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Chris Assets/Scenes/fight_screen.unity
+- path: Assets/Chris Assets/Scenes/SampleScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
