@@ -34,6 +34,32 @@ public class CallOutAssist : MonoBehaviour
         AssistAllowed = true;//Temporary for testing, makes the assist being on true
         itemList = GameObject.Find("GameManager").GetComponent<ItemLists>();//Reference for itemLists, found on GameManager object
     }
+    public void p1UseCAssist()
+    {
+        //updating the assist meters with player timers
+        p1AssistMeter.value = p1Timer;//setting slider value to current counting time for p1
+        p1AssistMeter.maxValue = time2Spawn;//sets p1's meter max value to time2Spawn
+        timerTickUp();//calls method that increases each player's timer for item spawns
+        if (p1CanSpawn)
+        {
+            setOneTime();//calls method that sets the spawing bool to true
+            p1Timer = 0;//sets p1's timer back to 0, turning p1CanSpawn false
+        }
+    }
+    public void p2UseCAssist()
+    {
+        p2AssistMeter.value = p2Timer;//setting slider value to current counting time for p2
+        p2AssistMeter.maxValue = time2Spawn;//sets p2's meter max value to time2Spawn
+
+        timerTickUp();//calls method that increases each player's timer for item spawns
+                      //for player 1
+                      //for player 2
+        if (p2CanSpawn)
+        {
+            setOneTime();//calls method that sets the spawing bool to true
+            p2Timer = 0;//sets p2's timer back to 0, turning p2CanSpawn false
+        }
+    }
     void Update()
     {
         //limiting each timer's upper limit to the time2Spawn number
@@ -137,7 +163,7 @@ public class CallOutAssist : MonoBehaviour
     }
     public void timerTickUp()
     {
-        p1Timer += Time.deltaTime;
-        p2Timer += Time.deltaTime;
+        p1Timer += 0.5f * Time.deltaTime;
+        p2Timer += 0.5f * Time.deltaTime;
     }
 }

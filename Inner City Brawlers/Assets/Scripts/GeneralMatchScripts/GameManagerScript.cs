@@ -45,6 +45,8 @@ public class GameManagerScript : MonoBehaviour
 
     void StartMatch()
     {
+        //currentTimerInt = maxTimerInt;
+        //TimerText.text = "Time " + (Mathf.Round(currentTimerInt)).ToString();
         p1HealthFloat = p1Health.currentHealth;
         p2HealthFloat = p2Health.currentHealth;
 
@@ -60,6 +62,13 @@ public class GameManagerScript : MonoBehaviour
         currentMatchState = playerState.PreRound;
 
         StartCoroutine(CountDownTimer(1f));
+
+        GameObject player1 = GameObject.Find("Player1");
+        GameObject player2 = GameObject.Find("Player2");
+        PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
+        PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
+        p1.groundCheck.SetActive(false);
+        p2.groundCheck.SetActive(false);
     }
 
     // Update is called once per frame
@@ -108,8 +117,14 @@ public class GameManagerScript : MonoBehaviour
             hasFunctionRun = true;
             if (hasFunctionRun == true)
             {
+                GameObject player1 = GameObject.Find("Player1");
+                GameObject player2 = GameObject.Find("Player2");
+                PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
+                PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
+                p1.currentPlayState = PlayerMovement.playerState.Immobile;
+                p2.currentPlayState = PlayerMovement.playerState.Immobile;
                 //StartCoroutine(CheckResult(1f));
-                
+
             }   
         }
         if (p1HealthFloat == 0)
@@ -117,8 +132,14 @@ public class GameManagerScript : MonoBehaviour
             hasFunctionRun = true;
             if (hasFunctionRun == true)
             {
+                GameObject player1 = GameObject.Find("Player1");
+                GameObject player2 = GameObject.Find("Player2");
+                PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
+                PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
+                p1.currentPlayState = PlayerMovement.playerState.Immobile;
+                p2.currentPlayState = PlayerMovement.playerState.Immobile;
                 //StartCoroutine(CheckResult(1f));
-                
+
             }
         }
     }
@@ -147,15 +168,15 @@ public class GameManagerScript : MonoBehaviour
     IEnumerator CountDownTimer(float Time)
     {
         yield return new WaitForSeconds(0f);
-        
         GameObject player1 = GameObject.Find("Player1");
         GameObject player2 = GameObject.Find("Player2");
         PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
         PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
-        p1.currentPlayState = PlayerMovement.playerState.Immobile;
-        p2.currentPlayState = PlayerMovement.playerState.Immobile;
+
         yield return new WaitForSeconds(5f);
         currentMatchState = playerState.InGameMatch;
+        p1.groundCheck.SetActive(true);
+        p2.groundCheck.SetActive(true);
         p1.currentPlayState = PlayerMovement.playerState.Grounded;
         p2.currentPlayState = PlayerMovement.playerState.Grounded;
 

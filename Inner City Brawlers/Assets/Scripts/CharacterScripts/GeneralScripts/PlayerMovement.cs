@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void FixedUpdate()
     {
         P1Movement();
     }
@@ -38,8 +38,8 @@ public class PlayerMovement : MonoBehaviour
     public void P1Movement()
     {
         float moveHorizontal = player.GetAxis("Move Horizontal");
-        float moveUp = player.GetAxis("Move Up");
-        float moveDown = player.GetAxis("Move Down");
+        float moveUp = player.GetAxis("Move Vertical");
+        //float moveDown = player.GetAxis("Move Down");
 
         if (currentPlayState == playerState.Grounded)
         {
@@ -75,9 +75,9 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("Current Player State: " + currentPlayState);
             }
         }
-        if (-moveDown <= 1 && -moveDown > 0.3)
+        if (-moveUp <= 1 && -moveUp > 0.3)
         {
-            currentPlayState = playerState.Crouch;
+            //currentPlayState = playerState.Crouch;
             Debug.Log("Crouch2 " + currentPlayState);
         }
         /*if (currentPlayState == playerState.Crouch)

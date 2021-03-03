@@ -16,7 +16,7 @@ public class PlayerButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = ReInput.players.GetPlayer(playerID);
+        player = ReInput.players.GetPlayer(pM.playerID);
     }
 
     // Update is called once per frame
@@ -59,8 +59,17 @@ public class PlayerButtons : MonoBehaviour
             if (player.GetButtonDown("CalloutAssist"))
             {
                 GameObject gameManager = GameObject.Find("GameManager");
-                GameManagerScript gM = (GameManagerScript)gameManager.GetComponent(typeof(GameManagerScript));
-                gM.useP1CaAssist();
+                CallOutAssist gM = (CallOutAssist)gameManager.GetComponent(typeof(CallOutAssist));
+                if(playerID == 0)
+                {
+                    gM.p1UseCAssist();
+                }
+
+                if (playerID == 1)
+                {
+                    gM.p2UseCAssist();
+                }
+
                 Debug.Log("CurrentPlayerState: " + pM.currentPlayState);
             }
             if (player.GetButtonDown("LifelineAssist"))
