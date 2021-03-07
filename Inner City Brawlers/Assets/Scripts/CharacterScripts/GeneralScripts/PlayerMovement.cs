@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     //Rewired
     [SerializeField] public int playerID;
     [SerializeField] private Player player;
+
+    public bool isDisabled;
    
 
     // Start is called before the first frame update
@@ -27,16 +29,41 @@ public class PlayerMovement : MonoBehaviour
     {
         myRB2D = GetComponent<Rigidbody2D>();
         player = ReInput.players.GetPlayer(playerID);
+        if (playerID == 0)
+        {
+            SetControllerMapsForCurrentModeP1();
+        }
+
+        if (playerID == 1)
+        {
+            SetControllerMapsForCurrentModeP2();
+        }
     }
 
     // Update is called once per frame
     public void FixedUpdate()
     {
-        P1Movement();
+        if(isDisabled != true)
+        {
+            playerMovement();
+        }  
     }
 
-    public void P1Movement()
+    public void SetControllerMapsForCurrentModeP1()
     {
+        player.controllers.maps.LoadMap(ControllerType.Keyboard, playerID, "Default", "Player1", true);
+        player.controllers.maps.LoadMap(ControllerType.Joystick, playerID, "Default", "Player1", true);
+    }
+
+    public void SetControllerMapsForCurrentModeP2()
+    {
+        player.controllers.maps.LoadMap(ControllerType.Keyboard, playerID, "Default", "Player2", true);
+        player.controllers.maps.LoadMap(ControllerType.Joystick, playerID, "Default", "Player2", true);
+    }
+
+    public void playerMovement()
+    {
+        
         float moveHorizontal = player.GetAxis("Move Horizontal");
         float moveUp = player.GetAxis("Move Vertical");
         //float moveDown = player.GetAxis("Move Down");

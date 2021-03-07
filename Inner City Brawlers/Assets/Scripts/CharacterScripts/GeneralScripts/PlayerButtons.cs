@@ -22,7 +22,7 @@ public class PlayerButtons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pM.currentPlayState == PlayerMovement.playerState.Grounded || pM.currentPlayState == PlayerMovement.playerState.Jump)
+        if ((pM.currentPlayState == PlayerMovement.playerState.Grounded || pM.currentPlayState == PlayerMovement.playerState.Jump) && pM.isDisabled != true)
         {
             if (player.GetButtonDown("LightAttack"))
             {
