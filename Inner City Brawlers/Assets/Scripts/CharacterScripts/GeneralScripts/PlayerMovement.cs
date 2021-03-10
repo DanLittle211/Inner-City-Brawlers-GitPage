@@ -75,8 +75,13 @@ public class PlayerMovement : MonoBehaviour
                 JumpFunction();
                 Debug.Log("Current Player State: " + currentPlayState);
             }
+            if (-moveUp <= 1 && -moveUp > 0.2)
+            {
+                currentPlayState = playerState.Crouch;
+                Debug.Log("Current Player State: " + currentPlayState);
+            }
 
-            if (moveHorizontal <= 1 && moveHorizontal > 0.2)
+            if (moveHorizontal <= 1 && moveHorizontal > 0.5)
             {
                 myRB2D.AddForce(new Vector2(movementSpeed, 0), ForceMode2D.Impulse);
                 if (moveUp <= 1 && moveUp > 0.2)
@@ -84,14 +89,26 @@ public class PlayerMovement : MonoBehaviour
                     JumpFunction();
                     Debug.Log("Current Player State: " + currentPlayState);
                 }
+                if (-moveUp <= 1 && -moveUp > 0.2)
+                {
+                    currentPlayState = playerState.Crouch;
+                    myRB2D.AddForce(new Vector2(0, 0), ForceMode2D.Impulse);
+                    Debug.Log("Current Player State: " + currentPlayState);
+                }
                 Debug.Log("RightWalk");
             }
-            if (-moveHorizontal <= 1 && -moveHorizontal > 0.2)
+            if (-moveHorizontal <= 1 && -moveHorizontal > 0.5)
             {
                 myRB2D.AddForce(new Vector2(-movementSpeed, 0), ForceMode2D.Impulse);
                 if (moveUp <= 1 && moveUp > 0.2)
                 {
                     JumpFunction();
+                    Debug.Log("Current Player State: " + currentPlayState);
+                }
+                if (-moveUp <= 1 && -moveUp > 0.2)
+                {
+                    currentPlayState = playerState.Crouch;
+                    myRB2D.AddForce(new Vector2(0, 0), ForceMode2D.Impulse);
                     Debug.Log("Current Player State: " + currentPlayState);
                 }
                 Debug.Log("LeftWalk");
@@ -102,19 +119,34 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("Current Player State: " + currentPlayState);
             }
         }
-        if (-moveUp <= 1 && -moveUp > 0.3)
-        {
-            //currentPlayState = playerState.Crouch;
-            Debug.Log("Crouch2 " + currentPlayState);
-        }
-        /*if (currentPlayState == playerState.Crouch)
+        if (currentPlayState == playerState.Crouch)
         {
             if (moveUp <= 1 && moveUp > 0.2)
             {
                 JumpFunction();
                 Debug.Log("Current Player State: " + currentPlayState);
             }
-        }*/
+            if (-moveUp <= 1 && -moveUp > 0.2)
+            {
+                if (moveHorizontal <= 0.5 && moveHorizontal > 0.2)
+                {
+                    myRB2D.AddForce(new Vector2(0, 0), ForceMode2D.Impulse);
+                    currentPlayState = playerState.Crouch;
+                    Debug.Log("Current Player State: " + currentPlayState + " Right");
+                }
+                if (-moveHorizontal <= 0.5 && -moveHorizontal > 0.2)
+                {
+                    myRB2D.AddForce(new Vector2(0, 0), ForceMode2D.Impulse);
+                    currentPlayState = playerState.Crouch;
+                    Debug.Log("Current Player State: " + currentPlayState + " Left");
+                }
+            }
+            else
+            {
+                currentPlayState = playerState.Grounded;
+                Debug.Log("Current Player State: " + currentPlayState);
+            }
+        }
     }
     
     public void JumpFunction()

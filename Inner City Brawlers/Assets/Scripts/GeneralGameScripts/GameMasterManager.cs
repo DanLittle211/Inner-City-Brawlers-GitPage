@@ -8,12 +8,15 @@ public class GameMasterManager : MonoBehaviour
 {
     [Header("SceneViewObjects")]
     public GameObject[] sceneView;
-    public enum GameState {StartScreen, MainMenu, InfoPage, SinglePlayer, Options, CharacterSelect, FightView};
+    public enum GameState { StartScreen, MainMenu, InfoPage, SinglePlayer, Options, CharacterSelect, FightView };
     public GameState currentGameState;
 
     //Rewired
     [SerializeField] public int playerID;
     [SerializeField] private Player player;
+
+    [Header("Master Game BoolState")]
+    public bool isMultiActive;
 
     // Start is called before the first frame update
     void Start()
@@ -131,6 +134,7 @@ public class GameMasterManager : MonoBehaviour
         GameObject player2 = GameObject.Find("Player2");
         PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
         p2.isDisabled = true;
+        isMultiActive = false;
     }
     public void SetGameStateFightViewMulti()
     {
@@ -147,5 +151,6 @@ public class GameMasterManager : MonoBehaviour
         GameObject player2 = GameObject.Find("Player2");
         PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
         p2.isDisabled = false;
+        isMultiActive = true;
     }
 }

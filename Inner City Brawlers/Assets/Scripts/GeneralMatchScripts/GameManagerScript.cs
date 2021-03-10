@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class GameManagerScript : MonoBehaviour
 {
-    //HealthManagementVariables
+
+    [Header("Player's Health")]
     public PlayerHealth p1Health;
     public PlayerHealth p2Health;
 
     public float p1HealthFloat;
     public float p2HealthFloat;
 
-    //CalloutAssist Variables
+    [Header("Player 1's Meter Variables")]
     public float p1CAMeterfloat;
     public float p1CAMeterMaxfloat = 5f;
     public Slider p1CAMeter;
@@ -20,6 +21,7 @@ public class GameManagerScript : MonoBehaviour
     public bool p1CaIsFull;
     public Gradient p1CaGradient;
 
+    [Header("Player 2's Meter Variables")]
     public float p2CAMeterfloat;
     public float p2CAMeterMaxfloat = 5f;
     public Slider p2CAMeter;
@@ -27,11 +29,14 @@ public class GameManagerScript : MonoBehaviour
     public bool p2CaIsFull;
     public Gradient p2CaGradient;
 
-    //Timer Variable
+
+    [Header("Timer Variables")]
     public float currentTimerInt;
     public float maxTimerInt;
     public Text TimerText;
+    public bool TimeStart;
 
+    [Header("Game Manager Variables")]
     public RoundManagement rManager;
     public bool hasFunctionRun;
     public enum playerState {PreRound, InGameMatch, Pause, Knockout,RoundOver,WinnerSelect};
@@ -45,10 +50,11 @@ public class GameManagerScript : MonoBehaviour
 
     void StartMatch()
     {
-        //currentTimerInt = maxTimerInt;
-        //TimerText.text = "Time " + (Mathf.Round(currentTimerInt)).ToString();
+        currentTimerInt = maxTimerInt;
+        TimerText.text = "Time " + (Mathf.Round(currentTimerInt)).ToString();
         p1HealthFloat = p1Health.currentHealth;
         p2HealthFloat = p2Health.currentHealth;
+        TimeStart = false;
 
         p1CAMeterfloat = p1CAMeterMaxfloat;
         SetP1CaMeter(p1CAMeterfloat);
@@ -84,12 +90,6 @@ public class GameManagerScript : MonoBehaviour
         {
             TimerText.text = "Round Over";
         }
-
-        if (currentMatchState == playerState.InGameMatch)
-        {
-            timerTickDown();
-        }
-
         CheckHealth();
 
         if (p1CAMeterfloat >= p1CAMeterMaxfloat)
@@ -142,6 +142,7 @@ public class GameManagerScript : MonoBehaviour
 
             }
         }
+        timerTickDown();
     }
 
     public void CheckHealth()
@@ -179,8 +180,7 @@ public class GameManagerScript : MonoBehaviour
         p2.groundCheck.SetActive(true);
         p1.currentPlayState = PlayerMovement.playerState.Grounded;
         p2.currentPlayState = PlayerMovement.playerState.Grounded;
-
- 
+        TimeStart = true;
     }
     IEnumerator CheckResult(float Time)
     {
@@ -244,8 +244,26 @@ public class GameManagerScript : MonoBehaviour
     //In Game timer Manager
     public void timerTickDown()
     {
-        currentTimerInt -= Time.deltaTime;
-        TimerText.text = "Time " + (Mathf.Round(currentTimerInt)).ToString();
+        if (TimeStart == true)
+        {
+            if (currentTimerInt <= 0)
+            {
+                currentTimerInt = 0;
+                TimerText.text = "Time " + (Mathf.Round(currentTimerInt)).ToString();
+            }
+
+            else if (p1HealthFloat <= 0 || p2HealthFloat <= 0)
+            {
+                currentTimerInt = (currentTimerInt + 1 - 1);
+                TimerText.text = "Time " + (Mathf.Round(currentTimerInt)).ToString();
+            }
+
+            else
+            {
+                currentTimerInt -= Time.deltaTime;
+                TimerText.text = "Time " + (Mathf.Round(currentTimerInt)).ToString();
+            }
+        }
        
     }
 
