@@ -1,6 +1,7 @@
 //created by Will McBride III
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 public class RoundManager : MonoBehaviour
@@ -21,6 +22,11 @@ public class RoundManager : MonoBehaviour
     public float roundTimerStart;
     private float preroundTimer;
     public float preroundTimerStart;
+    #endregion
+    #region Menu/UI Variables
+    [Header("Menu/UI Variables")]
+    public GameObject GameConcludedPanel;
+    public GameObject pauseMenu;
     #endregion
     #region Script References
     [Header("Script references")]
@@ -63,6 +69,9 @@ public class RoundManager : MonoBehaviour
         //preround countdown
         if(currentState == roundState.preRound)
         {
+            //setting each player's movement state to immobile while in this round state
+            p1Movement.currentPlayState = PlayerMovement.playerState.Immobile;
+            p2Movement.currentPlayState = PlayerMovement.playerState.Immobile;
             preroundTimer -= Time.deltaTime; //counts down timer while in this state
             if (preroundTimer <= 0)
             {
@@ -125,7 +134,9 @@ public class RoundManager : MonoBehaviour
         }
         //used for adding to round wins
         if(currentState == roundState.endRound)
-        {
+        {  //setting each player's movement state to immobile while in this round state
+            p1Movement.currentPlayState = PlayerMovement.playerState.Immobile;
+            p2Movement.currentPlayState = PlayerMovement.playerState.Immobile;
             //what happens when player 1 wins the round
             if (p1Wins)
             {
@@ -147,6 +158,9 @@ public class RoundManager : MonoBehaviour
         //used for restarting rounds and tracking total rounds
         if(currentState == roundState.continueOption)
         {
+            //setting each player's movement state to immobile while in this round state
+            p1Movement.currentPlayState =  PlayerMovement.playerState.Immobile;
+            p2Movement.currentPlayState = PlayerMovement.playerState.Immobile;
             //works as a reset for the round
             if(currentRound < totalRounds)
             {
@@ -163,19 +177,31 @@ public class RoundManager : MonoBehaviour
                 //if p1 has more wins than p2 at the last round, for displaying who wins and giving options to restart or not
                 if(p1CurrentWins > p2CurrentWins)
                 {
+                    GameConcludedPanel.SetActive(true);
                     Debug.Log("Player 1 Wins");
                 }
                 //if p2 has more wins than p1 at the last round, for displaying who wins and giving options to restart or not
                 if (p2CurrentWins > p1CurrentWins)
                 {
+                    GameConcludedPanel.SetActive(true);
                     Debug.Log("Player 2 Wins");
                 }
                 //if both players have equal wins, for displaying who wins and giving options to restart or not
                 if (p1CurrentWins == p2CurrentWins)
                 {
+                    GameConcludedPanel.SetActive(true);
                     Debug.Log("The players tied");
                 }
             }
+        }
+        //what happens if the game is paused
+        if(currentState == roundState.roundPaused)
+        {
+            //setting each player's movement state to immobile while in this round state
+            p1Movement.currentPlayState = PlayerMovement.playerState.Immobile;
+            p2Movement.currentPlayState = PlayerMovement.playerState.Immobile;
+            //setting pause menu to active
+            pauseMenu.SetActive(true);
         }
     }
 

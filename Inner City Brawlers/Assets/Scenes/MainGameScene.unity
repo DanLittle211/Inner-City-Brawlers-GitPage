@@ -3678,6 +3678,7 @@ GameObject:
   - component: {fileID: 1100499573}
   - component: {fileID: 1100499574}
   - component: {fileID: 1100499575}
+  - component: {fileID: 1100499578}
   - component: {fileID: 1100499576}
   - component: {fileID: 1100499577}
   m_Layer: 0
@@ -3942,6 +3943,24 @@ MonoBehaviour:
   CurrentRoundInt: 0
   Player1currentRWInt: 0
   Player2currentRWInt: 0
+--- !u!114 &1100499578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100499571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6fa82742850543a0a11d997d2dcfa76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShortRange_Chars:
+  - {fileID: 11400000, guid: 44c17d747e45d4a8a87dee34bb22514b, type: 2}
+  MidRange_chars:
+  - {fileID: 11400000, guid: 45be4d3fe848d4883a7dae62b2446005, type: 2}
+  LongRange_chars:
+  - {fileID: 11400000, guid: b236ea6d88bc540f29c10c20ccd130ce, type: 2}
 --- !u!1 &1132370099
 GameObject:
   m_ObjectHideFlags: 0
