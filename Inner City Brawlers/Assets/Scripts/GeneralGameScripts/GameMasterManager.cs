@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Rewired;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class GameMasterManager : MonoBehaviour
 {
@@ -11,6 +13,12 @@ public class GameMasterManager : MonoBehaviour
     public enum GameState { StartScreen, MainMenu, InfoPage, SinglePlayer, Options, CharacterSelect, FightView };
     public GameState currentGameState;
 
+    [Header("EventSystemManipulation")]
+    public GameObject[] newButton;
+                        //0 = SinglePlayer
+                        //1 = Arcade
+                        //2 = Info Back button
+                        //3 = Options main button
     //Rewired
     [SerializeField] public int playerID;
     [SerializeField] private Player player;
@@ -24,8 +32,6 @@ public class GameMasterManager : MonoBehaviour
         SetGameStateStart();
         player = ReInput.players.GetPlayer(playerID);
         SetControllerMapsForCurrentMode();
-
-
     }
 
     void Update()
@@ -58,6 +64,11 @@ public class GameMasterManager : MonoBehaviour
         sceneView[5].gameObject.SetActive(false);
         sceneView[6].gameObject.SetActive(false);
     }
+
+    public void CloseGame()
+    {
+        Application.Quit();
+    }
     public void SetGameStateMain()
     {
         currentGameState = GameState.MainMenu;
@@ -69,6 +80,11 @@ public class GameMasterManager : MonoBehaviour
         sceneView[4].gameObject.SetActive(false);
         sceneView[5].gameObject.SetActive(false);
         sceneView[6].gameObject.SetActive(false);
+
+
+        GameObject EventSystem = GameObject.Find("EventSystem");
+        EventSystem eS = (EventSystem)EventSystem.GetComponent(typeof(EventSystem));
+        UnityEngine.EventSystems.EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(newButton[0]);
     }
     public void SetGameStateInfo()
     {
@@ -81,6 +97,11 @@ public class GameMasterManager : MonoBehaviour
         sceneView[4].gameObject.SetActive(false);
         sceneView[5].gameObject.SetActive(false);
         sceneView[6].gameObject.SetActive(false);
+
+
+        GameObject EventSystem = GameObject.Find("EventSystem");
+        EventSystem eS = (EventSystem)EventSystem.GetComponent(typeof(EventSystem));
+        UnityEngine.EventSystems.EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(newButton[2]);
     }
     public void SetGameStateSinglePlayer()
     {
@@ -93,6 +114,10 @@ public class GameMasterManager : MonoBehaviour
         sceneView[4].gameObject.SetActive(false);
         sceneView[5].gameObject.SetActive(false);
         sceneView[6].gameObject.SetActive(false);
+
+        GameObject EventSystem = GameObject.Find("EventSystem");
+        EventSystem eS = (EventSystem)EventSystem.GetComponent(typeof(EventSystem));
+        UnityEngine.EventSystems.EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(newButton[1]);
     }
     public void SetGameStateOptions()
     {
@@ -105,6 +130,10 @@ public class GameMasterManager : MonoBehaviour
         sceneView[3].gameObject.SetActive(false);
         sceneView[5].gameObject.SetActive(false);
         sceneView[6].gameObject.SetActive(false);
+
+        //GameObject EventSystem = GameObject.Find("EventSystem");
+        //EventSystem eS = (EventSystem)EventSystem.GetComponent(typeof(EventSystem));
+        UnityEngine.EventSystems.EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(newButton[3]);
     }
     public void SetGameStateCharacterSelect()
     {
