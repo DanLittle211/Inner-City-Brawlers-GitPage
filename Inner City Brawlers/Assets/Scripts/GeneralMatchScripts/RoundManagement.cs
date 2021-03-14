@@ -30,20 +30,20 @@ public class RoundManagement : MonoBehaviour
         {
             if (gManager.p2HealthFloat == gManager.p1HealthFloat)
             {
-                Debug.Log("Draw!!");
-                gManager.hasFunctionRun = true;
+                //Debug.Log("Draw!!");
+                //gManager.hasFunctionRun = true;
                 //playersTie();
             }
             else if (gManager.p1HealthFloat >= gManager.p2HealthFloat)
             {
-                Debug.Log("Player 1 Wins!");
-                gManager.hasFunctionRun = true;
+                //Debug.Log("Player 1 Wins!");
+                //gManager.hasFunctionRun = true;
                 //player1WinRound();
             }
             else if (gManager.p2HealthFloat >= gManager.p1HealthFloat)
             {
-                Debug.Log("Player 2 Wins!");
-                gManager.hasFunctionRun = true;
+                //Debug.Log("Player 2 Wins!");
+                //gManager.hasFunctionRun = true;
                 //player2WinRound();
             }
             gManager.hasFunctionRun = false;

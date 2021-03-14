@@ -80,10 +80,6 @@ public class GameMasterManager : MonoBehaviour
         sceneView[4].gameObject.SetActive(false);
         sceneView[5].gameObject.SetActive(false);
         sceneView[6].gameObject.SetActive(false);
-
-
-        GameObject EventSystem = GameObject.Find("EventSystem");
-        EventSystem eS = (EventSystem)EventSystem.GetComponent(typeof(EventSystem));
         UnityEngine.EventSystems.EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(newButton[0]);
     }
     public void SetGameStateInfo()
@@ -98,9 +94,6 @@ public class GameMasterManager : MonoBehaviour
         sceneView[5].gameObject.SetActive(false);
         sceneView[6].gameObject.SetActive(false);
 
-
-        GameObject EventSystem = GameObject.Find("EventSystem");
-        EventSystem eS = (EventSystem)EventSystem.GetComponent(typeof(EventSystem));
         UnityEngine.EventSystems.EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(newButton[2]);
     }
     public void SetGameStateSinglePlayer()
@@ -115,8 +108,6 @@ public class GameMasterManager : MonoBehaviour
         sceneView[5].gameObject.SetActive(false);
         sceneView[6].gameObject.SetActive(false);
 
-        GameObject EventSystem = GameObject.Find("EventSystem");
-        EventSystem eS = (EventSystem)EventSystem.GetComponent(typeof(EventSystem));
         UnityEngine.EventSystems.EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(newButton[1]);
     }
     public void SetGameStateOptions()
@@ -131,8 +122,6 @@ public class GameMasterManager : MonoBehaviour
         sceneView[5].gameObject.SetActive(false);
         sceneView[6].gameObject.SetActive(false);
 
-        //GameObject EventSystem = GameObject.Find("EventSystem");
-        //EventSystem eS = (EventSystem)EventSystem.GetComponent(typeof(EventSystem));
         UnityEngine.EventSystems.EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(newButton[3]);
     }
     public void SetGameStateCharacterSelect()

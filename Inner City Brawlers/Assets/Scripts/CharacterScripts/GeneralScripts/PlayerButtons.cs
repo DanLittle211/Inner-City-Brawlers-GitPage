@@ -11,7 +11,7 @@ public class PlayerButtons : MonoBehaviour
 
     //Rewired
     [SerializeField] public int playerID;
-    [SerializeField] private Player player;
+    [SerializeField] public Player player;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +41,7 @@ public class PlayerButtons : MonoBehaviour
                 Debug.Log("Heavy attack ");
             }
         }
-        if (pM.currentPlayState == PlayerMovement.playerState.Grounded)
+        if ((pM.currentPlayState == PlayerMovement.playerState.Grounded) && pM.isDisabled != true)
         {
             if (player.GetButtonDown("UniqueAttack"))
             {
@@ -58,16 +58,16 @@ public class PlayerButtons : MonoBehaviour
             }
             if (player.GetButtonDown("CalloutAssist"))
             {
-                GameObject gameManager = GameObject.Find("GameManager");
-                CallOutAssist gM = (CallOutAssist)gameManager.GetComponent(typeof(CallOutAssist));
+                GameObject gameManagerCA = GameObject.Find("GameManager");
+                CallOutAssist gMCA = (CallOutAssist)gameManagerCA.GetComponent(typeof(CallOutAssist));
                 if(playerID == 0)
                 {
-                    gM.p1UseCAssist();
+                    gMCA.p1UseCAssist();
                 }
 
                 if (playerID == 1)
                 {
-                    gM.p2UseCAssist();
+                    gMCA.p2UseCAssist();
                 }
 
                 Debug.Log("CurrentPlayerState: " + pM.currentPlayState);
@@ -77,14 +77,27 @@ public class PlayerButtons : MonoBehaviour
                 Debug.Log("LifeLine Assist Used ");
             }
         }
+
+        GameObject gameMasterManager = GameObject.Find("GameMasterManager");
+        GameMasterManager gMM = (GameMasterManager)gameMasterManager.GetComponent(typeof(GameMasterManager));
+
+        GameObject gameManager = GameObject.Find("GameManager");
+        GameManagerScript gM = (GameManagerScript)gameMasterManager.GetComponent(typeof(GameManagerScript));
+
         if (player.GetButtonDown("Pause"))
         {
-            GameObject gameManager = GameObject.Find("GameManager");
-            GameManagerScript gM = (GameManagerScript)gameManager.GetComponent(typeof(GameManagerScript));
-            //gM.useP1CaAssist();
-            Debug.Log("CurrentPlayerState " + pM.currentPlayState);
-            Debug.Log("CurrentGameState");
-        }  
+            if (gMM.isMultiActive == true)
+            {
+                //Gustave put code to reference pausing game for multiplayer here
+            }
+            if (gMM.isMultiActive == false)
+            {
+                GameObject TrainingPM = GameObject.Find("GameManager");
+                TrainingPauseManager tPM = (TrainingPauseManager)TrainingPM.GetComponent(typeof(TrainingPauseManager));
+                tPM.SetPause();
+            }
+        }
+
     }
     IEnumerator lightAttack(float time)
     {

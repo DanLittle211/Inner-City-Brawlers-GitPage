@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Rewired
     [SerializeField] public int playerID;
-    [SerializeField] private Player player;
+    [SerializeField] public Player player;
 
     public bool isDisabled;
    
