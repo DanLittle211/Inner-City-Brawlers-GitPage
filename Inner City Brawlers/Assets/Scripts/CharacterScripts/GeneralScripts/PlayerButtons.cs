@@ -92,7 +92,7 @@ public class PlayerButtons : MonoBehaviour
             }
             if (gMM.isMultiActive == false)
             {
-                GameObject TrainingPM = GameObject.Find("GameManager");
+                GameObject TrainingPM = GameObject.Find("SettingManager");
                 TrainingPauseManager tPM = (TrainingPauseManager)TrainingPM.GetComponent(typeof(TrainingPauseManager));
                 tPM.SetPause();
             }

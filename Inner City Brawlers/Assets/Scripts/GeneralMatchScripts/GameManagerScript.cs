@@ -7,6 +7,8 @@ public class GameManagerScript : MonoBehaviour
 {
     [Header("Training Variables/Tabs")]
     public GameMasterManager gMM;
+    public TrainingPauseManager tPM;
+    public MeterSystem mS;
     
     [Header("Player's Health")]
     public PlayerHealth p1Health;
@@ -48,7 +50,7 @@ public class GameManagerScript : MonoBehaviour
     public playerState currentMatchState;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         StartMatch();
     }
@@ -80,33 +82,40 @@ public class GameManagerScript : MonoBehaviour
              GameObject player2 = GameObject.Find("Player2");
              PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
              PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
-             p1.groundCheck.SetActive(false);
-             p2.groundCheck.SetActive(false);
         }
         if (gMM.isMultiActive == false)
         {
             StartCoroutine(CountDownTrainingTimer(1f));
             currentTimerInt = maxTimerInt;
             TimerText.text = "Time " + " ∞";
-
-            p1HealthFloat = p1Health.currentHealth;
-            p2HealthFloat = p2Health.currentHealth;
-
-            TimeStart = false;
-            p1CAMeterfloat = p1CAMeterMaxfloat;
-            SetP1CaMeter(p1CAMeterfloat);
-
-            p2CAMeterfloat = p2CAMeterMaxfloat;
-            SetP2CaMeter(p2CAMeterfloat);
-
-            hasFunctionRun = false;
-            currentMatchState = playerState.PreRound;
-
+            ResetMode();
+            tPM.SetinactiveState();
             GameObject player1 = GameObject.Find("Player1");
             GameObject player2 = GameObject.Find("Player2");
             PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
             PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
+            //p1.currentPlayState = PlayerMovement.playerState.Grounded;
+            //p2.currentPlayState = PlayerMovement.playerState.Grounded;
         }
+    }
+    void ResetMode()
+    {
+        p1HealthFloat = p1Health.maxHealth;
+        p1Health.SetMaxHealth(p1Health.maxHealth);
+        p2HealthFloat = p2Health.maxHealth;
+        p2Health.SetMaxHealth(p2Health.maxHealth);
+
+        mS.ResetP1Meter();
+        mS.ResetP2Meter();
+
+        p1CAMeterfloat = p1CAMeterMaxfloat;
+        SetP1CaMeter(p1CAMeterfloat);
+
+        TimeStart = false;
+        p2CAMeterfloat = p2CAMeterMaxfloat;
+        SetP2CaMeter(p2CAMeterfloat);
+        hasFunctionRun = false;
+        currentMatchState = playerState.PreRound;
     }
     IEnumerator CountDownTrainingTimer(float Time)
     {
@@ -115,10 +124,10 @@ public class GameManagerScript : MonoBehaviour
         GameObject player2 = GameObject.Find("Player2");
         PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
         PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
-        currentMatchState = playerState.InGameMatch;
+        currentMatchState = playerState.InGameMatch; 
         p1.groundCheck.SetActive(true);
-        p2.groundCheck.SetActive(true);
         p1.currentPlayState = PlayerMovement.playerState.Grounded;
+        p2.groundCheck.SetActive(true);
         p2.currentPlayState = PlayerMovement.playerState.Grounded;
     }
     IEnumerator CountDownVersusTimer(float Time)
@@ -132,8 +141,8 @@ public class GameManagerScript : MonoBehaviour
         yield return new WaitForSeconds(5f);
         currentMatchState = playerState.InGameMatch;
         p1.groundCheck.SetActive(true);
-        p2.groundCheck.SetActive(true);
         p1.currentPlayState = PlayerMovement.playerState.Grounded;
+        p2.groundCheck.SetActive(true);
         p2.currentPlayState = PlayerMovement.playerState.Grounded;
         TimeStart = true;
     }
@@ -147,8 +156,6 @@ public class GameManagerScript : MonoBehaviour
   
     void FixedUpdate()
     {
-
-
         if (gMM.isMultiActive == true)
         {
             timerTickDown();

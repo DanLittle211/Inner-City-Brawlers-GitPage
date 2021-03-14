@@ -8,10 +8,14 @@ using UnityEngine.SceneManagement;
 
 public class GameMasterManager : MonoBehaviour
 {
+    [Header("Game Header Objects")]
+    [SerializeField] public GameObject Menus;
+    [SerializeField] public GameObject FightView;
     [Header("SceneViewObjects")]
     public GameObject[] sceneView;
-    public enum GameState { StartScreen, MainMenu, InfoPage, SinglePlayer, Options, CharacterSelect, FightView };
-    public GameState currentGameState;
+    [SerializeField] public enum GameState { StartScreen, MainMenu, InfoPage, SinglePlayer, Options, CharacterSelect, FightView };
+    [SerializeField] public GameState currentGameState;
+    public GameManagerScript gMS;
 
     [Header("EventSystemManipulation")]
     public GameObject[] newButton;
@@ -29,6 +33,8 @@ public class GameMasterManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Menus.gameObject.SetActive(true);
+        FightView.gameObject.SetActive(false);
         SetGameStateStart();
         player = ReInput.players.GetPlayer(playerID);
         SetControllerMapsForCurrentMode();
@@ -127,13 +133,13 @@ public class GameMasterManager : MonoBehaviour
     public void SetGameStateCharacterSelect()
     {
         currentGameState = GameState.CharacterSelect;
-        sceneView[4].gameObject.SetActive(true);
+        sceneView[5].gameObject.SetActive(true);
 
         sceneView[0].gameObject.SetActive(false);
         sceneView[1].gameObject.SetActive(false);
         sceneView[2].gameObject.SetActive(false);
         sceneView[3].gameObject.SetActive(false);
-        sceneView[5].gameObject.SetActive(false);
+        sceneView[4].gameObject.SetActive(false);
         sceneView[6].gameObject.SetActive(false);
     }
 
@@ -153,6 +159,7 @@ public class GameMasterManager : MonoBehaviour
         PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
         p2.isDisabled = true;
         isMultiActive = false;
+        gMS.Start();
     }
     public void SetGameStateFightViewMulti()
     {
@@ -170,5 +177,6 @@ public class GameMasterManager : MonoBehaviour
         PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
         p2.isDisabled = false;
         isMultiActive = true;
+        gMS.Start();
     }
 }

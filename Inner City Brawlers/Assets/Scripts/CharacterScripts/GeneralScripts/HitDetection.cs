@@ -15,11 +15,7 @@ public class HitDetection : MonoBehaviour
             PlayerHealth pH = (PlayerHealth)playerHealth.GetComponent(typeof(PlayerHealth));
             pH.TakeDamage(damageNumber);
 
-            GameObject gameManager = GameObject.Find("GameManager");
-            MeterSystem mS = (MeterSystem)gameManager.GetComponent(typeof(MeterSystem));
-            mS.p1MakeMeter(gMeterNumber);
-            mS.p2MakeMeter(rMeterNumber);
-
+            p1MeterDealing();
             Debug.Log("Hit hitbox");
         }
 
@@ -28,12 +24,25 @@ public class HitDetection : MonoBehaviour
             GameObject playerHealth = GameObject.Find("Player2");
             PlayerHealth pH = (PlayerHealth)playerHealth.GetComponent(typeof(PlayerHealth));
             pH.TakeDamage(damageNumber);
-
-            GameObject gameManager = GameObject.Find("GameManager");
-            MeterSystem mS = (MeterSystem)gameManager.GetComponent(typeof(MeterSystem));
-            mS.p1MakeMeter(rMeterNumber);
-            mS.p2MakeMeter(gMeterNumber);
+            p2MeterDealing();
+            
             Debug.Log("Hit hitbox");
         }
+    }
+    void p1MeterDealing()
+    {
+        GameObject gameManager = GameObject.Find("GameManager");
+        MeterSystem mS = (MeterSystem)gameManager.GetComponent(typeof(MeterSystem));
+        mS.p1MakeMeter(gMeterNumber);
+        mS.p2MakeMeter(rMeterNumber);
+        Debug.Log("p1 Dealt Meter");
+    }
+    void p2MeterDealing()
+    {
+        GameObject gameManager = GameObject.Find("GameManager");
+        MeterSystem mS = (MeterSystem)gameManager.GetComponent(typeof(MeterSystem));
+        mS.p1MakeMeter(rMeterNumber);
+        mS.p2MakeMeter(gMeterNumber);
+        Debug.Log("p2 Dealt Meter");
     }
 }

@@ -19,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
         currentRecovHealth = maxHealth;
     }
-    public void SetMaxHealth(int health)
+    public void SetMaxHealth(float health)
     {
         slider.maxValue = health;
         slider.value = health;
@@ -37,14 +37,12 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= damage;
         Mathf.Round(currentHealth);
-        //currentRecovHealth -= (Mathf.Round(damage/2));
         SetHealth(currentHealth);
     }
     public void MakeHealth(float healthPercent)
     {
         currentHealth += healthPercent;
         SetHealth(currentHealth);
-
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -59,6 +57,15 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth >= currentRecovHealth)
         {
             //currentHealth = currentRecovHealth;
+        }
+
+        if (currentHealth >= 500)
+        {
+            currentHealth = 500;
+        }
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
         }
         if (currentHealth <= 0)
         {
