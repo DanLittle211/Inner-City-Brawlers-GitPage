@@ -54,34 +54,36 @@ public class GameManagerScript : MonoBehaviour
     {
         StartMatch();
     }
+    void ImmobilizePlayer()
+    {
+        Debug.Log("Immobilized Player");
+        GameObject player1 = GameObject.Find("Player1");
+        GameObject player2 = GameObject.Find("Player2");
+        PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
+        PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
+        p1.isDisabled = true;
+        p2.isDisabled = true;
+    }
 
     void StartMatch()
     {
         if (gMM.isMultiActive == true)
         {
-             currentTimerInt = maxTimerInt;
-             TimerText.text = "Time " + (Mathf.Round(currentTimerInt)).ToString();
-             p1HealthFloat = p1Health.currentHealth;
-             p2HealthFloat = p2Health.currentHealth;
-             TimeStart = false;
+            currentTimerInt = maxTimerInt;
+            TimerText.text = "Time " + (Mathf.Round(currentTimerInt)).ToString();
+            p1HealthFloat = p1Health.currentHealth;
+            p2HealthFloat = p2Health.currentHealth;
+            TimeStart = false;
 
-             p1CAMeterfloat = p1CAMeterMaxfloat;
-             SetP1CaMeter(p1CAMeterfloat);
-
-             p2CAMeterfloat = p1CAMeterMaxfloat;
-             SetP2CaMeter(p1CAMeterfloat);
-
-             currentTimerInt = maxTimerInt;
-             hasFunctionRun = false;
-
-             currentMatchState = playerState.PreRound;
-
-             StartCoroutine(CountDownVersusTimer(1f));
-
-             GameObject player1 = GameObject.Find("Player1");
-             GameObject player2 = GameObject.Find("Player2");
-             PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
-             PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
+            p1CAMeterfloat = p1CAMeterMaxfloat;
+            SetP1CaMeter(p1CAMeterfloat);
+            p2CAMeterfloat = p1CAMeterMaxfloat;
+            SetP2CaMeter(p1CAMeterfloat);
+            currentTimerInt = maxTimerInt;
+            hasFunctionRun = false;
+            currentMatchState = playerState.PreRound;
+            StartCoroutine(CountDownVersusTimer(1f));
+            ImmobilizePlayer();
         }
         if (gMM.isMultiActive == false)
         {
@@ -144,6 +146,8 @@ public class GameManagerScript : MonoBehaviour
         p1.currentPlayState = PlayerMovement.playerState.Grounded;
         p2.groundCheck.SetActive(true);
         p2.currentPlayState = PlayerMovement.playerState.Grounded;
+        p1.isDisabled = false;
+        p2.isDisabled = false;
         TimeStart = true;
     }
 
