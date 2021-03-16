@@ -21570,7 +21570,7 @@ MonoBehaviour:
   maxTimerInt: 99
   TimerText: {fileID: 1465969646}
   TimeStart: 0
-  rManager: {fileID: 1100499577}
+  rManager: {fileID: 0}
   hasFunctionRun: 0
   currentMatchState: 0
 --- !u!114 &1100499574
@@ -21716,14 +21716,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1100499571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f625d20b966a7d3459d3398a3e4addc7, type: 3}
+  m_Script: {fileID: 11500000, guid: 5126ee3b5f48d4fa1a2a575e8cc9bb89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentState: 0
+  currentRound: 0
+  totalRounds: 0
+  p1CurrentWins: 0
+  p2CurrentWins: 0
+  roundTimerStart: 0
+  preroundTimerStart: 0
+  GameConcludedPanel: {fileID: 0}
+  pauseMenu: {fileID: 0}
   gManager: {fileID: 1100499573}
-  TotalWinsInt: 0
-  CurrentRoundInt: 0
-  Player1currentRWInt: 0
-  Player2currentRWInt: 0
+  player1: {fileID: 1649239951}
+  player2: {fileID: 470878389}
+  p1Wins: 0
+  p2Wins: 0
+  haveTied: 0
 --- !u!1 &1110374495
 GameObject:
   m_ObjectHideFlags: 0
@@ -21959,7 +21969,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1112377047
 Transform:
   m_ObjectHideFlags: 0

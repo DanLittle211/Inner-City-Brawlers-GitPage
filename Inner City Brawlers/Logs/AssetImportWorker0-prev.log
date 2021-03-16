@@ -1,0 +1,16 @@
+Using pre-set license
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.2.4f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner City Brawlers
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+63108
+Successfully changed project path to: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner City Brawlers
