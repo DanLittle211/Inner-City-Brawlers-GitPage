@@ -9,7 +9,14 @@ public class GameManagerScript : MonoBehaviour
     public GameMasterManager gMM;
     public TrainingPauseManager tPM;
     public MeterSystem mS;
-    
+    public CallOutAssist cOA;
+
+    [Header("Transform Starter Positions")]
+    [SerializeField] public Transform p1Transform;
+    [SerializeField] public Transform p2Transform;
+    public Transform p1StartPosition;
+    public Transform p2StartPosition;
+
     [Header("Player's Health")]
     public PlayerHealth p1Health;
     public PlayerHealth p2Health;
@@ -54,6 +61,11 @@ public class GameManagerScript : MonoBehaviour
     {
         StartMatch();
     }
+    void LockStartPosition()
+    {
+        p1Transform.transform.position = p1StartPosition.transform.position;
+        p2Transform.transform.position = p2StartPosition.transform.position;
+    }
     void ImmobilizePlayer()
     {
         Debug.Log("Immobilized Player");
@@ -71,19 +83,32 @@ public class GameManagerScript : MonoBehaviour
         {
             currentTimerInt = maxTimerInt;
             TimerText.text = "Time " + (Mathf.Round(currentTimerInt)).ToString();
-            p1HealthFloat = p1Health.currentHealth;
-            p2HealthFloat = p2Health.currentHealth;
+
+            p1HealthFloat = p1Health.maxHealth;
+            p1Health.SetMaxHealth(p1Health.maxHealth);
+
+            p2HealthFloat = p2Health.maxHealth;
+            p2Health.SetMaxHealth(p2Health.maxHealth);
+            mS.ResetP1Meter();
+            mS.ResetP2Meter();
+
             TimeStart = false;
 
             p1CAMeterfloat = p1CAMeterMaxfloat;
             SetP1CaMeter(p1CAMeterfloat);
+
             p2CAMeterfloat = p1CAMeterMaxfloat;
             SetP2CaMeter(p1CAMeterfloat);
+
             currentTimerInt = maxTimerInt;
             hasFunctionRun = false;
+            tPM.SetinactiveState();
             currentMatchState = playerState.PreRound;
             StartCoroutine(CountDownVersusTimer(1f));
             ImmobilizePlayer();
+            cOA.p1Timer = 0f;
+            cOA.p2Timer = 0f;
+            LockStartPosition();
         }
         if (gMM.isMultiActive == false)
         {
@@ -96,8 +121,9 @@ public class GameManagerScript : MonoBehaviour
             GameObject player2 = GameObject.Find("Player2");
             PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
             PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
-            //p1.currentPlayState = PlayerMovement.playerState.Grounded;
-            //p2.currentPlayState = PlayerMovement.playerState.Grounded;
+            cOA.p1Timer = 0f;
+            cOA.p2Timer = 0f;
+
         }
     }
     void ResetMode()
@@ -109,7 +135,7 @@ public class GameManagerScript : MonoBehaviour
 
         mS.ResetP1Meter();
         mS.ResetP2Meter();
-
+        LockStartPosition();
         p1CAMeterfloat = p1CAMeterMaxfloat;
         SetP1CaMeter(p1CAMeterfloat);
 
