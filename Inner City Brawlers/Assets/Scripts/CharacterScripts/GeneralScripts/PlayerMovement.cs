@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("Current Player State: " + currentPlayState);
             }
 
-            if (moveHorizontal <= 1 && moveHorizontal > 0.5)
+            if ((moveHorizontal <= 1 && moveHorizontal > 0.5) && Mathf.Round(myRB2D.velocity.x) <= movementSpeed)
             {
                 myRB2D.AddForce(new Vector2(movementSpeed, 0), ForceMode2D.Impulse);
                 if (moveUp <= 1 && moveUp > 0.2)
@@ -97,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 Debug.Log("RightWalk");
             }
-            if (-moveHorizontal <= 1 && -moveHorizontal > 0.5)
+            if ((-moveHorizontal <= 1 && -moveHorizontal > 0.5) && Mathf.Abs(myRB2D.velocity.x) <= movementSpeed)
             {
                 myRB2D.AddForce(new Vector2(-movementSpeed, 0), ForceMode2D.Impulse);
                 if (moveUp <= 1 && moveUp > 0.2)
@@ -151,7 +151,7 @@ public class PlayerMovement : MonoBehaviour
     
     public void JumpFunction()
     {
-        if (isGrounded == true && Mathf.Abs(myRB2D.velocity.y) < 0.001f)
+        if (isGrounded == true && Mathf.Abs(myRB2D.velocity.y) < 0.0012f)
         {
             myRB2D.AddForce(new Vector2(0, jumpStrength), ForceMode2D.Impulse);
         }
