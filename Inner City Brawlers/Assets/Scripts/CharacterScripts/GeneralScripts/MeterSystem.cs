@@ -33,9 +33,21 @@ public class MeterSystem : MonoBehaviour
         SetP1Meter(p1CurrentMeter);
 
     }
+    public void p1DecreaseMeter(float miPoint) // miPoint = meter increase point
+    {
+        p1CurrentMeter -= miPoint;
+        SetP1Meter(p1CurrentMeter);
+
+    }
     public void p2MakeMeter(float miPoint) // miPoint = meter increase point
     {
         p2CurrentMeter += miPoint;
+        SetP2Meter(p2CurrentMeter);
+
+    }
+    public void p2DecreaseMeter(float miPoint) // miPoint = meter increase point
+    {
+        p2CurrentMeter -= miPoint;
         SetP2Meter(p2CurrentMeter);
 
     }
@@ -80,19 +92,25 @@ public class MeterSystem : MonoBehaviour
         p2MeterFull = false;
     }
 
-    public void SuperCharge()
-    {
-        //meterFull = true;
-    }
     void Update()
     {
         if (p1CurrentMeter >= 4 ^ p1CurrentMeter >= p1MaxMeter)
         {
             p1MeterFull = true;
+            p1CurrentMeter = 4;
         }
         if (p2CurrentMeter >= 4 ^ p2CurrentMeter >= p2MaxMeter)
         {
             p2MeterFull = true;
+            p1CurrentMeter = 4;
+        }
+        if (p1CurrentMeter <= 0)
+        {
+            p1CurrentMeter = 0;
+        }
+        if (p2CurrentMeter <= 0)
+        {
+            p2CurrentMeter = 0;
         }
     }
 }

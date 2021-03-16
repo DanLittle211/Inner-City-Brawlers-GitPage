@@ -1,18 +1,30 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManagerScript : MonoBehaviour
 {
-    //HealthManagementVariables
+    [Header("Training Variables/Tabs")]
+    public GameMasterManager gMM;
+    public TrainingPauseManager tPM;
+    public MeterSystem mS;
+    public CallOutAssist cOA;
+
+    [Header("Transform Starter Positions")]
+    [SerializeField] public Transform p1Transform;
+    [SerializeField] public Transform p2Transform;
+    public Transform p1StartPosition;
+    public Transform p2StartPosition;
+
+    [Header("Player's Health")]
     public PlayerHealth p1Health;
     public PlayerHealth p2Health;
 
     public float p1HealthFloat;
     public float p2HealthFloat;
 
-    //CalloutAssist Variables
+    [Header("Player 1's Meter Variables")]
     public float p1CAMeterfloat;
     public float p1CAMeterMaxfloat = 5f;
     public Slider p1CAMeter;
@@ -20,6 +32,7 @@ public class GameManagerScript : MonoBehaviour
     public bool p1CaIsFull;
     public Gradient p1CaGradient;
 
+    [Header("Player 2's Meter Variables")]
     public float p2CAMeterfloat;
     public float p2CAMeterMaxfloat = 5f;
     public Slider p2CAMeter;
@@ -27,48 +40,141 @@ public class GameManagerScript : MonoBehaviour
     public bool p2CaIsFull;
     public Gradient p2CaGradient;
 
-    //Timer Variable
+    [Header("Pause Variables")]
+    [SerializeField] public bool isPaused;
+
+
+    [Header("Timer Variables")]
     public float currentTimerInt;
     public float maxTimerInt;
     public Text TimerText;
+    public bool TimeStart;
 
+    [Header("Game Manager Variables")]
     public RoundManagement rManager;
     public bool hasFunctionRun;
     public enum playerState {PreRound, InGameMatch, Pause, Knockout,RoundOver,WinnerSelect};
     public playerState currentMatchState;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         StartMatch();
     }
-
-    void StartMatch()
+    void LockStartPosition()
     {
-        //currentTimerInt = maxTimerInt;
-        //TimerText.text = "Time " + (Mathf.Round(currentTimerInt)).ToString();
-        p1HealthFloat = p1Health.currentHealth;
-        p2HealthFloat = p2Health.currentHealth;
-
-        p1CAMeterfloat = p1CAMeterMaxfloat;
-        SetP1CaMeter(p1CAMeterfloat);
-
-        p2CAMeterfloat = p1CAMeterMaxfloat;
-        SetP2CaMeter(p1CAMeterfloat);
-
-        currentTimerInt = maxTimerInt;
-        hasFunctionRun = false;
-
-        currentMatchState = playerState.PreRound;
-
-        StartCoroutine(CountDownTimer(1f));
-
+        p1Transform.transform.position = p1StartPosition.transform.position;
+        p2Transform.transform.position = p2StartPosition.transform.position;
+    }
+    void ImmobilizePlayer()
+    {
+        Debug.Log("Immobilized Player");
         GameObject player1 = GameObject.Find("Player1");
         GameObject player2 = GameObject.Find("Player2");
         PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
         PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
-        p1.groundCheck.SetActive(false);
-        p2.groundCheck.SetActive(false);
+        p1.isDisabled = true;
+        p2.isDisabled = true;
+    }
+
+    void StartMatch()
+    {
+        if (gMM.isMultiActive == true)
+        {
+            currentTimerInt = maxTimerInt;
+            TimerText.text = "Time " + (Mathf.Round(currentTimerInt)).ToString();
+
+            p1HealthFloat = p1Health.maxHealth;
+            p1Health.SetMaxHealth(p1Health.maxHealth);
+
+            p2HealthFloat = p2Health.maxHealth;
+            p2Health.SetMaxHealth(p2Health.maxHealth);
+            mS.ResetP1Meter();
+            mS.ResetP2Meter();
+
+            TimeStart = false;
+
+            p1CAMeterfloat = p1CAMeterMaxfloat;
+            SetP1CaMeter(p1CAMeterfloat);
+
+            p2CAMeterfloat = p1CAMeterMaxfloat;
+            SetP2CaMeter(p1CAMeterfloat);
+
+            currentTimerInt = maxTimerInt;
+            hasFunctionRun = false;
+            tPM.SetinactiveState();
+            currentMatchState = playerState.PreRound;
+            StartCoroutine(CountDownVersusTimer(1f));
+            ImmobilizePlayer();
+            cOA.p1Timer = 0f;
+            cOA.p2Timer = 0f;
+            LockStartPosition();
+        }
+        if (gMM.isMultiActive == false)
+        {
+            StartCoroutine(CountDownTrainingTimer(1f));
+            currentTimerInt = maxTimerInt;
+            TimerText.text = "Time " + " ∞";
+            ResetMode();
+            tPM.SetinactiveState();
+            GameObject player1 = GameObject.Find("Player1");
+            GameObject player2 = GameObject.Find("Player2");
+            PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
+            PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
+            cOA.p1Timer = 0f;
+            cOA.p2Timer = 0f;
+
+        }
+    }
+    void ResetMode()
+    {
+        p1HealthFloat = p1Health.maxHealth;
+        p1Health.SetMaxHealth(p1Health.maxHealth);
+        p2HealthFloat = p2Health.maxHealth;
+        p2Health.SetMaxHealth(p2Health.maxHealth);
+
+        mS.ResetP1Meter();
+        mS.ResetP2Meter();
+        LockStartPosition();
+        p1CAMeterfloat = p1CAMeterMaxfloat;
+        SetP1CaMeter(p1CAMeterfloat);
+
+        TimeStart = false;
+        p2CAMeterfloat = p2CAMeterMaxfloat;
+        SetP2CaMeter(p2CAMeterfloat);
+        hasFunctionRun = false;
+        currentMatchState = playerState.PreRound;
+    }
+    IEnumerator CountDownTrainingTimer(float Time)
+    {
+        yield return new WaitForSeconds(0f);
+        GameObject player1 = GameObject.Find("Player1");
+        GameObject player2 = GameObject.Find("Player2");
+        PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
+        PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
+        currentMatchState = playerState.InGameMatch; 
+        p1.groundCheck.SetActive(true);
+        p1.currentPlayState = PlayerMovement.playerState.Grounded;
+        p2.groundCheck.SetActive(true);
+        p2.currentPlayState = PlayerMovement.playerState.Grounded;
+    }
+    IEnumerator CountDownVersusTimer(float Time)
+    {
+        yield return new WaitForSeconds(0f);
+        GameObject player1 = GameObject.Find("Player1");
+        GameObject player2 = GameObject.Find("Player2");
+        PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
+        PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
+
+        yield return new WaitForSeconds(5f);
+        currentMatchState = playerState.InGameMatch;
+        p1.groundCheck.SetActive(true);
+        p1.currentPlayState = PlayerMovement.playerState.Grounded;
+        p2.groundCheck.SetActive(true);
+        p2.currentPlayState = PlayerMovement.playerState.Grounded;
+        p1.isDisabled = false;
+        p2.isDisabled = false;
+        TimeStart = true;
     }
 
     // Update is called once per frame
@@ -79,17 +185,11 @@ public class GameManagerScript : MonoBehaviour
     }
   
     void FixedUpdate()
-    {  
-        if (currentTimerInt <= 0)
-        {
-            TimerText.text = "Round Over";
-        }
-
-        if (currentMatchState == playerState.InGameMatch)
+    {
+        if (gMM.isMultiActive == true)
         {
             timerTickDown();
         }
-
         CheckHealth();
 
         if (p1CAMeterfloat >= p1CAMeterMaxfloat)
@@ -124,7 +224,6 @@ public class GameManagerScript : MonoBehaviour
                 p1.currentPlayState = PlayerMovement.playerState.Immobile;
                 p2.currentPlayState = PlayerMovement.playerState.Immobile;
                 //StartCoroutine(CheckResult(1f));
-
             }   
         }
         if (p1HealthFloat == 0)
@@ -139,9 +238,9 @@ public class GameManagerScript : MonoBehaviour
                 p1.currentPlayState = PlayerMovement.playerState.Immobile;
                 p2.currentPlayState = PlayerMovement.playerState.Immobile;
                 //StartCoroutine(CheckResult(1f));
-
             }
         }
+        
     }
 
     public void CheckHealth()
@@ -165,23 +264,7 @@ public class GameManagerScript : MonoBehaviour
         
     }
 
-    IEnumerator CountDownTimer(float Time)
-    {
-        yield return new WaitForSeconds(0f);
-        GameObject player1 = GameObject.Find("Player1");
-        GameObject player2 = GameObject.Find("Player2");
-        PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
-        PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
-
-        yield return new WaitForSeconds(5f);
-        currentMatchState = playerState.InGameMatch;
-        p1.groundCheck.SetActive(true);
-        p2.groundCheck.SetActive(true);
-        p1.currentPlayState = PlayerMovement.playerState.Grounded;
-        p2.currentPlayState = PlayerMovement.playerState.Grounded;
-
- 
-    }
+   
     IEnumerator CheckResult(float Time)
     {
         hasFunctionRun = false;
@@ -244,8 +327,26 @@ public class GameManagerScript : MonoBehaviour
     //In Game timer Manager
     public void timerTickDown()
     {
-        currentTimerInt -= Time.deltaTime;
-        TimerText.text = "Time " + (Mathf.Round(currentTimerInt)).ToString();
+        if (TimeStart == true)
+        {
+            if (currentTimerInt <= 0)
+            {
+                currentTimerInt = 0;
+                TimerText.text = "Round Over";
+            }
+
+            else if (p1HealthFloat <= 0 || p2HealthFloat <= 0)
+            {
+                currentTimerInt = (currentTimerInt + 1 - 1);
+                TimerText.text = "Time " + (Mathf.Round(currentTimerInt)).ToString();
+            }
+
+            else
+            {
+                currentTimerInt -= Time.deltaTime;
+                TimerText.text = "Time " + (Mathf.Round(currentTimerInt)).ToString();
+            }
+        }
        
     }
 
