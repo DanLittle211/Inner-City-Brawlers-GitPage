@@ -36,6 +36,7 @@ public class RoundManager : MonoBehaviour
     #region Script References
     [Header("Script references")]
     public GameManagerScript gManager;
+    public GameMasterManager gMM;
     private PlayerHealth p1Health;
     private PlayerHealth p2Health;
     private PlayerMovement p1Movement;
@@ -69,14 +70,25 @@ public class RoundManager : MonoBehaviour
         p1Buttons = player1.GetComponent<PlayerButtons>();
         p2Buttons = player2.GetComponent<PlayerButtons>();
         //other variables
-        roundTimer = roundTimerStart;
-        preroundTimer = preroundTimerStart;
-        currentRound = 1;
-        p1CurrentWins = 0;
-        p2CurrentWins = 0;
-        currentState = roundState.preRound;
-        GameConcludedPanel.SetActive(false);
 
+        if (gMM.isMultiActive == false)
+        {
+            gManager.trainingStart();
+            pauseMenu.SetActive(false);
+        }
+        if (gMM.isMultiActive == true)
+        {
+            gManager.LockStartPosition();
+            roundTimer = roundTimerStart;
+            preroundTimer = preroundTimerStart;
+            currentRound = 1;
+            p1CurrentWins = 0;
+            p2CurrentWins = 0;
+            currentState = roundState.preRound;
+            GameConcludedPanel.SetActive(false);
+            pauseMenu.SetActive(false);
+        }
+        
     }
 
     public void ResetGame()
@@ -87,187 +99,191 @@ public class RoundManager : MonoBehaviour
 
     private void Update()
     {
-        TimerText.text = "Time: " + (Mathf.Round(roundTimer)).ToString();
-        Debug.Log(currentState);
-        //preround countdown
-        if(currentState == roundState.preRound)
+        
+        if (gMM.isMultiActive == true)
         {
-            p1Movement.isDisabled = true;
-            p2Movement.isDisabled = true;
-            oneTime = false;
-            //setting each player's movement state to immobile while in this round state
-            preroundTimer -= Time.deltaTime; //counts down timer while in this state
-            if (preroundTimer <= 0)
+            TimerText.text = "Time: " + (Mathf.Round(roundTimer)).ToString();
+            Debug.Log(currentState);
+            //preround countdown
+            if (currentState == roundState.preRound)
             {
-                preroundTimer = 0;
-                previousRound = currentRound;
+                p1Movement.isDisabled = true;
+                p2Movement.isDisabled = true;
+                oneTime = false;
+                //setting each player's movement state to immobile while in this round state
+                preroundTimer -= Time.deltaTime; //counts down timer while in this state
+                if (preroundTimer <= 0)
+                {
+                    preroundTimer = 0;
+                    previousRound = currentRound;
 
-                currentState = roundState.duringRound;
+                    currentState = roundState.duringRound;
+                    p1Movement.isDisabled = false;
+                    p2Movement.isDisabled = false;
+                }
+            }
+            //used for tracking round wins and others 
+            if (currentState == roundState.duringRound)
+            {
+                //round timer functions
+                roundTimer -= Time.deltaTime; //counts down timer while in this state
+                                              //what happens when the timer runs out and no-one won
                 p1Movement.isDisabled = false;
                 p2Movement.isDisabled = false;
-            }
-        }
-        //used for tracking round wins and others 
-        if(currentState == roundState.duringRound)
-        {
-            //round timer functions
-            roundTimer -= Time.deltaTime; //counts down timer while in this state
-            //what happens when the timer runs out and no-one won
-            p1Movement.isDisabled = false;
-            p2Movement.isDisabled = false;
-            if (roundTimer <= 0)
-            {
-                roundTimer = 0;
-                //p1 wins
-                if(p1Health.currentHealth > p2Health.currentHealth)
+                if (roundTimer <= 0)
                 {
-                    p1Wins = true;
-                    currentState = roundState.endRound;
+                    roundTimer = 0;
+                    //p1 wins
+                    if (p1Health.currentHealth > p2Health.currentHealth)
+                    {
+                        p1Wins = true;
+                        currentState = roundState.endRound;
+                    }
+                    //p2 wins
+                    if (p1Health.currentHealth < p2Health.currentHealth)
+                    {
+                        p2Wins = true;
+                        currentState = roundState.endRound;
+                    }
+                    //players tie
+                    if (p1Health.currentHealth == p2Health.currentHealth)
+                    {
+                        haveTied = true;
+                        currentState = roundState.endRound;
+                    }
+
                 }
-                //p2 wins
-                if(p1Health.currentHealth < p2Health.currentHealth)
+                //if the round timer is > 0
+                else
                 {
-                    p2Wins = true;
-                    currentState = roundState.endRound;
-                }
-                //players tie
-                if(p1Health.currentHealth == p2Health.currentHealth)
-                {
-                    haveTied = true;
-                    currentState = roundState.endRound;
+                    //player 1 is knockedout
+                    if (p1Health.currentHealth <= 0 && !p1Wins && !haveTied)
+                    {
+                        p2Wins = true;
+                        currentState = roundState.endRound;
+                    }
+                    //player 2 is knockedout
+                    if (p2Health.currentHealth <= 0 && !p2Wins && !haveTied)
+                    {
+                        p1Wins = true;
+                        currentState = roundState.endRound;
+                    }
+                    //both are knocked out at same time
+                    if ((p1Health.currentHealth == 0 && p2Health.currentHealth == 0) && (!p1Wins && !p2Wins))
+                    {
+                        haveTied = true;
+                        currentState = roundState.endRound;
+                    }
                 }
 
             }
-            //if the round timer is > 0
-            else
-            {
-                //player 1 is knockedout
-                if (p1Health.currentHealth <= 0 && !p1Wins && !haveTied)
-                {
-                    p2Wins = true;
-                    currentState = roundState.endRound;
-                }
-                //player 2 is knockedout
-                if (p2Health.currentHealth <= 0 && !p2Wins && !haveTied)
-                {
-                    p1Wins = true;
-                    currentState = roundState.endRound;
-                }
-                //both are knocked out at same time
-                if ((p1Health.currentHealth == 0 && p2Health.currentHealth == 0) && (!p1Wins && !p2Wins))
-                {
-                    haveTied = true;
-                    currentState = roundState.endRound;
-                }
+            //used for adding to round wins
+            if (currentState == roundState.endRound)
+            {  //setting each player's movement state to immobile while in this round state
+                currentState = roundState.continueOption;
+                //what happens when player 1 wins the round
             }
-           
-        }
-        //used for adding to round wins
-        if(currentState == roundState.endRound)
-        {  //setting each player's movement state to immobile while in this round state
-            currentState = roundState.continueOption;
-            //what happens when player 1 wins the round
-        }
-        //used for restarting rounds and tracking total rounds
-        if(currentState == roundState.continueOption)
-        {
-            //setting each player's movement state to immobile while in this round state
-            //p1Movement.isDisabled = true;
-            //p2Movement.isDisabled = true;
-            //works as a reset for the round
-            if (currentRound == previousRound)
+            //used for restarting rounds and tracking total rounds
+            if (currentState == roundState.continueOption)
             {
-                setOneTime();
-                if (oneTime)
+                //setting each player's movement state to immobile while in this round state
+                //p1Movement.isDisabled = true;
+                //p2Movement.isDisabled = true;
+                //works as a reset for the round
+                if (currentRound == previousRound)
                 {
-                    if (p1Wins)
+                    setOneTime();
+                    if (oneTime)
                     {
-                        p1CurrentWins = p1CurrentWins + 1;
+                        if (p1Wins)
+                        {
+                            p1CurrentWins = p1CurrentWins + 1;
+                            p1Wins = false;
+                            //currentState = roundState.continueOption;
+
+                        }
+                        //what happens when player 2 wins the round
+                        if (p2Wins)
+                        {
+                            p2CurrentWins = p2CurrentWins + 1;
+                            p2Wins = false;
+                            //currentState = roundState.continueOption;
+
+                        }
+                        //what happens when the players have tied
+                        if (haveTied)
+                        {
+                            haveTied = false;
+                            //currentState = roundState.continueOption;
+                        }
+                        roundTimer = roundTimerStart;
+                        preroundTimer = preroundTimerStart;
+                        currentRound = currentRound + 1;
                         p1Wins = false;
-                        //currentState = roundState.continueOption;
-
-                    }
-                    //what happens when player 2 wins the round
-                    if (p2Wins)
-                    {
-                        p2CurrentWins = p2CurrentWins + 1;
                         p2Wins = false;
-                        //currentState = roundState.continueOption;
-
-                    }
-                    //what happens when the players have tied
-                    if (haveTied)
-                    {
                         haveTied = false;
-                        //currentState = roundState.continueOption;
+                        oneTime = false;
+                        gManager.StartMatch();
                     }
-                    roundTimer = roundTimerStart;
-                    preroundTimer = preroundTimerStart;
-                    currentRound = currentRound + 1;
-                    p1Wins = false;
-                    p2Wins = false;
-                    haveTied = false;
-                    oneTime = false;
-                    gManager.StartMatch();
                 }
+                else if (currentRound < totalRounds)
+                {
+                    currentState = roundState.preRound;
+                }
+                else if (currentRound >= totalRounds)
+                {
+                    //if p1 has more wins than p2 at the last round, for displaying who wins and giving options to restart or not
+                    if (p1CurrentWins > p2CurrentWins)
+                    {
+                        GameConcludedPanel.SetActive(true);
+                        SetActiveButton(roundOverButton);
+                        p1Movement.isDisabled = true;
+                        p2Movement.isDisabled = true;
+                        gameOverText.text = "Game Over, Player 1 Wins";
+                        p1Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
+                        p1Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
+                        Debug.Log("Player 1 Wins");
+                    }
+                    //if p2 has more wins than p1 at the last round, for displaying who wins and giving options to restart or not
+                    if (p2CurrentWins > p1CurrentWins)
+                    {
+                        GameConcludedPanel.SetActive(true);
+                        SetActiveButton(roundOverButton);
+                        p1Movement.isDisabled = true;
+                        p2Movement.isDisabled = true;
+                        gameOverText.text = "Game Over, Player 2 Wins";
+                        p2Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
+                        p2Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
+                        Debug.Log("Player 2 Wins");
+                    }
+                    //if both players have equal wins, for displaying who wins and giving options to restart or not
+                    if (p1CurrentWins == p2CurrentWins)
+                    {
+                        GameConcludedPanel.SetActive(true);
+                        SetActiveButton(roundOverButton);
+                        p1Movement.isDisabled = true;
+                        p2Movement.isDisabled = true;
+                        gameOverText.text = "Game Over, Players Tied";
+                        p1Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
+                        p1Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
+                        Debug.Log("The players tied");
+                    }
+
+                }
+
             }
-            else if(currentRound < totalRounds)
+            //what happens if the game is paused
+            if (currentState == roundState.roundPaused)
             {
-                currentState = roundState.preRound;
+                //setting each player's movement state to immobile while in this round state
+                p1Movement.isDisabled = true;
+                p2Movement.isDisabled = true;
+                //setting pause menu to active
+                pauseMenu.SetActive(true);
+                p1Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
+                p1Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
+                SetActiveButton(multiPauseButton);
             }
-            else if (currentRound >= totalRounds)
-            {
-                //if p1 has more wins than p2 at the last round, for displaying who wins and giving options to restart or not
-                if (p1CurrentWins > p2CurrentWins)
-                {
-                    GameConcludedPanel.SetActive(true);
-                    SetActiveButton(roundOverButton);
-                    p1Movement.isDisabled = true;
-                    p2Movement.isDisabled = true;
-                    gameOverText.text = "Game Over, Player 1 Wins";
-                    p1Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
-                    p1Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
-                    Debug.Log("Player 1 Wins");
-                }
-                //if p2 has more wins than p1 at the last round, for displaying who wins and giving options to restart or not
-                if (p2CurrentWins > p1CurrentWins)
-                {
-                    GameConcludedPanel.SetActive(true);
-                    SetActiveButton(roundOverButton);
-                    p1Movement.isDisabled = true;
-                    p2Movement.isDisabled = true;
-                    gameOverText.text = "Game Over, Player 2 Wins";
-                    p2Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
-                    p2Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
-                    Debug.Log("Player 2 Wins");
-                }
-                //if both players have equal wins, for displaying who wins and giving options to restart or not
-                if (p1CurrentWins == p2CurrentWins)
-                {
-                    GameConcludedPanel.SetActive(true);
-                    SetActiveButton(roundOverButton);
-                    p1Movement.isDisabled = true;
-                    p2Movement.isDisabled = true;
-                    gameOverText.text = "Game Over, Players Tied";
-                    p1Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
-                    p1Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
-                    Debug.Log("The players tied");
-                }
-                
-            }
-            
-        }
-        //what happens if the game is paused
-        if(currentState == roundState.roundPaused)
-        {
-            //setting each player's movement state to immobile while in this round state
-            p1Movement.isDisabled = true;
-            p2Movement.isDisabled = true;
-            //setting pause menu to active
-            pauseMenu.SetActive(true);
-            p1Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
-            p1Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
-            SetActiveButton(multiPauseButton);
         }
     }
     public void SetActiveButton(GameObject button)

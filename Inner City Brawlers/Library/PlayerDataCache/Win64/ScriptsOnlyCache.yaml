@@ -1567,7 +1567,7 @@ ScriptsOnlyBuild:
     className: SpriteLabel
   - hash:
       serializedVersion: 2
-      Hash: f83bd493fc6e9b99d030c4a89f163218
+      Hash: c14bffc29dc58bf18abe6a4a3f1d8fec
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RoundManager
@@ -2102,4 +2102,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainGameScene.unity
-  playerPath: D:/College Papers/All GDD WORK/411/MidtermBuild/Inner City Brawlers.exe
+  playerPath: D:/College Papers/All GDD WORK/411/TrueMidTermBuild/Inner City Brawlers.exe

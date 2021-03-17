@@ -59,10 +59,9 @@ public class GameManagerScript : MonoBehaviour
     public void Start()
     {
         rM.Awake();
-        //StartMatch();
         tPM.SetinactiveState();
     }
-    void LockStartPosition()
+    public void LockStartPosition()
     {
         p1Transform.transform.position = p1StartPosition.transform.position;
         p2Transform.transform.position = p2StartPosition.transform.position;
@@ -105,19 +104,23 @@ public class GameManagerScript : MonoBehaviour
         }
         if (gMM.isMultiActive == false)
         {
-            StartCoroutine(CountDownTrainingTimer(1f));
-            currentTimerInt = maxTimerInt;
-            TimerText.text = "Time " + " ∞";
-            ResetMode();
-            tPM.SetinactiveState();
-            GameObject player1 = GameObject.Find("Player1");
-            GameObject player2 = GameObject.Find("Player2");
-            PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
-            PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
-            cOA.p1Timer = 0f;
-            cOA.p2Timer = 0f;
 
+            trainingStart();
         }
+    }
+    public void trainingStart()
+    {
+        StartCoroutine(CountDownTrainingTimer(1f));
+        currentTimerInt = maxTimerInt;
+        TimerText.text = "Time " + " ∞";
+        ResetMode();
+        tPM.SetinactiveState();
+        GameObject player1 = GameObject.Find("Player1");
+        GameObject player2 = GameObject.Find("Player2");
+        PlayerMovement p1 = (PlayerMovement)player1.GetComponent(typeof(PlayerMovement));
+        PlayerMovement p2 = (PlayerMovement)player2.GetComponent(typeof(PlayerMovement));
+        cOA.p1Timer = 0f;
+        cOA.p2Timer = 0f;
     }
     public void ResetMode()
     {
