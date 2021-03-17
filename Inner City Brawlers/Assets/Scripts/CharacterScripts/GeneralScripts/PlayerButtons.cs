@@ -12,10 +12,12 @@ public class PlayerButtons : MonoBehaviour
     //Rewired
     [SerializeField] public int playerID;
     [SerializeField] public Player player;
+    private RoundManager rM;
 
     // Start is called before the first frame update
     void Start()
     {
+        rM = GameObject.Find("GameManager").GetComponent<RoundManager>();
         player = ReInput.players.GetPlayer(pM.playerID);
     }
 
@@ -88,7 +90,7 @@ public class PlayerButtons : MonoBehaviour
         {
             if (gMM.isMultiActive == true)
             {
-                //Gustave put code to reference pausing game for multiplayer here
+                rM.currentState = RoundManager.roundState.roundPaused;
             }
             if (gMM.isMultiActive == false)
             {

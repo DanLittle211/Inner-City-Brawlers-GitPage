@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
+using Rewired;
 public class RoundManager : MonoBehaviour
 {
     //round States
@@ -12,13 +14,14 @@ public class RoundManager : MonoBehaviour
     #region Round Variables
     [Header("Round Win Variables")]
     public int currentRound;
+    public int previousRound;
     public int totalRounds;
     public int p1CurrentWins;
     public int p2CurrentWins;
     #endregion
     #region Round Timer Variables
     [Header("Round Timers")]
-    private float roundTimer;
+    public float roundTimer;
     public float roundTimerStart;
     private float preroundTimer;
     public float preroundTimerStart;
@@ -27,6 +30,8 @@ public class RoundManager : MonoBehaviour
     [Header("Menu/UI Variables")]
     public GameObject GameConcludedPanel;
     public GameObject pauseMenu;
+    public TMP_Text TimerText;
+    public TMP_Text gameOverText;
     #endregion
     #region Script References
     [Header("Script references")]
@@ -35,6 +40,8 @@ public class RoundManager : MonoBehaviour
     private PlayerHealth p2Health;
     private PlayerMovement p1Movement;
     private PlayerMovement p2Movement;
+    private PlayerButtons p1Buttons;
+    private PlayerButtons p2Buttons;
     #endregion
     #region Player Object Referecnes
     [Header("Player References")]
@@ -47,6 +54,10 @@ public class RoundManager : MonoBehaviour
     public bool p2Wins;
     public bool haveTied;
     #endregion
+    public GameObject multiPauseButton;
+    public GameObject roundOverButton;
+    public bool oneTime;
+    
 
     public void Awake()
     {
@@ -55,6 +66,8 @@ public class RoundManager : MonoBehaviour
         p2Health = player2.GetComponent<PlayerHealth>();
         p1Movement = player1.GetComponent<PlayerMovement>();
         p2Movement = player2.GetComponent<PlayerMovement>();
+        p1Buttons = player1.GetComponent<PlayerButtons>();
+        p2Buttons = player2.GetComponent<PlayerButtons>();
         //other variables
         roundTimer = roundTimerStart;
         preroundTimer = preroundTimerStart;
@@ -62,21 +75,36 @@ public class RoundManager : MonoBehaviour
         p1CurrentWins = 0;
         p2CurrentWins = 0;
         currentState = roundState.preRound;
+        GameConcludedPanel.SetActive(false);
+
+    }
+
+    public void ResetGame()
+    {
+        Awake();
+        gManager.StartMatch();
     }
 
     private void Update()
     {
+        TimerText.text = "Time: " + (Mathf.Round(roundTimer)).ToString();
+        Debug.Log(currentState);
         //preround countdown
         if(currentState == roundState.preRound)
         {
+            p1Movement.isDisabled = true;
+            p2Movement.isDisabled = true;
+            oneTime = false;
             //setting each player's movement state to immobile while in this round state
-            p1Movement.currentPlayState = PlayerMovement.playerState.Immobile;
-            p2Movement.currentPlayState = PlayerMovement.playerState.Immobile;
             preroundTimer -= Time.deltaTime; //counts down timer while in this state
             if (preroundTimer <= 0)
             {
                 preroundTimer = 0;
+                previousRound = currentRound;
+
                 currentState = roundState.duringRound;
+                p1Movement.isDisabled = false;
+                p2Movement.isDisabled = false;
             }
         }
         //used for tracking round wins and others 
@@ -85,7 +113,9 @@ public class RoundManager : MonoBehaviour
             //round timer functions
             roundTimer -= Time.deltaTime; //counts down timer while in this state
             //what happens when the timer runs out and no-one won
-            if(roundTimer <= 0)
+            p1Movement.isDisabled = false;
+            p2Movement.isDisabled = false;
+            if (roundTimer <= 0)
             {
                 roundTimer = 0;
                 //p1 wins
@@ -135,74 +165,125 @@ public class RoundManager : MonoBehaviour
         //used for adding to round wins
         if(currentState == roundState.endRound)
         {  //setting each player's movement state to immobile while in this round state
-            p1Movement.currentPlayState = PlayerMovement.playerState.Immobile;
-            p2Movement.currentPlayState = PlayerMovement.playerState.Immobile;
+            currentState = roundState.continueOption;
             //what happens when player 1 wins the round
-            if (p1Wins)
-            {
-                p1CurrentWins = p1CurrentWins + 1;
-                currentState = roundState.continueOption;
-            }
-            //what happens when player 2 wins the round
-            if (p2Wins)
-            {
-                p2CurrentWins = p2CurrentWins + 1;
-                currentState = roundState.continueOption;
-            }
-            //what happens when the players have tied
-            if (haveTied)
-            {
-                currentState = roundState.continueOption;
-            }
         }
         //used for restarting rounds and tracking total rounds
         if(currentState == roundState.continueOption)
         {
             //setting each player's movement state to immobile while in this round state
-            p1Movement.currentPlayState =  PlayerMovement.playerState.Immobile;
-            p2Movement.currentPlayState = PlayerMovement.playerState.Immobile;
+            //p1Movement.isDisabled = true;
+            //p2Movement.isDisabled = true;
             //works as a reset for the round
-            if(currentRound < totalRounds)
+            if (currentRound == previousRound)
             {
-                p1Wins = false;
-                p2Wins = false;
-                haveTied = false;
-                roundTimer = roundTimerStart;
-                preroundTimer = preroundTimerStart;
-                currentRound = currentRound + 1;
+                setOneTime();
+                if (oneTime)
+                {
+                    if (p1Wins)
+                    {
+                        p1CurrentWins = p1CurrentWins + 1;
+                        p1Wins = false;
+                        //currentState = roundState.continueOption;
+
+                    }
+                    //what happens when player 2 wins the round
+                    if (p2Wins)
+                    {
+                        p2CurrentWins = p2CurrentWins + 1;
+                        p2Wins = false;
+                        //currentState = roundState.continueOption;
+
+                    }
+                    //what happens when the players have tied
+                    if (haveTied)
+                    {
+                        haveTied = false;
+                        //currentState = roundState.continueOption;
+                    }
+                    roundTimer = roundTimerStart;
+                    preroundTimer = preroundTimerStart;
+                    currentRound = currentRound + 1;
+                    p1Wins = false;
+                    p2Wins = false;
+                    haveTied = false;
+                    oneTime = false;
+                    gManager.StartMatch();
+                }
+            }
+            else if(currentRound < totalRounds)
+            {
                 currentState = roundState.preRound;
             }
-            else
+            else if (currentRound >= totalRounds)
             {
                 //if p1 has more wins than p2 at the last round, for displaying who wins and giving options to restart or not
-                if(p1CurrentWins > p2CurrentWins)
+                if (p1CurrentWins > p2CurrentWins)
                 {
                     GameConcludedPanel.SetActive(true);
+                    SetActiveButton(roundOverButton);
+                    p1Movement.isDisabled = true;
+                    p2Movement.isDisabled = true;
+                    gameOverText.text = "Game Over, Player 1 Wins";
+                    p1Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
+                    p1Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
                     Debug.Log("Player 1 Wins");
                 }
                 //if p2 has more wins than p1 at the last round, for displaying who wins and giving options to restart or not
                 if (p2CurrentWins > p1CurrentWins)
                 {
                     GameConcludedPanel.SetActive(true);
+                    SetActiveButton(roundOverButton);
+                    p1Movement.isDisabled = true;
+                    p2Movement.isDisabled = true;
+                    gameOverText.text = "Game Over, Player 2 Wins";
+                    p2Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
+                    p2Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
                     Debug.Log("Player 2 Wins");
                 }
                 //if both players have equal wins, for displaying who wins and giving options to restart or not
                 if (p1CurrentWins == p2CurrentWins)
                 {
                     GameConcludedPanel.SetActive(true);
+                    SetActiveButton(roundOverButton);
+                    p1Movement.isDisabled = true;
+                    p2Movement.isDisabled = true;
+                    gameOverText.text = "Game Over, Players Tied";
+                    p1Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
+                    p1Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
                     Debug.Log("The players tied");
                 }
+                
             }
+            
         }
         //what happens if the game is paused
         if(currentState == roundState.roundPaused)
         {
             //setting each player's movement state to immobile while in this round state
-            p1Movement.currentPlayState = PlayerMovement.playerState.Immobile;
-            p2Movement.currentPlayState = PlayerMovement.playerState.Immobile;
+            p1Movement.isDisabled = true;
+            p2Movement.isDisabled = true;
             //setting pause menu to active
             pauseMenu.SetActive(true);
+            p1Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
+            p1Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
+            SetActiveButton(multiPauseButton);
         }
     }
-
+    public void SetActiveButton(GameObject button)
+    {
+        UnityEngine.EventSystems.EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(button);
+    }
+    public void UnpauseGame()
+    {
+        pauseMenu.SetActive(false);
+        p1Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Default", "Player1", true);
+        p1Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Default", "Player1", true);
+        currentState = roundState.duringRound;
+    }
+    void setOneTime()
+    {
+        oneTime = true;
+       
+    }
 }

@@ -65,6 +65,9 @@ public class TrainingPauseManager : MonoBehaviour
         pauseScreens[4].gameObject.SetActive(false);
         pauseScreens[5].gameObject.SetActive(false);
         SetActiveButton(startingButtons[0]);
+        GameObject player1 = GameObject.Find("Player1");
+        PlayerButtons p1 = (PlayerButtons)player1.GetComponent(typeof(PlayerButtons));
+        p1.pM.isDisabled = true;
     }
     public void SetTrainingSettingsState()
     {
