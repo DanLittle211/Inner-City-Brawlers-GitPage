@@ -90,7 +90,7 @@ public class PlayerButtons : MonoBehaviour
         {
             if (gMM.isMultiActive == true)
             {
-                rM.currentState = RoundManager.roundState.roundPaused;
+                rM.PauseGame();
             }
             if (gMM.isMultiActive == false)
             {

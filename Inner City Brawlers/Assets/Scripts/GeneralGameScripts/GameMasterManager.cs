@@ -13,7 +13,7 @@ public class GameMasterManager : MonoBehaviour
     [SerializeField] public GameObject FightView;
     [Header("SceneViewObjects")]
     public GameObject[] sceneView;
-    [SerializeField] public enum GameState { StartScreen, MainMenu, InfoPage, SinglePlayer, Options, CharacterSelect, FightView };
+    [SerializeField] public enum GameState { StartScreen, MainMenu, InfoPage, SinglePlayer, Options, CharacterSelect, FightView, Controls };
     [SerializeField] public GameState currentGameState;
     public GameManagerScript gMS;
 
@@ -69,6 +69,7 @@ public class GameMasterManager : MonoBehaviour
         sceneView[4].gameObject.SetActive(false);
         sceneView[5].gameObject.SetActive(false);
         sceneView[6].gameObject.SetActive(false);
+        sceneView[7].gameObject.SetActive(false);
     }
 
     public void CloseGame()
@@ -87,6 +88,7 @@ public class GameMasterManager : MonoBehaviour
         sceneView[5].gameObject.SetActive(false);
         sceneView[6].gameObject.SetActive(false);
         UnityEngine.EventSystems.EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(newButton[0]);
+        sceneView[7].gameObject.SetActive(false);
     }
     public void SetGameStateInfo()
     {
@@ -101,6 +103,7 @@ public class GameMasterManager : MonoBehaviour
         sceneView[6].gameObject.SetActive(false);
 
         UnityEngine.EventSystems.EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(newButton[2]);
+        sceneView[7].gameObject.SetActive(false);
     }
     public void SetGameStateSinglePlayer()
     {
@@ -115,6 +118,21 @@ public class GameMasterManager : MonoBehaviour
         sceneView[6].gameObject.SetActive(false);
 
         UnityEngine.EventSystems.EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(newButton[1]);
+        sceneView[7].gameObject.SetActive(false);
+    }
+    public void SetGameStateControls()
+    {
+        currentGameState = GameState.Controls;
+        sceneView[7].gameObject.SetActive(true);
+
+        sceneView[0].gameObject.SetActive(false);
+        sceneView[1].gameObject.SetActive(false);
+        sceneView[2].gameObject.SetActive(false);
+        sceneView[3].gameObject.SetActive(false);
+        sceneView[4].gameObject.SetActive(false);
+        sceneView[5].gameObject.SetActive(false);
+        sceneView[6].gameObject.SetActive(false);
+        UnityEngine.EventSystems.EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(newButton[4]);
     }
     public void SetGameStateOptions()
     {
@@ -129,6 +147,7 @@ public class GameMasterManager : MonoBehaviour
         sceneView[6].gameObject.SetActive(false);
 
         UnityEngine.EventSystems.EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(newButton[3]);
+        sceneView[7].gameObject.SetActive(false);
     }
     public void SetGameStateCharacterSelect()
     {
@@ -141,6 +160,7 @@ public class GameMasterManager : MonoBehaviour
         sceneView[3].gameObject.SetActive(false);
         sceneView[4].gameObject.SetActive(false);
         sceneView[6].gameObject.SetActive(false);
+        sceneView[7].gameObject.SetActive(false);
     }
 
     public void SetGameStateFightViewSingle()
@@ -160,6 +180,7 @@ public class GameMasterManager : MonoBehaviour
         p2.isDisabled = true;
         isMultiActive = false;
         gMS.Start();
+        sceneView[7].gameObject.SetActive(false);
     }
     public void SetGameStateFightViewMulti()
     {
@@ -178,5 +199,7 @@ public class GameMasterManager : MonoBehaviour
         p2.isDisabled = false;
         isMultiActive = true;
         gMS.Start();
+        sceneView[7].gameObject.SetActive(false);
     }
+   
 }

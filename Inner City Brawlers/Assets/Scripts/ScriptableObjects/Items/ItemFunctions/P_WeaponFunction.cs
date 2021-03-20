@@ -52,7 +52,7 @@ public class P_WeaponFunction : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player1" || other.gameObject.tag == "Player2")
         {
             Debug.Log(other.gameObject.name + " picked up " + this.gameObject.name);//temporary
             DestroySelf();//temporary until full function is completed

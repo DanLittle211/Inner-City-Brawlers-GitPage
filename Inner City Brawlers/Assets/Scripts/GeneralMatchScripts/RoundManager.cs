@@ -75,6 +75,7 @@ public class RoundManager : MonoBehaviour
         {
             gManager.trainingStart();
             pauseMenu.SetActive(false);
+            GameConcludedPanel.SetActive(false);
         }
         if (gMM.isMultiActive == true)
         {
@@ -214,6 +215,7 @@ public class RoundManager : MonoBehaviour
                         if (haveTied)
                         {
                             haveTied = false;
+                            totalRounds = totalRounds + 1;
                             //currentState = roundState.continueOption;
                         }
                         roundTimer = roundTimerStart;
@@ -236,7 +238,7 @@ public class RoundManager : MonoBehaviour
                     if (p1CurrentWins > p2CurrentWins)
                     {
                         GameConcludedPanel.SetActive(true);
-                        SetActiveButton(roundOverButton);
+
                         p1Movement.isDisabled = true;
                         p2Movement.isDisabled = true;
                         gameOverText.text = "Game Over, Player 1 Wins";
@@ -248,7 +250,7 @@ public class RoundManager : MonoBehaviour
                     if (p2CurrentWins > p1CurrentWins)
                     {
                         GameConcludedPanel.SetActive(true);
-                        SetActiveButton(roundOverButton);
+
                         p1Movement.isDisabled = true;
                         p2Movement.isDisabled = true;
                         gameOverText.text = "Game Over, Player 2 Wins";
@@ -260,7 +262,7 @@ public class RoundManager : MonoBehaviour
                     if (p1CurrentWins == p2CurrentWins)
                     {
                         GameConcludedPanel.SetActive(true);
-                        SetActiveButton(roundOverButton);
+
                         p1Movement.isDisabled = true;
                         p2Movement.isDisabled = true;
                         gameOverText.text = "Game Over, Players Tied";
@@ -268,7 +270,12 @@ public class RoundManager : MonoBehaviour
                         p1Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
                         Debug.Log("The players tied");
                     }
-
+                    //setOneTime();
+                    if (oneTime == false)
+                    {
+                        GameOverButtonSet();
+                        oneTime = true;
+                    }
                 }
 
             }
@@ -278,17 +285,24 @@ public class RoundManager : MonoBehaviour
                 //setting each player's movement state to immobile while in this round state
                 p1Movement.isDisabled = true;
                 p2Movement.isDisabled = true;
-                //setting pause menu to active
-                pauseMenu.SetActive(true);
-                p1Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
-                p1Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
-                SetActiveButton(multiPauseButton);
+                //setting pause menu to active 
             }
         }
     }
     public void SetActiveButton(GameObject button)
     {
         UnityEngine.EventSystems.EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(button);
+    }
+    public void GameOverButtonSet()
+    {
+        SetActiveButton(roundOverButton);
+    }
+    public void PauseGame()
+    {
+        pauseMenu.SetActive(true);
+        p1Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
+        p1Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
+        SetActiveButton(multiPauseButton);
     }
     public void UnpauseGame()
     {
@@ -299,7 +313,6 @@ public class RoundManager : MonoBehaviour
     }
     void setOneTime()
     {
-        oneTime = true;
-       
+        oneTime = true;  
     }
 }
