@@ -48,6 +48,8 @@ public class RoundManager : MonoBehaviour
     [Header("Player References")]
     public GameObject player1;
     public GameObject player2;
+    public GameObject TrainingRoom;
+    public GameObject VersusRoom;
     #endregion
     #region Round Result Bools
     [Header("Round Results")]
@@ -76,9 +78,13 @@ public class RoundManager : MonoBehaviour
             gManager.trainingStart();
             pauseMenu.SetActive(false);
             GameConcludedPanel.SetActive(false);
+            TrainingRoom.SetActive(true);
+            VersusRoom.SetActive(false);
         }
         if (gMM.isMultiActive == true)
         {
+            TrainingRoom.SetActive(false);
+            VersusRoom.SetActive(true);
             gManager.LockStartPosition();
             roundTimer = roundTimerStart;
             preroundTimer = preroundTimerStart;

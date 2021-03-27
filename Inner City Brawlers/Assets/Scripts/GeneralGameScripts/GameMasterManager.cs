@@ -11,6 +11,9 @@ public class GameMasterManager : MonoBehaviour
     [Header("Game Header Objects")]
     [SerializeField] public GameObject Menus;
     [SerializeField] public GameObject FightView;
+    [SerializeField] public GameObject TrainingView;
+    [SerializeField] public GameObject VersusView;
+
     [Header("SceneViewObjects")]
     public GameObject[] sceneView;
     [SerializeField] public enum GameState { StartScreen, MainMenu, InfoPage, SinglePlayer, Options, CharacterSelect, FightView, Controls };
@@ -54,7 +57,6 @@ public class GameMasterManager : MonoBehaviour
     public void SetControllerMapsForCurrentMode()
     {
         player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
-
         player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
     }
 
@@ -70,6 +72,8 @@ public class GameMasterManager : MonoBehaviour
         sceneView[5].gameObject.SetActive(false);
         sceneView[6].gameObject.SetActive(false);
         sceneView[7].gameObject.SetActive(false);
+        VersusView.SetActive(false);
+        TrainingView.SetActive(false);
     }
 
     public void CloseGame()
@@ -89,6 +93,9 @@ public class GameMasterManager : MonoBehaviour
         sceneView[6].gameObject.SetActive(false);
         UnityEngine.EventSystems.EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(newButton[0]);
         sceneView[7].gameObject.SetActive(false);
+        FightView.SetActive(false);
+        VersusView.SetActive(false);
+        TrainingView.SetActive(false);
     }
     public void SetGameStateInfo()
     {
@@ -161,6 +168,9 @@ public class GameMasterManager : MonoBehaviour
         sceneView[4].gameObject.SetActive(false);
         sceneView[6].gameObject.SetActive(false);
         sceneView[7].gameObject.SetActive(false);
+        FightView.SetActive(false);
+        VersusView.SetActive(false);
+        TrainingView.SetActive(false);
     }
 
     public void SetGameStateFightViewSingle()
