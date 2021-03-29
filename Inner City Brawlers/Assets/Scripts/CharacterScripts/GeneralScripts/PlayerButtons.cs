@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using Rewired;
 
-public enum AttackType {light = 0, medium = 1, heavy = 2, unique = 3, throwAction = 4, Assist = 5, Lifeline = 6};
+
+public enum AttackType {light = 0, medium = 1, heavy = 2, unique = 3, throwAction = 4, Assist = 5, Lifeline = 6, movement = 7};
 
 public class PlayerButtons : MonoBehaviour
 {
@@ -27,15 +28,18 @@ public class PlayerButtons : MonoBehaviour
     public Attack LifeLineAssist;
 
     [SerializeField]public List<Combo> combos;
-    [SerializeField]public float buttonCheckDuration;
+    [SerializeField]public float buttonCheckDuration = 0.2f;
 
-    /*[Header("Components")]
-    public Animator ani;*/
+    [Header("Components")]
+    public Animator myAnim;
 
     ComboInput LastInput = null;
     Attack curAttack = null;
-    public float timer = 0;
+    float timer = 0;
+    float leeway = 0;
     [SerializeField] public List<int> currentCombos = new List<int>();
+    bool skip = false;
+    Vector2 analogDirection;
 
     void PrimeCombo()
     {
@@ -44,7 +48,10 @@ public class PlayerButtons : MonoBehaviour
             Combo c = combos[i];
             c.onInputted.AddListener(() =>
             {
+                skip = true;
+                LastInput = null;
                 Attack(c.comboAttack);
+                ResetCombos();
             });
         }
     }
@@ -55,13 +62,7 @@ public class PlayerButtons : MonoBehaviour
         rM = GameObject.Find("GameManager").GetComponent<RoundManager>();
         player = ReInput.players.GetPlayer(pM.playerID);
         PrimeCombo();
-    }
-
-    void Attack(Attack A)
-    {
-        curAttack = A;
-        timer = A.length;
-        //animation.Play(animationName, -1, 0); playAnimation in code and resets anim
+        //myAnim = this.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -75,53 +76,69 @@ public class PlayerButtons : MonoBehaviour
                 if (timer > 0)
                 {
                     timer -= Time.deltaTime;
-                   
                 }
                 else
-                {
+                { 
                     curAttack = null;
                 }
+                return;
             }
             ComboInput input = null;
+            if (currentCombos.Count > 0)
+            {
+                leeway += Time.deltaTime;
+                if (leeway >= buttonCheckDuration)
+                {
+                    if (LastInput != null)
+                    {
+                        Attack att = getAttackFromType(LastInput.type);
+                        if (att != null)
+                        {
+                            Attack(att);
+                            LastInput = null;
+                        }
+                    }
+                    ResetCombos();
+                }
+            }
+            else
+            {
+                leeway = 0;
+            }
 
+            if (player.GetButtonDown("LightAttack"))
+            {
+                // StartCoroutine(LightAttack(0.2f));
+                input = new ComboInput(AttackType.light); Debug.Log("Light attack ");
+            }
+            if (player.GetButtonDown("MediumAttack"))
+            {
+                //StartCoroutine(mediumAttack(0.6f));
+                input = new ComboInput(AttackType.medium); Debug.Log("medium attack ");
+            }
+            if (player.GetButtonDown("HeavyAttack"))
+            {
+                // StartCoroutine(heavyAttack(1f));
+                input = new ComboInput(AttackType.heavy); Debug.Log("Heavy attack ");
+            }
+            
             if (pM.currentPlayState == PlayerMovement.playerState.Grounded)
             {
-                if (pM.currentPlayState == PlayerMovement.playerState.Grounded || pM.currentPlayState == PlayerMovement.playerState.Jump)
-                {
-                    if (player.GetButtonDown("LightAttack"))
-                    {
-                        StartCoroutine(LightAttack(0.2f));
-                        input = new ComboInput(AttackType.light);
-                        Debug.Log("Light attack ");
-                    }
-                    if (player.GetButtonDown("MediumAttack"))
-                    {
-                        StartCoroutine(mediumAttack(0.6f));
-                        input = new ComboInput(AttackType.medium);
-                        Debug.Log("medium attack ");
-                    }
-                    if (player.GetButtonDown("HeavyAttack"))
-                    {
-                        StartCoroutine(heavyAttack(1f));
-                        input = new ComboInput(AttackType.heavy);
-                        Debug.Log("Heavy attack ");
-                    }
-                }
                 if (player.GetButtonDown("UniqueAttack"))
                 {
-                    StartCoroutine(uniqueAttack(1.2f));
-                    input = new ComboInput(AttackType.unique);
-                    Debug.Log("Unique attack ");
+                    //StartCoroutine(uniqueAttack(1.2f));
+                    input = new ComboInput(AttackType.unique); Debug.Log("Unique attack ");
+
                 }
                 if (player.GetButtonDown("Throw"))
                 {
-                    input = new ComboInput(AttackType.throwAction);
-                    Debug.Log("Throw");
+                    input = new ComboInput(AttackType.throwAction); Debug.Log("Throw");
+
                 }
                 if (player.GetButtonDown("Use Assist"))
                 {
-                    Debug.Log("Use Assist ");
-                    input = new ComboInput(AttackType.Assist);
+                   
+                    input = new ComboInput(AttackType.Assist); Debug.Log("Use Assist ");
                 }
                 if (player.GetButtonDown("CalloutAssist"))
                 {
@@ -141,40 +158,84 @@ public class PlayerButtons : MonoBehaviour
                 }
                 if (player.GetButtonDown("LifelineAssist"))
                 {
-                    Debug.Log("LifeLine Assist Used ");
-                    input = new ComboInput(AttackType.Lifeline);
+                    input = new ComboInput(AttackType.Lifeline); Debug.Log("LifeLine Assist Used ");
+                }
+                Vector2 movement = Vector2.zero;
+                if(PlayerMovement.InputDownX())
+                {
+                    movement.x = PlayerMovement.x;
+                    Debug.Log("Move right left");
+                }
+                if (PlayerMovement.InputDownY())
+                {
+                    movement.y = PlayerMovement.y;
+                    Debug.Log("Move up down");
                 }
 
+                if (movement != Vector2.zero)
+                {
+                    input = new ComboInput(movement);
+                }
+
+                if (input == null)
+                {
+                    return;
+                }
+                LastInput = input;
                 List<int> remove = new List<int>();
-                for(int i = 0; i < currentCombos.Count; i++)
+
+                for (int i = 0; i < currentCombos.Count; i++)
                 {
                     Combo c = combos[currentCombos[i]];
                     if (c.continueCombo(input))
                     {
-                        //Do Something
+                        leeway = 0;
                     }
                     else
                     {
                         remove.Add(i);
                     }
                 }
-                if (currentCombos.Count <= 0)
+                if (skip != false)
                 {
-                    Attack(getAttackFromType(input.type));
+                    skip = false;
+                    return;
                 }
+                for (int i = 0; i < combos.Count; i++)
+                {
+                    if (currentCombos.Contains(i))
+                    {
+                        continue;
+                    }
+                    if (combos[i].continueCombo(input))
+                    {
+                        currentCombos.Add(i);
+                        leeway = 0;
+                    }
+                }
+                Attack att = getAttackFromType(input.type);
                 foreach (int i in remove)
                 {
                     currentCombos.RemoveAt(i);
                 }
+                if (att != null && currentCombos.Count <= 0)
+                {
+                    //Attack(getAttackFromType(input.type));
+                    Attack(att);
+                }
             }
-            if (input == null)
-            {
-                LastInput = input;
-                return;
-            }
+            
         }
 
     }
+
+    void Attack(Attack A)
+    {
+        curAttack = A;
+        timer = A.length;
+        myAnim.Play(A.name, -1, 0); //playAnimation in code and resets anim
+    }
+
     Attack getAttackFromType(AttackType t)
     {
         if (t == AttackType.light)
@@ -230,6 +291,17 @@ public class PlayerButtons : MonoBehaviour
         }
 
     }
+
+    void ResetCombos()
+    {
+        leeway = 0;
+        for (int i = 0; i < currentCombos.Count; i++)
+        {
+            Combo c = combos[currentCombos[i]];
+            c.ResetCombo();
+        }
+        currentCombos.Clear();
+    }
     IEnumerator LightAttack(float time)
     {
         hitboxes[1].gameObject.SetActive(false);
@@ -283,6 +355,7 @@ public class Attack
 [System.Serializable]
 public class Combo
 {
+    public string name;
     public List<ComboInput> inputs;
     public Attack comboAttack;
     public UnityEvent onInputted;
@@ -290,7 +363,7 @@ public class Combo
 
     public bool continueCombo(ComboInput I)
     {
-        if (inputs[curInput].isSameAs(I))
+        if (inputs[curInput].IsSameAs(I))
         {
             curInput++;
             if (curInput >= inputs.Count)
@@ -318,29 +391,43 @@ public class Combo
     {
         curInput = 0;
     }
+  
 }
+
 [System.Serializable]
-public class ComboInput : MonoBehaviour
+public class ComboInput 
 {
     public AttackType type;
-    //MoveMent input placed here
-    public PlayerMovement pM;
-    [SerializeField] public float upMovement;
-    [SerializeField] public float rightMovement;
+    public Vector2 mType;
 
     public ComboInput(AttackType e)
     {
         type = e;
+        mType = Vector2.zero;
+    }
+    public ComboInput(Vector2 e)
+    {
+        type = AttackType.movement;
+        mType = e;
     }
 
-    void Start()
+    public bool IsSameAs(ComboInput J)
     {
-        pM = this.GetComponent<PlayerMovement>();
-        rightMovement = pM.moveHorizontal;
-        upMovement = pM.moveUp;
+        return ((type == AttackType.movement) ? (validMovemment(J.mType)) : (type == J.type)); 
+        //In a single statement akin to an if statement. it checks movement inputs, then buttons
     }
-    public bool isSameAs(ComboInput J)
+
+    bool validMovemment(Vector2 move)
     {
-        return ((type == J.type) && (rightMovement == J.rightMovement) && (upMovement == J.upMovement));
+        bool valid = true;
+        if (mType.x != 0 && mType.x != move.x)
+        {
+            valid = false;
+        }
+        if (mType.y != 0 && mType.y != move.y)
+        {
+            valid = false;
+        }
+        return valid;
     }
 }
