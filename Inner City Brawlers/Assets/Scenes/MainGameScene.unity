@@ -2532,7 +2532,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.242}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9643,8 +9643,8 @@ RectTransform:
   m_Father: {fileID: 106617395}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11958,7 +11958,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.242}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -14026,7 +14026,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -22832,7 +22832,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -24929,7 +24929,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -31905,7 +31905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1559782140
 Transform:
   m_ObjectHideFlags: 0
@@ -34786,14 +34786,14 @@ MonoBehaviour:
   - {fileID: 1613112977}
   playerID: 0
   lightAttack:
-    name: punch
+    name: 
     length: 0.133
   MediumAttack:
-    name: punch2
+    name: 
     length: 0.417
   HeavyAttack:
-    name: punch3
-    length: 0.417
+    name: 
+    length: 0
   UniqueAttack:
     name: Idle
     length: 1
@@ -34807,12 +34807,12 @@ MonoBehaviour:
     name: 
     length: 0
   combos:
-  - name: Basic Combo 1
+  - name: Special Move
     inputs:
     - type: 7
-      mType: {x: 1, y: 0}
+      mType: {x: 0, y: -1}
     - type: 7
-      mType: {x: -1, y: 0}
+      mType: {x: 1, y: 0}
     - type: 3
       mType: {x: 0, y: 0}
     comboAttack:
@@ -34821,7 +34821,19 @@ MonoBehaviour:
     onInputted:
       m_PersistentCalls:
         m_Calls: []
-  buttonCheckDuration: 1
+  - name: Basic Combo 2
+    inputs:
+    - type: 0
+      mType: {x: 0, y: 0}
+    - type: 0
+      mType: {x: 0, y: 0}
+    comboAttack:
+      name: punch2
+      length: 0.417
+    onInputted:
+      m_PersistentCalls:
+        m_Calls: []
+  buttonCheckDuration: 0.4
   myAnim: {fileID: 1254020613}
   currentCombos: 
 --- !u!114 &1649239959

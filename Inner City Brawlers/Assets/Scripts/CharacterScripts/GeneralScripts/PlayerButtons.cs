@@ -39,7 +39,6 @@ public class PlayerButtons : MonoBehaviour
     float leeway = 0;
     [SerializeField] public List<int> currentCombos = new List<int>();
     bool skip = false;
-    Vector2 analogDirection;
 
     void PrimeCombo()
     {
@@ -108,25 +107,25 @@ public class PlayerButtons : MonoBehaviour
 
             if (player.GetButtonDown("LightAttack"))
             {
-                // StartCoroutine(LightAttack(0.2f));
-                input = new ComboInput(AttackType.light); Debug.Log("Light attack ");
+                StartCoroutine(LAttack(0.2f));
+                input = new ComboInput(AttackType.light); Debug.Log("Light attack");
             }
             if (player.GetButtonDown("MediumAttack"))
             {
-                //StartCoroutine(mediumAttack(0.6f));
+                StartCoroutine(mediumAttack(0.6f));
                 input = new ComboInput(AttackType.medium); Debug.Log("medium attack ");
             }
             if (player.GetButtonDown("HeavyAttack"))
             {
-                // StartCoroutine(heavyAttack(1f));
+                 StartCoroutine(heavyAttack(1f));
                 input = new ComboInput(AttackType.heavy); Debug.Log("Heavy attack ");
             }
             
-            if (pM.currentPlayState == PlayerMovement.playerState.Grounded)
+            if (pM.currentPlayState == PlayerMovement.playerState.Grounded ^ pM.currentPlayState == PlayerMovement.playerState.Crouch)
             {
                 if (player.GetButtonDown("UniqueAttack"))
                 {
-                    //StartCoroutine(uniqueAttack(1.2f));
+                    StartCoroutine(uniqueAttack(1.2f));
                     input = new ComboInput(AttackType.unique); Debug.Log("Unique attack ");
 
                 }
@@ -228,8 +227,7 @@ public class PlayerButtons : MonoBehaviour
         }
 
     }
-
-    void Attack(Attack A)
+    public void Attack(Attack A)
     {
         curAttack = A;
         timer = A.length;
@@ -302,7 +300,23 @@ public class PlayerButtons : MonoBehaviour
         }
         currentCombos.Clear();
     }
-    IEnumerator LightAttack(float time)
+    public void beginLC()
+    {
+        StartCoroutine(LAttack(0f));
+    }
+    public void beginMC()
+    {
+        StartCoroutine(LAttack(0f));
+    }
+    public void beginHC()
+    {
+        StartCoroutine(LAttack(0f));
+    }
+    public void beginUC()
+    {
+        StartCoroutine(LAttack(0f));
+    }
+    IEnumerator LAttack(float time)
     {
         hitboxes[1].gameObject.SetActive(false);
         hitboxes[2].gameObject.SetActive(false);
@@ -310,7 +324,7 @@ public class PlayerButtons : MonoBehaviour
         hitboxes[0].gameObject.SetActive(true);
         yield return new WaitForSeconds(time);
         hitboxes[0].gameObject.SetActive(false);
-        StopCoroutine(LightAttack(1f));
+       // StopCoroutine(LAttack(1f));
     }
     IEnumerator mediumAttack(float time)
     {
@@ -320,7 +334,7 @@ public class PlayerButtons : MonoBehaviour
         hitboxes[1].gameObject.SetActive(true);
         yield return new WaitForSeconds(time);
         hitboxes[1].gameObject.SetActive(false);
-        StopCoroutine(mediumAttack(1f));
+        //StopCoroutine(mediumAttack(1f));
     }
     IEnumerator heavyAttack(float time)
     {
@@ -330,7 +344,7 @@ public class PlayerButtons : MonoBehaviour
         hitboxes[2].gameObject.SetActive(true);
         yield return new WaitForSeconds(time);
         hitboxes[2].gameObject.SetActive(false);
-        StopCoroutine(heavyAttack(1f));
+       // StopCoroutine(heavyAttack(1f));
     }
     IEnumerator uniqueAttack(float time)
     {
@@ -341,7 +355,7 @@ public class PlayerButtons : MonoBehaviour
         hitboxes[3].gameObject.SetActive(true);
         yield return new WaitForSeconds(time);
         hitboxes[3].gameObject.SetActive(false);
-        StopCoroutine(uniqueAttack(1f));
+      //  StopCoroutine(uniqueAttack(1f));
         pM.currentPlayState = PlayerMovement.playerState.Grounded;
     }
 }
@@ -358,6 +372,7 @@ public class Combo
     public string name;
     public List<ComboInput> inputs;
     public Attack comboAttack;
+    
     public UnityEvent onInputted;
     int curInput = 0;
 
