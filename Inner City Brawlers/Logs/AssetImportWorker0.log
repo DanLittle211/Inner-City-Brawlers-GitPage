@@ -1,0 +1,311 @@
+Using pre-set license
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.2.4f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+59608
+Successfully changed project path to: /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers
+/Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 50.00 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.4f1 (becced5a802b)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.2.4f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Assets
+GfxDevice: creating device client; threaded=0
+2021-03-30 16:57:41.993 Unity[44013:4524386] Color LCD preferred device: AMD Radeon Pro 560 (high power)
+2021-03-30 16:57:41.993 Unity[44013:4524386] Metal devices available: 2
+2021-03-30 16:57:41.993 Unity[44013:4524386] 0: AMD Radeon Pro 560 (high power)
+2021-03-30 16:57:41.993 Unity[44013:4524386] 1: Intel(R) HD Graphics 630 (low power)
+2021-03-30 16:57:41.993 Unity[44013:4524386] Using device AMD Radeon Pro 560 (high power)
+Initializing Metal device caps: AMD Radeon Pro 560
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.2.4f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.2.4f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.2.4f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56013
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2020.2.4f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2020.2.4f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2020.2.4f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2020.2.4f1/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2020.2.4f1/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll
+Registered in 0.001357 seconds.
+Native extension for Lumin target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 53.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  5.141 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002704 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0x7f8a79b00000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Assembly-CSharp.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a73afec00 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a79b93000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a796c1b20 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a73b00800 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a73b03400 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7936a000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/PsdPlugin.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a788b6000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a73b09600 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7934f000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7934f000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a79c8e000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7934f000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7444e000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a74450c00 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a74457200 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7444f000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7445b200 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a79e12000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a74461400 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a79e5d000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Cinemachine.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a79e5d000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a79ece000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a74464000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a74462c00 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a79f81000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a79e5d000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a74465000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a78b1c960 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a74470a00 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a744ac200 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a79ece000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for Lumin target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 59.76 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.351 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2020.2.4f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2061 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 170.3 MB.
+System memory in use after: 170.4 MB.
+
+Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 2558.
+Total: 3.284553 ms (FindLiveObjects: 0.335398 ms CreateObjectMapping: 0.324578 ms MarkObjects: 2.544458 ms  DeleteObjects: 0.078574 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98a0a8710dcd3d706ddd2fbcc670f98d') in 0.017544 seconds
+  Import took 0.022630 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 91.982788 seconds.
+  path: Assets/Scenes/MainGameScene.unity
+  artifactKey: Guid(0295010d22cb346649e9111f15d117d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainGameScene.unity using Guid(0295010d22cb346649e9111f15d117d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a548c27e1d532194b4860112c2ad8f3') in 0.008509 seconds
+  Import took 0.013053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 133.309005 seconds.
+  path: Assets/Scenes/TrainingRoom.unity
+  artifactKey: Guid(7efb5d13fbd624cc0ae18a9e50d33807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TrainingRoom.unity using Guid(7efb5d13fbd624cc0ae18a9e50d33807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2efb9e37bb969850d212448dc9449cd') in 0.010245 seconds
+  Import took 0.014850 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 130.912611 seconds.
+  path: Assets/Scenes/TrainingRoom.unity
+  artifactKey: Guid(7efb5d13fbd624cc0ae18a9e50d33807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TrainingRoom.unity using Guid(7efb5d13fbd624cc0ae18a9e50d33807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fddcb31a02cca719162a616889aaca4') in 0.006932 seconds
+  Import took 0.011644 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002667 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0x7f8a793d1000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Assembly-CSharp.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7aa45400 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a79b00000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a72d920f0 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7aa47000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7aa49c00 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a74dcc000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/PsdPlugin.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7a48b000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7aa50600 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a788f5000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a79ece000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a795d6000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a79ece000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7aa58c00 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7aa5c800 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7aa62e00 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7aa59c00 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7aa66e00 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a79d62000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7aa6d000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a79d2c000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Cinemachine.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a79d2c000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a79e0a000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7aa6fc00 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7aa6e800 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a79ee7000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a79d2c000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7aa70c00 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a72d76070 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7aa7c600 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a7aa8a800 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7f8a79e0a000 doesn't match image /Users/gustavegibbs/Desktop/Inner-City-Brawlers-GitPage/Inner City Brawlers/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for Lumin target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.232 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2047 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 170.0 MB.
+System memory in use after: 170.2 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 2561.
+Total: 2.325225 ms (FindLiveObjects: 0.271908 ms CreateObjectMapping: 0.076893 ms MarkObjects: 1.950762 ms  DeleteObjects: 0.024830 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 52.391032 seconds.
+  path: Assets/Scenes/TrainingRoom.unity
+  artifactKey: Guid(7efb5d13fbd624cc0ae18a9e50d33807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TrainingRoom.unity using Guid(7efb5d13fbd624cc0ae18a9e50d33807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef8cde67105e6635cdb96f34082a7057') in 0.017819 seconds
+  Import took 0.021999 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.569088 seconds.
+  path: Assets/Scenes/TrainingRoom.unity
+  artifactKey: Guid(7efb5d13fbd624cc0ae18a9e50d33807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TrainingRoom.unity using Guid(7efb5d13fbd624cc0ae18a9e50d33807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b054f63634bf2df330f8e54d8bbbd450') in 0.008294 seconds
+  Import took 0.012529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4544.896254 seconds.
+  path: Assets/Scripts/CharacterScripts/GeneralScripts/PlayerButtons.cs
+  artifactKey: Guid(b254db53d71594fd9af604898d763383) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CharacterScripts/GeneralScripts/PlayerButtons.cs using Guid(b254db53d71594fd9af604898d763383) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e8489013584e0ab784c0044d43ebde5') in 2.861626 seconds
+  Import took 2.866892 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 260.054032 seconds.
+  path: Assets/Scripts/CharacterScripts/GeneralScripts/PlayerButtons.cs
+  artifactKey: Guid(b254db53d71594fd9af604898d763383) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CharacterScripts/GeneralScripts/PlayerButtons.cs using Guid(b254db53d71594fd9af604898d763383) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfead9bd2140dfbf3d8e5c99a4ca62a9') in 0.005522 seconds
+  Import took 0.011486 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003041 seconds.
+  path: Assets/Scripts/CharacterScripts/GeneralScripts/PlayerButtons.cs
+  artifactKey: Guid(b254db53d71594fd9af604898d763383) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CharacterScripts/GeneralScripts/PlayerButtons.cs using Guid(b254db53d71594fd9af604898d763383) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfead9bd2140dfbf3d8e5c99a4ca62a9') in 0.005470 seconds
+  Import took 0.010223 seconds .
+
