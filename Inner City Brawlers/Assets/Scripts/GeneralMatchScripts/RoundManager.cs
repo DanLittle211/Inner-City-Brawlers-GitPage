@@ -308,6 +308,8 @@ public class RoundManager : MonoBehaviour
         pauseMenu.SetActive(true);
         p1Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
         p1Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
+        p2Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 1, "Menu", "Default", true);
+        p2Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 1, "Menu", "Default", true);
         SetActiveButton(multiPauseButton);
     }
     public void UnpauseGame()
@@ -315,6 +317,8 @@ public class RoundManager : MonoBehaviour
         pauseMenu.SetActive(false);
         p1Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Default", "Player1", true);
         p1Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Default", "Player1", true);
+        p2Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 1, "Default", "Player2", true);
+        p2Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 1, "Default", "Player2", true);
         currentState = roundState.duringRound;
     }
     void setOneTime()

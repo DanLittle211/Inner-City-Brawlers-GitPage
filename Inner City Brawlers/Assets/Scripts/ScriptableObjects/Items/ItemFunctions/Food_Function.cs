@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Food_Function : MonoBehaviour
 {
-    public itemObject FoodItem;
+    public Food_Item FoodItem;
     public float lifeTime;
     public bool isGrounded;
 
@@ -54,6 +54,7 @@ public class Food_Function : MonoBehaviour
     {
         if (other.gameObject.tag == "Player1" || other.gameObject.tag == "Player2")
         {
+            other.gameObject.GetComponent<PlayerHealth>().MakeHealth(FoodItem.restoreHealthValue);
             Debug.Log(other.gameObject.name + " picked up " + this.gameObject.name);//temporary
             DestroySelf();//temporary until full function is completed
         }

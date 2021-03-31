@@ -58,6 +58,7 @@ public class PlayerButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        pM = this.GetComponent<PlayerMovement>();
         rM = GameObject.Find("GameManager").GetComponent<RoundManager>();
         player = ReInput.players.GetPlayer(pM.playerID);
         PrimeCombo();
@@ -70,163 +71,165 @@ public class PlayerButtons : MonoBehaviour
         PauseButtons();
         if (pM.isDisabled != true)
         {
-            if (curAttack != null)
-            {
-                if (timer > 0)
-                {
-                    timer -= Time.deltaTime;
-                }
-                else
-                { 
-                    curAttack = null;
-                }
-                return;
-            }
-            ComboInput input = null;
-            if (currentCombos.Count > 0)
-            {
-                leeway += Time.deltaTime;
-                if (leeway >= buttonCheckDuration)
-                {
-                    if (LastInput != null)
-                    {
-                        Attack att = getAttackFromType(LastInput.type);
-                        if (att != null)
-                        {
-                            Attack(att);
-                            LastInput = null;
-                        }
-                    }
-                    ResetCombos();
-                }
-            }
-            else
-            {
-                leeway = 0;
-            }
-
-            if (player.GetButtonDown("LightAttack"))
-            {
-                StartCoroutine(LAttack(0.2f));
-                input = new ComboInput(AttackType.light); Debug.Log("Light attack");
-            }
-            if (player.GetButtonDown("MediumAttack"))
-            {
-                StartCoroutine(mediumAttack(0.6f));
-                input = new ComboInput(AttackType.medium); Debug.Log("medium attack ");
-            }
-            if (player.GetButtonDown("HeavyAttack"))
-            {
-                 StartCoroutine(heavyAttack(1f));
-                input = new ComboInput(AttackType.heavy); Debug.Log("Heavy attack ");
-            }
-            
-            if (pM.currentPlayState == PlayerMovement.playerState.Grounded ^ pM.currentPlayState == PlayerMovement.playerState.Crouch)
-            {
-                if (player.GetButtonDown("UniqueAttack"))
-                {
-                    StartCoroutine(uniqueAttack(1.2f));
-                    input = new ComboInput(AttackType.unique); Debug.Log("Unique attack ");
-
-                }
-                if (player.GetButtonDown("Throw"))
-                {
-                    input = new ComboInput(AttackType.throwAction); Debug.Log("Throw");
-
-                }
-                if (player.GetButtonDown("Use Assist"))
-                {
-                   
-                    input = new ComboInput(AttackType.Assist); Debug.Log("Use Assist ");
-                }
-                if (player.GetButtonDown("CalloutAssist"))
-                {
-                    GameObject gameManagerCA = GameObject.Find("GameManager");
-                    CallOutAssist gMCA = (CallOutAssist)gameManagerCA.GetComponent(typeof(CallOutAssist));
-                    if (playerID == 0)
-                    {
-                        gMCA.p1UseCAssist();
-                    }
-
-                    if (playerID == 1)
-                    {
-                        gMCA.p2UseCAssist();
-                    }
-
-                    Debug.Log("CurrentPlayerState: " + pM.currentPlayState);
-                }
-                if (player.GetButtonDown("LifelineAssist"))
-                {
-                    input = new ComboInput(AttackType.Lifeline); Debug.Log("LifeLine Assist Used ");
-                }
-                Vector2 movement = Vector2.zero;
-                if(PlayerMovement.InputDownX())
-                {
-                    movement.x = PlayerMovement.x;
-                    Debug.Log("Move right left");
-                }
-                if (PlayerMovement.InputDownY())
-                {
-                    movement.y = PlayerMovement.y;
-                    Debug.Log("Move up down");
-                }
-
-                if (movement != Vector2.zero)
-                {
-                    input = new ComboInput(movement);
-                }
-
-                if (input == null)
-                {
-                    return;
-                }
-                LastInput = input;
-                List<int> remove = new List<int>();
-
-                for (int i = 0; i < currentCombos.Count; i++)
-                {
-                    Combo c = combos[currentCombos[i]];
-                    if (c.continueCombo(input))
-                    {
-                        leeway = 0;
-                    }
-                    else
-                    {
-                        remove.Add(i);
-                    }
-                }
-                if (skip != false)
-                {
-                    skip = false;
-                    return;
-                }
-                for (int i = 0; i < combos.Count; i++)
-                {
-                    if (currentCombos.Contains(i))
-                    {
-                        continue;
-                    }
-                    if (combos[i].continueCombo(input))
-                    {
-                        currentCombos.Add(i);
-                        leeway = 0;
-                    }
-                }
-                Attack att = getAttackFromType(input.type);
-                foreach (int i in remove)
-                {
-                    currentCombos.RemoveAt(i);
-                }
-                if (att != null && currentCombos.Count <= 0)
-                {
-                    //Attack(getAttackFromType(input.type));
-                    Attack(att);
-                }
-            }
-            
+            GameControls();
         }
 
     }
+
+    void GameControls()
+    {
+        if (curAttack != null)
+        {
+            if (timer > 0)
+            {
+                timer -= Time.deltaTime;
+            }
+            else
+            {
+                curAttack = null;
+            }
+            return;
+        }
+        ComboInput input = null;
+        if (currentCombos.Count > 0)
+        {
+            leeway += Time.deltaTime;
+            if (leeway >= buttonCheckDuration)
+            {
+                if (LastInput != null)
+                {
+                    Attack att = getAttackFromType(LastInput.type);
+                    if (att != null)
+                    {
+                        Attack(att);
+                        LastInput = null;
+                    }
+                }
+                ResetCombos();
+            }
+        }
+        else
+        {
+            leeway = 0;
+        }
+
+        if (player.GetButtonDown("LightAttack"))
+        {
+            StartCoroutine(LAttack(0.2f));
+            input = new ComboInput(AttackType.light); Debug.Log("Light attack");
+        }
+        if (player.GetButtonDown("MediumAttack"))
+        {
+            StartCoroutine(mediumAttack(0.6f));
+            input = new ComboInput(AttackType.medium); Debug.Log("medium attack ");
+        }
+        if (player.GetButtonDown("HeavyAttack"))
+        {
+            StartCoroutine(heavyAttack(1f));
+            input = new ComboInput(AttackType.heavy); Debug.Log("Heavy attack ");
+        }
+
+        if (pM.currentPlayState == PlayerMovement.playerState.Grounded ^ pM.currentPlayState == PlayerMovement.playerState.Crouch)
+        {
+            if (player.GetButtonDown("UniqueAttack"))
+            {
+                StartCoroutine(uniqueAttack(1.2f));
+                input = new ComboInput(AttackType.unique); Debug.Log("Unique attack ");
+
+            }
+            if (player.GetButtonDown("Throw"))
+            {
+                input = new ComboInput(AttackType.throwAction); Debug.Log("Throw");
+
+            }
+            if (player.GetButtonDown("Use Assist"))
+            {
+
+                input = new ComboInput(AttackType.Assist); Debug.Log("Use Assist ");
+            }
+            if (player.GetButtonDown("CalloutAssist"))
+            {
+                GameObject gameManagerCA = GameObject.Find("GameManager");
+                CallOutAssist gMCA = (CallOutAssist)gameManagerCA.GetComponent(typeof(CallOutAssist));
+                if (playerID == 0)
+                {
+                    gMCA.p1UseCAssist();
+                }
+
+                if (playerID == 1)
+                {
+                    gMCA.p2UseCAssist();
+                }
+
+                Debug.Log("CurrentPlayerState: " + pM.currentPlayState);
+            }
+            if (player.GetButtonDown("LifelineAssist"))
+            {
+                input = new ComboInput(AttackType.Lifeline); Debug.Log("LifeLine Assist Used ");
+            }
+
+            Vector2 movement = Vector2.zero;
+            if (PlayerMovement.InputDownX() )
+            {
+                movement.x = PlayerMovement.x;
+            }
+            if (PlayerMovement.InputDownY())
+            {
+                movement.y = PlayerMovement.y;
+
+            }
+            if (movement != Vector2.zero)
+            {
+                input = new ComboInput(movement);
+            }
+            if (input == null)
+            {
+                return;
+            }
+            LastInput = input;
+            List<int> remove = new List<int>();
+
+            for (int i = 0; i < currentCombos.Count; i++)
+            {
+                Combo c = combos[currentCombos[i]];
+                if (c.continueCombo(input))
+                {
+                    leeway = 0;
+                }
+                else
+                {
+                    remove.Add(i);
+                }
+            }
+            if (skip != false)
+            {
+                skip = false;
+                return;
+            }
+            for (int i = 0; i < combos.Count; i++)
+            {
+                if (currentCombos.Contains(i))
+                {
+                    continue;
+                }
+                if (combos[i].continueCombo(input))
+                {
+                    currentCombos.Add(i);
+                    leeway = 0;
+                }
+            }
+            Attack att = getAttackFromType(input.type);
+            foreach (int i in remove)
+            {
+                currentCombos.RemoveAt(i);
+            }
+            if (att != null && currentCombos.Count <= 0)
+            {
+                Attack(att);
+            }
+        }
+    }
+   
     public void Attack(Attack A)
     {
         curAttack = A;
@@ -299,22 +302,6 @@ public class PlayerButtons : MonoBehaviour
             c.ResetCombo();
         }
         currentCombos.Clear();
-    }
-    public void beginLC()
-    {
-        StartCoroutine(LAttack(0f));
-    }
-    public void beginMC()
-    {
-        StartCoroutine(LAttack(0f));
-    }
-    public void beginHC()
-    {
-        StartCoroutine(LAttack(0f));
-    }
-    public void beginUC()
-    {
-        StartCoroutine(LAttack(0f));
     }
     IEnumerator LAttack(float time)
     {

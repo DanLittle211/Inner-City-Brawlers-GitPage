@@ -16,4 +16,4 @@ MonoBehaviour:
   itemLifeTime: 10
   type: 0
   ItemDescription: 
-  restoreHealthValue: 0
+  restoreHealthValue: 20

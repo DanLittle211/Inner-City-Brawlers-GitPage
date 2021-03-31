@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class DirectionLook : MonoBehaviour
 {
-    public Transform player1Transform;
-    public Transform player2Transform;
+    private Transform player1Transform, player2Transform;
 
     public bool isFlipped;
     // Start is called before the first frame update
     void Start()
     {
+        player1Transform = GameObject.Find("Player1").transform;
+        player2Transform = GameObject.Find("Player2").transform;
         isFlipped = false;    
     }
 
@@ -19,40 +20,26 @@ public class DirectionLook : MonoBehaviour
     {
 
         if (player1Transform.position.x >= player2Transform.position.x)
-        { 
-            flipPlayer1();
-            flipPlayer2();
+        {
+            flipPlayers(player1Transform);
+            flipPlayers(player2Transform);
         }
         if (player2Transform.position.x >= player1Transform.position.x)
-        {  
-            unflipPlayer1();
-            unflipPlayer2();
+        {
+            unflipPlayers(player1Transform);
+            unflipPlayers(player2Transform);
         }
     }
-
-    private void flipPlayer1()
+    private void flipPlayers(Transform curObject)
     {
         isFlipped = true;
-        player1Transform.rotation = Quaternion.Euler(0, -180f,0); 
-        Debug.Log("flipped p1");
+        curObject.rotation = Quaternion.Euler(0, -180f, 0);
+        Debug.Log("flipped");
     }
-    private void flipPlayer2()
-    {
-        isFlipped = true;
-        player2Transform.rotation = Quaternion.Euler(0, -180f, 0);
-        Debug.Log("flipped p2");
-    }
-
-    private void unflipPlayer1()
+    private void unflipPlayers(Transform curObject)
     {
         isFlipped = false;
-        player1Transform.rotation = Quaternion.Euler(0, 0f, 0);
-        Debug.Log("unflipped p1");
-    }
-    private void unflipPlayer2()
-    {
-        isFlipped = false;
-        player2Transform.rotation = Quaternion.Euler(0, 0f, 0);
-        Debug.Log("unflipped p2");
+        curObject.rotation = Quaternion.Euler(0, 0f, 0);
+        Debug.Log("unflipped");
     }
 }

@@ -18,6 +18,8 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] public Transform p2Transform;
     public Transform p1StartPosition;
     public Transform p2StartPosition;
+    public Transform fightCam;
+    public Transform CenterPoint;
 
     [Header("Player's Health")]
     public PlayerHealth p1Health;
@@ -65,6 +67,7 @@ public class GameManagerScript : MonoBehaviour
     {
         p1Transform.transform.position = p1StartPosition.transform.position;
         p2Transform.transform.position = p2StartPosition.transform.position;
+        fightCam.transform.position = CenterPoint.transform.position;
         ImmobilizePlayer();
     }
     void ImmobilizePlayer()

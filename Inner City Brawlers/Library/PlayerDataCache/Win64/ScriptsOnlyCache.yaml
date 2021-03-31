@@ -3,13 +3,12 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - B_WeaponFunction
     - BlackGardenStudios.HitboxStudioPro.AttackFX
-    - BlackGardenStudios.HitboxStudioPro.Demo.InputHistory
-    - BlackGardenStudios.HitboxStudioPro.Demo.InputVisualizer
     - BlackGardenStudios.HitboxStudioPro.HitboxCollisionMatrix
     - BlackGardenStudios.HitboxStudioPro.SpritePalette
     - BlackGardenStudios.HitboxStudioPro.SpritePaletteGroup
     - Blunt_Weapon_Item
     - CallOutAssist
+    - CameraMultipleTargets
     - DirectionLook
     - Food_Function
     - Food_Item
@@ -92,6 +91,13 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -194,8 +200,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 2500}
     - Class: 114
       Script: {instanceID: 2502}
-    - Class: 114
-      Script: {instanceID: 2614}
     - Class: 114
       Script: {instanceID: 2666}
     - Class: 114
@@ -309,23 +313,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6412}
     - Class: 114
-      Script: {instanceID: 6880}
+      Script: {instanceID: 6538}
     - Class: 114
-      Script: {instanceID: 6930}
+      Script: {instanceID: 6932}
     - Class: 114
-      Script: {instanceID: 6986}
+      Script: {instanceID: 6988}
     - Class: 114
-      Script: {instanceID: 7072}
+      Script: {instanceID: 7074}
     - Class: 114
-      Script: {instanceID: 7212}
+      Script: {instanceID: 7214}
     - Class: 114
-      Script: {instanceID: 7258}
+      Script: {instanceID: 7260}
     - Class: 114
-      Script: {instanceID: 7442}
+      Script: {instanceID: 7444}
     - Class: 114
-      Script: {instanceID: 7474}
+      Script: {instanceID: 7476}
     - Class: 114
-      Script: {instanceID: 7608}
+      Script: {instanceID: 7610}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -745,7 +749,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerGroup
   - hash:
       serializedVersion: 2
-      Hash: 597b58ce5fd734a89e357e603eb1c1d6
+      Hash: 1416bf2c1feb09058c3b9e6514a1b3f0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerButtons
@@ -865,7 +869,7 @@ ScriptsOnlyBuild:
     className: P_WeaponFunction
   - hash:
       serializedVersion: 2
-      Hash: 6da0903c3383f89dce3d0cbab6ceb404
+      Hash: ff67089a79716c254c8ece13818e291e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HitDetection
@@ -1189,7 +1193,7 @@ ScriptsOnlyBuild:
     className: ChromaticAberration
   - hash:
       serializedVersion: 2
-      Hash: 55f39edd9addad10c614cef50c5f9e41
+      Hash: 67fa6d217791c4be4e1cad0340522cfe
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManagerScript
@@ -1237,7 +1241,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerEnumHistory
   - hash:
       serializedVersion: 2
-      Hash: 58c6a36667f6dfa1218e2083c6528ac7
+      Hash: cfdbd17c15bcbec4a05ef123ae6e8069
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DirectionLook
@@ -1303,7 +1307,7 @@ ScriptsOnlyBuild:
     className: RewiredStandaloneInputModule
   - hash:
       serializedVersion: 2
-      Hash: 19186feecb2aadff494e970d0a2016ee
+      Hash: bbb16217d6cdd244d3d41c558545314e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameMasterManager
@@ -1423,7 +1427,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerVector3
   - hash:
       serializedVersion: 2
-      Hash: e326668dda1fe94eaf15f821af7598cd
+      Hash: 00808e0cc33c291bc0bb3052f86afcf0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -1519,7 +1523,7 @@ ScriptsOnlyBuild:
     className: UIFoldout
   - hash:
       serializedVersion: 2
-      Hash: 10cdbff4c3142e8ab55462fa60d02d13
+      Hash: 634bb119defe446b4071bd12dfeb2b1c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Food_Function
@@ -1567,7 +1571,7 @@ ScriptsOnlyBuild:
     className: SpriteLabel
   - hash:
       serializedVersion: 2
-      Hash: c14bffc29dc58bf18abe6a4a3f1d8fec
+      Hash: 8babf9dc58a6ebad97cf92febf3c0523
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RoundManager
@@ -1817,6 +1821,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: Physics2DRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 053c228dd9042a37224939e6fa95b47a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraMultipleTargets
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -2102,4 +2112,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainGameScene.unity
-  playerPath: D:/College Papers/All GDD WORK/411/TrueMidTermBuild/Inner City Brawlers.exe
+  playerPath: D:/College Papers/All GDD WORK/411/Week3Build/Inner City Brawlers.exe
