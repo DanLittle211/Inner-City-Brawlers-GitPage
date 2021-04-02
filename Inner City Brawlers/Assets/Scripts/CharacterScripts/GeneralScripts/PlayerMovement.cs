@@ -24,12 +24,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public  float moveUp;
 
     public static float x, y;
+    public float x1, y1;
     static bool xDown, yDown;
+    public bool xDown1, yDown1;
 
     public bool isDisabled;
     // Start is called before the first frame update
     void Start()
     {
+        Instance = this;
         myRB2D = GetComponent<Rigidbody2D>();
         player = ReInput.players.GetPlayer(playerID);
         if (playerID == 0)
@@ -43,9 +46,12 @@ public class PlayerMovement : MonoBehaviour
         }
         x = 0;
         y = 0;
+        x1 = 0;
+        y1 = 0;
         xDown = false;
         yDown = false;
-        
+        xDown1 = false;
+        yDown1 = false;
     }
 
     public void SetControllerMapsForCurrentModeP1()
@@ -66,14 +72,13 @@ public class PlayerMovement : MonoBehaviour
         if (isDisabled != true)
         {
             playerMovement();
-
-            GetInput(ref x, ref xDown, "Move Horizontal");
-            GetInput(ref y, ref yDown, "Move Vertical");
+            GetInput(ref x1, ref xDown1, "Move Horizontal");
+            GetInput(ref y1, ref yDown1, "Move Vertical");
         }
         
     }
 
-    public void GetInput(ref float val, ref bool down, string axis/*, int playerNum*/)
+    public void GetInput(ref float val, ref bool down, string axis)
     {
 
         float input = player.GetAxisRaw(axis);
@@ -194,6 +199,14 @@ public class PlayerMovement : MonoBehaviour
     public static bool InputDownY()
     {
         return yDown;
+    }
+    public bool InputDownX1()
+    {
+        return xDown1;
+    }
+    public bool InputDownY1()
+    {
+        return yDown1;
     }
     public void MoveFunction(float jumpLimiter, float speed, float jumpForce)
     {

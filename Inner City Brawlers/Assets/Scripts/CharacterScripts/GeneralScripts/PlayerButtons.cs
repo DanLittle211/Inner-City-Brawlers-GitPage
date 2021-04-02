@@ -73,7 +73,7 @@ public class PlayerButtons : MonoBehaviour
         {
             GameControls();
         }
-
+       
     }
 
     void GameControls()
@@ -169,14 +169,39 @@ public class PlayerButtons : MonoBehaviour
             }
 
             Vector2 movement = Vector2.zero;
-            if (PlayerMovement.InputDownX() )
+            if (pM.InputDownX1())
             {
-                movement.x = PlayerMovement.x;
+                DirectionLook dlook = this.GetComponent<DirectionLook>();
+                if (playerID == 0)
+                {
+                    if (dlook.isFlipped == true)
+                    {
+                        //movement.x = -(PlayerMovement.x);
+                        movement.x = -(pM.x1);
+                    }
+                    else
+                    {
+                        //movement.x = (PlayerMovement.x);
+                        movement.x = (pM.x1);
+                    }
+                }
+                if (playerID == 1)
+                {
+                    if (dlook.isFlipped == false)
+                    {
+                        //movement.x = -(PlayerMovement.x);
+                        movement.x = -(pM.x1);
+                    }
+                    else
+                    {
+                        //movement.x = (PlayerMovement.x);
+                        movement.x = (pM.x1);
+                    }
+                }
             }
-            if (PlayerMovement.InputDownY())
+            if (pM.InputDownY1())
             {
-                movement.y = PlayerMovement.y;
-
+                movement.y = pM.y1;
             }
             if (movement != Vector2.zero)
             {
@@ -235,6 +260,7 @@ public class PlayerButtons : MonoBehaviour
         curAttack = A;
         timer = A.length;
         myAnim.Play(A.name, -1, 0); //playAnimation in code and resets anim
+        Debug.Log(A.name + ": successfuly inputted");
     }
 
     Attack getAttackFromType(AttackType t)
