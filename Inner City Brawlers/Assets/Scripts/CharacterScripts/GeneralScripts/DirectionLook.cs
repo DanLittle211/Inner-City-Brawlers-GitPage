@@ -6,15 +6,35 @@ public class DirectionLook : MonoBehaviour
 {
     private Transform player1Transform, player2Transform;
 
+    public float blockDistance;
+
     public bool isFlipped;
+
+    public bool blockAvailable;
+
     // Start is called before the first frame update
     void Start()
     {
+        blockAvailable = false;
         player1Transform = GameObject.Find("Player1").transform;
         player2Transform = GameObject.Find("Player2").transform;
         isFlipped = false;    
     }
 
+    private void Update()
+    {
+        Vector2 direction = player1Transform.position - player2Transform.position;
+        direction.y = 0;
+        if (Vector2.Distance(player1Transform.position, player2Transform.position) <= blockDistance)
+        {
+            blockAvailable = true;
+        }
+        else
+        {
+            blockAvailable = false;
+        }
+
+    }
     // Update is called once per frame
     void FixedUpdate()
     {

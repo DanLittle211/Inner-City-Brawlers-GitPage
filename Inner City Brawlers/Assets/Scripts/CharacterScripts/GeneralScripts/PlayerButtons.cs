@@ -40,6 +40,8 @@ public class PlayerButtons : MonoBehaviour
     [SerializeField] public List<int> currentCombos = new List<int>();
     bool skip = false;
 
+    public bool isAttacking;
+
     void PrimeCombo()
     {
         for (int i = 0; i < combos.Count; i++)
@@ -51,6 +53,7 @@ public class PlayerButtons : MonoBehaviour
                 LastInput = null;
                 Attack(c.comboAttack);
                 ResetCombos();
+                //isAttacking = false;
             });
         }
     }
@@ -71,15 +74,77 @@ public class PlayerButtons : MonoBehaviour
         PauseButtons();
         if (pM.isDisabled != true)
         {
+            switch (pM.currentPlayState)
+            {
+                case PlayerMovement.playerState.Grounded:
+                    {
+                        break;
+                    }
+                case PlayerMovement.playerState.Crouch:
+                    {
+
+                        break;
+                    }
+                case PlayerMovement.playerState.Jump:
+                    {
+
+                        break;
+                    }
+                case PlayerMovement.playerState.Block:
+                    {
+                        break;
+                    }
+                case PlayerMovement.playerState.SoftKnockdown:
+                    {
+                        break;
+                    }
+                case PlayerMovement.playerState.HardKnockdown:
+                    {
+                        break;
+                    }
+                case PlayerMovement.playerState.Immobile:
+                    {
+                        break;
+                    }
+            }
             GameControls();
         }
        
     }
+    #region SettingState for This Character
+    public void SetPlayerStateGrounded()
+    {
+        pM.currentPlayState = PlayerMovement.playerState.Grounded;
+    }
+    public void SetPlayerStateCrouch()
+    {
+        pM.currentPlayState = PlayerMovement.playerState.Crouch;
+    }
+    public void SetPlayerStateJump()
+    {
+        pM.currentPlayState = PlayerMovement.playerState.Jump;
+    }
+    public void SetPlayerStateSKD()
+    {
+        pM.currentPlayState = PlayerMovement.playerState.SoftKnockdown;
+    }
+    public void SetPlayerStateHKD()
+    {
+        pM.currentPlayState = PlayerMovement.playerState.HardKnockdown;
+    }
+    public void SetPlayerStateImmobile()
+    {
+        pM.currentPlayState = PlayerMovement.playerState.Immobile;
+    }
+
+    #endregion
 
     void GameControls()
     {
+
         if (curAttack != null)
         {
+            //SetPlayerStateImmobile();
             if (timer > 0)
             {
                 timer -= Time.deltaTime;
@@ -89,6 +154,10 @@ public class PlayerButtons : MonoBehaviour
                 curAttack = null;
             }
             return;
+        }
+        else
+        {
+            //SetPlayerStateGrounded();
         }
         ComboInput input = null;
         if (currentCombos.Count > 0)
@@ -102,6 +171,7 @@ public class PlayerButtons : MonoBehaviour
                     if (att != null)
                     {
                         Attack(att);
+                        //isAttacking = false;
                         LastInput = null;
                     }
                 }
@@ -116,17 +186,17 @@ public class PlayerButtons : MonoBehaviour
         if (player.GetButtonDown("LightAttack"))
         {
             StartCoroutine(LAttack(0.2f));
-            input = new ComboInput(AttackType.light); Debug.Log("Light attack");
+            input = new ComboInput(AttackType.light, pM.GetInput()); Debug.Log("Light attack");
         }
         if (player.GetButtonDown("MediumAttack"))
         {
             StartCoroutine(mediumAttack(0.6f));
-            input = new ComboInput(AttackType.medium); Debug.Log("medium attack ");
+            input = new ComboInput(AttackType.medium, pM.GetInput()); Debug.Log("medium attack ");
         }
         if (player.GetButtonDown("HeavyAttack"))
         {
             StartCoroutine(heavyAttack(1f));
-            input = new ComboInput(AttackType.heavy); Debug.Log("Heavy attack ");
+            input = new ComboInput(AttackType.heavy, pM.GetInput()); Debug.Log("Heavy attack ");
         }
 
         if (pM.currentPlayState == PlayerMovement.playerState.Grounded ^ pM.currentPlayState == PlayerMovement.playerState.Crouch)
@@ -134,18 +204,18 @@ public class PlayerButtons : MonoBehaviour
             if (player.GetButtonDown("UniqueAttack"))
             {
                 StartCoroutine(uniqueAttack(1.2f));
-                input = new ComboInput(AttackType.unique); Debug.Log("Unique attack ");
+                input = new ComboInput(AttackType.unique, pM.GetInput()); Debug.Log("Unique attack ");
 
             }
             if (player.GetButtonDown("Throw"))
             {
-                input = new ComboInput(AttackType.throwAction); Debug.Log("Throw");
+                input = new ComboInput(AttackType.throwAction, pM.GetInput()); Debug.Log("Throw");
 
             }
             if (player.GetButtonDown("Use Assist"))
             {
 
-                input = new ComboInput(AttackType.Assist); Debug.Log("Use Assist ");
+                input = new ComboInput(AttackType.Assist, pM.GetInput()); Debug.Log("Use Assist ");
             }
             if (player.GetButtonDown("CalloutAssist"))
             {
@@ -165,23 +235,21 @@ public class PlayerButtons : MonoBehaviour
             }
             if (player.GetButtonDown("LifelineAssist"))
             {
-                input = new ComboInput(AttackType.Lifeline); Debug.Log("LifeLine Assist Used ");
+                input = new ComboInput(AttackType.Lifeline, pM.GetInput()); Debug.Log("LifeLine Assist Used ");
             }
 
             Vector2 movement = Vector2.zero;
             if (pM.InputDownX1())
             {
-                DirectionLook dlook = this.GetComponent<DirectionLook>();
+                DirectionLook dlook = GameObject.Find("GameManager").GetComponent<DirectionLook>();
                 if (playerID == 0)
                 {
                     if (dlook.isFlipped == true)
                     {
-                        //movement.x = -(PlayerMovement.x);
                         movement.x = -(pM.x1);
                     }
                     else
                     {
-                        //movement.x = (PlayerMovement.x);
                         movement.x = (pM.x1);
                     }
                 }
@@ -189,12 +257,10 @@ public class PlayerButtons : MonoBehaviour
                 {
                     if (dlook.isFlipped == false)
                     {
-                        //movement.x = -(PlayerMovement.x);
                         movement.x = -(pM.x1);
                     }
                     else
                     {
-                        //movement.x = (PlayerMovement.x);
                         movement.x = (pM.x1);
                     }
                 }
@@ -254,7 +320,17 @@ public class PlayerButtons : MonoBehaviour
             }
         }
     }
-   
+
+    public void SetIsAttackingTrue()
+    {
+        isAttacking = true;
+    }
+
+    public void SetIsAttackingFalse()
+    {
+       //isAttacking = false;
+    }
+
     public void Attack(Attack A)
     {
         curAttack = A;
@@ -327,6 +403,7 @@ public class PlayerButtons : MonoBehaviour
             Combo c = combos[currentCombos[i]];
             c.ResetCombo();
         }
+        //isAttacking = false;
         currentCombos.Clear();
     }
     IEnumerator LAttack(float time)
@@ -428,10 +505,11 @@ public class ComboInput
     public AttackType type;
     public Vector2 mType;
 
-    public ComboInput(AttackType e)
+    public ComboInput(AttackType e, Vector2 m)
     {
         type = e;
         mType = Vector2.zero;
+        mType = m;
     }
     public ComboInput(Vector2 e)
     {
@@ -441,8 +519,9 @@ public class ComboInput
 
     public bool IsSameAs(ComboInput J)
     {
-        return ((type == AttackType.movement) ? (validMovemment(J.mType)) : (type == J.type)); 
-        //In a single statement akin to an if statement. it checks movement inputs, then buttons
+        bool valid = validMovemment(J.mType);
+        return ((type == AttackType.movement) ? (valid) : (type == J.type && valid)); 
+        //In a single statement akin to an if statement. it checks movement inputs, then buttons and movement
     }
 
     bool validMovemment(Vector2 move)

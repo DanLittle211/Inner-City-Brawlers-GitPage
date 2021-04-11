@@ -4,7 +4,8 @@ using UnityEngine;
 using Rewired;
 public class PlayerMovement : MonoBehaviour
 {
-    public static PlayerMovement Instance;
+    public PlayerButtons otherPlayer;
+    private PlayerButtons pB;
     public GameObject groundCheck;
     public bool isGrounded;
    
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     
     public playerState currentPlayState;
     public Rigidbody2D myRB2D;
+    //private Animator myAnim;
 
     //Rewired
     [SerializeField] public int playerID;
@@ -23,16 +25,23 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public float moveHorizontal;
     [SerializeField] public  float moveUp;
 
-    public static float x, y;
+    [HideInInspector]
     public float x1, y1;
-    static bool xDown, yDown;
+    [HideInInspector]
     public bool xDown1, yDown1;
 
     public bool isDisabled;
+    public bool isBlockingHigh;
+    public bool isBlockingLow;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        Instance = this;
+        isBlockingHigh = false;
+        isBlockingLow = false;
+        pB = this.GetComponent<PlayerButtons>(); // this pB will be changed to one on active player once animations come in
+        //myAnim = this.GetComponent<Animator>();
         myRB2D = GetComponent<Rigidbody2D>();
         player = ReInput.players.GetPlayer(playerID);
         if (playerID == 0)
@@ -44,12 +53,8 @@ public class PlayerMovement : MonoBehaviour
         {
             SetControllerMapsForCurrentModeP2();
         }
-        x = 0;
-        y = 0;
         x1 = 0;
         y1 = 0;
-        xDown = false;
-        yDown = false;
         xDown1 = false;
         yDown1 = false;
     }
@@ -77,10 +82,16 @@ public class PlayerMovement : MonoBehaviour
         }
         
     }
+    private void FixedUpdate()
+    {
+        if (isDisabled != true)
+        {
+           // playerMovement();
+        }
+    }
 
     public void GetInput(ref float val, ref bool down, string axis)
     {
-
         float input = player.GetAxisRaw(axis);
         input = (input > 0.5f) ? 1 : ((input < -0.5f) ? -1 : 0);
 
@@ -103,25 +114,26 @@ public class PlayerMovement : MonoBehaviour
     }
     public void playerMovement()
     {
-        
         moveHorizontal = player.GetAxisRaw("Move Horizontal");
         moveHorizontal = (moveHorizontal > 0.3f) ? 1 : ((moveHorizontal < -0.3f) ? -1 : 0);
         moveUp = player.GetAxisRaw("Move Vertical");
-        moveUp = (moveUp > 0.75f) ? 1 : ((moveUp < -0.3f) ? -1 : 0); // Forces values of moveUp to be 1 or zero depending on moving direction
+        moveUp = (moveUp >= 0.75f) ? 1 : ((moveUp <= -0.3f) ? -1 : 0); // Forces values of moveUp to be 1 or zero depending on moving direction
 
+        //DirectionLook dlook = GameObject.Find("GameManager").GetComponent<DirectionLook>();
         switch (currentPlayState)
         {
             case playerState.Grounded:
-                if (-moveUp >= 0.4)
+                // myAnim.SetBool("IsCrouch", false);
+                if (-moveUp >= 0.3)
                 {
                     currentPlayState = playerState.Crouch;
+                    Debug.Log("Pressed Down");
                 }
                 if (moveUp > 0.2)
                 {
                     MoveFunction(0.0012f, 0f, jumpStrength);
                     currentPlayState = playerState.Jump;
                 }
-
                 if ((moveHorizontal <= 1 && moveHorizontal > 0.5) && Mathf.Round(myRB2D.velocity.x) <= 6)
                 {
                     MoveFunction(0.0012f, movementSpeed, 0f);
@@ -129,7 +141,7 @@ public class PlayerMovement : MonoBehaviour
                     {
                         MoveFunction(0.0012f, 0f, jumpStrength);
                     }
-                    if (-moveUp <= 1 && -moveUp > 0.2)
+                    if (-moveUp <= 0.7 && -moveUp > 0.2)
                     {
                         MoveFunction(0.0012f, 0f, 0f);
                         currentPlayState = playerState.Crouch;
@@ -150,11 +162,13 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else
                 {
-                    currentPlayState = playerState.Grounded;
+                    //currentPlayState = playerState.Grounded;
+                    isBlockingHigh = false;
                 }
                 break;
             case playerState.Crouch:
                 {
+                    //  myAnim.SetBool("IsCrouch", true);
                     if (-moveUp <= 1 && -moveUp > 0.4)
                     {
                         if (moveHorizontal <= 0.5 && moveHorizontal > 0)
@@ -165,40 +179,53 @@ public class PlayerMovement : MonoBehaviour
                         }
                         if (-moveHorizontal <= 0.5 && -moveHorizontal > 0)
                         {
-                            MoveFunction(0f, 0f,0f);
+                            MoveFunction(0f, 0f, 0f);
                             currentPlayState = playerState.Crouch;
                             Debug.Log("Current Player State: " + currentPlayState + " Left");
                         }
+                        MoveFunction(0f, 0f, 0f);
+                        Debug.Log("Current Player State: " + currentPlayState);
                     }
                     else
                     {
                         currentPlayState = playerState.Grounded;
                         Debug.Log("Current Player State: " + currentPlayState);
                     }
+
                     break;
                 }
             case playerState.Jump:
                 {
-                    if (moveHorizontal > 0.5 && Mathf.Round(myRB2D.velocity.x) <= 6)
+                    if (moveHorizontal >= 0.5 && Mathf.Round(myRB2D.velocity.x) <= 6)
                     {
                         MoveFunction(0.0012f, (movementSpeed / 2), 0f); // while in air, you move slightly to the right
                     }
-                    if (-moveHorizontal > 0.5 && Mathf.Abs(myRB2D.velocity.x) <= 6)
+                    if (-moveHorizontal >= 0.5 && Mathf.Abs(myRB2D.velocity.x) <= 6)
                     {
                         MoveFunction(0.0012f, (-movementSpeed / 2), 0f);  // while in air, you move slightly to the left
                     }
                     break;
                 }
+            case playerState.SoftKnockdown:
+                {
+  
+                    break;
+                }
+            case playerState.HardKnockdown:
+                {
+
+                    break;
+                }
+            case playerState.Immobile:
+                {
+
+                    break;
+                }
         }
     }
-
-    public static bool InputDownX()
+    public Vector2 GetInput()
     {
-        return xDown;
-    }
-    public static bool InputDownY()
-    {
-        return yDown;
+        return new Vector2(x1, y1);
     }
     public bool InputDownX1()
     {

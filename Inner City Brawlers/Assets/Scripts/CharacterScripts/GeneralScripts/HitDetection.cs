@@ -57,7 +57,7 @@ public class HitDetection : MonoBehaviour
 
     public void KnockBack(float knockbackForceX, float knockbackForceY, Rigidbody2D playerRB)
     {
-        DirectionLook dLook = GameObject.Find("Player1").GetComponent<DirectionLook>();
+        DirectionLook dLook = GameObject.Find("GameManager").GetComponent<DirectionLook>();
         if (dLook.isFlipped == false)
         {
             playerRB.AddRelativeForce(Vector3.right * knockbackForceX, ForceMode2D.Impulse);

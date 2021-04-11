@@ -4,8 +4,11 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 public class CallOutAssist : MonoBehaviour
-    
+
 {
+    [Header("Object References")]
+    private Transform p1Transform;
+    private Transform p2Transform;
     [Header("Script References")]
     public ItemLists itemList;//reference for the list of items, used for selecting which item is spawned
     [Header("UI Elements")]
@@ -33,6 +36,8 @@ public class CallOutAssist : MonoBehaviour
     {
         AssistAllowed = true;//Temporary for testing, makes the assist being on true
         itemList = GameObject.Find("GameManager").GetComponent<ItemLists>();//Reference for itemLists, found on GameManager object
+        p1Transform = GameObject.Find("Player1").transform;
+        p2Transform = GameObject.Find("Player2").transform;
     }
     public void p1UseCAssist()
     {
@@ -62,6 +67,21 @@ public class CallOutAssist : MonoBehaviour
     }
     void Update()
     {
+        //Sets spawn bounds to player's positions
+        DirectionLook dlook = GameObject.Find("GameManager").GetComponent<DirectionLook>();
+        if (dlook.isFlipped == true)
+        {
+            leftMax = p2Transform.position;
+            rightMax = p1Transform.position;
+            //If they're flipped, then it resets the position of the left equal to the player 2 position
+        }
+        if (dlook.isFlipped == false)
+        {
+            leftMax = p1Transform.position;
+            rightMax = p2Transform.position;
+            //If they're not flipped, then it resets the position of the left equal to the player 1 position
+        }
+
         //limiting each timer's upper limit to the time2Spawn number
         if (p1Timer >= time2Spawn) p1Timer = time2Spawn;
         if (p2Timer >= time2Spawn) p2Timer = time2Spawn;
