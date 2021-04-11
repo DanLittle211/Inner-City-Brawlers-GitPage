@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public float moveHorizontal;
     [SerializeField] public  float moveUp;
 
-    [HideInInspector]
+    //[HideInInspector]
     public float x1, y1;
     [HideInInspector]
     public bool xDown1, yDown1;
@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isDisabled != true)
         {
-            playerMovement();
+           // playerMovement();
             GetInput(ref x1, ref xDown1, "Move Horizontal");
             GetInput(ref y1, ref yDown1, "Move Vertical");
         }
@@ -86,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isDisabled != true)
         {
-           // playerMovement();
+           playerMovement();
         }
     }
 
@@ -101,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
             if (val != 0)
             {
                 down = true;
+                
             }
             else
             {
@@ -114,12 +115,16 @@ public class PlayerMovement : MonoBehaviour
     }
     public void playerMovement()
     {
+        DirectionLook dlook = GameObject.Find("GameManager").GetComponent<DirectionLook>();
         moveHorizontal = player.GetAxisRaw("Move Horizontal");
+
         moveHorizontal = (moveHorizontal > 0.3f) ? 1 : ((moveHorizontal < -0.3f) ? -1 : 0);
+
         moveUp = player.GetAxisRaw("Move Vertical");
         moveUp = (moveUp >= 0.75f) ? 1 : ((moveUp <= -0.3f) ? -1 : 0); // Forces values of moveUp to be 1 or zero depending on moving direction
 
-        //DirectionLook dlook = GameObject.Find("GameManager").GetComponent<DirectionLook>();
+
+
         switch (currentPlayState)
         {
             case playerState.Grounded:
@@ -134,6 +139,7 @@ public class PlayerMovement : MonoBehaviour
                     MoveFunction(0.0012f, 0f, jumpStrength);
                     currentPlayState = playerState.Jump;
                 }
+
                 if ((moveHorizontal <= 1 && moveHorizontal > 0.5) && Mathf.Round(myRB2D.velocity.x) <= 6)
                 {
                     MoveFunction(0.0012f, movementSpeed, 0f);
@@ -147,8 +153,10 @@ public class PlayerMovement : MonoBehaviour
                         currentPlayState = playerState.Crouch;
                     }
                 }
+
                 if ((-moveHorizontal <= 1 && -moveHorizontal > 0.5) && Mathf.Abs(myRB2D.velocity.x) <= 6)
                 {
+
                     MoveFunction(0.0012f, -movementSpeed, 0f);
                     if (moveUp <= 1 && moveUp > 0.2)
                     {
@@ -159,11 +167,13 @@ public class PlayerMovement : MonoBehaviour
                         MoveFunction(0.0012f, 0f, 0f);
                         currentPlayState = playerState.Crouch;
                     }
+
+
                 }
                 else
                 {
                     //currentPlayState = playerState.Grounded;
-                    isBlockingHigh = false;
+                    //isBlockingHigh = false;
                 }
                 break;
             case playerState.Crouch:
@@ -208,7 +218,7 @@ public class PlayerMovement : MonoBehaviour
                 }
             case playerState.SoftKnockdown:
                 {
-  
+
                     break;
                 }
             case playerState.HardKnockdown:

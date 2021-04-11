@@ -9,7 +9,7 @@ public enum AttackType {light = 0, medium = 1, heavy = 2, unique = 3, throwActio
 
 public class PlayerButtons : MonoBehaviour
 {
-    [SerializeField]public PlayerMovement pM;
+    [SerializeField] public PlayerMovement pM;
     public GameObject[] hitboxes;
 
 
@@ -27,8 +27,8 @@ public class PlayerButtons : MonoBehaviour
     public Attack AssistAttack;
     public Attack LifeLineAssist;
 
-    [SerializeField]public List<Combo> combos;
-    [SerializeField]public float buttonCheckDuration = 0.2f;
+    [SerializeField] public List<Combo> combos;
+    [SerializeField] public float buttonCheckDuration = 0.2f;
 
     [Header("Components")]
     public Animator myAnim;
@@ -108,8 +108,9 @@ public class PlayerButtons : MonoBehaviour
                     }
             }
             GameControls();
+            checkForBlock();
         }
-       
+
     }
     #region SettingState for This Character
     public void SetPlayerStateGrounded()
@@ -272,10 +273,12 @@ public class PlayerButtons : MonoBehaviour
             if (movement != Vector2.zero)
             {
                 input = new ComboInput(movement);
+               // checkForBlock();
             }
             if (input == null)
             {
                 return;
+
             }
             LastInput = input;
             List<int> remove = new List<int>();
@@ -320,7 +323,233 @@ public class PlayerButtons : MonoBehaviour
             }
         }
     }
+    public void checkForBlock()
+    {
+        DirectionLook dlook = GameObject.Find("GameManager").GetComponent<DirectionLook>();
+        if (playerID == 0)
+        {
+            if (dlook.isFlipped == false)
+            {
+                if ((-pM.x1 >= 0.5))
+                {
+                    if (dlook.blockAvailable == true)
+                    {
+                        if (pM.otherPlayer.isAttacking == true)
+                        {
+                            pM.isBlockingHigh = true;
+                            pM.isBlockingLow = false;
+                            if ((-pM.y1 >= 0.3))
+                            {
+                                pM.isBlockingHigh = false;
+                                pM.isBlockingLow = true;
+                            }
+                        }
+                        if (pM.otherPlayer.isAttacking == false)
+                        {
+                            pM.isBlockingHigh = false;
+                            pM.isBlockingLow = false;
+                        }
+                    }
+                    if (dlook.blockAvailable == false)
+                    {
+                        pM.isBlockingHigh = false;
+                        pM.isBlockingLow = false;
+                    }
+                }
+                else
+                {
+                    pM.isBlockingHigh = false;
+                    pM.isBlockingLow = false;
+                }
+                if ((-pM.y1 > 0.5))
+                {
+                    if (dlook.blockAvailable == true)
+                    {
+                        if (pM.otherPlayer.isAttacking == true)
+                        {
+                            if ((-pM.x1 >= 0.3))
+                            {
+                                pM.isBlockingHigh = false;
+                                pM.isBlockingLow = true;
+                            }
+                        }
+                    }
+                    if (dlook.blockAvailable == false)
+                    {
+                        pM.isBlockingHigh = false;
+                        pM.isBlockingLow = false;
+                    }
+                }
 
+            }
+            if (dlook.isFlipped == true)
+            {
+                if ((pM.x1 >= 0.5))
+                {
+                    if (dlook.blockAvailable == true)
+                    {
+                        if (pM.otherPlayer.isAttacking == true)
+                        {
+                            pM.isBlockingHigh = true;
+                            pM.isBlockingLow = false;
+                            if ((-pM.y1 >= 0.3))
+                            {
+                                pM.isBlockingHigh = false;
+                                pM.isBlockingLow = true;
+                            }
+                        }
+                        else
+                        {
+                            pM.isBlockingHigh = false;
+                            pM.isBlockingLow = false;
+                        }
+                    }
+                    else
+                    {
+                        pM.isBlockingHigh = false;
+                        pM.isBlockingLow = false;
+                    }
+                }
+                else
+                {
+                    pM.isBlockingHigh = false;
+                    pM.isBlockingLow = false;
+                }
+                if ((-pM.y1 > 0.5))
+                {
+                    if (dlook.blockAvailable == true)
+                    {
+                        if (pM.otherPlayer.isAttacking == true)
+                        {
+                            if ((pM.x1 >= 0.3))
+                            {
+                                pM.isBlockingHigh = false;
+                                pM.isBlockingLow = true;
+                            }
+                        }
+                    }
+                    if (dlook.blockAvailable == false)
+                    {
+                        pM.isBlockingHigh = false;
+                        pM.isBlockingLow = false;
+                    }
+                }
+
+            }
+        }
+        if (playerID == 1)
+        {
+            if (dlook.isFlipped == true)
+            {
+                if ((-pM.x1 >= 0.5))
+                {
+                    if (dlook.blockAvailable == true)
+                    {
+                        if (pM.otherPlayer.isAttacking == true)
+                        {
+                            pM.isBlockingHigh = true;
+                            pM.isBlockingLow = false;
+                            if ((-pM.y1 >= 0.3))
+                            {
+                                pM.isBlockingHigh = false;
+                                pM.isBlockingLow = true;
+                            }
+                        }
+                        if (pM.otherPlayer.isAttacking == false)
+                        {
+                            pM.isBlockingHigh = false;
+                            pM.isBlockingLow = false;
+                        }
+                    }
+                    if (dlook.blockAvailable == false)
+                    {
+                        pM.isBlockingHigh = false;
+                        pM.isBlockingLow = false;
+                    }
+                }
+                else
+                {
+                    pM.isBlockingHigh = false;
+                    pM.isBlockingLow = false;
+                }
+                if ((-pM.y1 > 0.5))
+                {
+                    if (dlook.blockAvailable == true)
+                    {
+                        if (pM.otherPlayer.isAttacking == true)
+                        {
+                            if ((-pM.x1 >= 0.3))
+                            {
+                                pM.isBlockingHigh = false;
+                                pM.isBlockingLow = true;
+                            }
+                        }
+                    }
+                    if (dlook.blockAvailable == false)
+                    {
+                        pM.isBlockingHigh = false;
+                        pM.isBlockingLow = false;
+                    }
+                }
+
+            }
+            if (dlook.isFlipped == false)
+            {
+                if ((pM.x1 >= 0.5))
+                {
+                    if (dlook.blockAvailable == true)
+                    {
+                        if (pM.otherPlayer.isAttacking == true)
+                        {
+                            pM.isBlockingHigh = true;
+                            pM.isBlockingLow = false;
+                            if ((-pM.y1 >= 0.3))
+                            {
+                                pM.isBlockingHigh = false;
+                                pM.isBlockingLow = true;
+                            }
+                        }
+                        else
+                        {
+                            pM.isBlockingHigh = false;
+                            pM.isBlockingLow = false;
+                        }
+                    }
+                    else
+                    {
+                        pM.isBlockingHigh = false;
+                        pM.isBlockingLow = false;
+                    }
+                }
+                else
+                {
+                    pM.isBlockingHigh = false;
+                    pM.isBlockingLow = false;
+                }
+                if ((-pM.y1 > 0.5))
+                {
+                    if (dlook.blockAvailable == true)
+                    {
+                        if (pM.otherPlayer.isAttacking == true)
+                        {
+                            if ((pM.x1 >= 0.3))
+                            {
+                                pM.isBlockingHigh = false;
+                                pM.isBlockingLow = true;
+                            }
+                        }
+                    }
+                    if (dlook.blockAvailable == false)
+                    {
+                        pM.isBlockingHigh = false;
+                        pM.isBlockingLow = false;
+                    }
+                }
+
+            }
+        }
+    }
+        
     public void SetIsAttackingTrue()
     {
         isAttacking = true;

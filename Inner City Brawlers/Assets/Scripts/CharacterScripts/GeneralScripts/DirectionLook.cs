@@ -9,6 +9,9 @@ public class DirectionLook : MonoBehaviour
     public float blockDistance;
 
     public bool isFlipped;
+    
+    public bool isP1Flipped;
+    public bool isP2Flipped;
 
     public bool blockAvailable;
 
@@ -18,7 +21,9 @@ public class DirectionLook : MonoBehaviour
         blockAvailable = false;
         player1Transform = GameObject.Find("Player1").transform;
         player2Transform = GameObject.Find("Player2").transform;
-        isFlipped = false;    
+        isFlipped = false;
+        isP1Flipped = false;
+        isP2Flipped = true;
     }
 
     private void Update()
@@ -53,12 +58,16 @@ public class DirectionLook : MonoBehaviour
     private void flipPlayers(Transform curObject)
     {
         isFlipped = true;
+        isP1Flipped = true;
+        isP2Flipped = false;
         curObject.rotation = Quaternion.Euler(0, -180f, 0);
         Debug.Log("flipped");
     }
     private void unflipPlayers(Transform curObject)
     {
         isFlipped = false;
+        isP1Flipped = false;
+        isP2Flipped = true;
         curObject.rotation = Quaternion.Euler(0, 0f, 0);
         Debug.Log("unflipped");
     }
