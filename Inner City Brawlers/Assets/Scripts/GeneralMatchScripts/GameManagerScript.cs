@@ -203,9 +203,10 @@ public class GameManagerScript : MonoBehaviour
         p2HealthFloat = p2Health.currentHealth;
         SetHitCounter(p1comboCounterText, p1comboCounter);
         SetHitCounter(p2comboCounterText, p2comboCounter);
-        if (comboLeewayTimer != 0)
+        if (comboLeewayTimer > 0.1)
         {
             comboLeewayTimer-= Time.deltaTime;
+
         }
         if (comboLeewayTimer <= 0)
         {
@@ -215,6 +216,7 @@ public class GameManagerScript : MonoBehaviour
         {
             p1comboCounterText.gameObject.SetActive(false);
         }
+        
         else
         {
             p1comboCounterText.gameObject.SetActive(true);
@@ -302,8 +304,8 @@ public class GameManagerScript : MonoBehaviour
         comboLeewayTimer = 0;
         p1comboCounter = 0;
         p2comboCounter = 0;
-        SetHitCounter(p1comboCounterText, p1comboCounter);
-        SetHitCounter(p2comboCounterText, p2comboCounter);
+        /*SetHitCounter(p1comboCounterText, p1comboCounter);
+        SetHitCounter(p2comboCounterText, p2comboCounter);*/
     }
    //Callout Assist Meter functions
     public void SetP1CAMaxMeter(float MaxMeter)

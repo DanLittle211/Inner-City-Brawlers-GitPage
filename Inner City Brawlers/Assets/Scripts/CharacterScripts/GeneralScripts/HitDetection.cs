@@ -29,7 +29,12 @@ public class HitDetection : MonoBehaviour
 
     private void Update()
     {
-        ResetScale();
+       
+        if (damageNumber < 1)
+        {
+            damageNumber = 1;
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -37,7 +42,8 @@ public class HitDetection : MonoBehaviour
         {
             GameObject playerHealth = GameObject.Find("Player1");
             PlayerHealth pH = (PlayerHealth)playerHealth.GetComponent(typeof(PlayerHealth));
-            pH.TakeDamage(damageNumber * scalingNumber);
+            pH.TakeDamage(damageNumber * Mathf.Abs(scalingNumber));
+            Debug.Log("Current Damage & Scaling Number: " + damageNumber + ", " + scalingNumber);
             KnockBack(xForce,yForce, p1M.myRB2D);
             gM.p2comboCounter++;
             gM.comboLeewayTimer = (stunNumber * scalingNumber);
@@ -46,13 +52,24 @@ public class HitDetection : MonoBehaviour
             gM.SetHitCounter(gM.p2comboCounterText, gM.p2comboCounter);
             p1MeterDealing();
             Debug.Log("Hit hitbox");
+
+
+            if (gM.p1comboCounter > 0 )
+            {
+                ResetScale();
+            }
+            if (gM.comboLeewayTimer <= 0)
+            {
+                ResetScale();
+            }
+            
         }
 
         if (col.tag == "Player2")
         {
             GameObject playerHealth = GameObject.Find("Player2");
             PlayerHealth pH = (PlayerHealth)playerHealth.GetComponent(typeof(PlayerHealth));
-            pH.TakeDamage(damageNumber * scalingNumber);
+            pH.TakeDamage(damageNumber * Mathf.Abs(scalingNumber));
             p2MeterDealing();
             gM.p1comboCounter++;
             gM.comboLeewayTimer = (stunNumber * scalingNumber);
@@ -61,15 +78,23 @@ public class HitDetection : MonoBehaviour
             gM.SetHitCounter(gM.p1comboCounterText, gM.p1comboCounter);
             KnockBack(xForce, yForce, p2M.myRB2D);
             Debug.Log("Hit hitbox");
+            if (gM.p2comboCounter > 0)
+            {
+                ResetScale();
+            }
+            if (gM.comboLeewayTimer < 0)
+            {
+                ResetScale();
+            }
         }
     }
-    void ResetScale()
+   public void ResetScale()
     {
-        if (gM.comboLeewayTimer <= 0)
-        {
-            scalingNumber = 1;
-            
-        }
+        scalingNumber = 1;
+        gM.p1comboCounter = 0;
+        gM.p2comboCounter = 0;
+        gM.SetHitCounter(gM.p1comboCounterText, gM.p1comboCounter);
+        gM.SetHitCounter(gM.p2comboCounterText, gM.p2comboCounter);
         Debug.Log("Ran Scaling Values");
     }
     void p1MeterDealing()
