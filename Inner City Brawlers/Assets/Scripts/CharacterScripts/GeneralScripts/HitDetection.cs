@@ -82,7 +82,7 @@ public class HitDetection : MonoBehaviour
             {
                 ResetScale();
             }
-            if (gM.comboLeewayTimer < 0)
+            if (gM.comboLeewayTimer <= 0)
             {
                 ResetScale();
             }

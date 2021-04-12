@@ -203,7 +203,7 @@ public class GameManagerScript : MonoBehaviour
         p2HealthFloat = p2Health.currentHealth;
         SetHitCounter(p1comboCounterText, p1comboCounter);
         SetHitCounter(p2comboCounterText, p2comboCounter);
-        if (comboLeewayTimer > 0.1)
+        if (comboLeewayTimer > -0.1)
         {
             comboLeewayTimer-= Time.deltaTime;
 
@@ -255,57 +255,13 @@ public class GameManagerScript : MonoBehaviour
         }
     }
 
-    /*public void CheckHealth()
-    {
-        if (p1HealthFloat > 0 && p2HealthFloat > 0)
-        {
-            if (p2HealthFloat == p1HealthFloat)
-            {
-                Debug.Log("Players are equal");
-
-            }
-            else if (p1HealthFloat >= p2HealthFloat)
-            {
-                Debug.Log("Player 1 is winning");
-            }
-            else if (p2HealthFloat >= p1HealthFloat)
-            {
-                Debug.Log("Player 2 is winning");
-            }
-        }
-        
-    }
-
-    public void fillUp()
-    {
-        p1CAMakeMeter(0.005f);
-        p2CAMakeMeter(0.005f);
-    }
-
-    public void useP1CaAssist()
-    {
-        if (p1CaIsFull == true)
-        {
-            Debug.Log("P1 Assist Called");
-            ResetP1CAMeter();
-        }
-    }
-
-    public void useP2CaAssist()
-    {
-        if (p2CaIsFull == true)
-        {
-            Debug.Log("P2 Assist Called");
-            ResetP2CAMeter();
-        }
-    }*/
     public void ResetcomboValues()
     {
         comboLeewayTimer = 0;
         p1comboCounter = 0;
         p2comboCounter = 0;
-        /*SetHitCounter(p1comboCounterText, p1comboCounter);
-        SetHitCounter(p2comboCounterText, p2comboCounter);*/
+        SetHitCounter(p1comboCounterText, p1comboCounter);
+        SetHitCounter(p2comboCounterText, p2comboCounter);
     }
    //Callout Assist Meter functions
     public void SetP1CAMaxMeter(float MaxMeter)

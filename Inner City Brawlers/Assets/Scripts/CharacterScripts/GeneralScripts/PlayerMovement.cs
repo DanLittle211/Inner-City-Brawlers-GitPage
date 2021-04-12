@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         isBlockingHigh = false;
         isBlockingLow = false;
         pB = this.GetComponent<PlayerButtons>(); // this pB will be changed to one on active player once animations come in
-        //myAnim = this.GetComponent<Animator>();
+       // myAnim = this.GetComponent<Animator>();
         myRB2D = GetComponent<Rigidbody2D>();
         player = ReInput.players.GetPlayer(playerID);
         if (playerID == 0)
@@ -178,7 +178,7 @@ public class PlayerMovement : MonoBehaviour
                 break;
             case playerState.Crouch:
                 {
-                    //  myAnim.SetBool("IsCrouch", true);
+                  //    myAnim.SetBool("IsCrouch", true);
                     if (-moveUp <= 1 && -moveUp > 0.4)
                     {
                         if (moveHorizontal <= 0.5 && moveHorizontal > 0)
