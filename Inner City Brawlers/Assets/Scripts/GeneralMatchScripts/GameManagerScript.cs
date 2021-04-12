@@ -53,6 +53,12 @@ public class GameManagerScript : MonoBehaviour
     public float maxTimerInt;
     public TMP_Text TimerText;
     public bool TimeStart;
+    [Header("ComboCounter Variables")]
+    public int p1comboCounter;
+    public TMP_Text p1comboCounterText;
+    public int p2comboCounter;
+    public TMP_Text p2comboCounterText;
+    public float comboLeewayTimer;
 
     [Header("Game Manager Variables")]
     public bool hasFunctionRun;
@@ -62,6 +68,16 @@ public class GameManagerScript : MonoBehaviour
     {
         rM.Awake();
         tPM.SetinactiveState();
+        p1comboCounter = 0;
+        p2comboCounter = 0;
+        comboLeewayTimer = 0;
+        SetHitCounter(p1comboCounterText, p1comboCounter);
+        SetHitCounter(p2comboCounterText, p2comboCounter);
+    }
+
+    public void SetHitCounter(TMP_Text text,int Hitcount)
+    {
+        text.SetText(Hitcount.ToString() + " HITS!");
     }
     public void LockStartPosition()
     {
@@ -185,6 +201,32 @@ public class GameManagerScript : MonoBehaviour
     {
         p1HealthFloat = p1Health.currentHealth;
         p2HealthFloat = p2Health.currentHealth;
+        SetHitCounter(p1comboCounterText, p1comboCounter);
+        SetHitCounter(p2comboCounterText, p2comboCounter);
+        if (comboLeewayTimer != 0)
+        {
+            comboLeewayTimer-= Time.deltaTime;
+        }
+        if (comboLeewayTimer <= 0)
+        {
+            ResetcomboValues();
+        }
+        if (p1comboCounter <= 1)
+        {
+            p1comboCounterText.gameObject.SetActive(false);
+        }
+        else
+        {
+            p1comboCounterText.gameObject.SetActive(true);
+        }
+        if (p2comboCounter <= 1)
+        {
+            p2comboCounterText.gameObject.SetActive(false);
+        }
+        else
+        {
+            p2comboCounterText.gameObject.SetActive(true);
+        }
     }
   
     void FixedUpdate()
@@ -196,7 +238,7 @@ public class GameManagerScript : MonoBehaviour
         }
         else
         {
-            fillUp();
+            //fillUp();
             p1CaIsFull = false;
         }
         if (p2CAMeterfloat >= p2CAMeterMaxfloat)
@@ -206,12 +248,12 @@ public class GameManagerScript : MonoBehaviour
         }
         else
         {
-            fillUp();
+            //fillUp();
             p2CaIsFull = false;
         }
     }
 
-    public void CheckHealth()
+    /*public void CheckHealth()
     {
         if (p1HealthFloat > 0 && p2HealthFloat > 0)
         {
@@ -254,8 +296,15 @@ public class GameManagerScript : MonoBehaviour
             Debug.Log("P2 Assist Called");
             ResetP2CAMeter();
         }
+    }*/
+    public void ResetcomboValues()
+    {
+        comboLeewayTimer = 0;
+        p1comboCounter = 0;
+        p2comboCounter = 0;
+        SetHitCounter(p1comboCounterText, p1comboCounter);
+        SetHitCounter(p2comboCounterText, p2comboCounter);
     }
-
    //Callout Assist Meter functions
     public void SetP1CAMaxMeter(float MaxMeter)
     {
