@@ -25,6 +25,7 @@ public class RoundManager : MonoBehaviour
     public float roundTimerStart;
     private float preroundTimer;
     public float preroundTimerStart;
+    public float roundBufferTimer = 10f;
     #endregion
     #region Menu/UI Variables
     [Header("Menu/UI Variables")]
@@ -114,6 +115,7 @@ public class RoundManager : MonoBehaviour
             //preround countdown
             if (currentState == roundState.preRound)
             {
+                roundBufferTimer = 10f;//resets round buffer timer
                 p1Movement.isDisabled = true;
                 p2Movement.isDisabled = true;
                 oneTime = false;
@@ -186,9 +188,13 @@ public class RoundManager : MonoBehaviour
             }
             //used for adding to round wins
             if (currentState == roundState.endRound)
-            {  //setting each player's movement state to immobile while in this round state
-                currentState = roundState.continueOption;
-                //what happens when player 1 wins the round
+            {
+                roundBufferTimer -= Time.deltaTime;//counts down the timer at end of round
+
+                if (roundBufferTimer <= 0)
+                {
+                    currentState = roundState.continueOption;
+                }
             }
             //used for restarting rounds and tracking total rounds
             if (currentState == roundState.continueOption)
