@@ -1,0 +1,1989 @@
+Using pre-set license
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.2.4f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker16
+-projectPath
+/Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner City Brawlers
+-logFile
+Logs/AssetImportWorker16.log
+-srvPort
+49847
+Successfully changed project path to: /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner City Brawlers
+/Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner City Brawlers
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 91.10 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.4f1 (becced5a802b)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.2.4f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/williammcbride/Desktop/QUSpring2021/GDD411/InnerCityBrawler/Inner-City-Brawlers-GitPage/Inner City Brawlers/Assets
+GfxDevice: creating device client; threaded=0
+2021-04-12 10:38:38.604 Unity[32775:10455685] iMac preferred device: AMD Radeon Pro 570 (high power)
+2021-04-12 10:38:38.604 Unity[32775:10455685] Metal devices available: 1
+2021-04-12 10:38:38.604 Unity[32775:10455685] 0: AMD Radeon Pro 570 (high power)
+2021-04-12 10:38:38.604 Unity[32775:10455685] Using device AMD Radeon Pro 570 (high power)
+Initializing Metal device caps: AMD Radeon Pro 570
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.2.4f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.2.4f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.2.4f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56775
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2020.2.4f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2020.2.4f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2020.2.4f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2020.2.4f1/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll
+Registered in 0.000956 seconds.
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 65.02 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.331 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.140589 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 71.44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.548 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launching external process: /Applications/Unity/Hub/Editor/2020.2.4f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 195.2 MB.
+System memory in use after: 195.5 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 3350.
+Total: 2.528522 ms (FindLiveObjects: 0.324806 ms CreateObjectMapping: 0.131270 ms MarkObjects: 2.005956 ms  DeleteObjects: 0.065303 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 3.290003 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 3.295849 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.441545 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001214 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006603 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.131744 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001237 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006439 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.096308 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000960 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006066 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092098 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001008 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005583 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092379 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000886 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007602 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.098333 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000921 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.088547 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000772 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.008034 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091228 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001311 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007667 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095464 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001095 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006249 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095611 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000977 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005905 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.088543 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001623 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007665 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092894 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001228 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007283 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095307 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001274 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007558 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090568 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001176 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005763 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092966 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001326 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007903 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.096483 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001123 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005729 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.089337 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001315 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007581 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092980 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001255 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007369 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.097221 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001245 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005914 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090323 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001396 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.008022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092912 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001246 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006839 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093781 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001015 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005840 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093846 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001538 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.008245 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092987 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001564 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.009303 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.089899 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001448 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007552 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092272 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001267 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006432 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090813 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001323 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007168 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093195 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001148 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005783 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094707 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001007 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005609 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095307 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001236 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007520 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093169 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001051 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006024 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091161 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001457 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007127 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092066 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001150 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006834 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.097003 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001346 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007153 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.088955 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001357 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007009 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095175 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001172 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005953 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091769 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001141 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094740 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001309 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007965 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091286 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001165 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006097 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091374 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001590 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007968 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095166 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000965 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006127 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093169 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001260 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090647 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001107 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006683 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095554 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001019 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005668 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093910 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001170 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006081 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095640 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001092 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005805 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090733 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001440 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007270 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.096468 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001055 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005772 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095842 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001273 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006234 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.088340 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001242 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007731 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094054 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001058 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005889 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092003 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001401 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007917 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091346 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001174 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006997 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094577 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001248 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006747 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091458 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001002 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006442 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.096544 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001056 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006461 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091310 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001285 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.008072 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091609 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001626 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.008939 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093475 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001214 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006825 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091640 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000855 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006595 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094610 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001006 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005527 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092069 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001867 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007490 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092404 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001292 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006943 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095858 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001002 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005855 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091150 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001319 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007632 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094992 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001002 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005600 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092309 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001203 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.008391 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.089775 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001226 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007663 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095444 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000974 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005408 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095843 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001447 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007584 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091269 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001067 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005600 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092457 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001335 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007301 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091248 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000860 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005738 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.097710 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001014 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005991 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091258 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001336 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007669 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095411 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001100 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006034 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090970 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001374 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006746 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093168 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001143 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006136 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.098232 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001210 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006102 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093186 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001190 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093136 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001288 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007486 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.088272 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001474 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007825 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091566 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001856 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.011020 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093950 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001243 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005870 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090010 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001473 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007860 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094308 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001241 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006191 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092815 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001278 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007328 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092659 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001095 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006146 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093437 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001134 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005665 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.096114 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001754 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.009111 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.087300 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001220 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093386 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001915 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.008365 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093914 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001389 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007731 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092850 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000988 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005451 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092181 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001536 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.009274 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095163 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001172 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006165 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.089242 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001208 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006631 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092814 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001266 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007045 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.098077 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001230 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006384 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.087393 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001068 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.008707 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093759 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001098 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092969 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001163 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005961 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094711 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001140 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006251 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094766 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001126 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006225 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090998 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001474 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007674 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.096561 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001108 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005711 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090799 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.002094 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.010269 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.088903 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001121 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007267 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.098206 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001271 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006076 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.089162 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001313 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093732 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001047 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005520 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092736 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001200 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006471 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092938 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001259 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007763 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095932 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001244 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006040 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090931 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001371 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.008185 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.096818 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001061 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005698 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.089422 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001447 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007511 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091368 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001802 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.008058 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094386 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001079 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005917 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091828 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001609 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.008290 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093168 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001091 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005738 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091450 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001454 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.008222 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094809 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001351 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007157 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091944 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001018 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005525 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093870 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001155 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006822 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095518 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001093 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006064 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094290 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001118 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005895 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.089347 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001223 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007619 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095140 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001112 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006416 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093083 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001369 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007752 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091493 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001044 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006098 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093016 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001467 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.008438 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093868 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001239 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.088870 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001269 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007476 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092124 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001239 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007273 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.097168 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001086 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094741 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001118 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.008043 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.087553 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001306 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.008576 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092981 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000980 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093912 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001341 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.008058 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093994 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001198 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093655 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001258 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007346 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.089675 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001094 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006837 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095053 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000888 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005742 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094647 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001388 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.007714 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092177 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001149 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005747 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091396 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001671 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.008650 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092699 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000919 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005795 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095283 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001031 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.005917 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093158 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001306 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.006837 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.097948 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001714 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.008177 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092275 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.002025 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.008392 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.085311 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.003472 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:38:17Z'
+  Import took 0.020885 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.080622 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001030 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.006407 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.101336 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.002214 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.014179 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.080818 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001001 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.006035 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.088840 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001093 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.006745 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.138607 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001349 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.008463 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.048868 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001302 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.007572 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090072 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001451 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.007026 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.415634 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001100 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.006702 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.076562 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.002178 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.010628 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.085783 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001083 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.005813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090151 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001544 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.007944 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092118 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001254 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.007707 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093066 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000988 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.005534 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093092 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001456 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.008147 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094485 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000848 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.005820 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090888 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001182 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.007999 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091450 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001161 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.007648 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.096194 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000957 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.005458 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091381 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001091 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.008039 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094039 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000950 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.005391 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092659 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000854 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.006331 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093887 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001206 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.007605 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094968 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001458 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.006708 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090940 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001496 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.008045 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093449 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001063 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.006563 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090915 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001647 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.008151 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092212 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001329 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.007911 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094869 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001003 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.006038 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.089580 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001401 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.008208 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.097359 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001453 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.006191 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093822 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001418 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.008158 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.086293 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001697 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.007972 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.096593 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001189 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.005964 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093243 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001216 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.008770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091789 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001618 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.006678 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.088986 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001212 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.008763 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090999 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001285 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.008044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094252 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001183 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.007410 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.089522 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001320 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.007317 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.097024 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001505 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.006486 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.089782 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001395 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.009419 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090622 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001800 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.009693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092373 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001662 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.008219 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.089305 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.002107 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.010142 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093253 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000960 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.006305 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093045 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001323 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.007824 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091238 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001574 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.008030 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094168 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001027 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.005564 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090707 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001693 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.008312 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093824 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001293 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.006249 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090610 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001472 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.008222 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090973 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001201 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.007445 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.096102 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001033 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.005637 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091742 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001367 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.007851 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094941 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001002 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.005873 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.091324 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.001419 seconds
+  ERROR: Build asset version error: assets/scripts/generalmatchscripts/roundmanager.cs in SourceAssetDB has modification time of '2021-04-11T14:58:00Z' while content on disk has modification time of '2021-04-12T14:39:14Z'
+  Import took 0.007962 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.807208 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a5203d227103d2afec44fbbe231af55') in 0.034046 seconds
+  Import took 0.040869 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 75.385262 seconds.
+  path: Assets/Scripts/GeneralMatchScripts/RoundManager.cs
+  artifactKey: Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GeneralMatchScripts/RoundManager.cs using Guid(5126ee3b5f48d4fa1a2a575e8cc9bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51868998224b5f2afb247cd6b44eb75f') in 0.002023 seconds
+  Import took 0.008349 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
