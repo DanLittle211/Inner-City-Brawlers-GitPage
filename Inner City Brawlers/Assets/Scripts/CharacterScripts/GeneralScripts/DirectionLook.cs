@@ -43,16 +43,15 @@ public class DirectionLook : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
         if (player1Transform.position.x >= player2Transform.position.x)
         {
             flipPlayers(player1Transform);
-            flipPlayers(player2Transform);
+            unflipPlayers(player2Transform);
         }
         if (player2Transform.position.x >= player1Transform.position.x)
         {
             unflipPlayers(player1Transform);
-            unflipPlayers(player2Transform);
+            flipPlayers(player2Transform);
         }
     }
     private void flipPlayers(Transform curObject)
@@ -61,6 +60,7 @@ public class DirectionLook : MonoBehaviour
         isP1Flipped = true;
         isP2Flipped = false;
         curObject.rotation = Quaternion.Euler(0, -180f, 0);
+        curObject.position = new Vector3(curObject.position.x, curObject.position.y, 15);
         Debug.Log("flipped");
     }
     private void unflipPlayers(Transform curObject)
@@ -69,6 +69,7 @@ public class DirectionLook : MonoBehaviour
         isP1Flipped = false;
         isP2Flipped = true;
         curObject.rotation = Quaternion.Euler(0, 0f, 0);
+        curObject.position = new Vector3(curObject.position.x, curObject.position.y, 15);
         Debug.Log("unflipped");
     }
 }

@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     
     public playerState currentPlayState;
     public Rigidbody2D myRB2D;
-    //private Animator myAnim;
+    private Animator myAnim;
 
     //Rewired
     [SerializeField] public int playerID;
@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         isBlockingHigh = false;
         isBlockingLow = false;
         pB = this.GetComponent<PlayerButtons>(); // this pB will be changed to one on active player once animations come in
-       // myAnim = this.GetComponent<Animator>();
+        myAnim = this.GetComponent<Animator>();
         myRB2D = GetComponent<Rigidbody2D>();
         player = ReInput.players.GetPlayer(playerID);
         if (playerID == 0)
@@ -76,7 +76,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isDisabled != true)
         {
-           // playerMovement();
             GetInput(ref x1, ref xDown1, "Move Horizontal");
             GetInput(ref y1, ref yDown1, "Move Vertical");
         }
@@ -128,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
         switch (currentPlayState)
         {
             case playerState.Grounded:
-                // myAnim.SetBool("IsCrouch", false);
+                 myAnim.SetBool("IsCrouch", false);
                 if (-moveUp >= 0.3)
                 {
                     currentPlayState = playerState.Crouch;
@@ -178,7 +177,7 @@ public class PlayerMovement : MonoBehaviour
                 break;
             case playerState.Crouch:
                 {
-                  //    myAnim.SetBool("IsCrouch", true);
+                    myAnim.SetBool("IsCrouch", true);
                     if (-moveUp <= 1 && -moveUp > 0.4)
                     {
                         if (moveHorizontal <= 0.5 && moveHorizontal > 0)

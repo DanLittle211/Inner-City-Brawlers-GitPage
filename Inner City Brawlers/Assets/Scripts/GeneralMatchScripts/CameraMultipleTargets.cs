@@ -14,6 +14,7 @@ public class CameraMultipleTargets : MonoBehaviour
     public float minZoom = 40f;
     public float maxZoom = 10f;
     public float zoomLimiter = 50f;
+    private Transform thisCamera;
 
     private Vector3 velocity;
     private Camera cam;
@@ -21,7 +22,7 @@ public class CameraMultipleTargets : MonoBehaviour
     void Start()
     {
         cam = GetComponent<Camera>();
-        
+        thisCamera = this.GetComponent<Transform>();
     }
 
     void LateUpdate()
@@ -41,6 +42,7 @@ public class CameraMultipleTargets : MonoBehaviour
 
     void Move()
     {
+        thisCamera.position = new Vector3(thisCamera.position.x, thisCamera.position.y, 0);
         Vector3 centerPoint = GetCenterPoint();
 
         Vector3 newPosition = centerPoint + offset;
