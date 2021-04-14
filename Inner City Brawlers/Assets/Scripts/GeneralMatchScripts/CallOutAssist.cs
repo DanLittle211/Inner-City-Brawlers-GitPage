@@ -10,6 +10,7 @@ public class CallOutAssist : MonoBehaviour
     private Transform p1Transform;
     private Transform p2Transform;
     [Header("Script References")]
+    [SerializeField] private RoundManager rM;
     public ItemLists itemList;//reference for the list of items, used for selecting which item is spawned
     [Header("UI Elements")]
     public Slider p1AssistMeter;//reference for p1's callout assist meter
@@ -36,6 +37,7 @@ public class CallOutAssist : MonoBehaviour
     {
         AssistAllowed = true;//Temporary for testing, makes the assist being on true
         itemList = GameObject.Find("GameManager").GetComponent<ItemLists>();//Reference for itemLists, found on GameManager object
+        rM = this.GetComponent<RoundManager>();
         p1Transform = GameObject.Find("Player1").transform;
         p2Transform = GameObject.Find("Player2").transform;
     }
@@ -44,7 +46,10 @@ public class CallOutAssist : MonoBehaviour
         //updating the assist meters with player timers
         p1AssistMeter.value = p1Timer;//setting slider value to current counting time for p1
         p1AssistMeter.maxValue = time2Spawn;//sets p1's meter max value to time2Spawn
-        timerTickUp();//calls method that increases each player's timer for item spawns
+        if (rM.currentState != RoundManager.roundState.roundPaused)
+        {
+            timerTickUp();//calls method that increases each player's timer for item spawns
+        }
         if (p1CanSpawn)
         {
             setOneTime();//calls method that sets the spawing bool to true
@@ -55,10 +60,12 @@ public class CallOutAssist : MonoBehaviour
     {
         p2AssistMeter.value = p2Timer;//setting slider value to current counting time for p2
         p2AssistMeter.maxValue = time2Spawn;//sets p2's meter max value to time2Spawn
-
-        timerTickUp();//calls method that increases each player's timer for item spawns
-                      //for player 1
-                      //for player 2
+        if (rM.currentState != RoundManager.roundState.roundPaused)
+        {
+            timerTickUp();//calls method that increases each player's timer for item spawns
+                          //for player 1
+                          //for player 2
+        }
         if (p2CanSpawn)
         {
             setOneTime();//calls method that sets the spawing bool to true

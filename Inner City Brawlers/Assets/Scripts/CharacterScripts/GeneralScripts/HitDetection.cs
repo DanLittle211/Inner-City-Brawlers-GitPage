@@ -53,10 +53,9 @@ public class HitDetection : MonoBehaviour
             p1MeterDealing();
             Debug.Log("Hit hitbox");
 
-
             if (gM.p1comboCounter > 0 )
             {
-                ResetScale();
+                //ResetScale();
             }
             if (gM.comboLeewayTimer <= 0)
             {
@@ -80,7 +79,7 @@ public class HitDetection : MonoBehaviour
             Debug.Log("Hit hitbox");
             if (gM.p2comboCounter > 0)
             {
-                ResetScale();
+                //ResetScale();
             }
             if (gM.comboLeewayTimer <= 0)
             {

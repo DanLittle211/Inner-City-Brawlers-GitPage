@@ -10,7 +10,7 @@ public class GameManagerScript : MonoBehaviour
     public GameMasterManager gMM;
     public TrainingPauseManager tPM;
     public MeterSystem mS;
-    public CallOutAssist cOA;
+    [SerializeField]private CallOutAssist cOA;
     public RoundManager rM;
 
     [Header("Transform Starter Positions")]
@@ -66,11 +66,14 @@ public class GameManagerScript : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        cOA = this.GetComponent<CallOutAssist>();
         rM.Awake();
         tPM.SetinactiveState();
         p1comboCounter = 0;
         p2comboCounter = 0;
         comboLeewayTimer = 0;
+        cOA.p1Timer = 0;
+        cOA.p2Timer = 0;
         SetHitCounter(p1comboCounterText, p1comboCounter);
         SetHitCounter(p2comboCounterText, p2comboCounter);
     }
@@ -101,6 +104,8 @@ public class GameManagerScript : MonoBehaviour
     {
         if (gMM.isMultiActive == true)
         {
+            cOA.p1Timer = 0;
+            cOA.p2Timer = 0;
             LockStartPosition();
             currentTimerInt = rM.roundTimer;
 
@@ -116,14 +121,14 @@ public class GameManagerScript : MonoBehaviour
             hasFunctionRun = false;
             tPM.SetinactiveState();
             StartCoroutine(CountDownVersusTimer(1f));
-            cOA.p1Timer = 0f;
-            cOA.p2Timer = 0f;
+            
             
             Debug.Log("ResetGameMode");
         }
         if (gMM.isMultiActive == false)
         {
-
+            cOA.p1Timer = 0;
+            cOA.p2Timer = 0;
             trainingStart();
         }
     }

@@ -1,3 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 Inner[[:space:]]City[[:space:]]Brawlers filter=lfs diff=lfs merge=lfs -text
+Inner-City-Brawlers/Library/ArtifactDB filter=lfs diff=lfs merge=lfs -text

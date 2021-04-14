@@ -2,42 +2,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Rewired;
+
+
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Script References")]
     public PlayerButtons otherPlayer;
     private PlayerButtons pB;
-    public GameObject groundCheck;
-    public bool isGrounded;
-   
-    public float jumpStrength;
-    public float movementSpeed;
 
-    public enum playerState{Grounded, Crouch, Jump, Block, SoftKnockdown, HardKnockdown , Immobile};
-
-    
-    public playerState currentPlayState;
-    public Rigidbody2D myRB2D;
+    [Header("Object References")]
+    [HideInInspector]
+    [SerializeField]public Rigidbody2D myRB2D;
     private Animator myAnim;
 
-    //Rewired
-    [SerializeField] public int playerID;
-    [SerializeField] public Player player;
-    [SerializeField] public float moveHorizontal;
-    [SerializeField] public  float moveUp;
+    [Header("GameObject References")]
+    public GameObject groundCheck;
 
-    //[HideInInspector]
-    public float x1, y1;
-    [HideInInspector]
-    public bool xDown1, yDown1;
-
+    [Header("Booleans")]
+    public bool isGrounded;
     public bool isDisabled;
     public bool isBlockingHigh;
     public bool isBlockingLow;
 
+    [Header("Floats")]
+    public float jumpStrength;
+    public float movementSpeed;
+
+    public enum playerState { Grounded, Crouch, Jump, Block, SoftKnockdown, HardKnockdown, Immobile };
+    public playerState currentPlayState;
+
+
+    //Rewired
+    [Header("Rewired Variables")]
+    [SerializeField] public int playerID;
+    [SerializeField] public Player player;
+    [SerializeField] public float moveHorizontal;
+    [SerializeField] public  float moveUp;
+    public Transform head;
+
+    [HideInInspector]
+    public float x1, y1;
+    public Vector2 walkMovement;
+    [HideInInspector]
+    public bool xDown1, yDown1;
 
     // Start is called before the first frame update
     void Start()
     {
+        walkMovement = Vector2.zero;
         isBlockingHigh = false;
         isBlockingLow = false;
         pB = this.GetComponent<PlayerButtons>(); // this pB will be changed to one on active player once animations come in
@@ -74,11 +86,15 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+        myAnim.SetFloat("yVelocity", this.transform.position.y);
+        myAnim.SetFloat("headVelocity", head.position.y);
+
         if (isDisabled != true)
         {
             GetInput(ref x1, ref xDown1, "Move Horizontal");
             GetInput(ref y1, ref yDown1, "Move Vertical");
         }
+       
         
     }
     private void FixedUpdate()
@@ -127,24 +143,17 @@ public class PlayerMovement : MonoBehaviour
         switch (currentPlayState)
         {
             case playerState.Grounded:
-                 myAnim.SetBool("IsCrouch", false);
-                if (-moveUp >= 0.3)
-                {
-                    currentPlayState = playerState.Crouch;
-                    Debug.Log("Pressed Down");
-                }
-                if (moveUp > 0.2)
-                {
-                    MoveFunction(0.0012f, 0f, jumpStrength);
-                    currentPlayState = playerState.Jump;
-                }
-
+                 myAnim.SetBool("isCrouch", false);
                 if ((moveHorizontal <= 1 && moveHorizontal > 0.5) && Mathf.Round(myRB2D.velocity.x) <= 6)
                 {
+                    myAnim.SetBool("isMoving", true);
                     MoveFunction(0.0012f, movementSpeed, 0f);
+                    myAnim.SetFloat("XAxis", walkMovement.x);
+                    
                     if (moveUp <= 1 && moveUp > 0.2)
                     {
                         MoveFunction(0.0012f, 0f, jumpStrength);
+                        myAnim.SetBool("Jump", true);
                     }
                     if (-moveUp <= 0.7 && -moveUp > 0.2)
                     {
@@ -155,8 +164,9 @@ public class PlayerMovement : MonoBehaviour
 
                 if ((-moveHorizontal <= 1 && -moveHorizontal > 0.5) && Mathf.Abs(myRB2D.velocity.x) <= 6)
                 {
-
+                    myAnim.SetBool("isMoving", true);
                     MoveFunction(0.0012f, -movementSpeed, 0f);
+                    myAnim.SetFloat("XAxis", walkMovement.x);
                     if (moveUp <= 1 && moveUp > 0.2)
                     {
                         MoveFunction(0.0012f, 0f, jumpStrength);
@@ -166,18 +176,29 @@ public class PlayerMovement : MonoBehaviour
                         MoveFunction(0.0012f, 0f, 0f);
                         currentPlayState = playerState.Crouch;
                     }
-
-
+                }
+                if (-moveUp >= 0.3)
+                {
+                    myAnim.SetFloat("Yaxis", moveUp);
+                    myAnim.SetBool("isCrouch", true);
+                    currentPlayState = playerState.Crouch;
+                    Debug.Log("Pressed Down");
+                }
+                if (moveUp > 0.2)
+                {
+                    MoveFunction(0.0012f, 0f, jumpStrength);
+                    currentPlayState = playerState.Jump;
                 }
                 else
                 {
-                    //currentPlayState = playerState.Grounded;
-                    //isBlockingHigh = false;
+                    myAnim.SetFloat("XAxis", walkMovement.x);
+                    myAnim.SetBool("isMoving", false);
                 }
                 break;
             case playerState.Crouch:
                 {
-                    myAnim.SetBool("IsCrouch", true);
+                    myAnim.SetBool("isCrouch", true);
+                    myAnim.SetFloat("XAxis", 0);
                     if (-moveUp <= 1 && -moveUp > 0.4)
                     {
                         if (moveHorizontal <= 0.5 && moveHorizontal > 0)
@@ -197,6 +218,7 @@ public class PlayerMovement : MonoBehaviour
                     }
                     else
                     {
+                        myAnim.SetFloat("Yaxis", moveUp);
                         currentPlayState = playerState.Grounded;
                         Debug.Log("Current Player State: " + currentPlayState);
                     }
@@ -230,6 +252,29 @@ public class PlayerMovement : MonoBehaviour
 
                     break;
                 }
+
+        }
+        if (playerID == 0)
+        {
+            if (dlook.isFlipped == false)
+            {
+                walkMovement.x = -(x1);
+            }
+            else
+            {
+                walkMovement.x = (x1);
+            }
+        }
+        if (playerID == 1)
+        {
+            if (dlook.isFlipped == true)
+            {
+                walkMovement.x = -(x1);
+            }
+            else
+            {
+                walkMovement.x = (x1);
+            }
         }
     }
     public Vector2 GetInput()
@@ -257,6 +302,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
             currentPlayState = playerState.Grounded;
+            myAnim.SetBool("Jump", false);
         }
     }
 
@@ -266,6 +312,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = false;
             currentPlayState = playerState.Jump;
+            myAnim.SetBool("Jump", true);
         }
     }
 }

@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AnimAttack
     - B_WeaponFunction
     - BlackGardenStudios.HitboxStudioPro.AttackFX
     - BlackGardenStudios.HitboxStudioPro.HitboxCollisionMatrix
@@ -91,6 +92,14 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -135,13 +144,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
     - Class: 62
       Script: {instanceID: 0}
     - Class: 65
-      Script: {instanceID: 0}
-    - Class: 68
       Script: {instanceID: 0}
     - Class: 70
       Script: {instanceID: 0}
@@ -323,6 +332,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 7476}
     - Class: 114
       Script: {instanceID: 7610}
+    - Class: 114
+      Script: {instanceID: 598448}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -742,7 +753,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerGroup
   - hash:
       serializedVersion: 2
-      Hash: 1416bf2c1feb09058c3b9e6514a1b3f0
+      Hash: f18b29115096efff1ce561ecb8515708
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerButtons
@@ -862,7 +873,7 @@ ScriptsOnlyBuild:
     className: P_WeaponFunction
   - hash:
       serializedVersion: 2
-      Hash: ff67089a79716c254c8ece13818e291e
+      Hash: c07165d5ee28dc2c86984d17fae9b783
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HitDetection
@@ -1186,7 +1197,7 @@ ScriptsOnlyBuild:
     className: ChromaticAberration
   - hash:
       serializedVersion: 2
-      Hash: 67fa6d217791c4be4e1cad0340522cfe
+      Hash: ac01944f84a4332fff91827d80fcf1ff
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManagerScript
@@ -1234,7 +1245,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerEnumHistory
   - hash:
       serializedVersion: 2
-      Hash: cfdbd17c15bcbec4a05ef123ae6e8069
+      Hash: 8bc492b8916add40e6d0cf9604a07ee5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DirectionLook
@@ -1420,7 +1431,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerVector3
   - hash:
       serializedVersion: 2
-      Hash: 51651efff4e503c92467ac8e3dacd42f
+      Hash: 5cfae150741de90dfb052bbc746901b1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -1438,7 +1449,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerIndirectToggle
   - hash:
       serializedVersion: 2
-      Hash: a619f93834f3468e1d9c9c2f9e135049
+      Hash: 85bc8a7d3d3532d1f5aa81bf8b49831c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CallOutAssist
@@ -2102,7 +2113,13 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerScript
+  - hash:
+      serializedVersion: 2
+      Hash: f6eff2eda724dcd822444fb815f9319f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AnimAttack
   platform: 2
   scenePathNames:
   - Assets/Scenes/MainGameScene.unity
-  playerPath: D:/College Papers/All GDD WORK/411/NewWeek3Build/MacVariant.app
+  playerPath: D:/College Papers/All GDD WORK/411/Week7/Week7MacBuild.app

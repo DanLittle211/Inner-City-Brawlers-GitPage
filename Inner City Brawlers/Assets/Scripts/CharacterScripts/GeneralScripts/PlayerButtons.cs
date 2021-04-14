@@ -9,14 +9,22 @@ public enum AttackType {light = 0, medium = 1, heavy = 2, unique = 3, throwActio
 
 public class PlayerButtons : MonoBehaviour
 {
+    [Header("Script References")]
+    [HideInInspector]
     [SerializeField] public PlayerMovement pM;
+    [SerializeField] private RoundManager rM;
+    [SerializeField] private GameMasterManager gMM;
+    [SerializeField] private GameManagerScript gM;
+    [SerializeField] private TrainingPauseManager tPM;
+    [SerializeField] private AnimAttack animAtt;
+
     public GameObject[] hitboxes;
 
-
+    [Header("Rewired Variables")]
     //Rewired
     [SerializeField] public int playerID;
     [SerializeField] public Player player;
-    private RoundManager rM;
+    
 
     [Header("Attacks")]
     public Attack lightAttack;
@@ -27,11 +35,22 @@ public class PlayerButtons : MonoBehaviour
     public Attack AssistAttack;
     public Attack LifeLineAssist;
 
+    [Header("Enemy Variables for AttackFunction")]
+    public PlayerHealth enemyHealth;
+    public PlayerMovement enemyMovement;
+    private int myComboCounterInt;
+    public int currentPlayer = 0;
+
+
     [SerializeField] public List<Combo> combos;
     [SerializeField] public float buttonCheckDuration = 0.2f;
 
     [Header("Components")]
-    public Animator myAnim;
+    [SerializeField] private Animator myAnim;
+    public GameObject AnimObject;
+    public bool onCharacter;
+
+    
 
     ComboInput LastInput = null;
     Attack curAttack = null;
@@ -41,6 +60,11 @@ public class PlayerButtons : MonoBehaviour
     bool skip = false;
 
     public bool isAttacking;
+
+    public Transform attackpoint;
+    public float attackRange = 0.5f;
+    public LayerMask enemyLayers;
+    public LayerMask myMask;
 
     void PrimeCombo()
     {
@@ -60,12 +84,36 @@ public class PlayerButtons : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    { 
+        if (playerID == 0)
+        {
+            currentPlayer = 1;
+            myComboCounterInt = gM.p1comboCounter;
+            gM.SetHitCounter(gM.p1comboCounterText, myComboCounterInt);
+            
+        }
+        if (playerID == 1)
+        {
+            currentPlayer = 2;
+            myComboCounterInt = gM.p2comboCounter;
+            gM.SetHitCounter(gM.p2comboCounterText, myComboCounterInt);
+        }
+        myAnim = AnimObject.GetComponent<Animator>();
+        animAtt = this.GetComponent<AnimAttack>();
         pM = this.GetComponent<PlayerMovement>();
         rM = GameObject.Find("GameManager").GetComponent<RoundManager>();
+        gMM = GameObject.Find("GameMasterManager").GetComponent<GameMasterManager>();
+        gM = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
+        tPM = GameObject.Find("SettingManager").GetComponent<TrainingPauseManager>();
+
         player = ReInput.players.GetPlayer(pM.playerID);
         PrimeCombo();
         //myAnim = this.GetComponent<Animator>();
+    }
+
+    void SetAnimator(Animator curAnim)
+    {
+        myAnim = curAnim.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -186,18 +234,23 @@ public class PlayerButtons : MonoBehaviour
 
         if (player.GetButtonDown("LightAttack"))
         {
-            StartCoroutine(LAttack(0.2f));
-            input = new ComboInput(AttackType.light, pM.GetInput()); Debug.Log("Light attack");
+            if (onCharacter == false)
+            {
+                attackpoint.gameObject.SetActive(false);
+                StartCoroutine(LAttack(0.2f));
+            }
+            
+            input = new ComboInput(AttackType.light, pM.GetInput(), pM.currentPlayState); Debug.Log("Light attack");
         }
         if (player.GetButtonDown("MediumAttack"))
         {
             StartCoroutine(mediumAttack(0.6f));
-            input = new ComboInput(AttackType.medium, pM.GetInput()); Debug.Log("medium attack ");
+            input = new ComboInput(AttackType.medium, pM.GetInput(), pM.currentPlayState); Debug.Log("medium attack ");
         }
         if (player.GetButtonDown("HeavyAttack"))
         {
             StartCoroutine(heavyAttack(1f));
-            input = new ComboInput(AttackType.heavy, pM.GetInput()); Debug.Log("Heavy attack ");
+            input = new ComboInput(AttackType.heavy, pM.GetInput(), pM.currentPlayState); Debug.Log("Heavy attack ");
         }
 
         if (pM.currentPlayState == PlayerMovement.playerState.Grounded ^ pM.currentPlayState == PlayerMovement.playerState.Crouch)
@@ -205,18 +258,18 @@ public class PlayerButtons : MonoBehaviour
             if (player.GetButtonDown("UniqueAttack"))
             {
                 StartCoroutine(uniqueAttack(1.2f));
-                input = new ComboInput(AttackType.unique, pM.GetInput()); Debug.Log("Unique attack ");
+                input = new ComboInput(AttackType.unique, pM.GetInput(), pM.currentPlayState); Debug.Log("Unique attack ");
 
             }
             if (player.GetButtonDown("Throw"))
             {
-                input = new ComboInput(AttackType.throwAction, pM.GetInput()); Debug.Log("Throw");
+                input = new ComboInput(AttackType.throwAction, pM.GetInput(), pM.currentPlayState); Debug.Log("Throw");
 
             }
             if (player.GetButtonDown("Use Assist"))
             {
 
-                input = new ComboInput(AttackType.Assist, pM.GetInput()); Debug.Log("Use Assist ");
+                input = new ComboInput(AttackType.Assist, pM.GetInput(), pM.currentPlayState); Debug.Log("Use Assist ");
             }
             if (player.GetButtonDown("CalloutAssist"))
             {
@@ -236,7 +289,21 @@ public class PlayerButtons : MonoBehaviour
             }
             if (player.GetButtonDown("LifelineAssist"))
             {
-                input = new ComboInput(AttackType.Lifeline, pM.GetInput()); Debug.Log("LifeLine Assist Used ");
+                input = new ComboInput(AttackType.Lifeline, pM.GetInput(), pM.currentPlayState); Debug.Log("LifeLine Assist Used ");
+            }
+            if (player.GetButtonDown("SwitchAnim"))
+            {
+                if (onCharacter == false)
+                {
+                    SetAnimator(this.GetComponent<Animator>());
+                    onCharacter = true;
+                }
+                else if (onCharacter == true)
+                {
+                    SetAnimator(AnimObject.GetComponent<Animator>());
+                    onCharacter = false;
+                }
+
             }
 
             Vector2 movement = Vector2.zero;
@@ -245,7 +312,7 @@ public class PlayerButtons : MonoBehaviour
                 DirectionLook dlook = GameObject.Find("GameManager").GetComponent<DirectionLook>();
                 if (playerID == 0)
                 {
-                    if (dlook.isFlipped == true)
+                    if (dlook.isFlipped == false)
                     {
                         movement.x = -(pM.x1);
                     }
@@ -256,9 +323,10 @@ public class PlayerButtons : MonoBehaviour
                 }
                 if (playerID == 1)
                 {
-                    if (dlook.isFlipped == false)
+                    if (dlook.isFlipped == true)
                     {
                         movement.x = -(pM.x1);
+ 
                     }
                     else
                     {
@@ -338,28 +406,34 @@ public class PlayerButtons : MonoBehaviour
                         {
                             pM.isBlockingHigh = true;
                             pM.isBlockingLow = false;
+                            myMask = LayerMask.GetMask("P1HBlock");
                             if ((-pM.y1 >= 0.3))
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
+                                myMask = LayerMask.GetMask("P1LBlock");
+
                             }
                         }
                         if (pM.otherPlayer.isAttacking == false)
                         {
                             pM.isBlockingHigh = false;
                             pM.isBlockingLow = false;
+                            this.gameObject.layer = 7;
                         }
                     }
                     if (dlook.blockAvailable == false)
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
+                        this.gameObject.layer = 7;
                     }
                 }
                 else
                 {
                     pM.isBlockingHigh = false;
                     pM.isBlockingLow = false;
+                    this.gameObject.layer = 7;
                 }
                 if ((-pM.y1 > 0.5))
                 {
@@ -371,6 +445,7 @@ public class PlayerButtons : MonoBehaviour
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
+                                this.gameObject.layer = 9;
                             }
                         }
                     }
@@ -378,6 +453,7 @@ public class PlayerButtons : MonoBehaviour
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
+                        this.gameObject.layer = 7;
                     }
                 }
 
@@ -392,28 +468,33 @@ public class PlayerButtons : MonoBehaviour
                         {
                             pM.isBlockingHigh = true;
                             pM.isBlockingLow = false;
+                            this.gameObject.layer = 8;
                             if ((-pM.y1 >= 0.3))
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
+                                this.gameObject.layer = 9;
                             }
                         }
                         else
                         {
                             pM.isBlockingHigh = false;
                             pM.isBlockingLow = false;
+                            this.gameObject.layer = 7;
                         }
                     }
                     else
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
+                        this.gameObject.layer = 7;
                     }
                 }
                 else
                 {
                     pM.isBlockingHigh = false;
                     pM.isBlockingLow = false;
+                    this.gameObject.layer = 7;
                 }
                 if ((-pM.y1 > 0.5))
                 {
@@ -425,6 +506,7 @@ public class PlayerButtons : MonoBehaviour
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
+                                this.gameObject.layer = 9;
                             }
                         }
                     }
@@ -432,6 +514,7 @@ public class PlayerButtons : MonoBehaviour
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
+                        this.gameObject.layer = 7;
                     }
                 }
 
@@ -449,28 +532,33 @@ public class PlayerButtons : MonoBehaviour
                         {
                             pM.isBlockingHigh = true;
                             pM.isBlockingLow = false;
+                            this.gameObject.layer = 12;
                             if ((-pM.y1 >= 0.3))
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
+                                this.gameObject.layer = 11;
                             }
                         }
                         if (pM.otherPlayer.isAttacking == false)
                         {
                             pM.isBlockingHigh = false;
                             pM.isBlockingLow = false;
+                            this.gameObject.layer = 10;
                         }
                     }
                     if (dlook.blockAvailable == false)
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
+                        this.gameObject.layer = 10;
                     }
                 }
                 else
                 {
                     pM.isBlockingHigh = false;
                     pM.isBlockingLow = false;
+                    this.gameObject.layer = 10;
                 }
                 if ((-pM.y1 > 0.5))
                 {
@@ -482,6 +570,7 @@ public class PlayerButtons : MonoBehaviour
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
+                                this.gameObject.layer = 12;
                             }
                         }
                     }
@@ -489,6 +578,7 @@ public class PlayerButtons : MonoBehaviour
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
+                        this.gameObject.layer = 10;
                     }
                 }
 
@@ -503,28 +593,33 @@ public class PlayerButtons : MonoBehaviour
                         {
                             pM.isBlockingHigh = true;
                             pM.isBlockingLow = false;
+                            this.gameObject.layer = 11;
                             if ((-pM.y1 >= 0.3))
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
+                                this.gameObject.layer = 12;
                             }
                         }
                         else
                         {
                             pM.isBlockingHigh = false;
                             pM.isBlockingLow = false;
+                            this.gameObject.layer = 10;
                         }
                     }
                     else
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
+                        this.gameObject.layer = 10;
                     }
                 }
                 else
                 {
                     pM.isBlockingHigh = false;
                     pM.isBlockingLow = false;
+                    this.gameObject.layer = 10;
                 }
                 if ((-pM.y1 > 0.5))
                 {
@@ -536,6 +631,7 @@ public class PlayerButtons : MonoBehaviour
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
+                                this.gameObject.layer = 12;
                             }
                         }
                     }
@@ -543,16 +639,36 @@ public class PlayerButtons : MonoBehaviour
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
+                        this.gameObject.layer = 10;
                     }
                 }
-
             }
         }
     }
-        
+
+
+    public void KnockBack(float knockbackForceX, float knockbackForceY, Rigidbody2D playerRB)
+    {
+        DirectionLook dLook = GameObject.Find("GameManager").GetComponent<DirectionLook>();
+        if (dLook.isFlipped == true)
+        {
+            playerRB.AddRelativeForce(Vector3.right * knockbackForceX, ForceMode2D.Impulse);
+        }
+        if (dLook.isFlipped == false)
+        {
+            playerRB.AddRelativeForce(Vector3.left * knockbackForceX, ForceMode2D.Impulse);
+        }
+        playerRB.AddRelativeForce(Vector3.up * knockbackForceY, ForceMode2D.Impulse);
+    }
+
     public void SetIsAttackingTrue()
     {
         isAttacking = true;
+    }
+
+    public void DisableThenEnable()
+    {
+        StartCoroutine(DisableThenEnable(1f));
     }
 
     public void SetIsAttackingFalse()
@@ -565,7 +681,65 @@ public class PlayerButtons : MonoBehaviour
         curAttack = A;
         timer = A.length;
         myAnim.Play(A.name, -1, 0); //playAnimation in code and resets anim
+        myAnim.SetBool("isAttacking", isAttacking);
         Debug.Log(A.name + ": successfuly inputted");
+        StartCoroutine(RunAnimForLength(1f));
+
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackpoint.position, attackRange, enemyLayers);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+
+            if (gameObject.tag == "Player1")
+            {
+                enemy.GetComponent<AnimAttack>().AttackPlayer(enemyHealth, enemyMovement, gM.p1comboCounter);
+                animAtt.p2MeterDealing();
+                gM.p1comboCounter++;
+                gM.SetHitCounter(gM.p1comboCounterText, gM.p1comboCounter);
+                Debug.Log("Player " + playerID + 1 + " Hit: " + enemy.name);
+
+            }
+            if (gameObject.tag == "Player2")
+            {
+                enemy.GetComponent<AnimAttack>().AttackPlayer(enemyHealth, enemyMovement, gM.p2comboCounter);
+                animAtt.p1MeterDealing();
+                gM.p2comboCounter++;
+                gM.SetHitCounter(gM.p2comboCounterText,gM.p2comboCounter);
+                Debug.Log("Player " + playerID + 1 + " Hit: " + enemy.name);
+            }
+            
+           
+        }
+
+    }
+    void OnDrawGizmosSelected()
+    {
+        if (attackpoint == null)
+        {
+            return;
+        }
+        Gizmos.DrawWireSphere(attackpoint.position, attackRange);
+    }
+    IEnumerator RunAnimForLength(float time)
+    {
+        isAttacking = true;
+        if (isAttacking == true)
+        {
+            attackpoint.gameObject.SetActive(true);
+            myAnim.SetTrigger("Attack");
+            SetPlayerStateImmobile();
+        }
+        yield return new WaitForSeconds(timer);
+        isAttacking = false;
+        if (isAttacking == false)
+        {
+            attackpoint.gameObject.SetActive(false);
+            if (pM.isGrounded == true)
+            {
+                SetPlayerStateGrounded();
+            }    
+        }
+        
     }
 
     Attack getAttackFromType(AttackType t)
@@ -602,22 +776,16 @@ public class PlayerButtons : MonoBehaviour
     }
     public void PauseButtons()
     {
-        GameObject gameMasterManager = GameObject.Find("GameMasterManager");
-        GameMasterManager gMM = (GameMasterManager)gameMasterManager.GetComponent(typeof(GameMasterManager));
-
-        GameObject gameManager = GameObject.Find("GameManager");
-        GameManagerScript gM = (GameManagerScript)gameMasterManager.GetComponent(typeof(GameManagerScript));
-
         if (player.GetButtonDown("Pause"))
         {
             if (gMM.isMultiActive == true)
             {
                 rM.PauseGame();
+                rM.currentState = RoundManager.roundState.roundPaused;
             }
             if (gMM.isMultiActive == false)
             {
-                GameObject TrainingPM = GameObject.Find("SettingManager");
-                TrainingPauseManager tPM = (TrainingPauseManager)TrainingPM.GetComponent(typeof(TrainingPauseManager));
+                
                 tPM.SetPause();
             }
         }
@@ -634,6 +802,13 @@ public class PlayerButtons : MonoBehaviour
         }
         //isAttacking = false;
         currentCombos.Clear();
+    }
+    IEnumerator DisableThenEnable(float time)
+    {
+        SetPlayerStateImmobile();
+        yield return new WaitForSeconds(1.2f);
+        SetPlayerStateGrounded();
+        // StopCoroutine(LAttack(1f));
     }
     IEnumerator LAttack(float time)
     {
@@ -667,7 +842,7 @@ public class PlayerButtons : MonoBehaviour
     }
     IEnumerator uniqueAttack(float time)
     {
-        pM.currentPlayState = PlayerMovement.playerState.Immobile;
+        //pM.currentPlayState = PlayerMovement.playerState.Immobile;
         hitboxes[0].gameObject.SetActive(false);
         hitboxes[1].gameObject.SetActive(false);
         hitboxes[2].gameObject.SetActive(false);
@@ -675,7 +850,7 @@ public class PlayerButtons : MonoBehaviour
         yield return new WaitForSeconds(time);
         hitboxes[3].gameObject.SetActive(false);
       //  StopCoroutine(uniqueAttack(1f));
-        pM.currentPlayState = PlayerMovement.playerState.Grounded;
+       // pM.currentPlayState = PlayerMovement.playerState.Grounded;
     }
 }
 
@@ -729,16 +904,19 @@ public class Combo
 }
 
 [System.Serializable]
-public class ComboInput 
+public class ComboInput
 {
     public AttackType type;
     public Vector2 mType;
+    public PlayerMovement.playerState thisCurrentState;
 
-    public ComboInput(AttackType e, Vector2 m)
+
+    public ComboInput(AttackType e, Vector2 m , PlayerMovement.playerState currentState)
     {
         type = e;
         mType = Vector2.zero;
         mType = m;
+        thisCurrentState = currentState;
     }
     public ComboInput(Vector2 e)
     {
@@ -749,7 +927,7 @@ public class ComboInput
     public bool IsSameAs(ComboInput J)
     {
         bool valid = validMovemment(J.mType);
-        return ((type == AttackType.movement) ? (valid) : (type == J.type && valid)); 
+        return ((type == AttackType.movement) ? (valid) : (type == J.type && valid && thisCurrentState == J.thisCurrentState)); 
         //In a single statement akin to an if statement. it checks movement inputs, then buttons and movement
     }
 

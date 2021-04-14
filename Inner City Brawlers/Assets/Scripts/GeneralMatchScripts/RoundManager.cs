@@ -35,6 +35,7 @@ public class RoundManager : MonoBehaviour
     #endregion
     #region Script References
     [Header("Script references")]
+    
     public GameManagerScript gManager;
     public GameMasterManager gMM;
     private PlayerHealth p1Health;
@@ -106,7 +107,8 @@ public class RoundManager : MonoBehaviour
 
     private void Update()
     {
-        
+        Debug.Log("Player 1 State: " + p1Movement.isDisabled);
+        Debug.Log("Player 2 State: " + p2Movement.isDisabled);
         if (gMM.isMultiActive == true)
         {
             TimerText.text = "Time: " + (Mathf.Round(roundTimer)).ToString();
@@ -288,6 +290,8 @@ public class RoundManager : MonoBehaviour
             //what happens if the game is paused
             if (currentState == roundState.roundPaused)
             {
+                roundTimer -= 0;
+                
                 //setting each player's movement state to immobile while in this round state
                 p1Movement.isDisabled = true;
                 p2Movement.isDisabled = true;
@@ -305,6 +309,8 @@ public class RoundManager : MonoBehaviour
     }
     public void PauseGame()
     {
+        DisablePlayer(p2Movement);
+        DisablePlayer(p1Movement);
         pauseMenu.SetActive(true);
         p1Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
         p1Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
@@ -314,12 +320,24 @@ public class RoundManager : MonoBehaviour
     }
     public void UnpauseGame()
     {
+        EnablePlayer(p2Movement);
+        EnablePlayer(p1Movement);
         pauseMenu.SetActive(false);
         p1Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Default", "Player1", true);
         p1Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Default", "Player1", true);
         p2Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 1, "Default", "Player2", true);
         p2Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 1, "Default", "Player2", true);
         currentState = roundState.duringRound;
+    }
+    void DisablePlayer(PlayerMovement thisPlayer)
+    {
+        thisPlayer.isDisabled = false;
+        Debug.Log("Player Disabled");
+    }
+    void EnablePlayer(PlayerMovement thisPlayer)
+    {
+        thisPlayer.isDisabled = true;
+        Debug.Log("Player Enabled");
     }
     void setOneTime()
     {
