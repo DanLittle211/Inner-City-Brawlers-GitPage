@@ -70,8 +70,8 @@ public class RoundManager : MonoBehaviour
         p2Health = player2.GetComponent<PlayerHealth>();
         p1Movement = player1.GetComponent<PlayerMovement>();
         p2Movement = player2.GetComponent<PlayerMovement>();
-        p1Buttons = player1.GetComponent<PlayerButtons>();
-        p2Buttons = player2.GetComponent<PlayerButtons>();
+        p1Buttons = player1.GetComponentInChildren<PlayerButtons>();
+        p2Buttons = player2.GetComponentInChildren<PlayerButtons>();
         //other variables
 
         if (gMM.isMultiActive == false)
@@ -107,8 +107,6 @@ public class RoundManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Player 1 State: " + p1Movement.isDisabled);
-        Debug.Log("Player 2 State: " + p2Movement.isDisabled);
         if (gMM.isMultiActive == true)
         {
             TimerText.text = "Time: " + (Mathf.Round(roundTimer)).ToString();

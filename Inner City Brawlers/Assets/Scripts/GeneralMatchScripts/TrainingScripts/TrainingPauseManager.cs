@@ -24,7 +24,7 @@ public class TrainingPauseManager : MonoBehaviour
     public void SetPause()
     {
         GameObject player1 = GameObject.Find("Player1");
-        PlayerButtons p1 = (PlayerButtons)player1.GetComponent(typeof(PlayerButtons));
+        PlayerButtons p1 = (PlayerButtons)player1.GetComponentInChildren(typeof(PlayerButtons));
         p1.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
         p1.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
         SetMainPauseState();
@@ -34,7 +34,7 @@ public class TrainingPauseManager : MonoBehaviour
     {
         GameObject player1 = GameObject.Find("Player1");
         SetinactiveState();
-        PlayerButtons p1 = (PlayerButtons)player1.GetComponent(typeof(PlayerButtons));
+        PlayerButtons p1 = (PlayerButtons)player1.GetComponentInChildren(typeof(PlayerButtons));
         p1.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Default", "Player1", true);
         p1.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Default", "Player1", true);
         p1.pM.isDisabled = false;
@@ -51,8 +51,8 @@ public class TrainingPauseManager : MonoBehaviour
         SetActiveButton(startingButtons[0]);
 
         GameObject player1 = GameObject.Find("Player1");
-        PlayerButtons p1 = (PlayerButtons)player1.GetComponent(typeof(PlayerButtons));
-        p1.pM.isDisabled = false;
+        PlayerMovement p1 = (PlayerMovement)player1.GetComponentInChildren(typeof(PlayerMovement));
+        p1.isDisabled = false;
     }
 
     public void SetMainPauseState()
@@ -66,7 +66,7 @@ public class TrainingPauseManager : MonoBehaviour
         pauseScreens[5].gameObject.SetActive(false);
         SetActiveButton(startingButtons[0]);
         GameObject player1 = GameObject.Find("Player1");
-        PlayerButtons p1 = (PlayerButtons)player1.GetComponent(typeof(PlayerButtons));
+        PlayerButtons p1 = (PlayerButtons)player1.GetComponentInChildren(typeof(PlayerButtons));
         p1.pM.isDisabled = true;
     }
     public void SetTrainingSettingsState()
@@ -140,7 +140,7 @@ public class TrainingPauseManager : MonoBehaviour
         gMM.SetGameStateMain();
 
         GameObject player1 = GameObject.Find("Player1");
-        PlayerButtons p1 = (PlayerButtons)player1.GetComponent(typeof(PlayerButtons));
+        PlayerButtons p1 = (PlayerButtons)player1.GetComponentInChildren(typeof(PlayerButtons));
         p1.pM.isDisabled = false;
     }
 }

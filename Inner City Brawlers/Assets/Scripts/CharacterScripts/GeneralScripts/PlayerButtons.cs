@@ -100,7 +100,7 @@ public class PlayerButtons : MonoBehaviour
         }
         myAnim = AnimObject.GetComponent<Animator>();
         animAtt = this.GetComponent<AnimAttack>();
-        pM = this.GetComponent<PlayerMovement>();
+        pM = this.GetComponentInParent<PlayerMovement>();
         rM = GameObject.Find("GameManager").GetComponent<RoundManager>();
         gMM = GameObject.Find("GameMasterManager").GetComponent<GameMasterManager>();
         gM = GameObject.Find("GameManager").GetComponent<GameManagerScript>();

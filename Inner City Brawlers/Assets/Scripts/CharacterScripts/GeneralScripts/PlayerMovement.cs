@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Object References")]
     [HideInInspector]
     [SerializeField]public Rigidbody2D myRB2D;
-    private Animator myAnim;
+    [SerializeField] private Animator myAnim;
 
     [Header("GameObject References")]
     public GameObject groundCheck;
@@ -52,9 +52,9 @@ public class PlayerMovement : MonoBehaviour
         walkMovement = Vector2.zero;
         isBlockingHigh = false;
         isBlockingLow = false;
-        pB = this.GetComponent<PlayerButtons>(); // this pB will be changed to one on active player once animations come in
-        myAnim = this.GetComponent<Animator>();
-        myRB2D = GetComponent<Rigidbody2D>();
+        pB = this.GetComponentInChildren<PlayerButtons>(); // this pB will be changed to one on active player once animations come in
+        myAnim = this.GetComponentInChildren<Animator>();
+        myRB2D = this.GetComponent<Rigidbody2D>();
         player = ReInput.players.GetPlayer(playerID);
         if (playerID == 0)
         {
