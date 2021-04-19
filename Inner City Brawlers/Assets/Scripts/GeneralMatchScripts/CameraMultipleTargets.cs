@@ -42,7 +42,7 @@ public class CameraMultipleTargets : MonoBehaviour
 
     void Move()
     {
-        thisCamera.position = new Vector3(thisCamera.position.x, thisCamera.position.y, 0);
+        thisCamera.position = new Vector3(thisCamera.position.x, thisCamera.position.y, -15);
         Vector3 centerPoint = GetCenterPoint();
 
         Vector3 newPosition = centerPoint + offset;

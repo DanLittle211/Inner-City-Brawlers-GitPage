@@ -95,9 +95,11 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationBlendTree.Node
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateMachineNode
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
@@ -255,85 +257,85 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4536}
     - Class: 114
-      Script: {instanceID: 4952}
+      Script: {instanceID: 4906}
     - Class: 114
-      Script: {instanceID: 4962}
+      Script: {instanceID: 4954}
     - Class: 114
-      Script: {instanceID: 4972}
+      Script: {instanceID: 4964}
     - Class: 114
-      Script: {instanceID: 5016}
+      Script: {instanceID: 4974}
     - Class: 114
-      Script: {instanceID: 5024}
+      Script: {instanceID: 5018}
     - Class: 114
-      Script: {instanceID: 5030}
+      Script: {instanceID: 5026}
     - Class: 114
-      Script: {instanceID: 5048}
+      Script: {instanceID: 5032}
     - Class: 114
-      Script: {instanceID: 5198}
+      Script: {instanceID: 5050}
     - Class: 114
       Script: {instanceID: 5200}
     - Class: 114
-      Script: {instanceID: 5222}
+      Script: {instanceID: 5202}
     - Class: 114
-      Script: {instanceID: 5462}
+      Script: {instanceID: 5224}
     - Class: 114
-      Script: {instanceID: 5478}
+      Script: {instanceID: 5464}
     - Class: 114
-      Script: {instanceID: 5574}
+      Script: {instanceID: 5480}
     - Class: 114
-      Script: {instanceID: 5578}
+      Script: {instanceID: 5576}
     - Class: 114
-      Script: {instanceID: 5638}
+      Script: {instanceID: 5580}
     - Class: 114
-      Script: {instanceID: 5720}
+      Script: {instanceID: 5640}
     - Class: 114
-      Script: {instanceID: 5726}
+      Script: {instanceID: 5722}
     - Class: 114
-      Script: {instanceID: 5782}
+      Script: {instanceID: 5728}
     - Class: 114
-      Script: {instanceID: 5788}
+      Script: {instanceID: 5784}
     - Class: 114
-      Script: {instanceID: 5876}
+      Script: {instanceID: 5790}
     - Class: 114
-      Script: {instanceID: 5908}
+      Script: {instanceID: 5878}
     - Class: 114
-      Script: {instanceID: 5952}
+      Script: {instanceID: 5910}
     - Class: 114
-      Script: {instanceID: 6018}
+      Script: {instanceID: 5954}
     - Class: 114
-      Script: {instanceID: 6050}
+      Script: {instanceID: 6020}
     - Class: 114
-      Script: {instanceID: 6120}
+      Script: {instanceID: 6052}
     - Class: 114
-      Script: {instanceID: 6240}
+      Script: {instanceID: 6122}
     - Class: 114
-      Script: {instanceID: 6318}
+      Script: {instanceID: 6242}
     - Class: 114
-      Script: {instanceID: 6354}
+      Script: {instanceID: 6320}
     - Class: 114
-      Script: {instanceID: 6402}
+      Script: {instanceID: 6356}
     - Class: 114
-      Script: {instanceID: 6412}
+      Script: {instanceID: 6404}
     - Class: 114
-      Script: {instanceID: 6538}
+      Script: {instanceID: 6414}
     - Class: 114
-      Script: {instanceID: 6932}
+      Script: {instanceID: 6540}
     - Class: 114
-      Script: {instanceID: 6988}
+      Script: {instanceID: 6934}
     - Class: 114
-      Script: {instanceID: 7074}
+      Script: {instanceID: 6990}
     - Class: 114
-      Script: {instanceID: 7214}
+      Script: {instanceID: 7076}
     - Class: 114
-      Script: {instanceID: 7260}
+      Script: {instanceID: 7216}
     - Class: 114
-      Script: {instanceID: 7444}
+      Script: {instanceID: 7262}
     - Class: 114
-      Script: {instanceID: 7476}
+      Script: {instanceID: 7446}
     - Class: 114
-      Script: {instanceID: 7610}
+      Script: {instanceID: 7478}
     - Class: 114
-      Script: {instanceID: 598448}
+      Script: {instanceID: 7612}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1401,6 +1403,12 @@ ScriptsOnlyBuild:
     className: ControlMapper
   - hash:
       serializedVersion: 2
+      Hash: 8c393bcd30b385216d662106263b4024
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AnimAttack
+  - hash:
+      serializedVersion: 2
       Hash: 59ce5902048c1041729c804e2772b2ce
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
@@ -1431,7 +1439,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerVector3
   - hash:
       serializedVersion: 2
-      Hash: 5cfae150741de90dfb052bbc746901b1
+      Hash: cb4877e86cbd4fedc19f0a847503832a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -1449,7 +1457,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerIndirectToggle
   - hash:
       serializedVersion: 2
-      Hash: 85bc8a7d3d3532d1f5aa81bf8b49831c
+      Hash: 2b6d32a321d22b7ca2a298c5602c64a8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CallOutAssist
@@ -2113,13 +2121,8 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerScript
-  - hash:
-      serializedVersion: 2
-      Hash: f6eff2eda724dcd822444fb815f9319f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: AnimAttack
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainGameScene.unity
-  playerPath: D:/College Papers/All GDD WORK/411/Week7Build/Inner City Brawlers.exe
+  playerPath: D:/College Papers/All GDD WORK/411/Week7Refresh/Week7BuildPC/Inner
+    City Brawlers.exe

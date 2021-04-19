@@ -8,6 +8,7 @@ public class AnimAttack : MonoBehaviour
     [HideInInspector]
     [SerializeField] private PlayerMovement p1M, p2M;
     [SerializeField] private GameManagerScript gM;
+    [SerializeField] private MeterSystem mS;
 
     [Header("Damage Values")]
     [SerializeField] private float damageNumber;
@@ -24,6 +25,7 @@ public class AnimAttack : MonoBehaviour
 
     void Start()
     {
+        mS = GameObject.Find("GameManager").GetComponent<MeterSystem>();
         p1M = GameObject.Find("Player1").GetComponent<PlayerMovement>();
         p2M = GameObject.Find("Player2").GetComponent<PlayerMovement>();
         gM = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
@@ -31,39 +33,36 @@ public class AnimAttack : MonoBehaviour
         scalingNumber = 1;
     }
 
-    public void AttackPlayer(PlayerHealth targetHealth, PlayerMovement targetRB2D, int targetComboCounter)
+    public void AttackPlayer(PlayerHealth targetHealth, PlayerMovement targetRB2D)//, int targetComboCounter)
     {
-        targetHealth.TakeDamage(damageNumber * Mathf.Abs(scalingNumber));
-        //pH.TakeDamage(damageNumber * Mathf.Abs(scalingNumber));
-        Debug.Log("Current Damage & Scaling Number: " + damageNumber + ", " + scalingNumber);
-        KnockBack(xForce, yForce, targetRB2D.myRB2D);
-        //KnockBack(xForce, yForce, p1M.myRB2D);
-        targetComboCounter++;
-        //gM.p2comboCounter++;
-        gM.comboLeewayTimer = (stunNumber * scalingNumber);
-        scalingNumber -= scalingFactor;
+        KnockBack(xForce, yForce, targetRB2D.myRB2D); //Knocks back chose player
+        targetHealth.TakeDamage(damageNumber * Mathf.Abs(scalingNumber));  //damages player and scales damage number
+        //targetComboCounter++;  //increases combo counter for attacking player
+        gM.comboLeewayTimer = (stunNumber * scalingNumber); // sets combo leeway timer to the stun timer and scales it
+        scalingNumber -= scalingFactor; // decreases scaling values by the scaling factor for each hit.
         Debug.Log("Current stun number: " + stunNumber);
-        gM.SetHitCounter(gM.p2comboCounterText, gM.p2comboCounter);
-        /*if(thisPlayer <= 1)
-        {
-            p1MeterDealing();
-        }
-        if (thisPlayer >= 2)
+        Debug.Log("Current Damage & Scaling Number: " + damageNumber + ", " + scalingNumber);
+
+        if (this.gameObject.tag == "Player2")
         {
             p2MeterDealing();
-        }*/
-        
-        Debug.Log("Hit hitbox");
-
-
-        if (targetComboCounter > 0)
-        {
-            //ResetScale();
+            gM.p1comboCounter++;
+            gM.SetHitCounter(gM.p1comboCounterText, gM.p1comboCounter);
         }
+        if (this.gameObject.tag == "Player1")
+        {
+            p1MeterDealing();
+            gM.p2comboCounter++;
+            gM.SetHitCounter(gM.p2comboCounterText, gM.p2comboCounter);
+        }
+
         if (gM.comboLeewayTimer <= 0)
         {
             ResetScale();
         }
+
+        Debug.Log("Hit hitbox");
+
     }
 
     public void ResetScale()
@@ -77,19 +76,13 @@ public class AnimAttack : MonoBehaviour
     }
     public void p1MeterDealing()
     {
-        GameObject gameManager = GameObject.Find("GameManager");
-        MeterSystem mS = (MeterSystem)gameManager.GetComponent(typeof(MeterSystem));
         mS.p1MakeMeter(gMeterNumber);
         mS.p2MakeMeter(rMeterNumber);
-        Debug.Log("p1 Dealt Meter");
     }
     public void p2MeterDealing()
     {
-        GameObject gameManager = GameObject.Find("GameManager");
-        MeterSystem mS = (MeterSystem)gameManager.GetComponent(typeof(MeterSystem));
         mS.p1MakeMeter(rMeterNumber);
         mS.p2MakeMeter(gMeterNumber);
-        Debug.Log("p2 Dealt Meter");
     }
     public void KnockBack(float knockbackForceX, float knockbackForceY, Rigidbody2D playerRB)
     {

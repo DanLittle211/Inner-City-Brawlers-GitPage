@@ -54,7 +54,7 @@ public class Food_Function : MonoBehaviour
     {
         if (other.gameObject.tag == "Player1" || other.gameObject.tag == "Player2")
         {
-            other.gameObject.GetComponent<PlayerHealth>().MakeHealth(FoodItem.restoreHealthValue);
+            other.gameObject.GetComponentInChildren<PlayerHealth>().MakeHealth(FoodItem.restoreHealthValue);
             Debug.Log(other.gameObject.name + " picked up " + this.gameObject.name);//temporary
             DestroySelf();//temporary until full function is completed
         }

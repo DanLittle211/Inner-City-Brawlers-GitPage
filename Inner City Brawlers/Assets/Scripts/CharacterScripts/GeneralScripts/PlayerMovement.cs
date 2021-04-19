@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Object References")]
     [HideInInspector]
-    [SerializeField]public Rigidbody2D myRB2D;
+    [SerializeField] public Rigidbody2D myRB2D;
     [SerializeField] private Animator myAnim;
 
     [Header("GameObject References")]
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public int playerID;
     [SerializeField] public Player player;
     [SerializeField] public float moveHorizontal;
-    [SerializeField] public  float moveUp;
+    [SerializeField] public float moveUp;
     public Transform head;
 
     [HideInInspector]
@@ -46,9 +46,21 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector]
     public bool xDown1, yDown1;
 
+    string currentState;
+    const string IDLE = "idle";
+    const string WalkF = "walk";
+    const string WalkB = "wback";
+    const string Jump = "jump";
+    const string MidAir = "falling";
+    const string Land = "land";
+    const string toCrouch = "idleToCrouch";
+    const string Crouch = "crouch";
+    const string toIdle = "crouch2Idle";
+
     // Start is called before the first frame update
     void Start()
     {
+        currentPlayState = playerState.Grounded;
         walkMovement = Vector2.zero;
         isBlockingHigh = false;
         isBlockingLow = false;
@@ -56,11 +68,11 @@ public class PlayerMovement : MonoBehaviour
         myAnim = this.GetComponentInChildren<Animator>();
         myRB2D = this.GetComponent<Rigidbody2D>();
         player = ReInput.players.GetPlayer(playerID);
+        
         if (playerID == 0)
         {
             SetControllerMapsForCurrentModeP1();
         }
-
         if (playerID == 1)
         {
             SetControllerMapsForCurrentModeP2();
@@ -69,6 +81,18 @@ public class PlayerMovement : MonoBehaviour
         y1 = 0;
         xDown1 = false;
         yDown1 = false;
+    }
+    void ChangeAnimationState(string thisState) 
+    {
+        //stop anim playing multiple times
+        if (currentState == thisState)
+        {
+            return;
+        }
+        //plays animation
+        myAnim.Play(thisState.ToString());
+
+        currentState = thisState;
     }
 
     public void SetControllerMapsForCurrentModeP1()
@@ -86,24 +110,26 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        myAnim.SetFloat("yVelocity", this.transform.position.y);
-        myAnim.SetFloat("headVelocity", head.position.y);
-
+        //myAnim.SetFloat("yVelocity", this.transform.position.y);
+        //myAnim.SetFloat("headVelocity", head.position.y);
+        
         if (isDisabled != true)
         {
             GetInput(ref x1, ref xDown1, "Move Horizontal");
             GetInput(ref y1, ref yDown1, "Move Vertical");
+
         }
-       
-        
     }
+
     private void FixedUpdate()
     {
         if (isDisabled != true)
         {
            playerMovement();
+
         }
     }
+
 
     public void GetInput(ref float val, ref bool down, string axis)
     {
@@ -132,75 +158,145 @@ public class PlayerMovement : MonoBehaviour
     {
         DirectionLook dlook = GameObject.Find("GameManager").GetComponent<DirectionLook>();
         moveHorizontal = player.GetAxisRaw("Move Horizontal");
-
         moveHorizontal = (moveHorizontal > 0.3f) ? 1 : ((moveHorizontal < -0.3f) ? -1 : 0);
-
         moveUp = player.GetAxisRaw("Move Vertical");
         moveUp = (moveUp >= 0.75f) ? 1 : ((moveUp <= -0.3f) ? -1 : 0); // Forces values of moveUp to be 1 or zero depending on moving direction
-
-
 
         switch (currentPlayState)
         {
             case playerState.Grounded:
-                 myAnim.SetBool("isCrouch", false);
-                if ((moveHorizontal <= 1 && moveHorizontal > 0.5) && Mathf.Round(myRB2D.velocity.x) <= 6)
-                {
-                    myAnim.SetBool("isMoving", true);
-                    MoveFunction(0.0012f, movementSpeed, 0f);
-                    myAnim.SetFloat("XAxis", walkMovement.x);
-                    
-                    if (moveUp <= 1 && moveUp > 0.2)
-                    {
-                        MoveFunction(0.0012f, 0f, jumpStrength);
-                        myAnim.SetBool("Jump", true);
-                    }
-                    if (-moveUp <= 0.7 && -moveUp > 0.2)
-                    {
-                        MoveFunction(0.0012f, 0f, 0f);
-                        currentPlayState = playerState.Crouch;
-                    }
-                }
-
-                if ((-moveHorizontal <= 1 && -moveHorizontal > 0.5) && Mathf.Abs(myRB2D.velocity.x) <= 6)
-                {
-                    myAnim.SetBool("isMoving", true);
-                    MoveFunction(0.0012f, -movementSpeed, 0f);
-                    myAnim.SetFloat("XAxis", walkMovement.x);
-                    if (moveUp <= 1 && moveUp > 0.2)
-                    {
-                        MoveFunction(0.0012f, 0f, jumpStrength);
-                    }
-                    if (-moveUp <= 0.7 && -moveUp > 0.2)
-                    {
-                        MoveFunction(0.0012f, 0f, 0f);
-                        currentPlayState = playerState.Crouch;
-                    }
-                }
                 if (-moveUp >= 0.3)
                 {
-                    myAnim.SetFloat("Yaxis", moveUp);
-                    myAnim.SetBool("isCrouch", true);
-                    currentPlayState = playerState.Crouch;
+                    // myAnim.SetFloat("Yaxis", moveUp);
+                    // myAnim.SetBool("isCrouch", true);
+                    StartCoroutine(IdleToCrouchSequence(0f));
                     Debug.Log("Pressed Down");
                 }
                 if (moveUp > 0.2)
                 {
+                    StopAllCoroutines();
+                    StartCoroutine(JumpSequence(1f));
                     MoveFunction(0.0012f, 0f, jumpStrength);
                     currentPlayState = playerState.Jump;
                 }
-                else
+                //myAnim.SetBool("isCrouch", false);
+                if (isGrounded)
                 {
-                    myAnim.SetFloat("XAxis", walkMovement.x);
-                    myAnim.SetBool("isMoving", false);
+                    if ((moveHorizontal <= 1 && moveHorizontal > 0.5) && Mathf.Round(myRB2D.velocity.x) <= 6)
+                    {
+                        
+                        if (moveUp == 0)
+                        {
+                            currentPlayState = playerState.Grounded;
+                            MoveFunction(0.0012f, movementSpeed, 0f);
+                            if (playerID == 0)
+                            {
+                                if (dlook.isP1Flipped == true)
+                                {
+                                    StopAllCoroutines();
+                                    StartCoroutine(MoveAction(0f, WalkF));
+
+                                }
+                                else if (dlook.isP1Flipped == false)
+                                {
+                                    StopAllCoroutines();
+                                    StartCoroutine(MoveAction(0f, WalkB));
+
+                                }
+                            }
+                            if (playerID == 1)
+                            {
+                                if (dlook.isP2Flipped == true)
+                                {
+                                    StopAllCoroutines();
+                                    StartCoroutine(MoveAction(0f, WalkF));
+
+                                }
+                                else if (dlook.isP2Flipped == false)
+                                {
+                                    StopAllCoroutines();
+                                    StartCoroutine(MoveAction(0f, WalkB));
+
+                                }
+                            }
+                        }
+                        else if (moveUp <= 1 && moveUp > 0.2)
+                        {
+                            MoveFunction(0.0012f, 0f, jumpStrength);
+
+                        }
+                        else if (-moveUp <= 1 && -moveUp > 0.2)
+                        {
+                            MoveFunction(0.0012f, 0f, 0f);
+                            StartCoroutine(IdleToCrouchSequence(0f));
+                        }
+                        
+                    }
+
+
+                    else if ((-moveHorizontal <= 1 && -moveHorizontal > 0.5) && Mathf.Abs(myRB2D.velocity.x) <= 6)
+                    {
+                        
+                        if (moveUp == 0)
+                        {
+                            currentPlayState = playerState.Grounded;
+                            MoveFunction(0.0012f, -movementSpeed, 0f);
+                            if (playerID == 0)
+                            {
+                                if (dlook.isP1Flipped == true)
+                                {
+                                    StopAllCoroutines();
+                                    StartCoroutine(MoveAction(0f, WalkB));
+
+                                }
+                                else if (dlook.isP1Flipped == false)
+                                {
+                                    StopAllCoroutines();
+                                    StartCoroutine(MoveAction(0f, WalkF));
+
+                                }
+                            }
+                            if (playerID == 1)
+                            {
+                                if (dlook.isP2Flipped == true)
+                                {
+                                    StopAllCoroutines();
+                                    StartCoroutine(MoveAction(0f, WalkB));
+                                }
+                                else if (dlook.isP2Flipped == false)
+                                {
+                                    StopAllCoroutines();
+                                    StartCoroutine(MoveAction(0f, WalkF));
+
+                                }
+                            }
+                        }
+                        else if (moveUp <= 1 && moveUp > 0.2)
+                        {
+                            MoveFunction(0.0012f, 0f, jumpStrength);
+                        }
+                        else if (-moveUp <= 1 && -moveUp > 0.2)
+                        {
+                            MoveFunction(0.0012f, 0f, 0f);
+                            StartCoroutine(IdleToCrouchSequence(0f));
+                        }
+                        
+                    }
+
+                    if (moveHorizontal == 0 && moveUp == 0)
+                    {
+                        StopAllCoroutines();
+                        StartCoroutine(MoveAction(0f, IDLE));
+                        currentPlayState = playerState.Grounded;
+
+                    }
                 }
                 break;
             case playerState.Crouch:
                 {
-                    myAnim.SetBool("isCrouch", true);
-                    myAnim.SetFloat("XAxis", 0);
                     if (-moveUp <= 1 && -moveUp > 0.4)
                     {
+                        ChangeAnimationState(Crouch);
                         if (moveHorizontal <= 0.5 && moveHorizontal > 0)
                         {
                             MoveFunction(0f, 0f, 0f);
@@ -216,11 +312,9 @@ public class PlayerMovement : MonoBehaviour
                         MoveFunction(0f, 0f, 0f);
                         Debug.Log("Current Player State: " + currentPlayState);
                     }
-                    else
+                    else if(moveUp == 0)
                     {
-                        myAnim.SetFloat("Yaxis", moveUp);
-                        currentPlayState = playerState.Grounded;
-                        Debug.Log("Current Player State: " + currentPlayState);
+                        StartCoroutine(CrouchToIdleSequence(0f));  
                     }
 
                     break;
@@ -235,6 +329,7 @@ public class PlayerMovement : MonoBehaviour
                     {
                         MoveFunction(0.0012f, (-movementSpeed / 2), 0f);  // while in air, you move slightly to the left
                     }
+                    
                     break;
                 }
             case playerState.SoftKnockdown:
@@ -252,7 +347,6 @@ public class PlayerMovement : MonoBehaviour
 
                     break;
                 }
-
         }
         if (playerID == 0)
         {
@@ -276,6 +370,38 @@ public class PlayerMovement : MonoBehaviour
                 walkMovement.x = (x1);
             }
         }
+
+        Debug.Log("Current Player State: " + currentPlayState);
+ 
+    }
+    IEnumerator MoveAction(float time, string ActionString)
+    {
+        yield return new WaitForSeconds(0.01f);
+        ChangeAnimationState(ActionString);
+
+    }
+    IEnumerator JumpSequence(float time)
+    {
+        ChangeAnimationState(Jump);
+        yield return new WaitForSeconds(0.667f);
+        ChangeAnimationState(MidAir);
+        yield return new WaitForSeconds(0.007f);
+        ChangeAnimationState(Land);
+        yield return new WaitForSeconds(1f);
+    }
+    IEnumerator IdleToCrouchSequence(float time)
+    {
+        ChangeAnimationState(toCrouch);
+        yield return new WaitForSeconds(0.1f);
+        currentPlayState = playerState.Crouch;
+        //CheckEquals();
+    }
+    IEnumerator CrouchToIdleSequence(float time)
+    {
+        ChangeAnimationState(toIdle);
+        yield return new WaitForSeconds(0.1f);
+        currentPlayState = playerState.Grounded;
+        //CheckEquals();
     }
     public Vector2 GetInput()
     {
@@ -302,7 +428,9 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
             currentPlayState = playerState.Grounded;
-            myAnim.SetBool("Jump", false);
+
+            // myAnim.SetBool("Jump", !isGrounded);
+
         }
     }
 
@@ -312,7 +440,6 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = false;
             currentPlayState = playerState.Jump;
-            myAnim.SetBool("Jump", true);
         }
     }
 }

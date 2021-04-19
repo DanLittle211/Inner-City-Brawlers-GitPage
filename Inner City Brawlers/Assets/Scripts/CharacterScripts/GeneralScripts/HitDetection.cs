@@ -41,7 +41,7 @@ public class HitDetection : MonoBehaviour
         if (col.tag == "Player1")
         {
             GameObject playerHealth = GameObject.Find("Player1");
-            PlayerHealth pH = (PlayerHealth)playerHealth.GetComponent(typeof(PlayerHealth));
+            PlayerHealth pH = (PlayerHealth)playerHealth.GetComponentInChildren(typeof(PlayerHealth));
             pH.TakeDamage(damageNumber * Mathf.Abs(scalingNumber));
             Debug.Log("Current Damage & Scaling Number: " + damageNumber + ", " + scalingNumber);
             KnockBack(xForce,yForce, p1M.myRB2D);
@@ -67,7 +67,7 @@ public class HitDetection : MonoBehaviour
         if (col.tag == "Player2")
         {
             GameObject playerHealth = GameObject.Find("Player2");
-            PlayerHealth pH = (PlayerHealth)playerHealth.GetComponent(typeof(PlayerHealth));
+            PlayerHealth pH = (PlayerHealth)playerHealth.GetComponentInChildren(typeof(PlayerHealth));
             pH.TakeDamage(damageNumber * Mathf.Abs(scalingNumber));
             p2MeterDealing();
             gM.p1comboCounter++;

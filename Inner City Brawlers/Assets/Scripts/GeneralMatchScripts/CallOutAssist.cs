@@ -7,8 +7,8 @@ public class CallOutAssist : MonoBehaviour
 
 {
     [Header("Object References")]
-    private Transform p1Transform;
-    private Transform p2Transform;
+    [SerializeField] private Transform p1Transform;
+    [SerializeField] private Transform p2Transform;
     [Header("Script References")]
     [SerializeField] private RoundManager rM;
     public ItemLists itemList;//reference for the list of items, used for selecting which item is spawned

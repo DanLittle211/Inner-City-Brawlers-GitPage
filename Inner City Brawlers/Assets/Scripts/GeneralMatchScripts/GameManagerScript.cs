@@ -76,6 +76,17 @@ public class GameManagerScript : MonoBehaviour
         cOA.p2Timer = 0;
         SetHitCounter(p1comboCounterText, p1comboCounter);
         SetHitCounter(p2comboCounterText, p2comboCounter);
+
+        p1Health.currentHealth = p1Health.maxHealth;
+        p1Health.SetHealth(p1Health.maxHealth);
+
+        p2Health.currentHealth = p2Health.maxHealth;
+        p2Health.SetHealth(p2Health.maxHealth);
+
+        mS.p2CurrentMeter = 0;
+        mS.SetP2Meter(mS.p2CurrentMeter);
+        mS.p1CurrentMeter = 0;
+        mS.SetP1Meter(mS.p1CurrentMeter);
     }
 
     public void SetHitCounter(TMP_Text text,int Hitcount)
@@ -127,6 +138,10 @@ public class GameManagerScript : MonoBehaviour
         }
         if (gMM.isMultiActive == false)
         {
+            p1Health.currentHealth = p1Health.maxHealth;
+            p1Health.SetHealth(p1Health.maxHealth);
+            p2Health.currentHealth = p2Health.maxHealth;
+            p2Health.SetHealth(p2Health.maxHealth);
             cOA.p1Timer = 0;
             cOA.p2Timer = 0;
             trainingStart();

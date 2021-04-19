@@ -66,8 +66,8 @@ public class RoundManager : MonoBehaviour
     public void Awake()
     {
         //Player script 
-        p1Health = player1.GetComponent<PlayerHealth>();
-        p2Health = player2.GetComponent<PlayerHealth>();
+        p1Health = player1.GetComponentInChildren<PlayerHealth>();
+        p2Health = player2.GetComponentInChildren<PlayerHealth>();
         p1Movement = player1.GetComponent<PlayerMovement>();
         p2Movement = player2.GetComponent<PlayerMovement>();
         p1Buttons = player1.GetComponentInChildren<PlayerButtons>();
