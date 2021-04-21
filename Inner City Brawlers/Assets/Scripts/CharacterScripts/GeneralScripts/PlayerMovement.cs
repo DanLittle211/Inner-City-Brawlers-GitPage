@@ -392,16 +392,14 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator IdleToCrouchSequence(float time)
     {
         ChangeAnimationState(toCrouch);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.3f);
         currentPlayState = playerState.Crouch;
-        //CheckEquals();
     }
     IEnumerator CrouchToIdleSequence(float time)
     {
         ChangeAnimationState(toIdle);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
         currentPlayState = playerState.Grounded;
-        //CheckEquals();
     }
     public Vector2 GetInput()
     {

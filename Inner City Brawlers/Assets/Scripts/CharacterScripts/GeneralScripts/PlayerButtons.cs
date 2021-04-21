@@ -218,7 +218,7 @@ public class PlayerButtons : MonoBehaviour
             {
                 if (LastInput != null)
                 {
-                    Attack att = getAttackFromType(LastInput.type);
+                    Attack att = getAttackFromType(LastInput.type, this.pM.currentPlayState);
                     if (att != null)
                     {
                         Attack(att);
@@ -381,7 +381,7 @@ public class PlayerButtons : MonoBehaviour
                     leeway = 0;
                 }
             }
-            Attack att = getAttackFromType(input.type);
+            Attack att = getAttackFromType(input.type, this.pM.currentPlayState);
             foreach (int i in remove)
             {
                 currentCombos.RemoveAt(i);
@@ -730,9 +730,9 @@ public class PlayerButtons : MonoBehaviour
         }
     }
 
-    Attack getAttackFromType(AttackType t)
+    Attack getAttackFromType(AttackType t, PlayerMovement.playerState currState)
     {
-        if (t == AttackType.light)
+        if (t == AttackType.light && currState == pM.currentPlayState)
         {
             return lightAttack;
         }

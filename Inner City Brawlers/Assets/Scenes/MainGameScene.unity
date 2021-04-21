@@ -2762,7 +2762,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135839375}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3488.9998}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1406920087}
@@ -14782,7 +14782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6848977186352922573, guid: 72d0625c5613d8d48a2f8ccc583a8144, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2994996045485485061, guid: 72d0625c5613d8d48a2f8ccc583a8144, type: 3}
@@ -15064,10 +15064,10 @@ MonoBehaviour:
   attackRange: 0.25
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 7168
+    m_Bits: 1024
   myMask:
     serializedVersion: 2
-    m_Bits: 896
+    m_Bits: 128
 --- !u!114 &651999251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16546,6 +16546,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739149570}
   m_CullTransparentMesh: 1
+--- !u!1 &740387476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6848977186352922573, guid: 72d0625c5613d8d48a2f8ccc583a8144, type: 3}
+  m_PrefabInstance: {fileID: 651999245}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &740387477
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740387476}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.028785616, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.31204775
 --- !u!1 &742490901
 GameObject:
   m_ObjectHideFlags: 0
@@ -39850,7 +39871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6848977186352922573, guid: 72d0625c5613d8d48a2f8ccc583a8144, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1921265183281929399, guid: 72d0625c5613d8d48a2f8ccc583a8144, type: 3}
@@ -40120,10 +40141,10 @@ MonoBehaviour:
   attackRange: 0.4
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 896
+    m_Bits: 128
   myMask:
     serializedVersion: 2
-    m_Bits: 7168
+    m_Bits: 1024
 --- !u!114 &1811452104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46637,7 +46658,7 @@ GameObject:
   - component: {fileID: 2142617231}
   - component: {fileID: 2142617229}
   - component: {fileID: 2142617232}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Player1
   m_TagString: Player1
   m_Icon: {fileID: 0}
