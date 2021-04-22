@@ -9,12 +9,11 @@ public class StateManager : MonoBehaviour
     public enum GameState {LevelState, PauseState, LearnState}
     public GameState currentGameState;
     private bool isPaused;
-    private bool isLearning;
    
     public GameObject Level; 
     public GameObject Pause;
     public GameObject Learn;
-  
+    
 
     // Start is called before the first frame update
     void Start()
@@ -64,6 +63,11 @@ public class StateManager : MonoBehaviour
     {
         currentGameState = GameState.LearnState;
         ShowScreen(Learn);
+    }
+
+    public void TrainingMenu()
+    {
+        SceneManager.LoadScene("TrainingRoom");
     }
 
     public void BackToGame()

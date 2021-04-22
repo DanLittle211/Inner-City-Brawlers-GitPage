@@ -890,7 +890,7 @@ GameObject:
   - component: {fileID: 146123162}
   - component: {fileID: 146123161}
   m_Layer: 5
-  m_Name: MainMenuButton
+  m_Name: TrainingRoomButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -959,7 +959,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 146123162}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 519420030}
+        m_TargetAssemblyTypeName: StateManager, Assembly-CSharp
+        m_MethodName: TrainingMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &146123162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2904,8 +2916,8 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
-  - component: {fileID: 519420033}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2937,6 +2949,7 @@ MonoBehaviour:
   Level: {fileID: 590036320}
   Pause: {fileID: 1544483986}
   Learn: {fileID: 1435262701}
+  Train: {fileID: 0}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -3003,7 +3016,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2983923fd77e49e2a116bafbf287095, type: 3}
+  m_Script: {fileID: 11500000, guid: f999e015bbdc2614d884e4812ed64c87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   targets:
@@ -3163,7 +3176,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Main Menu
+  m_Text: Training Room
 --- !u!222 &575286050
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5224,9 +5237,93 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf12fd399adb8146a1fbc9ba801b96f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gMM: {fileID: 0}
+  tPM: {fileID: 0}
+  mS: {fileID: 0}
+  cOA: {fileID: 0}
+  rM: {fileID: 0}
+  p1Transform: {fileID: 0}
+  p2Transform: {fileID: 0}
+  p1StartPosition: {fileID: 0}
+  p2StartPosition: {fileID: 0}
+  p1Health: {fileID: 0}
+  p2Health: {fileID: 0}
+  p1HealthFloat: 0
+  p2HealthFloat: 0
+  p1CAMeterfloat: 0
+  p1CAMeterMaxfloat: 5
+  p1CAMeter: {fileID: 0}
+  p1CAFill: {fileID: 0}
+  p1CaIsFull: 0
+  p1CaGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  p2CAMeterfloat: 0
+  p2CAMeterMaxfloat: 5
+  p2CAMeter: {fileID: 0}
+  p2CAFill: {fileID: 0}
+  p2CaIsFull: 0
+  p2CaGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  isPaused: 0
   currentTimerInt: 0
   maxTimerInt: 99
-  TimerText: {fileID: 1465969646}
+  TimerText: {fileID: 0}
+  TimeStart: 0
+  hasFunctionRun: 0
 --- !u!114 &1100499574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9117,7 +9214,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5.000061, y: 0}
+  m_AnchoredPosition: {x: -5.0000916, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1994163732

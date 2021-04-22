@@ -108,19 +108,16 @@ public class PlayerButtons : MonoBehaviour
             if (player.GetButtonDown("LightAttack"))
             {
                 StartCoroutine(LAttack(0.2f));
-                transform.position = new Vector2(transform.position.x + 1, transform.position.y);
                 input = new ComboInput(AttackType.light); Debug.Log("Light attack");
             }
             if (player.GetButtonDown("MediumAttack"))
             {
                 StartCoroutine(mediumAttack(0.6f));
-                transform.position = new Vector2(transform.position.x + 2, transform.position.y);
                 input = new ComboInput(AttackType.medium); Debug.Log("medium attack ");
             }
             if (player.GetButtonDown("HeavyAttack"))
             {
-                StartCoroutine(heavyAttack(1f));
-                transform.position = new Vector2(transform.position.x + 3, transform.position.y);
+                 StartCoroutine(heavyAttack(1f));
                 input = new ComboInput(AttackType.heavy); Debug.Log("Heavy attack ");
             }
             

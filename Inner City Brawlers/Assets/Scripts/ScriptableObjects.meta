@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 981695c11df7e4e989a351b49e820721
+=======
+guid: c4d5a3e469ff6ce4887874816574c37a
+>>>>>>> DanBranch
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

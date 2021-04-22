@@ -19,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
         currentRecovHealth = maxHealth;
     }
-    public void SetMaxHealth(int health)
+    public void SetMaxHealth(float health)
     {
         slider.maxValue = health;
         slider.value = health;
@@ -33,26 +33,21 @@ public class PlayerHealth : MonoBehaviour
         Fill.color = gradient.Evaluate(slider.normalizedValue);
     }
 
-    void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         currentHealth -= damage;
         Mathf.Round(currentHealth);
-        //currentRecovHealth -= (Mathf.Round(damage/2));
         SetHealth(currentHealth);
     }
     public void MakeHealth(float healthPercent)
     {
         currentHealth += healthPercent;
         SetHealth(currentHealth);
-
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "TempHitBox")
         {
-            TakeDamage(20f);
-            meterSystem.GiveMeter(0.1f);
-            meterSystem.MakeMeter(0.3f);
             Debug.Log("Hit hitbox");
         }
     }
@@ -63,9 +58,22 @@ public class PlayerHealth : MonoBehaviour
         {
             //currentHealth = currentRecovHealth;
         }
+
+        if (currentHealth >= 500)
+        {
+            currentHealth = 500;
+        }
         if (currentHealth <= 0)
         {
             currentHealth = 0;
+        }
+        if (currentHealth <= 0)
+        {
+            
+            GameObject gManager = GameObject.Find("GameManager");
+            GameManagerScript gM = (GameManagerScript)gManager.GetComponent(typeof(GameManagerScript));
+            //currentHealth = 0;
+            // gM.currentMatchState = GameManagerScript.playerState.Knockout;
         }
     }
 }
