@@ -25,6 +25,7 @@ public class PlayerButtons : MonoBehaviour
     [SerializeField] public int playerID;
     [SerializeField] public Player player;
     
+    
 
     [Header("Attacks")]
     public Attack lightAttack;
@@ -218,10 +219,10 @@ public class PlayerButtons : MonoBehaviour
             {
                 if (LastInput != null)
                 {
-                    Attack att = getAttackFromType(LastInput.type, this.pM.currentPlayState);
-                    if (att != null)
+
+                    if (getAttackFromType(LastInput.type) != null)
                     {
-                        Attack(att);
+                        Attack(getAttackFromType(LastInput.type));
                         //isAttacking = false;
                         LastInput = null;
                     }
@@ -233,7 +234,6 @@ public class PlayerButtons : MonoBehaviour
         {
             leeway = 0;
         }
-
         if (player.GetButtonDown("LightAttack"))
         {
             if (onCharacter == false)
@@ -241,18 +241,29 @@ public class PlayerButtons : MonoBehaviour
                 attackpoint.gameObject.SetActive(false);
                 StartCoroutine(LAttack(0.2f));
             }
-            
-            input = new ComboInput(AttackType.light, pM.GetInput(), pM.currentPlayState); Debug.Log("Light attack");
+            if (pM.currentPlayState == PlayerMovement.playerState.Grounded)
+            {
+                input = new ComboInput(AttackType.light, pM.GetInput(), playerState.Grounded); Debug.Log("Light attack");
+            }
+            else if (pM.currentPlayState == PlayerMovement.playerState.Crouch)
+            {
+                input = new ComboInput(AttackType.light, pM.GetInput(), playerState.Crouch); Debug.Log("Light attack");
+            }
+            if (pM.currentPlayState == PlayerMovement.playerState.Jump)
+            {
+                input = new ComboInput(AttackType.light, pM.GetInput(), playerState.Jump); Debug.Log("Light attack");
+            }
+
         }
         if (player.GetButtonDown("MediumAttack"))
         {
             StartCoroutine(mediumAttack(0.6f));
-            input = new ComboInput(AttackType.medium, pM.GetInput(), pM.currentPlayState); Debug.Log("medium attack ");
+            input = new ComboInput(AttackType.medium, pM.GetInput(), playerState.Grounded); Debug.Log("medium attack ");
         }
         if (player.GetButtonDown("HeavyAttack"))
         {
             StartCoroutine(heavyAttack(1f));
-            input = new ComboInput(AttackType.heavy, pM.GetInput(), pM.currentPlayState); Debug.Log("Heavy attack ");
+            input = new ComboInput(AttackType.heavy, pM.GetInput(), playerState.Grounded); Debug.Log("Heavy attack ");
         }
 
         if (pM.currentPlayState == PlayerMovement.playerState.Grounded ^ pM.currentPlayState == PlayerMovement.playerState.Crouch)
@@ -260,18 +271,18 @@ public class PlayerButtons : MonoBehaviour
             if (player.GetButtonDown("UniqueAttack"))
             {
                 StartCoroutine(uniqueAttack(1.2f));
-                input = new ComboInput(AttackType.unique, pM.GetInput(), pM.currentPlayState); Debug.Log("Unique attack ");
+                input = new ComboInput(AttackType.unique, pM.GetInput(), playerState.Grounded); Debug.Log("Unique attack ");
 
             }
             if (player.GetButtonDown("Throw"))
             {
-                input = new ComboInput(AttackType.throwAction, pM.GetInput(), pM.currentPlayState); Debug.Log("Throw");
+                input = new ComboInput(AttackType.throwAction, pM.GetInput(), playerState.Grounded); Debug.Log("Throw");
 
             }
             if (player.GetButtonDown("Use Assist"))
             {
 
-                input = new ComboInput(AttackType.Assist, pM.GetInput(), pM.currentPlayState); Debug.Log("Use Assist ");
+                input = new ComboInput(AttackType.Assist, pM.GetInput(), playerState.Grounded); Debug.Log("Use Assist ");
             }
             if (player.GetButtonDown("CalloutAssist"))
             {
@@ -291,7 +302,7 @@ public class PlayerButtons : MonoBehaviour
             }
             if (player.GetButtonDown("LifelineAssist"))
             {
-                input = new ComboInput(AttackType.Lifeline, pM.GetInput(), pM.currentPlayState); Debug.Log("LifeLine Assist Used ");
+                input = new ComboInput(AttackType.Lifeline, pM.GetInput(), playerState.Grounded); Debug.Log("LifeLine Assist Used ");
             }
             if (player.GetButtonDown("SwitchAnim"))
             {
@@ -307,93 +318,106 @@ public class PlayerButtons : MonoBehaviour
                 }
 
             }
+        }
 
-            Vector2 movement = Vector2.zero;
-            if (pM.InputDownX1())
+        Vector2 movement = Vector2.zero;
+        if (pM.InputDownX1())
+        {
+            DirectionLook dlook = GameObject.Find("GameManager").GetComponent<DirectionLook>();
+            if (playerID == 0)
             {
-                DirectionLook dlook = GameObject.Find("GameManager").GetComponent<DirectionLook>();
-                if (playerID == 0)
+                if (dlook.isFlipped == false)
                 {
-                    if (dlook.isFlipped == false)
-                    {
-                        movement.x = -(pM.x1);
-                    }
-                    else
-                    {
-                        movement.x = (pM.x1);
-                    }
-                }
-                if (playerID == 1)
-                {
-                    if (dlook.isFlipped == true)
-                    {
-                        movement.x = -(pM.x1);
- 
-                    }
-                    else
-                    {
-                        movement.x = (pM.x1);
-                    }
-                }
-            }
-            if (pM.InputDownY1())
-            {
-                movement.y = pM.y1;
-            }
-            if (movement != Vector2.zero)
-            {
-                input = new ComboInput(movement);
-            }
-            if (input == null)
-            {
-                return;
-
-            }
-            LastInput = input;
-            List<int> remove = new List<int>();
-
-            for (int i = 0; i < currentCombos.Count; i++)
-            {
-                Combo c = combos[currentCombos[i]];
-                if (c.continueCombo(input))
-                {
-                    leeway = 0;
+                    movement.x = -(pM.x1);
                 }
                 else
                 {
-                    remove.Add(i);
+                    movement.x = (pM.x1);
                 }
             }
-            if (skip != false)
+            if (playerID == 1)
             {
-                skip = false;
-                return;
-            }
-            for (int i = 0; i < combos.Count; i++)
-            {
-                if (currentCombos.Contains(i))
+                if (dlook.isFlipped == true)
                 {
-                    continue;
+                    movement.x = -(pM.x1);
+
                 }
-                if (combos[i].continueCombo(input))
+                else
                 {
-                    currentCombos.Add(i);
-                    leeway = 0;
+                    movement.x = (pM.x1);
                 }
             }
-            Attack att = getAttackFromType(input.type, this.pM.currentPlayState);
-            foreach (int i in remove)
+        }
+        if (pM.InputDownY1())
+        {
+            movement.y = pM.y1;
+        }
+        if (movement != Vector2.zero)
+        {
+            if(pM.currentPlayState == PlayerMovement.playerState.Grounded)
             {
-                currentCombos.RemoveAt(i);
+                input = new ComboInput(movement, playerState.Grounded);
             }
-            if (att != null && currentCombos.Count <= 0)
+            if (pM.currentPlayState == PlayerMovement.playerState.Crouch)
             {
-                Attack(att);
+                input = new ComboInput(movement, playerState.Crouch);
             }
+            if (pM.currentPlayState == PlayerMovement.playerState.Jump)
+            {
+                input = new ComboInput(movement, playerState.Jump);
+            }
+
+        }
+        if (input == null)
+        {
+            return;
+
+        }
+        LastInput = input;
+        List<int> remove = new List<int>();
+
+        for (int i = 0; i < currentCombos.Count; i++)
+        {
+            Combo c = combos[currentCombos[i]];
+            if (c.continueCombo(input))
+            {
+                leeway = 0;
+            }
+            else
+            {
+                remove.Add(i);
+            }
+        }
+        if (skip != false)
+        {
+            skip = false;
+            return;
+        }
+        for (int i = 0; i < combos.Count; i++)
+        {
+            if (currentCombos.Contains(i))
+            {
+                continue;
+            }
+            if (combos[i].continueCombo(input))
+            {
+                currentCombos.Add(i);
+                leeway = 0;
+            }
+        }
+        Attack att = getAttackFromType(input.type);
+        foreach (int i in remove)
+        {
+            currentCombos.RemoveAt(i);
+        }
+        if (att != null && currentCombos.Count <= 0)
+        {
+            Attack(att);
         }
     }
     public void checkForBlock()
     {
+        //Be sure to change states to block later
         DirectionLook dlook = GameObject.Find("GameManager").GetComponent<DirectionLook>();
         if (playerID == 0)
         {
@@ -407,13 +431,13 @@ public class PlayerButtons : MonoBehaviour
                         {
                             pM.isBlockingHigh = true;
                             pM.isBlockingLow = false;
-                            contactFilter.SetLayerMask(8);
+                            //blockhigh
                             if ((-pM.y1 >= 0.3))
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
                                 
-                                this.contactFilter.SetLayerMask(9);
+                                //blocklow
 
                             }
                         }
@@ -421,21 +445,21 @@ public class PlayerButtons : MonoBehaviour
                         {
                             pM.isBlockingHigh = false;
                             pM.isBlockingLow = false;
-                            contactFilter.SetLayerMask(7);
+                            //noblock
                         }
                     }
                     if (dlook.blockAvailable == false)
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
-                        contactFilter.SetLayerMask(7);
+                        //noblock
                     }
                 }
                 else
                 {
                     pM.isBlockingHigh = false;
                     pM.isBlockingLow = false;
-                    contactFilter.SetLayerMask(7);
+                    //noblock
                 }
                 if ((-pM.y1 > 0.5))
                 {
@@ -447,7 +471,7 @@ public class PlayerButtons : MonoBehaviour
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
-                                contactFilter.SetLayerMask(9);
+                                //blocklow
                             }
                         }
                     }
@@ -455,7 +479,7 @@ public class PlayerButtons : MonoBehaviour
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
-                        contactFilter.SetLayerMask(7);
+                        //noblock
                     }
                 }
 
@@ -470,33 +494,33 @@ public class PlayerButtons : MonoBehaviour
                         {
                             pM.isBlockingHigh = true;
                             pM.isBlockingLow = false;
-                            this.gameObject.layer = 8;
+                            //blockhigh
                             if ((-pM.y1 >= 0.3))
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
-                                contactFilter.SetLayerMask(9);
+                                //blocklow
                             }
                         }
                         else
                         {
                             pM.isBlockingHigh = false;
                             pM.isBlockingLow = false;
-                            contactFilter.SetLayerMask(7);
+                            //noblock
                         }
                     }
                     else
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
-                        contactFilter.SetLayerMask(7);
+                        //noblock
                     }
                 }
                 else
                 {
                     pM.isBlockingHigh = false;
                     pM.isBlockingLow = false;
-                    contactFilter.SetLayerMask(7);
+                    //noblock
                 }
                 if ((-pM.y1 > 0.5))
                 {
@@ -508,7 +532,7 @@ public class PlayerButtons : MonoBehaviour
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
-                                contactFilter.SetLayerMask(9);
+                                //blocklow
                             }
                         }
                     }
@@ -516,7 +540,7 @@ public class PlayerButtons : MonoBehaviour
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
-                        contactFilter.SetLayerMask(7);
+                        //noblock
                     }
                 }
 
@@ -534,33 +558,33 @@ public class PlayerButtons : MonoBehaviour
                         {
                             pM.isBlockingHigh = true;
                             pM.isBlockingLow = false;
-                            contactFilter.SetLayerMask(11);
+                            //blockhigh
                             if ((-pM.y1 >= 0.3))
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
-                                contactFilter.SetLayerMask(12);
+                                //blocklow
                             }
                         }
                         if (pM.otherPlayer.isAttacking == false)
                         {
                             pM.isBlockingHigh = false;
                             pM.isBlockingLow = false;
-                            contactFilter.SetLayerMask(10);
+                            //noblock
                         }
                     }
                     if (dlook.blockAvailable == false)
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
-                        contactFilter.SetLayerMask(10);
+                        //noblock
                     }
                 }
                 else
                 {
                     pM.isBlockingHigh = false;
                     pM.isBlockingLow = false;
-                    contactFilter.SetLayerMask(10);
+                    //noblock
                 }
                 if ((-pM.y1 > 0.5))
                 {
@@ -572,7 +596,7 @@ public class PlayerButtons : MonoBehaviour
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
-                                contactFilter.SetLayerMask(11);
+                                //blocklow
                             }
                         }
                     }
@@ -580,7 +604,7 @@ public class PlayerButtons : MonoBehaviour
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
-                        contactFilter.SetLayerMask(10);
+                        //noblock
                     }
                 }
 
@@ -595,33 +619,33 @@ public class PlayerButtons : MonoBehaviour
                         {
                             pM.isBlockingHigh = true;
                             pM.isBlockingLow = false;
-                            contactFilter.SetLayerMask(12);
+                            //blockhigh
                             if ((-pM.y1 >= 0.3))
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
-                                contactFilter.SetLayerMask(11);
+                                //blocklow
                             }
                         }
                         else
                         {
                             pM.isBlockingHigh = false;
                             pM.isBlockingLow = false;
-                            contactFilter.SetLayerMask(10);
+                            //noblock
                         }
                     }
                     else
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
-                        contactFilter.SetLayerMask(10);
+                        //noblock
                     }
                 }
                 else
                 {
                     pM.isBlockingHigh = false;
                     pM.isBlockingLow = false;
-                    contactFilter.SetLayerMask(10);
+                    //noblock
                 }
                 if ((-pM.y1 > 0.5))
                 {
@@ -633,7 +657,7 @@ public class PlayerButtons : MonoBehaviour
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
-                                contactFilter.SetLayerMask(11);
+                                //blocklow
                             }
                         }
                     }
@@ -641,11 +665,15 @@ public class PlayerButtons : MonoBehaviour
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
-                        contactFilter.SetLayerMask(10);
+                        //noblock
                     }
                 }
             }
         }
+    }
+    public void CheckInput()
+    {
+
     }
 
 
@@ -730,9 +758,9 @@ public class PlayerButtons : MonoBehaviour
         }
     }
 
-    Attack getAttackFromType(AttackType t, PlayerMovement.playerState currState)
+    Attack getAttackFromType(AttackType t)
     {
-        if (t == AttackType.light && currState == pM.currentPlayState)
+        if (t == AttackType.light)
         {
             return lightAttack;
         }
@@ -895,20 +923,22 @@ public class ComboInput
 {
     public AttackType type;
     public Vector2 mType;
-    public PlayerMovement.playerState thisCurrentState;
+    public playerState thisCurrentState;
 
 
-    public ComboInput(AttackType e, Vector2 m , PlayerMovement.playerState currentState)
+    public ComboInput(AttackType e, Vector2 m , playerState currentState)
     {
         type = e;
         mType = Vector2.zero;
         mType = m;
         thisCurrentState = currentState;
     }
-    public ComboInput(Vector2 e)
+
+    public ComboInput(Vector2 e, playerState currentState)
     {
         type = AttackType.movement;
         mType = e;
+        thisCurrentState = currentState;
     }
 
     public bool IsSameAs(ComboInput J)
