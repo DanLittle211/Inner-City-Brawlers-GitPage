@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Rewired;
 
+public enum playerState { Grounded, Crouch, Jump, Block, SoftKnockdown, HardKnockdown, Immobile };
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     public enum playerState { Grounded, Crouch, Jump, Block, SoftKnockdown, HardKnockdown, Immobile };
     public playerState currentPlayState;
+    public playerState lastPlayState;
 
 
     //Rewired
@@ -45,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 walkMovement;
     [HideInInspector]
     public bool xDown1, yDown1;
+    public float delay;
 
     string currentState;
     const string IDLE = "idle";
@@ -60,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        lastPlayState = currentPlayState;
         currentPlayState = playerState.Grounded;
         walkMovement = Vector2.zero;
         isBlockingHigh = false;
@@ -119,6 +123,26 @@ public class PlayerMovement : MonoBehaviour
             GetInput(ref y1, ref yDown1, "Move Vertical");
 
         }
+    }
+    public void LateUpdate()
+    {
+
+
+        if (delay > 0)
+        {
+            delay -= Time.deltaTime;
+        }
+        else if (delay <= 0)
+        {
+            ResetValue();
+            lastPlayState = currentPlayState;
+            Debug.Log("Last State: " + lastPlayState + " Current State: " + currentPlayState);
+        }
+
+    }
+    public void ResetValue()
+    {
+        delay = 0.5f;
     }
 
     private void FixedUpdate()

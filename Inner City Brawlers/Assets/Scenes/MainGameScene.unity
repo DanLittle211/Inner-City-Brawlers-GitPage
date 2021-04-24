@@ -9005,6 +9005,7 @@ MonoBehaviour:
   jumpStrength: 24
   movementSpeed: 4
   currentPlayState: 0
+  lastPlayState: 0
   playerID: 1
   moveHorizontal: 0
   moveUp: 0
@@ -9014,6 +9015,7 @@ MonoBehaviour:
   walkMovement: {x: 0, y: 0}
   xDown1: 0
   yDown1: 0
+  delay: 7
 --- !u!58 &396402703
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -29881,7 +29883,7 @@ MonoBehaviour:
   m_VerticalAxis: Move Up
   m_SubmitButton: Accept
   m_CancelButton: UICancel
-  m_InputActionsPerSecond: 10
+  m_InputActionsPerSecond: 2
   m_RepeatDelay: 0
   m_allowMouseInput: 1
   m_allowMouseInputIfTouchSupported: 1
@@ -46740,6 +46742,7 @@ MonoBehaviour:
   jumpStrength: 24
   movementSpeed: 4
   currentPlayState: 0
+  lastPlayState: 0
   playerID: 0
   moveHorizontal: 0
   moveUp: 0
@@ -46749,6 +46752,7 @@ MonoBehaviour:
   walkMovement: {x: 0, y: 0}
   xDown1: 0
   yDown1: 0
+  delay: 0.5
 --- !u!1 &2143060503
 GameObject:
   m_ObjectHideFlags: 0
