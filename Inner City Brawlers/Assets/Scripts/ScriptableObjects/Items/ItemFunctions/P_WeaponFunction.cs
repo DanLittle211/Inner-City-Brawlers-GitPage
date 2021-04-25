@@ -54,7 +54,9 @@ public class P_WeaponFunction : MonoBehaviour
     {
         if (other.gameObject.tag == "Player1" || other.gameObject.tag == "Player2")
         {
-            Debug.Log(other.gameObject.name + " picked up " + this.gameObject.name);//temporary
+            //Debug.Log(other.gameObject.name + " picked up " + this.gameObject.name);//temporary
+            other.gameObject.GetComponent<Pweap_Timer>().ResetTimer();
+            other.gameObject.GetComponent<Pweap_Timer>().hasWeapon = true;
             DestroySelf();//temporary until full function is completed
         }
     }
