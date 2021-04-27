@@ -6,7 +6,7 @@ public class P_WeaponFunction : MonoBehaviour
 {
     public itemObject P_Weapon;
     public float lifeTime;
-    public bool isGrounded;
+    public bool isGrounded;//tracks if the item is on the gound or not
 
     public void Awake()
     {

@@ -35,7 +35,7 @@ public class CallOutAssist : MonoBehaviour
 
     private void Awake()
     {
-        AssistAllowed = true;//Temporary for testing, makes the assist being on true
+        AssistAllowed = true;//Temporary for Alpha, makes the assist being on true
         itemList = GameObject.Find("GameManager").GetComponent<ItemLists>();//Reference for itemLists, found on GameManager object
         rM = this.GetComponent<RoundManager>();
         p1Transform = GameObject.Find("Player1").transform;

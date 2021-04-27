@@ -114,10 +114,10 @@ public class RoundManager : MonoBehaviour
             //preround countdown
             if (currentState == roundState.preRound)
             {
+                //setting each player's movement state to immobile while in this round state
                 p1Movement.isDisabled = true;
                 p2Movement.isDisabled = true;
                 oneTime = false;
-                //setting each player's movement state to immobile while in this round state
                 preroundTimer -= Time.deltaTime; //counts down timer while in this state
                 if (preroundTimer <= 0)
                 {

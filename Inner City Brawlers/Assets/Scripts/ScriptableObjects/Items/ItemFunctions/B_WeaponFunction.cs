@@ -17,17 +17,17 @@ public class B_WeaponFunction : MonoBehaviour
     {
         if (isGrounded)
         {
-            tickDown();//calls tickDown Method
+            tickDown();//calls tickDown Method while it is on the ground
         }
         if (lifeTime <= 0)
         {
-            DestroySelf();//calls DestroySelf Method
+            DestroySelf();//calls DestroySelf Method after lieftime is up  
         }
     }
 
     public void tickDown()
     {
-        lifeTime -= Time.deltaTime;//ticks down lifetime counter
+        lifeTime -= Time.deltaTime;//ticks down lifetime counter as
     }
     private void DestroySelf()
     {
@@ -55,8 +55,8 @@ public class B_WeaponFunction : MonoBehaviour
         if (other.gameObject.tag == "Player1" || other.gameObject.tag == "Player2")
         {
             Debug.Log(other.gameObject.name + " picked up " + this.gameObject.name);//temporary
-            other.gameObject.GetComponent<Bweap_Timer>().ResetTimer();
-            other.gameObject.GetComponent<Bweap_Timer>().hasWeapon = true;
+            other.gameObject.GetComponent<Bweap_Timer>().ResetTimer();//finds blunt weapon timer script on interacting player and resets it to max time
+            other.gameObject.GetComponent<Bweap_Timer>().hasWeapon = true;//sets bool on b-weapon script to true which activates the countdown
             DestroySelf();//temporary until full function is completed
         }
     }
