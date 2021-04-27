@@ -9343,7 +9343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 212234448d69b654bae75c452b314a7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherPlayer: {fileID: 1811452103}
+  otherPlayer: {fileID: 651999250}
   myRB2D: {fileID: 0}
   myAnim: {fileID: 1811452099}
   groundCheck: {fileID: 2030056160}
@@ -24293,7 +24293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1112377047
 Transform:
   m_ObjectHideFlags: 0

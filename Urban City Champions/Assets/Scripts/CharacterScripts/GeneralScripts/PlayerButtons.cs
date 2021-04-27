@@ -420,13 +420,28 @@ public class PlayerButtons : MonoBehaviour
             Attack(att);
         }
     }
+    public void previousNonBlockState()
+    {
+        if (pM.currentPlayState == PlayerMovement.playerState.Grounded)
+        {
+            pM.currentPlayState = PlayerMovement.playerState.Grounded;
+        }
+        if (pM.currentPlayState == PlayerMovement.playerState.Crouch)
+        {
+            pM.currentPlayState = PlayerMovement.playerState.Crouch;
+        }
+        if (pM.currentPlayState == PlayerMovement.playerState.Jump)
+        {
+            pM.currentPlayState = PlayerMovement.playerState.Jump;
+        }
+    }
     public void checkForBlock()
     {
         //Be sure to change states to block later
         DirectionLook dlook = GameObject.Find("GameManager").GetComponent<DirectionLook>();
         if (playerID == 0)
         {
-            if (dlook.isFlipped == false)
+            if (dlook.isFlipped == true)
             {
                 if ((-pM.x1 >= 0.5))
                 {
@@ -437,11 +452,12 @@ public class PlayerButtons : MonoBehaviour
                             pM.isBlockingHigh = true;
                             pM.isBlockingLow = false;
                             //blockhigh
+                            pM.currentPlayState = PlayerMovement.playerState.HB; 
                             if ((-pM.y1 >= 0.3))
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
-                                
+                                pM.currentPlayState = PlayerMovement.playerState.LB;
                                 //blocklow
 
                             }
@@ -450,6 +466,7 @@ public class PlayerButtons : MonoBehaviour
                         {
                             pM.isBlockingHigh = false;
                             pM.isBlockingLow = false;
+                            previousNonBlockState();
                             //noblock
                         }
                     }
@@ -457,6 +474,7 @@ public class PlayerButtons : MonoBehaviour
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
+                        previousNonBlockState();
                         //noblock
                     }
                 }
@@ -464,6 +482,7 @@ public class PlayerButtons : MonoBehaviour
                 {
                     pM.isBlockingHigh = false;
                     pM.isBlockingLow = false;
+                    previousNonBlockState();
                     //noblock
                 }
                 if ((-pM.y1 > 0.5))
@@ -476,6 +495,7 @@ public class PlayerButtons : MonoBehaviour
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
+                                pM.currentPlayState = PlayerMovement.playerState.LB;
                                 //blocklow
                             }
                         }
@@ -484,12 +504,13 @@ public class PlayerButtons : MonoBehaviour
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
+                        previousNonBlockState();
                         //noblock
                     }
                 }
 
             }
-            if (dlook.isFlipped == true)
+            if (dlook.isFlipped == false)
             {
                 if ((pM.x1 >= 0.5))
                 {
@@ -499,11 +520,13 @@ public class PlayerButtons : MonoBehaviour
                         {
                             pM.isBlockingHigh = true;
                             pM.isBlockingLow = false;
+                            pM.currentPlayState = PlayerMovement.playerState.HB;
                             //blockhigh
                             if ((-pM.y1 >= 0.3))
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
+                                pM.currentPlayState = PlayerMovement.playerState.LB;
                                 //blocklow
                             }
                         }
@@ -511,6 +534,7 @@ public class PlayerButtons : MonoBehaviour
                         {
                             pM.isBlockingHigh = false;
                             pM.isBlockingLow = false;
+                            previousNonBlockState();
                             //noblock
                         }
                     }
@@ -518,6 +542,7 @@ public class PlayerButtons : MonoBehaviour
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
+                        previousNonBlockState();
                         //noblock
                     }
                 }
@@ -525,6 +550,7 @@ public class PlayerButtons : MonoBehaviour
                 {
                     pM.isBlockingHigh = false;
                     pM.isBlockingLow = false;
+                    previousNonBlockState();
                     //noblock
                 }
                 if ((-pM.y1 > 0.5))
@@ -537,6 +563,7 @@ public class PlayerButtons : MonoBehaviour
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
+                                pM.currentPlayState = PlayerMovement.playerState.LB;
                                 //blocklow
                             }
                         }
@@ -545,6 +572,7 @@ public class PlayerButtons : MonoBehaviour
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
+                        previousNonBlockState();
                         //noblock
                     }
                 }
@@ -555,7 +583,7 @@ public class PlayerButtons : MonoBehaviour
         {
             if (dlook.isFlipped == true)
             {
-                if ((-pM.x1 >= 0.5))
+                if ((pM.x1 >= 0.5))
                 {
                     if (dlook.blockAvailable == true)
                     {
@@ -563,11 +591,13 @@ public class PlayerButtons : MonoBehaviour
                         {
                             pM.isBlockingHigh = true;
                             pM.isBlockingLow = false;
+                            this.pM.currentPlayState = PlayerMovement.playerState.HB;
                             //blockhigh
                             if ((-pM.y1 >= 0.3))
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
+                                this.pM.currentPlayState = PlayerMovement.playerState.LB;
                                 //blocklow
                             }
                         }
@@ -575,6 +605,7 @@ public class PlayerButtons : MonoBehaviour
                         {
                             pM.isBlockingHigh = false;
                             pM.isBlockingLow = false;
+                            previousNonBlockState();
                             //noblock
                         }
                     }
@@ -582,6 +613,7 @@ public class PlayerButtons : MonoBehaviour
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
+                        previousNonBlockState();
                         //noblock
                     }
                 }
@@ -589,6 +621,7 @@ public class PlayerButtons : MonoBehaviour
                 {
                     pM.isBlockingHigh = false;
                     pM.isBlockingLow = false;
+                    previousNonBlockState();
                     //noblock
                 }
                 if ((-pM.y1 > 0.5))
@@ -601,6 +634,7 @@ public class PlayerButtons : MonoBehaviour
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
+                                pM.currentPlayState = PlayerMovement.playerState.LB;
                                 //blocklow
                             }
                         }
@@ -609,6 +643,7 @@ public class PlayerButtons : MonoBehaviour
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
+                        previousNonBlockState();
                         //noblock
                     }
                 }
@@ -616,7 +651,7 @@ public class PlayerButtons : MonoBehaviour
             }
             if (dlook.isFlipped == false)
             {
-                if ((pM.x1 >= 0.5))
+                if ((-pM.x1 >= 0.5))
                 {
                     if (dlook.blockAvailable == true)
                     {
@@ -624,11 +659,13 @@ public class PlayerButtons : MonoBehaviour
                         {
                             pM.isBlockingHigh = true;
                             pM.isBlockingLow = false;
+                            pM.currentPlayState = PlayerMovement.playerState.HB;
                             //blockhigh
                             if ((-pM.y1 >= 0.3))
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
+                                pM.currentPlayState = PlayerMovement.playerState.LB;
                                 //blocklow
                             }
                         }
@@ -636,6 +673,7 @@ public class PlayerButtons : MonoBehaviour
                         {
                             pM.isBlockingHigh = false;
                             pM.isBlockingLow = false;
+                            previousNonBlockState();
                             //noblock
                         }
                     }
@@ -643,6 +681,7 @@ public class PlayerButtons : MonoBehaviour
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
+                        previousNonBlockState();
                         //noblock
                     }
                 }
@@ -650,6 +689,7 @@ public class PlayerButtons : MonoBehaviour
                 {
                     pM.isBlockingHigh = false;
                     pM.isBlockingLow = false;
+                    previousNonBlockState();
                     //noblock
                 }
                 if ((-pM.y1 > 0.5))
@@ -662,6 +702,7 @@ public class PlayerButtons : MonoBehaviour
                             {
                                 pM.isBlockingHigh = false;
                                 pM.isBlockingLow = true;
+                                pM.currentPlayState = PlayerMovement.playerState.LB;
                                 //blocklow
                             }
                         }
@@ -670,6 +711,7 @@ public class PlayerButtons : MonoBehaviour
                     {
                         pM.isBlockingHigh = false;
                         pM.isBlockingLow = false;
+                        previousNonBlockState();
                         //noblock
                     }
                 }
