@@ -1818,3 +1818,135 @@ System memory in use after: 216.4 MB.
 Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2874.
 Total: 2.824565 ms (FindLiveObjects: 0.413345 ms CreateObjectMapping: 0.176399 ms MarkObjects: 2.210251 ms  DeleteObjects: 0.022742 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 4308.062479 seconds.
+  path: Assets/DialogueSystem/DialogManager.cs
+  artifactKey: Guid(2789206b1de6b4cb4bec40c4838e790d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogManager.cs using Guid(2789206b1de6b4cb4bec40c4838e790d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a3ccdc4ac5d6a999e38c5fe9528f105') in 0.006439 seconds
+  Import took 0.011066 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001696 seconds.
+  path: Assets/DialogueSystem/DialogManager.cs
+  artifactKey: Guid(2789206b1de6b4cb4bec40c4838e790d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogManager.cs using Guid(2789206b1de6b4cb4bec40c4838e790d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a3ccdc4ac5d6a999e38c5fe9528f105') in 0.002393 seconds
+  Import took 0.007373 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006841 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.373 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2091 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 216.4 MB.
+System memory in use after: 216.6 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2877.
+Total: 2.859066 ms (FindLiveObjects: 0.386754 ms CreateObjectMapping: 0.107581 ms MarkObjects: 2.340653 ms  DeleteObjects: 0.022412 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 321.470579 seconds.
+  path: Assets/DialogueSystem/DialogManager.cs
+  artifactKey: Guid(2789206b1de6b4cb4bec40c4838e790d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogManager.cs using Guid(2789206b1de6b4cb4bec40c4838e790d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d6888845933140aa7f6e2e38534e099') in 0.007638 seconds
+  Import took 0.012561 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005592 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.452 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2091 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 216.6 MB.
+System memory in use after: 216.9 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2880.
+Total: 2.909932 ms (FindLiveObjects: 0.378472 ms CreateObjectMapping: 0.283487 ms MarkObjects: 2.224332 ms  DeleteObjects: 0.022176 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005781 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.835 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.76 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2091 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 216.9 MB.
+System memory in use after: 217.1 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2883.
+Total: 3.923914 ms (FindLiveObjects: 0.518241 ms CreateObjectMapping: 0.270793 ms MarkObjects: 3.104113 ms  DeleteObjects: 0.028840 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004084 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.372 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2091 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 217.1 MB.
+System memory in use after: 217.3 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2886.
+Total: 2.802615 ms (FindLiveObjects: 0.444712 ms CreateObjectMapping: 0.201422 ms MarkObjects: 2.125820 ms  DeleteObjects: 0.026556 ms)
+

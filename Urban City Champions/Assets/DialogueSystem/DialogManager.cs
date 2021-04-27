@@ -5,36 +5,14 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class DialogManager : MonoBehaviour
-{
-    //SceneUI
-    public GameObject DialogScreen;
-    
-    public GameObject StartButton;
-    public GameObject NextButton;
-
-    //DialogBox
-    public Text convoContent;
-    
+{    
     //SentenceString
     private Queue<string> sentences;
-    //private Queue<AudioClip> myAudioClips;
-    /*
-    //Textures
-    public Image profileImage;
-    public Sprite JamesTired;
-    public Sprite KyleReg;
-    
-    //AnimationYetToBe
-    public GameObject fadeToBlack;
-    public GameObject blackFader;
-    */
-
-    //AudioSourcesYetToBe
+   
     void Start()
     {
         sentences = new Queue<string>();
-        //myAudioClips = new Queue<AudioClip>();
-        //NextButton.gameObject.SetActive(false);
+        
     }
     public void StartDialog(Dialog dialog)
     {  //method called at start of a conversation
@@ -46,20 +24,10 @@ public class DialogManager : MonoBehaviour
         {
             sentences.Enqueue(sentence); // put each in the queue
         }
-        /*foreach (AudioClip myClip in dialog.audioClips)
-        {
-            myAudioClips.Enqueue(myClip);
-        }*/
-        // then call a method to actually display it
+        
         DisplayNextSentence();
     }
-    /*public void PlayDialogAudio()
-    {
-        AudioClip myClip = myAudioClips.Dequeue();
-        AudioSource myAudio = GetComponent<AudioSource>();
-        myAudio.clip = myClip;
-        myAudio.Play();
-    }*/
+    
     
     public void DisplayNextSentence()
     {
@@ -71,63 +39,8 @@ public class DialogManager : MonoBehaviour
         }
         
         string sentence = sentences.Dequeue();  // otherwise pull sentence out of the queue
-        Debug.Log(sentences.Count);
-        convoContent.text = sentence;
-        /*for (int i = 6; i > 0; i--)
-            {
-            if (sentences.Count == 6)
-            {
-                NextButton.gameObject.SetActive(true);
-                Debug.Log("number is even");
-                //StartButton.gameObject.SetActive(false);
-
-            }
-            else if (sentences.Count == 5)
-            {
-                Debug.Log("number is odd");
-                //convoContent.color = Color.red;
-                profileImage.sprite = KyleReg; 
-            }
-
-            else if (sentences.Count == 4)
-            {
-                Debug.Log("number is even");
-                //convoContent.color = Color.yellow;
-            }
-
-            else if (sentences.Count == 3)
-            {
-                Debug.Log("number is odd");
-                //convoContent.color = Color.red;
-            }
-
-            else if (sentences.Count == 2)
-            {
-                Debug.Log("number is even");
-                //convoContent.color = Color.yellow;
-            }
-
-            else if (sentences.Count == 1)
-            {
-                Debug.Log("number is odd");
-                convoContent.alignment = TextAnchor.MiddleCenter;
-            }
-
-            else if (sentences.Count == 0)
-            {
-                Debug.Log("number is even");
-                //convoContent.color = Color.red;
-            }
-
-            else
-            {
-                Debug.Log("number is odd");
-                //convoContent.color = Color.yellow;
-            }
-                //Debug.Log ("line is" + sentence); // display it
-                
-            }
-        PlayDialogAudio();*/
+        Debug.Log(sentence);
+       
     }
 
     public void EndConvo()
