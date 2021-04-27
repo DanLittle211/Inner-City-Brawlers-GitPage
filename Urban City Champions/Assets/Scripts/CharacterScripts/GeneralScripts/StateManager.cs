@@ -63,23 +63,27 @@ public class StateManager : MonoBehaviour
     {
         currentGameState = GameState.LearnState;
         ShowScreen(Learn);
+        FindObjectOfType<SoundManager>().Play("MenuClick");
     }
 
     public void TrainingMenu()
     {
         SceneManager.LoadScene("TrainingRoom");
+        FindObjectOfType<SoundManager>().Play("MenuClick");
     }
 
     public void BackToGame()
     {
         currentGameState = GameState.LevelState;
         ShowScreen(Level);
+        FindObjectOfType<SoundManager>().Play("MenuClick");
     }
 
     public void BackToPause()
     {
         currentGameState = GameState.PauseState;
         ShowScreen(Pause);
+        FindObjectOfType<SoundManager>().Play("MenuClick");
     }
 
     private void ShowScreen (GameObject gameObjectToShow)

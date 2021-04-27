@@ -464,7 +464,7 @@ MonoBehaviour:
   - {fileID: 2127724559}
   - {fileID: 0}
   currentGameState: 0
-  gMS: {fileID: 1663050857}
+  gMS: {fileID: 0}
   newButton:
   - {fileID: 0}
   - {fileID: 0}
@@ -1818,7 +1818,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663050859}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RoundManager, Assembly-CSharp
         m_MethodName: UnpauseGame
         m_Mode: 1
@@ -3154,7 +3154,7 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   Fill: {fileID: 60059414}
-  meterSystem: {fileID: 1663050862}
+  meterSystem: {fileID: 0}
   blueHealthFill: {fileID: 1957183012}
 --- !u!70 &200428856
 CapsuleCollider2D:
@@ -11450,7 +11450,7 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   Fill: {fileID: 1352088298}
-  meterSystem: {fileID: 1663050862}
+  meterSystem: {fileID: 0}
   blueHealthFill: {fileID: 740786236}
 --- !u!70 &830654433
 CapsuleCollider2D:
@@ -19155,7 +19155,7 @@ MonoBehaviour:
   pH:
   - {fileID: 830654432}
   - {fileID: 200428855}
-  mS: {fileID: 1663050862}
+  mS: {fileID: 0}
   p1Slider: {fileID: 721051651}
   p1SliderImage: {fileID: 188539046}
   p1Sliderfloat: 500
@@ -21223,7 +21223,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663050859}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RoundManager, Assembly-CSharp
         m_MethodName: ResetGame
         m_Mode: 1

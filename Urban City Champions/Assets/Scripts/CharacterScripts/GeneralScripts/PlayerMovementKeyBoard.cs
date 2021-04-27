@@ -54,6 +54,7 @@ public class PlayerMovementKeyBoard : MonoBehaviour
             {
                 JumpFunction();
                 Debug.Log("Jump " + currentPlayState);
+                FindObjectOfType<SoundManager>().Play("PlayerJump");
             }
             if (Input.GetKeyDown(KeyCode.S))
             {
@@ -81,6 +82,7 @@ public class PlayerMovementKeyBoard : MonoBehaviour
             {
                 JumpFunction();
                 Debug.Log("Jump " + currentPlayState);
+                FindObjectOfType<SoundManager>().Play("PlayerJump");
             }
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
