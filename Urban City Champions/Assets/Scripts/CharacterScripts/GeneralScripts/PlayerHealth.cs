@@ -13,9 +13,11 @@ public class PlayerHealth : MonoBehaviour
     public Image Fill;
     public MeterSystem meterSystem;
     public Image blueHealthFill;
+    [SerializeField] private PlayerMovement pM;
     // Start is called before the first frame update
     void Start()
     {
+        pM = this.GetComponentInParent<PlayerMovement>();
         currentHealth = maxHealth;
         currentRecovHealth = maxHealth;
     }
@@ -35,9 +37,12 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        currentHealth -= damage;
-        Mathf.Round(currentHealth);
-        SetHealth(currentHealth);
+        if(!(pM.isBlockingHigh == true ^ pM.isBlockingLow == true))
+        {
+            currentHealth -= damage;
+            Mathf.Round(currentHealth);
+            SetHealth(currentHealth);
+        }   
     }
     public void MakeHealth(float healthPercent)
     {

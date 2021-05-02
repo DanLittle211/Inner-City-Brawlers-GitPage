@@ -5,8 +5,8 @@ using UnityEngine;
 public class AnimAttack : MonoBehaviour
 {
     [Header("Script References")]
-    [HideInInspector]
-    [SerializeField] private PlayerMovement p1M, p2M;
+    [SerializeField] private PlayerMovement p1M;
+    [SerializeField] private PlayerMovement p2M;
     [SerializeField] private GameManagerScript gM;
     [SerializeField] private MeterSystem mS;
 
@@ -35,27 +35,55 @@ public class AnimAttack : MonoBehaviour
 
     public void AttackPlayer(PlayerHealth targetHealth, PlayerMovement targetRB2D)//, int targetComboCounter)
     {
-        KnockBack(xForce, yForce, targetRB2D.myRB2D); //Knocks back chose player
-        targetHealth.TakeDamage(damageNumber * Mathf.Abs(scalingNumber));  //damages player and scales damage number
-        //targetComboCounter++;  //increases combo counter for attacking player
-        gM.comboLeewayTimer = (stunNumber * scalingNumber); // sets combo leeway timer to the stun timer and scales it
-        scalingNumber -= scalingFactor; // decreases scaling values by the scaling factor for each hit.
-        Debug.Log("Current stun number: " + stunNumber);
-        Debug.Log("Current Damage & Scaling Number: " + damageNumber + ", " + scalingNumber);
 
         if (this.gameObject.tag == "Player2")
         {
-            p2MeterDealing();
-            gM.p1comboCounter++;
-            gM.SetHitCounter(gM.p1comboCounterText, gM.p1comboCounter);
+            if (p2M.currentPlayState == PlayerMovement.playerState.HB ^ p2M.currentPlayState == PlayerMovement.playerState.LB)
+            {
+                KnockBack(xForce, yForce, targetRB2D.myRB2D); //Knocks back chose player
+                this.GetComponentInParent<SoundManager>().Play("Attack");
+            }
+            else
+            { 
+                Debug.Log(gameObject.tag + p2M.currentPlayState);
+                KnockBack(xForce, yForce, targetRB2D.myRB2D); //Knocks back chose player
+                targetHealth.TakeDamage(damageNumber * Mathf.Abs(scalingNumber));  //damages player and scales damage number
+                                                                                   //targetComboCounter++;  //increases combo counter for attacking player
+                gM.comboLeewayTimer = (stunNumber * scalingNumber); // sets combo leeway timer to the stun timer and scales it
+                scalingNumber -= scalingFactor; // decreases scaling values by the scaling factor for each hit.
+                Debug.Log("Current stun number: " + stunNumber);
+                Debug.Log("Current Damage & Scaling Number: " + damageNumber + ", " + scalingNumber);
+                this.GetComponentInParent<SoundManager>().Play("Damage");
+                p2MeterDealing();
+                gM.p1comboCounter++;
+                gM.SetHitCounter(gM.p1comboCounterText, gM.p1comboCounter);
+                this.GetComponentInParent<SoundManager>().Play("Attack");
+            }
         }
         if (this.gameObject.tag == "Player1")
         {
-            p1MeterDealing();
-            gM.p2comboCounter++;
-            gM.SetHitCounter(gM.p2comboCounterText, gM.p2comboCounter);
+            if (p1M.currentPlayState == PlayerMovement.playerState.HB || p1M.currentPlayState == PlayerMovement.playerState.LB)
+            {
+                KnockBack(xForce, yForce, targetRB2D.myRB2D); //Knocks back chose player
+                this.GetComponentInParent<SoundManager>().Play("Attack");
+            }
+            else
+            { 
+                Debug.Log(gameObject.tag + p1M.currentPlayState);
+                KnockBack(xForce, yForce, targetRB2D.myRB2D); //Knocks back chose player
+                targetHealth.TakeDamage(damageNumber * Mathf.Abs(scalingNumber));  //damages player and scales damage number
+                                                                                   //targetComboCounter++;  //increases combo counter for attacking player
+                gM.comboLeewayTimer = (stunNumber * scalingNumber); // sets combo leeway timer to the stun timer and scales it
+                scalingNumber -= scalingFactor; // decreases scaling values by the scaling factor for each hit.
+                Debug.Log("Current stun number: " + stunNumber);
+                Debug.Log("Current Damage & Scaling Number: " + damageNumber + ", " + scalingNumber);
+                this.GetComponentInParent<SoundManager>().Play("Damage");
+                p1MeterDealing();
+                gM.p2comboCounter++;
+                gM.SetHitCounter(gM.p2comboCounterText, gM.p2comboCounter);
+                this.GetComponentInParent<SoundManager>().Play("Attack");
+            }
         }
-
         if (gM.comboLeewayTimer <= 0)
         {
             ResetScale();

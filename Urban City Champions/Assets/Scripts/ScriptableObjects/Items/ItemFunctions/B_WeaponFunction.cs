@@ -55,6 +55,8 @@ public class B_WeaponFunction : MonoBehaviour
         if (other.gameObject.tag == "Player1" || other.gameObject.tag == "Player2")
         {
             Debug.Log(other.gameObject.name + " picked up " + this.gameObject.name);//temporary
+            other.gameObject.GetComponent<Bweap_Timer>().ResetTimer(); // finds bweap timer on interacting player and resets timer
+            other.gameObject.GetComponent<Bweap_Timer>().hasWeapon = true; // sets bool on bweap timer true
             DestroySelf();//temporary until full function is completed
         }
     }

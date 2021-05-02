@@ -86,7 +86,10 @@ public class StartScreenManager : MonoBehaviour
                     if (player.GetAnyButtonDown() ^ player.GetAnyNegativeButtonDown() && (QuitActive ==  false && (!(player.GetButton("Escape")))))
                     {
                         DeactivateQuitMenu();
-                        SetGameStateMainActive();
+                        if (player.GetAnyButtonDown() ^ player.GetAnyNegativeButtonDown())
+                        {
+                            SetGameStateMainActive();
+                        }
                     }
 
                     waitTimer = maxWaitTimer;

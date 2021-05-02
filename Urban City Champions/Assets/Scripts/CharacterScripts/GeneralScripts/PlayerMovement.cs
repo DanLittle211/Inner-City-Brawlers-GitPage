@@ -5,6 +5,7 @@ using Rewired;
 
 public enum playerState { Grounded, Crouch, Jump, HB, LB, SoftKnockdown, HardKnockdown, Immobile };
 
+
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Script References")]
@@ -116,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //myAnim.SetFloat("yVelocity", this.transform.position.y);
         //myAnim.SetFloat("headVelocity", head.position.y);
-        
+
         if (isDisabled != true)
         {
             GetInput(ref x1, ref xDown1, "Move Horizontal");
@@ -124,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
     }
-   /* public void LateUpdate()
+    public void LateUpdate()
     {
         if (delay > 0)
         {
@@ -137,7 +138,7 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Last State: " + lastPlayState + " Current State: " + currentPlayState);
         }
 
-    }*/
+    }
     public void ResetValue()
     {
         delay = 0.5f;
@@ -190,24 +191,26 @@ public class PlayerMovement : MonoBehaviour
                 {
                     if (-moveUp >= 0.3)
                     {
-                        // myAnim.SetFloat("Yaxis", moveUp);
-                        // myAnim.SetBool("isCrouch", true);
                         StartCoroutine(IdleToCrouchSequence(0f));
                         Debug.Log("Pressed Down");
                     }
                     if (moveUp > 0.2)
                     {
+                        this.GetComponent<SoundManager>().Play("Jump");
                         StopAllCoroutines();
                         StartCoroutine(JumpSequence(1f));
                         MoveFunction(0.0012f, 0f, jumpStrength);
                         currentPlayState = playerState.Jump;
                     }
-                    //myAnim.SetBool("isCrouch", false);
                     if (isGrounded)
                     {
-                        if ((moveHorizontal <= 1 && moveHorizontal > 0.5) && Mathf.Round(myRB2D.velocity.x) <= 6)
+                        if (moveHorizontal == 0 && moveUp == 0)
                         {
-
+                            StopAllCoroutines();
+                            StartCoroutine(MoveAction(0f, IDLE));
+                        }
+                        else if ((moveHorizontal <= 1 && moveHorizontal > 0.5) && Mathf.Round(myRB2D.velocity.x) <= 6)
+                        {
                             if (moveUp == 0)
                             {
                                 currentPlayState = playerState.Grounded;
@@ -218,7 +221,6 @@ public class PlayerMovement : MonoBehaviour
                                     {
                                         StopAllCoroutines();
                                         StartCoroutine(MoveAction(0f, WalkF));
-
                                     }
                                     else if (dlook.isP1Flipped == false)
                                     {
@@ -255,11 +257,8 @@ public class PlayerMovement : MonoBehaviour
                             }
 
                         }
-
-
                         else if ((-moveHorizontal <= 1 && -moveHorizontal > 0.5) && Mathf.Abs(myRB2D.velocity.x) <= 6)
                         {
-
                             if (moveUp == 0)
                             {
                                 currentPlayState = playerState.Grounded;
@@ -305,14 +304,21 @@ public class PlayerMovement : MonoBehaviour
                             }
 
                         }
-
-                        if (moveHorizontal == 0 && moveUp == 0)
+                        else if (moveHorizontal == 0 && moveUp == 0)
                         {
                             StopAllCoroutines();
                             StartCoroutine(MoveAction(0f, IDLE));
-                            currentPlayState = playerState.Grounded;
-
                         }
+                        currentPlayState = playerState.Grounded;
+
+                        //StartCoroutine(MoveAction(0f, IDLE));
+                    }
+                    if (moveHorizontal == 0 && moveUp == 0)
+                    {
+                        StopAllCoroutines();
+                        StartCoroutine(MoveAction(0f, IDLE));
+                        currentPlayState = playerState.Grounded;
+
                     }
                     break;
                 }
@@ -353,7 +359,6 @@ public class PlayerMovement : MonoBehaviour
                     {
                         MoveFunction(0.0012f, (-movementSpeed / 2), 0f);  // while in air, you move slightly to the left
                     }
-                    
                     break;
                 }
             case playerState.SoftKnockdown:
@@ -373,6 +378,7 @@ public class PlayerMovement : MonoBehaviour
                 }
             case playerState.HB:
                 {
+                    isBlockingHigh = true;
                     if (isGrounded)
                     {
                         if (isBlockingHigh == true)
@@ -381,20 +387,19 @@ public class PlayerMovement : MonoBehaviour
                             {
                                 if (moveUp == 0)
                                 {
-                                    currentPlayState = playerState.Grounded;
-                                    MoveFunction(0.0012f, 0, 0f);
+                                    //currentPlayState = playerState.Grounded;
                                     if (playerID == 0)
                                     {
                                         if (dlook.isP1Flipped == true)
                                         {
                                             StopAllCoroutines();
-                                            //StartCoroutine(MoveAction(0f, WalkF));
+                                            StartCoroutine(MoveAction(0f, WalkF));
 
                                         }
                                         else if (dlook.isP1Flipped == false)
                                         {
                                             StopAllCoroutines();
-                                            //StartCoroutine(MoveAction(0f, WalkB));
+                                            StartCoroutine(MoveAction(0f, WalkB));
 
                                         }
                                     }
@@ -403,25 +408,25 @@ public class PlayerMovement : MonoBehaviour
                                         if (dlook.isP2Flipped == true)
                                         {
                                             StopAllCoroutines();
-                                            //StartCoroutine(MoveAction(0f, WalkF));
+                                            StartCoroutine(MoveAction(0f, WalkF));
 
                                         }
                                         else if (dlook.isP2Flipped == false)
                                         {
                                             StopAllCoroutines();
-                                            //StartCoroutine(MoveAction(0f, WalkB));
+                                            StartCoroutine(MoveAction(0f, WalkB));
 
                                         }
                                     }
                                 }
                                 else if (moveUp <= 1 && moveUp > 0.2)
                                 {
-                                    MoveFunction(0.0012f, 0f, jumpStrength);
+                                   //MoveFunction(0.0012f, 0f, jumpStrength);
 
                                 }
                                 else if (-moveUp <= 1 && -moveUp > 0.2)
                                 {
-                                    MoveFunction(0.0012f, 0f, 0f);
+                                    //MoveFunction(0.0012f, 0f, 0f);
                                     StartCoroutine(IdleToCrouchSequenceB(0f));
                                 }
 
@@ -433,20 +438,20 @@ public class PlayerMovement : MonoBehaviour
 
                                 if (moveUp == 0)
                                 {
-                                    currentPlayState = playerState.Grounded;
-                                    MoveFunction(0.0012f, -movementSpeed, 0f);
+                                    //currentPlayState = playerState.Grounded;
+                                    //MoveFunction(0.0012f, -movementSpeed, 0f);
                                     if (playerID == 0)
                                     {
                                         if (dlook.isP1Flipped == true)
                                         {
                                             StopAllCoroutines();
-                                            //StartCoroutine(MoveAction(0f, WalkB));
+                                            StartCoroutine(MoveAction(0f, WalkB));
 
                                         }
                                         else if (dlook.isP1Flipped == false)
                                         {
                                             StopAllCoroutines();
-                                            //StartCoroutine(MoveAction(0f, WalkF));
+                                            StartCoroutine(MoveAction(0f, WalkF));
 
                                         }
                                     }
@@ -455,23 +460,23 @@ public class PlayerMovement : MonoBehaviour
                                         if (dlook.isP2Flipped == true)
                                         {
                                             StopAllCoroutines();
-                                            //StartCoroutine(MoveAction(0f, WalkB));
+                                            StartCoroutine(MoveAction(0f, WalkB));
                                         }
                                         else if (dlook.isP2Flipped == false)
                                         {
                                             StopAllCoroutines();
-                                            //StartCoroutine(MoveAction(0f, WalkF));
+                                            StartCoroutine(MoveAction(0f, WalkF));
 
                                         }
                                     }
                                 }
                                 else if (moveUp <= 1 && moveUp > 0.2)
                                 {
-                                    MoveFunction(0.0012f, 0f, jumpStrength);
+                                    //MoveFunction(0.0012f, 0f, jumpStrength);
                                 }
                                 else if (-moveUp <= 1 && -moveUp > 0.2)
                                 {
-                                    MoveFunction(0.0012f, 0f, 0f);
+                                    //MoveFunction(0.0012f, 0f, 0f);
                                     StartCoroutine(IdleToCrouchSequenceB(0f));
                                 }
 
@@ -485,29 +490,40 @@ public class PlayerMovement : MonoBehaviour
                             isBlockingHigh = false;
                         }
                     }
+                    if ((moveHorizontal == 0 && moveUp == 0) || isBlockingHigh != true)
+                    {
+                        StopAllCoroutines();
+                        StartCoroutine(MoveAction(0f, IDLE));
+                        currentPlayState = playerState.Grounded;
+                    }
                     break;
+
                 }
             case playerState.LB:
                 {
-                    if (isBlockingLow == true)
+                    if (moveUp != 0)
                     {
-                        if (-moveUp <= 1 && -moveUp > 0.4)
+                        isBlockingLow = true;
+                        if (isBlockingLow == true)
                         {
-                            ChangeAnimationState(Crouch);
-                            if (moveHorizontal <= 0.5 && moveHorizontal > 0)
+                            if (-moveUp <= 1 && -moveUp > 0.4)
                             {
+                                ChangeAnimationState(Crouch);
+                                if (moveHorizontal <= 0.5 && moveHorizontal > 0)
+                                {
+                                    MoveFunction(0f, 0f, 0f);
+                                    currentPlayState = playerState.LB;
+                                    Debug.Log("Current Player State: " + currentPlayState + " Right");
+                                }
+                                if (-moveHorizontal <= 0.5 && -moveHorizontal > 0)
+                                {
+                                    MoveFunction(0f, 0f, 0f);
+                                    currentPlayState = playerState.LB;
+                                    Debug.Log("Current Player State: " + currentPlayState + " Left");
+                                }
                                 MoveFunction(0f, 0f, 0f);
-                                currentPlayState = playerState.Crouch;
-                                Debug.Log("Current Player State: " + currentPlayState + " Right");
+                                Debug.Log("Current Player State: " + currentPlayState);
                             }
-                            if (-moveHorizontal <= 0.5 && -moveHorizontal > 0)
-                            {
-                                MoveFunction(0f, 0f, 0f);
-                                currentPlayState = playerState.Crouch;
-                                Debug.Log("Current Player State: " + currentPlayState + " Left");
-                            }
-                            MoveFunction(0f, 0f, 0f);
-                            Debug.Log("Current Player State: " + currentPlayState);
                         }
                     }
                     else if (moveUp == 0)
@@ -562,19 +578,19 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator IdleToCrouchSequence(float time)
     {
         ChangeAnimationState(toCrouch);
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.15f);
         currentPlayState = playerState.Crouch;
     }
     IEnumerator IdleToCrouchSequenceB(float time)
     {
         ChangeAnimationState(toCrouch);
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.15f);
         currentPlayState = playerState.LB;
     }
     IEnumerator CrouchToIdleSequence(float time)
     {
         ChangeAnimationState(toIdle);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.15f);
         currentPlayState = playerState.Grounded;
     }
     public Vector2 GetInput()
@@ -602,9 +618,6 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
             currentPlayState = playerState.Grounded;
-
-            // myAnim.SetBool("Jump", !isGrounded);
-
         }
     }
 
@@ -613,6 +626,7 @@ public class PlayerMovement : MonoBehaviour
         if (col.tag == "Ground")
         {
             isGrounded = false;
+            StartCoroutine(JumpSequence(1f));
             currentPlayState = playerState.Jump;
         }
     }

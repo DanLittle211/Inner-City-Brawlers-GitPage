@@ -113,6 +113,7 @@ public class GameManagerScript : MonoBehaviour
     {
         if (gMM.isMultiActive == true)
         {
+            rM.GameConcludedPanel.SetActive(false);
             currentTimerInt = rM.roundTimer;
             cOA.p1Timer = 0;
             cOA.p2Timer = 0;

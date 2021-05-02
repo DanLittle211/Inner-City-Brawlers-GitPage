@@ -60,7 +60,8 @@ public class PlayerButtons : MonoBehaviour
     public bool isAttacking;
 
     public Transform attackpoint;
-    public float attackRange = 0.5f;
+    public float attackRange;
+    public float rangefloat = 0.5f;
     protected ContactFilter2D contactFilter;
     public LayerMask enemyLayers;
     public LayerMask myMask;
@@ -83,7 +84,8 @@ public class PlayerButtons : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    { 
+    {
+        attackRange = rangefloat;
         if (playerID == 0)
         {
             myComboCounterInt = gM.p1comboCounter;
@@ -255,19 +257,21 @@ public class PlayerButtons : MonoBehaviour
             }
             else if (pM.currentPlayState == PlayerMovement.playerState.Jump)
             {
-                input = new ComboInput(AttackType.light, pM.GetInput(), playerState.Jump); Debug.Log("Light attack");
+                input = new ComboInput(AttackType.light, pM.GetInput(),  playerState.Jump); Debug.Log("Light attack");
             }
-
+            this.GetComponentInParent<SoundManager>().Play("Attack");
         }
         if (pM.player.GetButtonDown("MediumAttack"))
         {
             StartCoroutine(mediumAttack(0.6f));
-            input = new ComboInput(AttackType.medium, pM.GetInput(), playerState.Grounded); Debug.Log("medium attack ");
+            input = new ComboInput(AttackType.medium, pM.GetInput(),  playerState.Grounded); Debug.Log("medium attack ");
+            this.GetComponentInParent<SoundManager>().Play("Attack");
         }
         if (pM.player.GetButtonDown("HeavyAttack"))
         {
             StartCoroutine(heavyAttack(1f));
-            input = new ComboInput(AttackType.heavy, pM.GetInput(), playerState.Grounded); Debug.Log("Heavy attack ");
+            input = new ComboInput(AttackType.heavy, pM.GetInput(),  playerState.Grounded); Debug.Log("Heavy attack ");
+            this.GetComponentInParent<SoundManager>().Play("Attack");
         }
 
         if (pM.currentPlayState == PlayerMovement.playerState.Grounded ^ pM.currentPlayState == PlayerMovement.playerState.Crouch)
@@ -276,7 +280,7 @@ public class PlayerButtons : MonoBehaviour
             {
                 StartCoroutine(uniqueAttack(1.2f));
                 input = new ComboInput(AttackType.unique, pM.GetInput(), playerState.Grounded); Debug.Log("Unique attack ");
-
+                this.GetComponentInParent<SoundManager>().Play("Attack");
             }
             if (pM.player.GetButtonDown("Throw"))
             {
@@ -324,7 +328,6 @@ public class PlayerButtons : MonoBehaviour
             }
         }
        
-
         Vector2 movement = Vector2.zero;
         if (pM.InputDownX1())
         {
@@ -739,30 +742,25 @@ public class PlayerButtons : MonoBehaviour
         isAttacking = true;
     }
 
-    public void DisableThenEnable()
-    {
-        StartCoroutine(DisableThenEnable(1f));
-    }
-
-    public void SetIsAttackingFalse()
-    {
-       //isAttacking = false;
-    }
 
     public void Attack(Attack A)
     {
+
         curAttack = A;
         timer = A.length;
-        myAnim.Play(A.name, 0, 0); //playAnimation in code and resets anim
+        myAnim.Play(A.name, -1, 0); //playAnimation in code and resets anim
         Debug.Log(A.name + ": successfuly inputted");
         StartCoroutine(RunAnimForLength(1f));
-
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackpoint.position, attackRange, enemyLayers);
-        foreach (Collider2D enemy in hitEnemies)
+        if (onCharacter == true)
         {
-            enemy.GetComponentInChildren<AnimAttack>().AttackPlayer(enemyHealth, enemyMovement);
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackpoint.position, attackRange, enemyLayers);
+            foreach (Collider2D enemy in hitEnemies)
+            {
 
+                enemy.GetComponentInChildren<AnimAttack>().AttackPlayer(enemyHealth, enemyMovement);
+            }
         }
+
         if (pM.currentPlayState == PlayerMovement.playerState.Grounded)
         {
             SetPlayerStateGrounded();
@@ -858,13 +856,17 @@ public class PlayerButtons : MonoBehaviour
     }
     IEnumerator LAttack(float time)
     {
+        attackpoint.gameObject.SetActive(false);
+        attackRange = 0f;
         hitboxes[1].gameObject.SetActive(false);
         hitboxes[2].gameObject.SetActive(false);
         hitboxes[3].gameObject.SetActive(false);
         hitboxes[0].gameObject.SetActive(true);
         yield return new WaitForSeconds(time);
         hitboxes[0].gameObject.SetActive(false);
-       // StopCoroutine(LAttack(1f));
+        // StopCoroutine(LAttack(1f));
+        attackRange = rangefloat;
+        attackpoint.gameObject.SetActive(true);
     }
     IEnumerator mediumAttack(float time)
     {
@@ -957,7 +959,7 @@ public class ComboInput
     public playerState thisCurrentState;
 
 
-    public ComboInput(AttackType e, Vector2 m , playerState currentState)
+    public ComboInput(AttackType e, Vector2 m ,playerState currentState)
     {
         type = e;
         mType = Vector2.zero;

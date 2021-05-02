@@ -58,6 +58,17 @@ public class RoundManager : MonoBehaviour
     public bool p2Wins;
     public bool haveTied;
     #endregion
+    #region Image Sprites
+    [Header("Winner Image Sprites")]
+    public Image WinSprayBackground;
+    public Sprite P1WinSprite;
+    public Sprite P2WinSprite;
+    [Header("Knockout Image Sprites")]
+    public GameObject knockoutImageObject;
+    public Image KnockoutSprayBackground;
+    public float delayTimer;
+    public float delayTimerStart;
+    #endregion
     public GameObject multiPauseButton;
     public GameObject roundOverButton;
     public bool oneTime;
@@ -65,6 +76,10 @@ public class RoundManager : MonoBehaviour
 
     public void Awake()
     {
+        StopAllCoroutines();
+        delayTimer = delayTimerStart;
+        knockoutImageObject.SetActive(false);
+        GameConcludedPanel.SetActive(false);
         //Player script 
         p1Health = player1.GetComponentInChildren<PlayerHealth>();
         p2Health = player2.GetComponentInChildren<PlayerHealth>();
@@ -101,6 +116,8 @@ public class RoundManager : MonoBehaviour
 
     public void ResetGame()
     {
+        StopAllCoroutines();
+        GameConcludedPanel.SetActive(false);
         Awake();
         gManager.StartMatch();
     }
@@ -139,11 +156,13 @@ public class RoundManager : MonoBehaviour
                 p2Movement.isDisabled = false;
                 if (roundTimer <= 0)
                 {
+                    StartCoroutine(AddRoundWin());
                     roundTimer = 0;
                     //p1 wins
                     if (p1Health.currentHealth > p2Health.currentHealth)
                     {
                         p1Wins = true;
+                        
                         currentState = roundState.endRound;
                     }
                     //p2 wins
@@ -167,18 +186,21 @@ public class RoundManager : MonoBehaviour
                     if (p1Health.currentHealth <= 0 && !p1Wins && !haveTied)
                     {
                         p2Wins = true;
+                        StartCoroutine(AddRoundWin());
                         currentState = roundState.endRound;
                     }
                     //player 2 is knockedout
                     if (p2Health.currentHealth <= 0 && !p2Wins && !haveTied)
                     {
                         p1Wins = true;
+                        StartCoroutine(AddRoundWin());
                         currentState = roundState.endRound;
                     }
                     //both are knocked out at same time
                     if ((p1Health.currentHealth == 0 && p2Health.currentHealth == 0) && (!p1Wins && !p2Wins))
                     {
                         haveTied = true;
+                        StartCoroutine(AddRoundWin());
                         currentState = roundState.endRound;
                     }
                 }
@@ -224,14 +246,15 @@ public class RoundManager : MonoBehaviour
                             totalRounds = totalRounds + 1;
                             //currentState = roundState.continueOption;
                         }
+
                         roundTimer = roundTimerStart;
                         preroundTimer = preroundTimerStart;
+                        StartCoroutine(DelayRoundRestart());
                         currentRound = currentRound + 1;
                         p1Wins = false;
                         p2Wins = false;
                         haveTied = false;
                         oneTime = false;
-                        gManager.StartMatch();
                     }
                 }
                 else if (currentRound < totalRounds)
@@ -243,25 +266,26 @@ public class RoundManager : MonoBehaviour
                     //if p1 has more wins than p2 at the last round, for displaying who wins and giving options to restart or not
                     if (p1CurrentWins > p2CurrentWins)
                     {
-                        GameConcludedPanel.SetActive(true);
 
+                        StartCoroutine(DelayShowWin(P1WinSprite));
                         p1Movement.isDisabled = true;
                         p2Movement.isDisabled = true;
-                        gameOverText.text = "Game Over, Player 1 Wins";
-                        p1Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
-                        p1Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
+                        //gameOverText.text = "Game Over, Player 1 Wins";
+
+                        p1Movement.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
+                        p1Movement.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
                         Debug.Log("Player 1 Wins");
                     }
                     //if p2 has more wins than p1 at the last round, for displaying who wins and giving options to restart or not
                     if (p2CurrentWins > p1CurrentWins)
                     {
-                        GameConcludedPanel.SetActive(true);
+                        StartCoroutine(DelayShowWin(P2WinSprite));
 
                         p1Movement.isDisabled = true;
                         p2Movement.isDisabled = true;
-                        gameOverText.text = "Game Over, Player 2 Wins";
-                        p2Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
-                        p2Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
+                        //gameOverText.text = "Game Over, Player 2 Wins";
+                        p2Movement.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
+                        p2Movement.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
                         Debug.Log("Player 2 Wins");
                     }
                     //if both players have equal wins, for displaying who wins and giving options to restart or not
@@ -272,16 +296,18 @@ public class RoundManager : MonoBehaviour
                         p1Movement.isDisabled = true;
                         p2Movement.isDisabled = true;
                         gameOverText.text = "Game Over, Players Tied";
-                        p1Buttons.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
-                        p1Buttons.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
+                        p1Movement.player.controllers.maps.LoadMap(ControllerType.Keyboard, 0, "Menu", "Default", true);
+                        p1Movement.player.controllers.maps.LoadMap(ControllerType.Joystick, 0, "Menu", "Default", true);
                         Debug.Log("The players tied");
                     }
-                    //setOneTime();
-                    if (oneTime == false)
-                    {
-                        GameOverButtonSet();
-                        oneTime = true;
-                    }
+                    
+                }
+                //setOneTime();
+                if (oneTime == false)
+                {
+                    Debug.Log(roundOverButton + " : Button Set.");
+                    SetActiveButton(roundOverButton);
+                    oneTime = true;
                 }
 
             }
@@ -296,6 +322,28 @@ public class RoundManager : MonoBehaviour
                 //setting pause menu to active 
             }
         }
+    }
+    IEnumerator AddRoundWin()
+    {
+        knockoutImageObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        knockoutImageObject.SetActive(false);
+
+    }
+    IEnumerator DelayRoundRestart()
+    {
+        yield return new WaitForSeconds(1f);
+        if (!(currentRound >= totalRounds))
+        {
+            gManager.StartMatch();
+        }
+    }
+
+    IEnumerator DelayShowWin(Sprite WinnerSprite)
+    {
+        yield return new WaitForSeconds(2f);
+        GameConcludedPanel.SetActive(true);
+        WinSprayBackground.sprite = WinnerSprite;
     }
     public void SetActiveButton(GameObject button)
     {

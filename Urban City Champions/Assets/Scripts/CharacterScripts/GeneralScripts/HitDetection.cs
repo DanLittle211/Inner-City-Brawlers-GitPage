@@ -40,18 +40,28 @@ public class HitDetection : MonoBehaviour
     {
         if (col.tag == "Player1")
         {
-            GameObject playerHealth = GameObject.Find("Player1");
-            PlayerHealth pH = (PlayerHealth)playerHealth.GetComponentInChildren(typeof(PlayerHealth));
-            pH.TakeDamage(damageNumber * Mathf.Abs(scalingNumber));
-            Debug.Log("Current Damage & Scaling Number: " + damageNumber + ", " + scalingNumber);
-            KnockBack(xForce,yForce, p1M.myRB2D);
-            gM.p2comboCounter++;
-            gM.comboLeewayTimer = (stunNumber * scalingNumber);
-            scalingNumber -= scalingFactor;
-            Debug.Log("Current stun number: " + stunNumber);
-            gM.SetHitCounter(gM.p2comboCounterText, gM.p2comboCounter);
-            p1MeterDealing();
-            Debug.Log("Hit hitbox");
+            if (p1M.currentPlayState == PlayerMovement.playerState.HB || p1M.currentPlayState == PlayerMovement.playerState.LB)
+            {
+                KnockBack(xForce, yForce, p1M.myRB2D);
+                FindObjectOfType<SoundManager>().Play("Attack");
+            }
+            else
+            {
+                GameObject playerHealth = GameObject.Find("Player1");
+                PlayerHealth pH = (PlayerHealth)playerHealth.GetComponentInChildren(typeof(PlayerHealth));
+                pH.TakeDamage(damageNumber * Mathf.Abs(scalingNumber));
+                Debug.Log("Current Damage & Scaling Number: " + damageNumber + ", " + scalingNumber);
+                KnockBack(xForce, yForce, p1M.myRB2D);
+                gM.p2comboCounter++;
+                gM.comboLeewayTimer = (stunNumber * scalingNumber);
+                scalingNumber -= scalingFactor;
+                Debug.Log("Current stun number: " + stunNumber);
+                gM.SetHitCounter(gM.p2comboCounterText, gM.p2comboCounter);
+                p1MeterDealing();
+                Debug.Log("Hit hitbox");
+                this.GetComponentInParent<SoundManager>().Play("Damage");
+                this.GetComponentInParent<SoundManager>().Play("Attack");
+            }
 
             if (gM.p1comboCounter > 0 )
             {
@@ -59,6 +69,7 @@ public class HitDetection : MonoBehaviour
             }
             if (gM.comboLeewayTimer <= 0)
             {
+                Debug.Log("Ran Scaling Values");
                 ResetScale();
             }
             
@@ -66,23 +77,34 @@ public class HitDetection : MonoBehaviour
 
         if (col.tag == "Player2")
         {
-            GameObject playerHealth = GameObject.Find("Player2");
-            PlayerHealth pH = (PlayerHealth)playerHealth.GetComponentInChildren(typeof(PlayerHealth));
-            pH.TakeDamage(damageNumber * Mathf.Abs(scalingNumber));
-            p2MeterDealing();
-            gM.p1comboCounter++;
-            gM.comboLeewayTimer = (stunNumber * scalingNumber);
-            scalingNumber -= scalingFactor;
-            Debug.Log("Current stun number: " + stunNumber);
-            gM.SetHitCounter(gM.p1comboCounterText, gM.p1comboCounter);
-            KnockBack(xForce, yForce, p2M.myRB2D);
-            Debug.Log("Hit hitbox");
+            if (p2M.currentPlayState == PlayerMovement.playerState.HB ^ p2M.currentPlayState == PlayerMovement.playerState.LB)
+            {
+                KnockBack(xForce, yForce, p2M.myRB2D);
+                FindObjectOfType<SoundManager>().Play("Attack");
+            }
+            else
+            {
+                GameObject playerHealth = GameObject.Find("Player2");
+                PlayerHealth pH = (PlayerHealth)playerHealth.GetComponentInChildren(typeof(PlayerHealth));
+                pH.TakeDamage(damageNumber * Mathf.Abs(scalingNumber));
+                p2MeterDealing();
+                gM.p1comboCounter++;
+                gM.comboLeewayTimer = (stunNumber * scalingNumber);
+                scalingNumber -= scalingFactor;
+                Debug.Log("Current stun number: " + stunNumber);
+                gM.SetHitCounter(gM.p1comboCounterText, gM.p1comboCounter);
+                KnockBack(xForce, yForce, p2M.myRB2D);
+                Debug.Log("Hit hitbox");
+                this.GetComponentInParent<SoundManager>().Play("Damage");
+                this.GetComponentInParent<SoundManager>().Play("Attack");
+            }
             if (gM.p2comboCounter > 0)
             {
                 //ResetScale();
             }
             if (gM.comboLeewayTimer <= 0)
             {
+                Debug.Log("Ran Scaling Values");
                 ResetScale();
             }
         }
